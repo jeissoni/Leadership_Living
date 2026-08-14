@@ -1,0 +1,73 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { dateValue, formatDate } from "../../lib/dates";
+
+export async function getStaticPaths() {
+  const temas = await getCollection("temas");
+  return temas.map((tema) => ({
+    params: { slug: tema.id },
+    props: { tema },
+  }));
+}
+
+const { tema } = Astro.props;
+const { Content } = await render(tema);
+const dateLabel = formatDate(tema.data.date);
+const homeHref = import.meta.env.BASE_URL;
+---
+
+<Base title={tema.data.title} description={tema.data.description} current="tema">
+  <article class="reading-shell" id="tema">
+    <p class="print-masthead">Leadership Living · Recursos teológicos</p>
+
+    <div class="reading-bar no-print">
+      <a class="back" href={homeHref}>← Temas</a>
+      <button class="btn" id="exportar-pdf" type="button">Exportar PDF</button>
+    </div>
+
+    <p class="reading-kicker">{tema.data.tags[0] ?? "Estudio"}</p>
+    <h1 class="reading-title">{tema.data.title}</h1>
+    <div class="meta">
+      <time datetime={dateValue(tema.data.date)}>{dateLabel}</time>
+      {tema.data.duration && <span>· {tema.data.duration}</span>}
+      {
+        tema.data.tags.map((tag) => (
+          <span class="tag">{tag}</span>
+        ))
+      }
+    </div>
+    <div class="gold-rule"></div>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    {
+      tema.data.resources.length > 0 && (
+        <section class="resources">
+          <h2>Recursos relacionados</h2>
+          <ul class="resource-list">
+            {tema.data.resources.map((resource) => (
+              <li>
+                {resource.url ? (
+                  <a href={resource.url} rel="noopener noreferrer">
+                    {resource.label}
+                  </a>
+                ) : (
+                  <span>{resource.label}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </article>
+
+  <script>
+    document.getElementById("exportar-pdf")?.addEventListener("click", () => {
+      window.print();
+    });
+  </script>
+</Base>

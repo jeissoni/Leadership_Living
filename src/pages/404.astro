@@ -1,0 +1,14 @@
+---
+import Base from "../layouts/Base.astro";
+
+const homeHref = import.meta.env.BASE_URL;
+---
+
+<Base title="No encontrado" description="Esa página no existe.">
+  <section class="wrap not-found">
+    <p class="kicker">404</p>
+    <h1 class="page-title">No encontramos esa página</h1>
+    <p class="lede">Es posible que el enlace haya cambiado o que el tema aún no esté publicado.</p>
+    <p><a href={homeHref}>Volver a los temas</a></p>
+  </section>
+</Base>

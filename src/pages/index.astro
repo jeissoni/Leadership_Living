@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import CatalogToolbar from "../components/CatalogToolbar.astro";
+import TemaCard from "../components/TemaCard.astro";
+import { formatDate } from "../lib/dates";
+
+const temas = (await getCollection("temas")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+const tags = [...new Set(temas.flatMap((tema) => tema.data.tags))].sort((a, b) =>
+  a.localeCompare(b, "es"),
+);
+const base = import.meta.env.BASE_URL;
+---
+
+<Base title="Temas" current="home">
+  <section class="wrap hero">
+    <p class="kicker">Biblioteca de estudio</p>
+    <h1>Recursos teológicos</h1>
+    <p class="lede">
+      Guiones y materiales para charlas: doctrina, Escritura y vida cristiana,
+      listos para leer y exportar a PDF.
+    </p>
+    <div class="gold-rule"></div>
+    <CatalogToolbar tags={tags} />
+  </section>
+
+  <section class="wrap grid" aria-label="Temas">
+    {
+      temas.map((tema) => (
+        <TemaCard
+          href={`${base}temas/${tema.id}/`}
+          title={tema.data.title}
+          description={tema.data.description}
+          tags={tema.data.tags}
+          dateLabel={formatDate(tema.data.date)}
+          duration={tema.data.duration}
+        />
+      ))
+    }
+    <p class="empty is-hidden" id="sin-resultados">No hay temas con ese criterio.</p>
+  </section>
+</Base>

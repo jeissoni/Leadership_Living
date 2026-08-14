@@ -1,0 +1,31 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  tags: string[];
+  dateLabel: string;
+  duration?: string;
+}
+
+const { href, title, description, tags, dateLabel, duration } = Astro.props;
+const searchBlob = [title, description, ...tags].join(" ").toLowerCase();
+---
+
+<a
+  class="card"
+  href={href}
+  data-tags={tags.join(",")}
+  data-search={searchBlob}
+>
+  <div class="card-top">
+    {tags[0] ? <span class="tag">{tags[0]}</span> : <span></span>}
+    {duration && <span>{duration}</span>}
+  </div>
+  <h2>{title}</h2>
+  <p>{description}</p>
+  <div class="card-foot">
+    <time>{dateLabel}</time>
+    <span class="card-arrow" aria-hidden="true">→</span>
+  </div>
+</a>
