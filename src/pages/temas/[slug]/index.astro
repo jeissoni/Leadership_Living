@@ -1,39 +1,16 @@
 ---
-import { getCollection, render } from "astro:content";
-import Base from "../../layouts/Base.astro";
-import { seriesById } from "../../lib/series";
+import { render } from "astro:content";
+import Base from "../../../layouts/Base.astro";
+import { seriesById } from "../../../lib/series";
+import { temaStaticPaths, type TemaEntry } from "../../../lib/tema-paths";
 
-const widgetFiles = import.meta.glob<string>("../../widgets/*.html", {
-  query: "?raw",
-  import: "default",
-  eager: true,
-});
+export const getStaticPaths = temaStaticPaths;
 
-function widgetHtml(name: string) {
-  const match = Object.entries(widgetFiles).find(([path]) => {
-    const file = path.split("/").pop()?.replace(/\.html$/, "");
-    return file === name;
-  });
-  return match?.[1] ?? "";
-}
-
-export async function getStaticPaths() {
-  const temas = await getCollection("temas");
-  return temas.map((tema) => {
-    const siblings = temas
-      .filter((item) => item.data.series === tema.data.series)
-      .sort((a, b) => a.data.order - b.data.order);
-    const index = siblings.findIndex((item) => item.id === tema.id);
-    return {
-      params: { slug: tema.id },
-      props: {
-        tema,
-        prev: index > 0 ? siblings[index - 1] : undefined,
-        next: index < siblings.length - 1 ? siblings[index + 1] : undefined,
-        total: siblings.length,
-      },
-    };
-  });
+interface Props {
+  tema: TemaEntry;
+  prev?: TemaEntry;
+  next?: TemaEntry;
+  total: number;
 }
 
 const { tema, prev, next, total } = Astro.props;
@@ -41,17 +18,14 @@ const { Content } = await render(tema);
 const serie = seriesById(tema.data.series);
 const homeHref = import.meta.env.BASE_URL;
 const base = import.meta.env.BASE_URL;
-const blocks = tema.data.widgets.map((name) => ({
-  name,
-  html: widgetHtml(name),
-}));
 const mindMapSrc = `${base}mapa-mental-reino-de-dios.png`;
+const guionHref = `${base}temas/${tema.id}/guion/`;
 ---
 
 <Base title={tema.data.title} description={tema.data.description} current="tema">
   <article class="reading-shell" id="tema">
     <p class="print-masthead">
-      Leadership Living · {serie?.title} · Charla {tema.data.order} de {total}
+      Leadership Living · {serie?.title} · Recurso · Charla {tema.data.order} de {total}
     </p>
 
     <div class="reading-bar no-print">
@@ -67,19 +41,23 @@ const mindMapSrc = `${base}mapa-mental-reino-de-dios.png`;
     </div>
     <div class="gold-rule"></div>
 
+    <blockquote class="thesis">
+      <p class="thesis-label">En una frase</p>
+      <p>{tema.data.thesis}</p>
+    </blockquote>
+
+    <section class="remember">
+      <h2>Para recordar</h2>
+      <ol>
+        {tema.data.remember.map((point) => (
+          <li>{point}</li>
+        ))}
+      </ol>
+    </section>
+
     <div class="prose">
       <Content />
     </div>
-
-    {
-      blocks.map((block) =>
-        block.html ? (
-          <div class="widget-stack" set:html={block.html} />
-        ) : (
-          <p class="prose">No se encontró el material “{block.name}”.</p>
-        ),
-      )
-    }
 
     {
       tema.data.showMindMap && (
@@ -110,6 +88,10 @@ const mindMapSrc = `${base}mapa-mental-reino-de-dios.png`;
         </section>
       )
     }
+
+    <p class="view-switch no-print">
+      <a href={guionHref}>Guion para dar la charla</a>
+    </p>
 
     <nav class="series-pager no-print" aria-label="Charlas de la serie">
       {

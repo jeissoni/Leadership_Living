@@ -43,9 +43,15 @@
     font-size: 26pt;
   }
 
+  .thesis p:last-child,
   .prose {
     font-size: 11.5pt;
     line-height: 1.55;
+  }
+
+  .thesis,
+  .remember li {
+    break-inside: avoid;
   }
 
   .prose table,

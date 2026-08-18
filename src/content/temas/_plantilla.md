@@ -6,6 +6,12 @@ series: el-reino-y-el-voluntario
 order: 4
 tags: ["doctrina"]
 duration: "45 min"
+thesis: "La idea central en una frase."
+remember:
+  - "Primer punto para retener."
+  - "Segundo punto para retener."
+  - "Tercer punto para retener."
+guionLede: "Nota corta para quien da la charla."
 widgets:
   - bloque_fundamento_reino
 resources:
@@ -13,4 +19,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Juan+1&version=RVR1960"
 ---
 
-Copia este archivo, quítale el `_` del nombre. `series` puede ser `el-reino-y-el-voluntario` o `de-la-ley-a-jesus`. `order` es el número dentro de la serie. `widgets` lista archivos de `src/widgets/` sin `.html`.
+## Sustento
+
+Copia este archivo, quítale el `_` del nombre. `series` puede ser `el-reino-y-el-voluntario` o `de-la-ley-a-jesus`. `order` es el número dentro de la serie.
+
+El cuerpo de esta página es el apunte para quien vuelve a leer. Usa `>` para citas bíblicas. `widgets` lista archivos de `src/widgets/` sin `.html` y solo aparecen en `/temas/[slug]/guion/`.

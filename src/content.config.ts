@@ -14,6 +14,9 @@ const temas = defineCollection({
     order: z.number().int().positive(),
     tags: z.array(z.string()).default([]),
     duration: z.string().optional(),
+    thesis: z.string(),
+    remember: z.array(z.string()).min(3).max(5),
+    guionLede: z.string().optional(),
     widgets: z.array(z.string()).default([]),
     showMindMap: z.boolean().default(false),
     resources: z

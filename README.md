@@ -2,6 +2,11 @@
 
 Sitio estático de estudio: pantallas diseñadas en Astro, textos en Markdown, publicación en GitHub Pages y exportación a PDF desde el navegador.
 
+Cada charla tiene dos vistas:
+
+- **Recurso** (`/temas/[slug]/`): apunte corto para volver y recordar — tesis, puntos clave, sustento teológico y pasajes.
+- **Guion** (`/temas/[slug]/guion/`): material para quien da la charla — widgets con tiempos, notas pastorales y tablas.
+
 ## Desarrollo
 
 ```bash
@@ -14,14 +19,15 @@ Abre `http://localhost:4321`.
 ## Agregar un tema
 
 1. Copia [`src/content/temas/_plantilla.md`](src/content/temas/_plantilla.md) a un archivo nuevo **sin** guion bajo, por ejemplo `src/content/temas/la-oracion.md`.
-2. Completa el encabezado (`title`, `description`, `date`, `tags`, `duration`, `resources`).
-3. Escribe el guion debajo, con `##` para secciones y `>` para citas bíblicas.
+2. Completa el encabezado (`title`, `description`, `date`, `series`, `order`, `thesis`, `remember`, `duration`, `resources`).
+3. Escribe el sustento debajo, con `## Sustento` y `>` para citas bíblicas.
+4. Si hay material de facilitador, lista los archivos de `src/widgets/` en `widgets` y una nota en `guionLede`.
 
-El diseño no se toca: el texto entra en la ficha del inicio y en la vista de lectura.
+El diseño no se toca: el apunte entra en la ficha del inicio y en la vista de lectura. El guion queda en la ruta `/guion/`.
 
 ## Exportar PDF
 
-En la página de un tema, usa **Exportar PDF**. En el diálogo del navegador elige *Guardar como PDF*. El estilo de impresión replica la lectura (A4, sin navegación).
+En la página de un tema, usa **Exportar PDF**. En el diálogo del navegador elige *Guardar como PDF*. El estilo de impresión replica la lectura (A4, sin navegación). El recurso y el guion llevan un masthead distinto para no mezclarlos.
 
 ## Publicar en GitHub Pages
 

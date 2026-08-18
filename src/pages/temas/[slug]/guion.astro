@@ -1,0 +1,111 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { seriesById } from "../../../lib/series";
+import { temaStaticPaths, type TemaEntry } from "../../../lib/tema-paths";
+
+const widgetFiles = import.meta.glob<string>("../../../widgets/*.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+function widgetHtml(name: string) {
+  const match = Object.entries(widgetFiles).find(([path]) => {
+    const file = path.split("/").pop()?.replace(/\.html$/, "");
+    return file === name;
+  });
+  return match?.[1] ?? "";
+}
+
+export const getStaticPaths = temaStaticPaths;
+
+interface Props {
+  tema: TemaEntry;
+  prev?: TemaEntry;
+  next?: TemaEntry;
+  total: number;
+}
+
+const { tema, prev, next, total } = Astro.props;
+const serie = seriesById(tema.data.series);
+const base = import.meta.env.BASE_URL;
+const recursoHref = `${base}temas/${tema.id}/`;
+const blocks = tema.data.widgets.map((name) => ({
+  name,
+  html: widgetHtml(name),
+}));
+---
+
+<Base
+  title={`Guion · ${tema.data.title}`}
+  description={tema.data.description}
+  current="tema"
+>
+  <article class="reading-shell" id="tema">
+    <p class="print-masthead">
+      Leadership Living · {serie?.title} · Guion · Charla {tema.data.order} de {total}
+    </p>
+
+    <div class="reading-bar no-print">
+      <a class="back" href={recursoHref}>← Recurso</a>
+      <button class="btn" id="exportar-pdf" type="button">Exportar PDF</button>
+    </div>
+
+    <p class="reading-kicker">Guion · {serie?.title}</p>
+    <h1 class="reading-title">{tema.data.title}</h1>
+    <div class="meta">
+      <span>Charla {tema.data.order} de {total}</span>
+      {tema.data.duration && <span>· {tema.data.duration}</span>}
+    </div>
+    <div class="gold-rule"></div>
+
+    {
+      tema.data.guionLede && (
+        <p class="guion-lede">{tema.data.guionLede}</p>
+      )
+    }
+
+    {
+      blocks.map((block) =>
+        block.html ? (
+          <div class="widget-stack" set:html={block.html} />
+        ) : (
+          <p class="prose">No se encontró el material “{block.name}”.</p>
+        ),
+      )
+    }
+
+    <p class="view-switch no-print">
+      <a href={recursoHref}>Volver al recurso</a>
+    </p>
+
+    <nav class="series-pager no-print" aria-label="Guiones de la serie">
+      {
+        prev ? (
+          <a href={`${base}temas/${prev.id}/guion/`}>
+            <span>Anterior</span>
+            <strong>{prev.data.title}</strong>
+          </a>
+        ) : (
+          <span></span>
+        )
+      }
+      {
+        next ? (
+          <a class="series-pager-next" href={`${base}temas/${next.id}/guion/`}>
+            <span>Siguiente</span>
+            <strong>{next.data.title}</strong>
+          </a>
+        ) : (
+          <span></span>
+        )
+      }
+    </nav>
+  </article>
+
+  <script>
+    document.getElementById("exportar-pdf")?.addEventListener("click", () => {
+      window.print();
+    });
+  </script>
+</Base>
