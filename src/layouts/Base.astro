@@ -10,7 +10,7 @@ interface Props {
   current?: "home" | "tema";
 }
 
-const { title, description = "Biblioteca de estudio de Leadership Living.", current = "home" } = Astro.props;
+const { title, description = "Series de charlas de Leadership Living.", current = "home" } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 

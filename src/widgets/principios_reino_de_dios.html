@@ -1,0 +1,196 @@
+
+<style>
+  .pr { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .card-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .n-purple { background: #EEEDFE; color: #3C3489; }
+  .n-teal { background: #E1F5EE; color: #085041; }
+  .n-amber { background: #FAEEDA; color: #633806; }
+  .n-coral { background: #FAECE7; color: #712B13; }
+  .n-green { background: #EAF3DE; color: #27500A; }
+  .n-blue { background: #E6F1FB; color: #0C447C; }
+  .n-pink { background: #FBEAF0; color: #72243E; }
+  .n-gray { background: #F1EFE8; color: #444441; }
+  .card-info { flex: 1; }
+  .card-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+  .card-tagline { font-size: 13px; color: var(--color-text-secondary); margin-top: 2px; font-style: italic; }
+  .card-body { padding: 14px 16px; }
+  .punto { display: flex; gap: 10px; margin-bottom: 9px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d-purple{background:#7F77DD;} .d-teal{background:#1D9E75;} .d-amber{background:#BA7517;} .d-coral{background:#D85A30;} .d-green{background:#639922;} .d-blue{background:#378ADD;} .d-pink{background:#D4537E;} .d-gray{background:#888780;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+  .contraste { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .c-card { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .c-mundo { background: #F1EFE8; }
+  .c-reino { background: #E1F5EE; }
+  .c-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .lbl-m { color: #888780; } .lbl-r { color: #0F6E56; }
+  .c-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .aplicacion { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin-top: 8px; font-size: 13px; color: var(--color-text-secondary); }
+  .ap-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .ap-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 8px 0; }
+  .sub-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 10px 0 6px; }
+  .badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--border-radius-md); }
+  .b-charla1 { background: #EEEDFE; color: #534AB7; }
+  .b-charla2 { background: #E1F5EE; color: #0F6E56; }
+  .b-ambas { background: #FAEEDA; color: #854F0B; }
+</style>
+
+<div class="pr">
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-purple">1</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de inversión</div>
+        <div class="card-tagline">Lo último es primero, lo pequeño es grande</div>
+      </div>
+      <span class="badge b-ambas">Charlas 1 y 2</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-purple"></div><div class="punto-text">El Reino opera con una lógica completamente invertida respecto al mundo. El que quiere ser grande sirve. El que quiere ganar su vida la pierde. El que se humilla es exaltado. No es poesía — es la ley de operación del Reino.</div></div>
+      <div class="punto"><div class="dot d-purple"></div><div class="punto-text">Esto no es ocasional en Jesús — es sistemático. Cada vez que los discípulos razonan con lógica mundana (quién es el mayor, quién tiene más autoridad), Jesús introduce el principio de inversión.</div></div>
+      <div class="verso">Mateo 20:26-27 — "El que quiera ser grande entre vosotros será vuestro servidor, y el que quiera ser el primero entre vosotros será vuestro siervo."</div>
+      <div class="contraste">
+        <div class="c-card c-mundo"><div class="c-label lbl-m">Lógica del mundo</div><div class="c-texto">El poder sube. El grande manda. El que más tiene más vale.</div></div>
+        <div class="c-card c-reino"><div class="c-label lbl-r">Lógica del Reino</div><div class="c-texto">El poder baja. El grande sirve. El que más da más recibe.</div></div>
+      </div>
+      <div class="aplicacion"><div class="ap-label">Para el voluntario</div><div class="ap-texto">La tarea invisible, el servicio que nadie ve, el rol que nadie quiere — en el Reino esos son los lugares de mayor honor. No de menor.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-teal">2</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de semilla</div>
+        <div class="card-tagline">Lo que muere, multiplica</div>
+      </div>
+      <span class="badge b-ambas">Charlas 1 y 2</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-teal"></div><div class="punto-text">El Reino crece de forma orgánica, invisible y exponencial — como una semilla. No se puede forzar ni acelerar artificialmente. Lo que el mundo descarta como demasiado pequeño o demasiado lento es exactamente el método que Dios prefiere.</div></div>
+      <div class="punto"><div class="dot d-teal"></div><div class="punto-text">La semilla tiene que morir para multiplicarse. El principio de la cruz — dar la vida, soltar el control, renunciar al resultado inmediato — es la condición de la multiplicación en el Reino.</div></div>
+      <div class="verso">Juan 12:24 — "De cierto os digo que si el grano de trigo no cae en la tierra y muere, queda solo; pero si muere, lleva mucho fruto."</div>
+      <div class="verso">Marcos 4:26-27 — "El reino de Dios es como cuando un hombre echa semilla en la tierra; y duerme y se levanta... y la semilla brota y crece sin que él sepa cómo."</div>
+      <div class="aplicacion"><div class="ap-label">Para el voluntario</div><div class="ap-texto">El servicio que hiciste hace tres años y del que nunca viste fruto — puede estar germinando ahora en alguien que ni recuerdas. El Reino no tiene el ritmo del Instagram.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-amber">3</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de levadura</div>
+        <div class="card-tagline">Lo pequeño transforma lo grande desde adentro</div>
+      </div>
+      <span class="badge b-charla2">Charla 2</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-amber"></div><div class="punto-text">La levadura no conquista la masa desde afuera — la transforma desde adentro, de manera invisible, hasta que todo fermenta. Ese es el modelo de impacto del Reino en el mundo: no dominación, sino fermentación.</div></div>
+      <div class="punto"><div class="dot d-amber"></div><div class="punto-text">Un solo creyente en un ambiente hostil — una oficina, un barrio, una familia — funciona como levadura. No necesita tener mayoría ni poder estructural para transformar la atmósfera.</div></div>
+      <div class="verso">Mateo 13:33 — "El reino de los cielos es semejante a la levadura que tomó una mujer y escondió en tres medidas de harina, hasta que todo fue leudado."</div>
+      <div class="contraste">
+        <div class="c-card c-mundo"><div class="c-label lbl-m">Impacto mundano</div><div class="c-texto">Dominar desde arriba. Tener mayoría. Controlar la estructura.</div></div>
+        <div class="c-card c-reino"><div class="c-label lbl-r">Impacto del Reino</div><div class="c-texto">Fermentar desde adentro. Presencia transformadora. Sin necesitar mayoría.</div></div>
+      </div>
+      <div class="aplicacion"><div class="ap-label">Para la segunda charla</div><div class="ap-texto">Tú eres la levadura en tu trabajo, tu barrio, tu familia. No necesitas convertir a todos antes de que algo cambie. Solo necesitas estar presente y ser diferente.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-coral">4</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de gracia</div>
+        <div class="card-tagline">No se gana, se recibe y se derrama</div>
+      </div>
+      <span class="badge b-charla1">Charla 1</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-coral"></div><div class="punto-text">El Reino no opera por mérito sino por gracia. Nadie entra por lo que hace — entra por lo que el Rey hizo. Y nadie sirve para ganarse un lugar — sirve desde el lugar que ya recibió gratuitamente.</div></div>
+      <div class="punto"><div class="dot d-coral"></div><div class="punto-text">Este principio es la raíz del servicio saludable. El voluntario que sirve para ganarse la aprobación de Dios o de los líderes está operando con lógica de religión, no de Reino. La gracia libera para servir sin necesitar el resultado.</div></div>
+      <div class="verso">Mateo 10:8 — "De gracia recibisteis, dad de gracia."</div>
+      <div class="verso">Efesios 2:8-9 — "Por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios. No por obras, para que nadie se gloríe."</div>
+      <div class="aplicacion"><div class="ap-label">Para el voluntario</div><div class="ap-texto">¿Estás sirviendo para recibir algo — aprobación, reconocimiento, seguridad? O ¿estás sirviendo porque ya lo recibiste todo? La respuesta honesta a esa pregunta dice todo sobre desde dónde sirves.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-green">5</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de mayordomía</div>
+        <div class="card-tagline">Todo lo que tienes es administrado, no poseído</div>
+      </div>
+      <span class="badge b-charla1">Charla 1</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-green"></div><div class="punto-text">En el Reino nadie es dueño — todos son mayordomos. El tiempo, los dones, los recursos, las relaciones, la posición — todo es un encargo del Rey para ser administrado con fidelidad y rendido en cuentas.</div></div>
+      <div class="punto"><div class="dot d-green"></div><div class="punto-text">La parábola de los talentos no es sobre dinero — es sobre el principio fundamental de que lo que no se invierte se pierde. El don no usado se atrofia. El ministerio no ejercido se seca. La mayordomía exige movimiento.</div></div>
+      <div class="verso">Mateo 25:14-15 — "A uno dio cinco talentos, a otro dos, a otro uno, a cada uno según su capacidad..."</div>
+      <div class="verso">Lucas 16:10 — "El que es fiel en lo muy poco, también en lo más es fiel."</div>
+      <div class="aplicacion"><div class="ap-label">Para el voluntario</div><div class="ap-texto">Tu don no te pertenece. Tu tiempo no te pertenece. Tu área de servicio no te pertenece. Todo es un encargo. La pregunta no es '¿qué quiero hacer con esto?' sino '¿qué quiere el Rey que haga con lo que me confió?'</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-blue">6</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de encarnación</div>
+        <div class="card-tagline">El Rey entró al mundo — nosotros también</div>
+      </div>
+      <span class="badge b-charla2">Charla 2</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-blue"></div><div class="punto-text">Dios no gritó instrucciones desde el cielo — vino a vivir en medio de la realidad humana. La encarnación es el modelo definitivo de cómo el Reino llega al mundo: no desde afuera hacia adentro, sino desde adentro de la realidad misma.</div></div>
+      <div class="punto"><div class="dot d-blue"></div><div class="punto-text">Jesús no fue enviado a los que ya estaban listos — fue a los enfermos, a los marginados, a los que nadie quería. El principio de encarnación implica ir hacia lo incomodo, no esperar que lo incómodo llegue a nosotros.</div></div>
+      <div class="verso">Juan 1:14 — "Y aquel Verbo fue hecho carne, y habitó entre nosotros."</div>
+      <div class="verso">Juan 20:21 — "Como el Padre me envió, así también yo os envío."</div>
+      <div class="contraste">
+        <div class="c-card c-mundo"><div class="c-label lbl-m">Misión sin encarnación</div><div class="c-texto">Gritar desde el edificio. Esperar que vengan. Evangelizar sin relacionarse.</div></div>
+        <div class="c-card c-reino"><div class="c-label lbl-r">Misión encarnacional</div><div class="c-texto">Entrar al territorio del otro. Vivir entre ellos. Ser presencia antes que proclama.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-pink">7</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de reconciliación</div>
+        <div class="card-tagline">El Reino restaura lo que el pecado rompió</div>
+      </div>
+      <span class="badge b-ambas">Charlas 1 y 2</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-pink"></div><div class="punto-text">El Reino no solo perdona — restaura. Dios reconcilia personas consigo mismo, personas entre sí, y la humanidad con la creación. Donde llega el Reino, las relaciones rotas se sanan, los enemigos se reconcilian, lo que estaba fragmentado se reintegra.</div></div>
+      <div class="punto"><div class="dot d-pink"></div><div class="punto-text">Todo ministerio que no tiene una dimensión de reconciliación está operando de forma incompleta. El equipo de voluntarios que no puede resolver sus propios conflictos no puede llevar reconciliación al mundo.</div></div>
+      <div class="verso">2 Corintios 5:18-19 — "Todo esto proviene de Dios, quien nos reconcilió consigo mismo por Cristo, y nos dio el ministerio de la reconciliación."</div>
+      <div class="aplicacion"><div class="ap-label">Para el voluntario</div><div class="ap-texto">¿Hay alguna relación rota en tu equipo de servicio que el Rey quiere restaurar a través de ti? La reconciliación que predicas tiene que ocurrir primero donde sirves.</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="num n-gray">8</div>
+      <div class="card-info">
+        <div class="card-titulo">Principio de multiplicación</div>
+        <div class="card-tagline">El Reino se propaga haciendo discípulos, no audiencias</div>
+      </div>
+      <span class="badge b-charla2">Charla 3</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-gray"></div><div class="punto-text">El modelo de Jesús no fue dar conferencias multitudinarias — fue invertir profundamente en doce personas que a su vez harían lo mismo con otros. La multiplicación del Reino depende del discipulado intencional, no del crecimiento numérico de audiencias.</div></div>
+      <div class="punto"><div class="dot d-gray"></div><div class="punto-text">Un voluntario que ha sido equipado y no equipa a nadie está rompiendo la cadena de multiplicación. Efesios 4 lo dice explícitamente: los ministerios existen para equipar a los santos — el resultado esperado es multiplicación, no concentración.</div></div>
+      <div class="verso">Mateo 28:19 — "Id y haced discípulos a todas las naciones..."</div>
+      <div class="verso">2 Timoteo 2:2 — "Lo que has oído de mí... encárgalo a hombres fieles que sean idóneos para enseñar también a otros."</div>
+      <div class="aplicacion"><div class="ap-label">Para la tercera charla</div><div class="ap-texto">¿A quién estás equipando tú? No solo recibir entrenamiento — dar entrenamiento. La multiplicación del Reino pasa por ti hacia alguien más.</div></div>
+    </div>
+  </div>
+
+</div>

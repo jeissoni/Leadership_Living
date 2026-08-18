@@ -1,0 +1,309 @@
+
+<style>
+  .vg { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .card-header { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b1{background:#FAECE7;color:#993C1D;}
+  .b2{background:#EEEDFE;color:#534AB7;}
+  .b3{background:#E1F5EE;color:#0F6E56;}
+  .b4{background:#FAEEDA;color:#854F0B;}
+  .b5{background:#EAF3DE;color:#3B6D11;}
+  .card-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .dc{background:#D85A30;} .dp{background:#7F77DD;} .dt{background:#1D9E75;} .da{background:#BA7517;} .dg{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .distincion { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0; border-radius: var(--border-radius-lg); overflow: hidden; border: 0.5px solid var(--color-border-tertiary); margin: 12px 0; }
+  .dis-header { padding: 8px 14px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .dh1 { background: #FAECE7; color: #993C1D; border-right: 0.5px solid var(--color-border-tertiary); }
+  .dh2 { background: #EEEDFE; color: #534AB7; }
+  .dis-row { display: contents; }
+  .dis-cel { padding: 10px 14px; font-size: 13px; color: var(--color-text-primary); line-height: 1.5; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .dis-cel:first-child { border-right: 0.5px solid var(--color-border-tertiary); }
+  .dis-cel:last-child { border-right: none; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .mascaras { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin: 10px 0; }
+  .mk-card { border-radius: var(--border-radius-md); padding: 11px 12px; border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
+  .mk-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .mk-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .mk-texto { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+
+  .jesus-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .jg-card { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); overflow: hidden; }
+  .jg-header { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .jg-num { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; flex-shrink: 0; }
+  .jn1{background:#E1F5EE;color:#085041;} .jn2{background:#EEEDFE;color:#3C3489;} .jn3{background:#FAEEDA;color:#633806;} .jn4{background:#EAF3DE;color:#27500A;} .jn5{background:#FAECE7;color:#712B13;}
+  .jg-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .jg-body { padding: 10px 12px; }
+  .jg-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.7; margin-bottom: 6px; }
+  .jg-verso { font-size: 12px; color: var(--color-text-secondary); font-style: italic; padding-left: 8px; border-left: 2px solid var(--color-border-secondary); }
+
+  .cruz { border-radius: var(--border-radius-lg); background: #FAECE7; border: 1px solid #F5C4B3; padding: 16px 18px; margin: 12px 0; }
+  .cruz-titulo { font-size: 15px; font-weight: 500; color: #712B13; margin-bottom: 8px; }
+  .cruz-texto { font-size: 14px; color: #4A1B0C; line-height: 1.8; }
+
+  .aplicacion { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .ap-card { border-radius: var(--border-radius-md); padding: 12px 14px; border: 0.5px solid var(--color-border-tertiary); }
+  .ap-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ap-preg { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; font-style: italic; }
+  .ap-texto { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+
+  .cierre { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="vg">
+
+  <!-- PARTE 1: LA VERGÜENZA -->
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b1">Parte 1</span>
+      <span class="card-titulo">¿Qué es la vergüenza? — La herida más profunda</span>
+    </div>
+    <div class="card-body">
+      <div class="distincion">
+        <div class="dis-header dh1">Culpa — sobre el acto</div>
+        <div class="dis-header dh2">Vergüenza — sobre la identidad</div>
+        <div class="dis-cel">"Hice algo malo"</div>
+        <div class="dis-cel">"Yo soy algo malo"</div>
+        <div class="dis-cel">Se resuelve con perdón</div>
+        <div class="dis-cel">Se resuelve con ser visto y aceptado</div>
+        <div class="dis-cel">Señala hacia afuera — el acto</div>
+        <div class="dis-cel">Señala hacia adentro — la persona</div>
+        <div class="dis-cel">Produce arrepentimiento</div>
+        <div class="dis-cel">Produce escondite y máscaras</div>
+        <div class="dis-cel">"Cometí un error"</div>
+        <div class="dis-cel">"Soy un error"</div>
+      </div>
+      <div class="infobox ib-coral">
+        <div class="ib-l">Por qué esto importa pastoralmente</div>
+        <div class="ib-t">Muchas personas han recibido la respuesta a la culpa — el perdón de sus pecados — pero siguen viviendo con vergüenza sin resolver. Saben que están perdonados pero no se sienten dignos. Conocen la doctrina pero no la experimentan. Esa brecha casi siempre es vergüenza que no ha sido sanada.</div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="punto"><div class="dot dc"></div><div class="punto-text"><strong>La vergüenza en el jardín.</strong> Génesis 2:25 dice que estaban desnudos y no se avergonzaban. La desnudez no era el problema — era el estado natural de la intimidad perfecta. Ser completamente visto y completamente aceptado. Después de la caída lo primero que sintieron fue vergüenza — no ante lo que hicieron, sino ante lo que eran. "Conocieron que estaban desnudos." Su identidad quedó expuesta y les produjo terror.</div></div>
+      <div class="punto"><div class="dot dc"></div><div class="punto-text"><strong>La vergüenza opera en el interior.</strong> Es una voz que dice: si te vieran completamente — todo lo que eres, todo lo que has hecho, todo lo que piensas — te rechazarían. Por eso la respuesta natural a la vergüenza es siempre la misma: ocultarse. Hacer que la parte vulnerable no sea visible.</div></div>
+      <div class="verso">Génesis 2:25 — "Y estaban ambos desnudos, Adán y su mujer, y no se avergonzaban."</div>
+      <div class="verso">Génesis 3:7 — "Conocieron que estaban desnudos; entonces cosieron hojas de higuera y se hicieron delantales."</div>
+    </div>
+  </div>
+
+  <!-- PARTE 2: CUBRIRSE -->
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b2">Parte 2</span>
+      <span class="card-titulo">Cubrirse — Las máscaras que usamos</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Las hojas de higuera de Adán fueron el primer intento humano de manejar la vergüenza por cuenta propia. Cubrirse es la respuesta universal a la vergüenza — en todas las culturas, en todos los tiempos, en todas las personas. Solo cambia el material con el que se hacen las hojas.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">El problema con cubrirse es doble: las hojas no eran suficientes — Dios tuvo que hacer túnicas de piel. Y cubrirse impide la intimidad real — no puedes ser completamente conocido y completamente amado si estás cubierto. Las máscaras protegen del rechazo pero también bloquean la conexión.</div></div>
+
+      <div class="mascaras">
+        <div class="mk-card">
+          <div class="mk-label">Máscara 1</div>
+          <div class="mk-titulo">El desempeño</div>
+          <div class="mk-texto">Si logro suficiente, si sirvo suficiente, si soy suficientemente bueno — nadie verá lo que hay debajo.</div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-label">Máscara 2</div>
+          <div class="mk-titulo">El perfeccionismo</div>
+          <div class="mk-texto">Si no cometo errores visibles, nadie tendrá razón para rechazarme. El perfeccionismo es vergüenza disfrazada de estándar alto.</div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-label">Máscara 3</div>
+          <div class="mk-titulo">La religiosidad</div>
+          <div class="mk-texto">Si aparezco lo suficientemente devoto, nadie sabrá lo que realmente ocurre adentro. El fariseísmo nació de la vergüenza.</div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-label">Máscara 4</div>
+          <div class="mk-titulo">La comparación</div>
+          <div class="mk-texto">"No soy tan malo como..." — señalar hacia otros para que la atención no llegue hasta mí.</div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-label">Máscara 5</div>
+          <div class="mk-titulo">La distancia</div>
+          <div class="mk-texto">No entrar en relaciones profundas. Mantener a todos a una distancia segura donde no puedan ver demasiado.</div>
+        </div>
+        <div class="mk-card">
+          <div class="mk-label">Máscara 6</div>
+          <div class="mk-titulo">El humor</div>
+          <div class="mk-texto">Hacer reír antes de que alguien tenga oportunidad de ver algo real. La risa como escudo permanente.</div>
+        </div>
+      </div>
+
+      <div class="infobox ib-purple">
+        <div class="ib-l">El costo de las máscaras</div>
+        <div class="ib-t">Las máscaras funcionan — protegen del rechazo. Pero tienen un precio enorme: impiden la conexión real. No puedes ser profundamente amado siendo una versión editada de ti mismo. La intimidad — con Dios y con otros — requiere ser visto sin máscara. Por eso la vergüenza no resuelta destruye las relaciones desde adentro.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTE 3: JESÚS Y LA VERGÜENZA -->
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b3">Parte 3</span>
+      <span class="card-titulo">Jesús y la vergüenza — No vino solo a perdonar</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dt"></div><div class="punto-text">Jesús vino a resolver tanto la culpa como la vergüenza. La culpa se resuelve en el perdón — sus pecados son borrados. La vergüenza se resuelve en algo diferente: ser completamente visto y completamente amado al mismo tiempo. Eso es lo que Jesús hace en cada encuentro del evangelio.</div></div>
+
+      <div class="jesus-grid">
+
+        <div class="jg-card">
+          <div class="jg-header">
+            <div class="jg-num jn1">1</div>
+            <div class="jg-titulo">La mujer samaritana — vista completamente, amada completamente</div>
+          </div>
+          <div class="jg-body">
+            <div class="jg-texto">Juan 4 — Jesús le dice todo lo que ha hecho. Cinco maridos, el actual no es su esposo. La expone completamente — y no la rechaza. La invita. Le ofrece agua viva. La vergüenza opera con la lógica de que "si me ven completamente, me rechazarán." Jesús la ve completamente y hace exactamente lo contrario. Eso es lo que sana la vergüenza — no el escondite sino el ser visto y no rechazado.</div>
+            <div class="jg-verso">Juan 4:18 — "Porque cinco maridos has tenido, y el que ahora tienes no es tu marido; esto has dicho con verdad."</div>
+          </div>
+        </div>
+
+        <div class="jg-card">
+          <div class="jg-header">
+            <div class="jg-num jn2">2</div>
+            <div class="jg-titulo">La mujer sorprendida en adulterio — sin condenación</div>
+          </div>
+          <div class="jg-body">
+            <div class="jg-texto">Juan 8 — la traen desnuda en su vergüenza ante todos. El máximo nivel de exposición pública. Jesús se agacha, escribe en el tierra, hace que los acusadores se vayan uno por uno. Cuando todos se han ido pregunta: "¿Nadie te condenó?" "Ninguno, Señor." "Ni yo te condeno." Primero la dignidad — luego la corrección. Nunca al revés. Jesús devuelve la dignidad a los que la vergüenza se la ha quitado.</div>
+            <div class="jg-verso">Juan 8:10-11 — "¿Dónde están los que te acusaban? ¿Ninguno te condenó? Ni yo te condeno; vete, y no peques más."</div>
+          </div>
+        </div>
+
+        <div class="jg-card">
+          <div class="jg-header">
+            <div class="jg-num jn3">3</div>
+            <div class="jg-titulo">Zaqueo — buscado antes de ser bueno</div>
+          </div>
+          <div class="jg-body">
+            <div class="jg-texto">Lucas 19 — Zaqueo era el hombre más despreciado de Jericó. Traidor, ladrón, colaborador del enemigo. Subió a un árbol — distancia segura, máscara de curiosidad, nadie lo ve de cerca. Y Jesús lo llama por su nombre y dice "hoy es necesario que me quede en tu casa." No "si cambias te visito." No "cuando te arregles te recibo." Te visito ahora, como estás. La aceptación precede a la transformación — nunca al revés.</div>
+            <div class="jg-verso">Lucas 19:5 — "Zaqueo, date prisa, desciende, porque hoy es necesario que pose yo en tu casa."</div>
+          </div>
+        </div>
+
+        <div class="jg-card">
+          <div class="jg-header">
+            <div class="jg-num jn4">4</div>
+            <div class="jg-titulo">Pedro después de la negación — restaurado en el mismo lugar</div>
+          </div>
+          <div class="jg-body">
+            <div class="jg-texto">Juan 21 — Pedro había negado a Jesús tres veces alrededor de una hoguera. Su vergüenza era tan profunda que volvió a pescar — regresó a su vida anterior. Jesús lo encuentra, hace una hoguera — el mismo elemento que evocaba su fracaso — y le pregunta tres veces: "¿Me amas?" Una por cada negación. No para restregar el dolor — sino para reemplazar cada momento de vergüenza con una afirmación de amor y misión. Jesús sana la vergüenza en el mismo lugar donde ocurrió.</div>
+            <div class="jg-verso">Juan 21:17 — "Le dijo la tercera vez: Simón, hijo de Jonás, ¿me amas? Y le dijo: Señor, tú sabes todas las cosas; tú sabes que te amo. Jesús le dijo: Apacienta mis ovejas."</div>
+          </div>
+        </div>
+
+        <div class="jg-card">
+          <div class="jg-header">
+            <div class="jg-num jn5">5</div>
+            <div class="jg-titulo">La cruz — Jesús cargó la vergüenza, no solo la culpa</div>
+          </div>
+          <div class="jg-body">
+            <div class="jg-texto">Hebreos 12:2 dice que Jesús "soportó la cruz, menospreciando el oprobio." Oprobio es vergüenza pública — deshonra, humillación. La crucifixión era diseñada para ser la muerte más vergonzosa posible: desnudo, expuesto, maldecido, rechazado. Jesús no solo cargó el peso de los pecados — cargó el peso de la vergüenza. En la cruz no hubo solo expiación de culpa — hubo absorción de vergüenza. Él fue expuesto completamente para que nosotros pudiéramos ser cubiertos completamente.</div>
+            <div class="jg-verso">Hebreos 12:2 — "El cual por el gozo puesto delante de él sufrió la cruz, menospreciando el oprobio."</div>
+            <div class="jg-verso">Isaías 53:3 — "Despreciado y desechado entre los hombres, varón de dolores, experimentado en quebranto."</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cruz">
+        <div class="cruz-titulo">Lo que ocurrió en la cruz respecto a la vergüenza</div>
+        <div class="cruz-texto">
+          Adán y Eva se cubrieron porque estaban desnudos y sintieron vergüenza.<br>
+          Jesús fue desnudado en la cruz — su vergüenza fue pública, total, deliberada.<br><br>
+          Ellos cosieron hojas de higuera — cobertura insuficiente.<br>
+          Dios hizo túnicas de piel en el Edén — señalando que algo tendría que morir para cubrir.<br>
+          En la cruz Jesús fue expuesto completamente para que nosotros fuéramos cubiertos completamente.<br><br>
+          La vergüenza de Adán buscó esconderse.<br>
+          La vergüenza de Jesús fue hacia adelante — "menospreciando el oprobio" — para absorberla.<br><br>
+          <em>Él tomó nuestra desnudez para darnos su justicia. Tomó nuestra vergüenza para darnos su dignidad.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PARTE 4: APLICACIÓN -->
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b4">Parte 4</span>
+      <span class="card-titulo">Cómo se aplica en mi vida — preguntas y pasos</span>
+    </div>
+    <div class="card-body">
+      <div class="aplicacion">
+        <div class="ap-card">
+          <div class="ap-label" style="color:#993C1D;">Pregunta 1</div>
+          <div class="ap-preg">"¿Cuál es mi máscara principal?"</div>
+          <div class="ap-texto">¿Con qué me cubro para que no me vean completamente? ¿Desempeño, perfeccionismo, religiosidad, humor, distancia?</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#993C1D;">Pregunta 2</div>
+          <div class="ap-preg">"¿Dónde opera la voz de vergüenza?"</div>
+          <div class="ap-texto">¿En qué área de tu vida escuchas "si te vieran completamente, te rechazarían"? ¿En familia, en ministerio, en relaciones íntimas?</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#0F6E56;">Pregunta 3</div>
+          <div class="ap-preg">"¿He recibido perdón pero no dignidad?"</div>
+          <div class="ap-texto">¿Sabes que eres perdonado pero no te sientes digno? Esa brecha es vergüenza sin sanar. El evangelio responde a las dos cosas.</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#0F6E56;">Pregunta 4</div>
+          <div class="ap-preg">"¿Hay alguien que me conoce sin máscara?"</div>
+          <div class="ap-texto">La vergüenza se sana en comunidad — siendo visto completamente y no rechazado. ¿Hay una persona así en tu vida?</div>
+        </div>
+      </div>
+
+      <div class="infobox ib-amber">
+        <div class="ib-l">Los tres pasos de la sanidad de vergüenza</div>
+        <div class="ib-t">
+          <strong>Paso 1 — Nombrarla.</strong> La vergüenza prospera en el silencio y en la oscuridad. El primer paso para sanarla es decirla en voz alta — ante Dios primero, ante alguien de confianza después. Lo que se nombra pierde poder.<br><br>
+          <strong>Paso 2 — Recibir lo que Jesús ofrece.</strong> No solo perdón por lo que hiciste — dignidad por lo que eres. Eres imagen de Dios, adoptado como hijo, cubierto con la justicia de Cristo. Esa no es una frase teológica — es la respuesta directa a la voz que dice "no eres suficiente."<br><br>
+          <strong>Paso 3 — Ser conocido.</strong> La vergüenza se sana en relación. Necesitas al menos una persona que te conozca sin máscara y te ame igual. Eso no reemplaza a Dios — lo refleja. Juan dijo que no podemos amar a Dios a quien no vemos si no amamos al hermano a quien sí vemos. Lo mismo aplica para la vergüenza.
+        </div>
+      </div>
+
+      <div class="infobox ib-green">
+        <div class="ib-l">Para el voluntario específicamente</div>
+        <div class="ib-t">Muchos voluntarios sirven desde la vergüenza sin saberlo — sirven para probar que son suficientes, para ganarse un lugar, para callar la voz interna que dice que no merecen estar ahí. El servicio desde la vergüenza se agota porque nunca hay suficiente desempeño para silenciar esa voz. El servicio desde la identidad restaurada fluye — porque ya no necesitas probar nada.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">El mensaje completo — vergüenza, cubrirse y Jesús</div>
+    <div class="cierre-texto">
+      <strong>La vergüenza</strong> dice: soy un error. Si me ven completamente, me rechazarán. Su respuesta natural es ocultarse y cubrirse.<br><br>
+      <strong>Cubrirse</strong> protege del rechazo pero bloquea la intimidad. Las hojas de higuera nunca fueron suficientes — Génesis 3 lo muestra desde el principio.<br><br>
+      <strong>Jesús</strong> responde a la vergüenza de una forma que ninguna religión puede imitar: siendo visto completamente en la cruz — desnudo, expuesto, rechazado — para que nosotros pudiéramos ser vistos completamente y aceptados completamente.<br><br>
+      La respuesta al "si me vieran completamente, me rechazarían" es la vida de Jesús entera: te veo completamente. Y no me voy.<br><br>
+      <em>"No hay ahora ninguna condenación para los que están en Cristo Jesús." — Romanos 8:1</em><br>
+      <em>No hay condenación. Ni tampoco vergüenza.</em>
+    </div>
+  </div>
+
+</div>

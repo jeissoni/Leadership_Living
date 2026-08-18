@@ -1,0 +1,316 @@
+
+<style>
+  .e { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+
+  .principio { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .pr-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .pr-num { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .pn1{background:#FAEEDA;color:#633806;} .pn2{background:#EEEDFE;color:#3C3489;} .pn3{background:#E1F5EE;color:#085041;}
+  .pr-info { flex: 1; }
+  .pr-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+  .pr-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; margin-top: 2px; }
+  .pr-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 9px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#7F77DD;} .d3{background:#1D9E75;} .d4{background:#D85A30;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .cumplimiento { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .cu-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cu-badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .cb1{background:#FAEEDA;color:#854F0B;} .cb2{background:#FAECE7;color:#993C1D;} .cb3{background:#EEEDFE;color:#534AB7;} .cb4{background:#E1F5EE;color:#0F6E56;} .cb5{background:#EAF3DE;color:#3B6D11;} .cb6{background:#F1EFE8;color:#444441;}
+  .cu-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .cu-body { padding: 14px 16px; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 11px 14px; margin: 8px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .pregunta-box { border-radius: var(--border-radius-md); padding: 11px 14px; margin: 8px 0; border: 1.5px solid #AFA9EC; background: #EEEDFE; }
+  .pq-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .pq-texto { font-size: 14px; color: #26215C; font-style: italic; line-height: 1.6; margin-bottom: 4px; }
+  .pq-nota { font-size: 12px; color: #534AB7; line-height: 1.5; }
+
+  .aplicacion-box { border-radius: var(--border-radius-md); padding: 11px 14px; margin: 8px 0; border: 1.5px solid #9FE1CB; background: #E1F5EE; }
+  .ap-label { font-size: 11px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ap-texto { font-size: 14px; color: #04342C; line-height: 1.7; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 11px 14px; margin: 8px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .tension { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 8px 0; }
+  .tc { border-radius: var(--border-radius-md); padding: 9px 11px; }
+  .tc1 { background: #F1EFE8; }
+  .tc2 { background: #E1F5EE; }
+  .tc-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .tl1 { color: #888780; } .tl2 { color: #0F6E56; }
+  .tc-t { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+
+  .estructura { border-radius: var(--border-radius-lg); background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); padding: 14px 16px; margin-bottom: 1.25rem; }
+  .est-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 10px; }
+  .est-fila { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+  .est-tiempo { font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: var(--border-radius-md); white-space: nowrap; flex-shrink: 0; }
+  .et1{background:#FAEEDA;color:#854F0B;} .et2{background:#EEEDFE;color:#534AB7;} .et3{background:#E1F5EE;color:#0F6E56;} .et4{background:#FAECE7;color:#993C1D;}
+  .est-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+
+  .nota-final { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1.5px solid #AFA9EC; padding: 16px 18px; margin-top: 1rem; }
+  .nf-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .nf-texto { font-size: 14px; color: #26215C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 8px 12px; margin: 6px 0; font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+</style>
+
+<div class="e">
+
+  <!-- LOS TRES PRINCIPIOS -->
+  <div class="principio">
+    <div class="pr-header">
+      <div class="pr-num pn1">1</div>
+      <div class="pr-info">
+        <div class="pr-titulo">No expliques — pregunta primero</div>
+        <div class="pr-tagline">Deja que el grupo descubra la conexión antes de que tú la nombres</div>
+      </div>
+    </div>
+    <div class="pr-body">
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">La semana pasada sembraste imágenes: el maná, la vara, el propiciatorio, el velo. El grupo las tiene en la mente. Tu trabajo en la charla 3 no es explicarlas — es hacer preguntas que los lleven a conectarlas solos. Cuando una persona descubre la conexión ella misma, la recuerda toda la vida. Cuando tú se la explicas, la olvida en tres días.</div></div>
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">El método es simple: antes de revelar cada cumplimiento, lanzas una pregunta al grupo. Das 30 segundos. Escuchas una o dos respuestas. Y luego confirmas — o corriges con gracia. El grupo se siente parte del descubrimiento, no receptor pasivo de información.</div></div>
+      <div class="infobox ib-amber">
+        <div class="ib-l">La diferencia en la sala</div>
+        <div class="ib-t">Una charla expositiva tiene personas sentadas escuchando. Una charla con preguntas tiene personas inclinadas hacia adelante pensando. La postura física cambia. La energía del salón cambia. Y la retención sube dramáticamente.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="principio">
+    <div class="pr-header">
+      <div class="pr-num pn2">2</div>
+      <div class="pr-info">
+        <div class="pr-titulo">Cada cumplimiento tiene un equivalente en la vida real</div>
+        <div class="pr-tagline">No solo "Jesús cumplió X" — sino "eso cambia cómo vives Y"</div>
+      </div>
+    </div>
+    <div class="pr-body">
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">El error de muchas charlas sobre el cumplimiento es quedarse en el nivel teológico: "Jesús es el cordero, Jesús es el sumo sacerdote, Jesús es el pan de vida." Todo correcto. Pero el grupo sale pensando "qué interesante" en lugar de "qué diferente voy a vivir esta semana."</div></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Para cada cumplimiento hay que bajar un nivel más: ¿qué cambia en mi vida concreta si esto es verdad? No en abstracto — con especificidad. Si Jesús es el sacrificio definitivo que no necesita repetirse, ¿qué cambia en la forma en que me relaciono con mi culpa esta semana?</div></div>
+      <div class="tension">
+        <div class="tc tc1"><div class="tc-l tl1">Charla solo teológica</div><div class="tc-t">"Jesús es el pan de vida." — El grupo asiente. Lo sabe. No cambia nada.</div></div>
+        <div class="tc tc2"><div class="tc-l tl2">Charla que aterriza</div><div class="tc-t">"Si Jesús es tu sustento real — ¿qué ansiedad específica puedes soltar esta semana?"</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="principio">
+    <div class="pr-header">
+      <div class="pr-num pn3">3</div>
+      <div class="pr-info">
+        <div class="pr-titulo">Un momento de silencio pesa más que diez versículos</div>
+        <div class="pr-tagline">El velo rasgado no necesita explicación — necesita pausa</div>
+      </div>
+    </div>
+    <div class="pr-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Hay momentos en la charla 3 donde lo más poderoso que puedes hacer es callarte. Especialmente cuando describes el velo rasgado. La imagen es tan potente que cualquier explicación la debilita. Di la frase. Para. Deja que aterrice. El silencio hace trabajo que las palabras no pueden hacer.</div></div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Identifica de antemano los dos o tres momentos cumbre de la charla — y planea el silencio como si fuera parte del guión. No es incomodidad — es espacio para que el Espíritu opere.</div></div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ESTRUCTURA CON TIEMPOS -->
+  <div class="estructura">
+    <div class="est-label">Estructura sugerida — 45 minutos con preguntas integradas</div>
+    <div class="est-fila">
+      <span class="est-tiempo et1">0–5 min</span>
+      <span class="est-texto"><strong>Retomar las preguntas abiertas.</strong> "La semana pasada terminamos con cinco preguntas sin responder. ¿Alguien las recuerda?" — Dejar que el grupo las diga. No las repitas tú. Escucha. Eso activa lo que sembraste.</span>
+    </div>
+    <div class="est-fila">
+      <span class="est-tiempo et2">5–30 min</span>
+      <span class="est-texto"><strong>Los cumplimientos — con preguntas y aplicación.</strong> No recorrer los seis en fila. Elegir tres o cuatro que más conecten con tu grupo. Cada uno tiene su pregunta de descubrimiento, su versículo y su aplicación concreta. Ver bloques abajo.</span>
+    </div>
+    <div class="est-fila">
+      <span class="est-tiempo et3">30–38 min</span>
+      <span class="est-texto"><strong>El velo rasgado — el momento cumbre.</strong> Este bloque va solo, separado de los demás. No es un cumplimiento más en la lista — es el momento de mayor impacto emocional y espiritual. Narrar. Silencio. Aplicación personal.</span>
+    </div>
+    <div class="est-fila">
+      <span class="est-tiempo et4">38–45 min</span>
+      <span class="est-texto"><strong>Cierre pastoral y oración.</strong> Una sola pregunta para llevar. Oración corta y honesta. Sin resumir todo lo que dijiste — eso lo debilita. Solo la pregunta y la oración.</span>
+    </div>
+  </div>
+
+  <!-- CADA CUMPLIMIENTO CON PREGUNTA Y APLICACIÓN -->
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb1">Cumplimiento 1</span>
+      <span class="cu-titulo">Los sacrificios repetidos → El sacrificio definitivo</span>
+    </div>
+    <div class="cu-body">
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta de descubrimiento — antes de revelar</div>
+        <div class="pq-texto">"¿Por qué creen que los sacrificios tenían que repetirse cada año? ¿Qué dice eso sobre si funcionaban completamente?"</div>
+        <div class="pq-nota">Escuchar 2 respuestas. El grupo llegará solo a: "porque no eran definitivos." Entonces tú confirmas y abres la solución.</div>
+      </div>
+      <div class="narrativa">
+        <div class="nar-label">Cómo presentarlo — no leer el versículo primero</div>
+        <div class="nar-texto">"Juan el Bautista ve a Jesús acercarse al Jordán y dice algo que ningún sacerdote levítico podría decir: 'He aquí el Cordero de Dios que quita el pecado del mundo.' No cubre. No aplaza. Quita. Una sola vez. Para siempre. Sin repetición."</div>
+      </div>
+      <div class="aplicacion-box">
+        <div class="ap-label">¿Cómo cambia esto tu vida hoy?</div>
+        <div class="ap-texto">Hay personas que viven en el Día de la Expiación perpetuo — cada vez que fallan sienten que tienen que volver a empezar desde cero, que el marcador se reinicia, que Dios está esperando la próxima confesión para volver a aceptarlos.<br><br>
+        Si el sacrificio de Jesús fue definitivo — no necesitas repetir el proceso. Lo que fue pagado una vez, fue pagado para siempre. La pregunta práctica: ¿hay algún pecado del pasado que sigues pagando tú aunque ya fue pagado por él?</div>
+      </div>
+      <div class="verso">Juan 1:29 — "He aquí el Cordero de Dios que quita el pecado del mundo."</div>
+      <div class="verso">Hebreos 9:12 — "Por su propia sangre entró una vez para siempre al Lugar Santísimo, habiendo obtenido eterna redención."</div>
+    </div>
+  </div>
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb2">Cumplimiento 2</span>
+      <span class="cu-titulo">El sacerdote que moría → El sacerdote que siempre vive</span>
+    </div>
+    <div class="cu-body">
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta de descubrimiento</div>
+        <div class="pq-texto">"Si el sacerdote era el mediador entre ustedes y Dios — ¿qué pasaba con su relación con Dios cuando el sacerdote moría?"</div>
+        <div class="pq-nota">El grupo descubrirá: quedaban sin mediador, o con uno nuevo que no los conocía. Eso abre la necesidad de un mediador permanente.</div>
+      </div>
+      <div class="narrativa">
+        <div class="nar-label">Cómo presentarlo</div>
+        <div class="nar-texto">"Hebreos 7:25 dice algo extraordinario sobre Jesús: 'siempre vive para interceder por ellos.' No 'vivió para interceder.' No 'intercedió una vez.' Siempre vive. Ahora mismo, en este momento, hay alguien ante el Padre hablando de ti por nombre."</div>
+      </div>
+      <div class="aplicacion-box">
+        <div class="ap-label">¿Cómo cambia esto tu vida hoy?</div>
+        <div class="ap-texto">Muchos creyentes oran como si tuvieran que convencer a Dios de que se fije en ellos — como si hubiera que competir por su atención, o llegar en el momento correcto, o usar las palabras correctas.<br><br>
+        Pero si Jesús "siempre vive para interceder" — eso significa que cuando tú llegas a orar, alguien ya estaba hablando de ti. No llegas a una sala vacía. Llegas a una conversación que ya estaba ocurriendo. ¿Cómo cambia eso la forma en que te acercas a Dios esta semana?</div>
+      </div>
+      <div class="verso">Hebreos 7:25 — "Siempre vive para interceder por ellos."</div>
+    </div>
+  </div>
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb3">Cumplimiento 3</span>
+      <span class="cu-titulo">El maná del desierto → El pan de vida eterno</span>
+    </div>
+    <div class="cu-body">
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta de descubrimiento</div>
+        <div class="pq-texto">"El maná sostuvo al pueblo por 40 años. Pero Jesús dice algo sobre ese maná en Juan 6:49. ¿Alguien sabe qué dice? ¿Cuál era el límite del maná?"</div>
+        <div class="pq-nota">Jesús dice: "Vuestros padres comieron el maná en el desierto y murieron." El maná sostenía físicamente pero no resolvía la muerte. Eso abre perfectamente la oferta de Jesús.</div>
+      </div>
+      <div class="narrativa">
+        <div class="nar-label">Cómo presentarlo</div>
+        <div class="nar-texto">"En Juan 6 Jesús tiene una conversación con una multitud que lo sigue porque los alimentó con pan físico. Y él les dice algo que los incomoda: 'No trabajéis por la comida que perece, sino por la comida que permanece para vida eterna.' Y luego dice la frase que los escandalizó: 'Yo soy el pan de vida.'"</div>
+      </div>
+      <div class="aplicacion-box">
+        <div class="ap-label">¿Cómo cambia esto tu vida hoy?</div>
+        <div class="ap-texto">El maná tenía que recogerse cada día — no podía acumularse. Eso era deliberado. Dios diseñó la dependencia diaria como la postura normal de su pueblo.<br><br>
+        La pregunta práctica no es si crees que Jesús es el pan de vida — es si lo estás comiendo hoy. ¿Hay algo específico en tu vida esta semana donde estás intentando sostenerte con tus propias fuerzas en lugar de alimentarte de él?</div>
+      </div>
+      <div class="verso">Juan 6:35 — "Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre."</div>
+      <div class="verso">Juan 6:49-50 — "Vuestros padres comieron el maná en el desierto y murieron. Este es el pan que desciende del cielo, para que el que de él coma, no muera."</div>
+    </div>
+  </div>
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb4">Cumplimiento 4</span>
+      <span class="cu-titulo">La vara que floreció → El que resucitó</span>
+    </div>
+    <div class="cu-body">
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta de descubrimiento</div>
+        <div class="pq-texto">"La vara de Aarón era seca — un palo muerto. Y floreció de la noche a la mañana. ¿Qué tenían en común ese evento y algo que ocurrió en Jerusalén siglos después?"</div>
+        <div class="pq-nota">El grupo conectará: lo muerto que da vida. Muerte y resurrección. Cuando lo nombren, confirma y amplía.</div>
+      </div>
+      <div class="aplicacion-box">
+        <div class="ap-label">¿Cómo cambia esto tu vida hoy?</div>
+        <div class="ap-texto">La vara floreció para confirmar autoridad legítima — frente a los que la cuestionaban. La resurrección de Jesús hace lo mismo: es la confirmación definitiva de quién es él. No una opinión, no una creencia — un hecho histórico que cambia el peso de todo lo que él dijo.<br><br>
+        Pregunta práctica: ¿Hay alguna enseñanza de Jesús que sabes pero que no has obedecido todavía? Si él resucitó — su autoridad es real. Y sus palabras no son sugerencias.</div>
+      </div>
+      <div class="verso">Romanos 1:4 — "Declarado Hijo de Dios con poder... por la resurrección de entre los muertos."</div>
+    </div>
+  </div>
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb5">Cumplimiento 5 — El más impactante</span>
+      <span class="cu-titulo">El velo permanente → El velo rasgado</span>
+    </div>
+    <div class="cu-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Este bloque va separado y más despacio que los demás. No tiene pregunta de descubrimiento antes — tiene narración. La imagen es tan poderosa que no necesita que el grupo la construya. Necesita que la escuche en silencio.</div></div>
+
+      <div class="narrativa">
+        <div class="nar-label">Narración — sin interrupciones, sin preguntas todavía</div>
+        <div class="nar-texto">"Durante siglos, ese velo permaneció cerrado. Generación tras generación. El sumo sacerdote que entraba una vez al año lo hacía con terror — había un protocolo por si moría adentro. Había cuerdas atadas a sus pies para poder sacarlo sin que nadie más entrara.<br><br>
+        El día que Jesús murió en la cruz, en el momento exacto en que entregó el espíritu, el velo se rasgó. De arriba hacia abajo. No un hombre desde adentro. Dios desde su lado.<br><br>
+        18 metros de alto. 10 centímetros de grosor. Rasgado."</div>
+      </div>
+
+      <div class="silencio">Pausa real aquí — mínimo 5 segundos. No llenar el silencio. Dejar que la imagen haga su trabajo.</div>
+
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta después del silencio — no antes</div>
+        <div class="pq-texto">"¿Qué creen que sintieron los sacerdotes que estaban en el templo ese día cuando vieron el velo rasgado?"</div>
+        <div class="pq-nota">Esta pregunta humaniza el momento. El grupo imagina la escena desde adentro. Escuchar respuestas — luego conectar con lo que significa para ellos hoy.</div>
+      </div>
+
+      <div class="aplicacion-box">
+        <div class="ap-label">¿Cómo cambia esto tu vida hoy?</div>
+        <div class="ap-texto">El velo rasgado no es solo historia antigua — describe algo que cambió para siempre la forma en que cualquier ser humano puede relacionarse con Dios.<br><br>
+        Antes del velo rasgado: acceso restringido, mediado, temporal, condicional.<br>
+        Después del velo rasgado: acceso directo, permanente, incondicional, en cualquier momento.<br><br>
+        La pregunta más personal de toda la serie: ¿Estás viviendo con el velo rasgado — o sigues comportándote como si estuviera cerrado? ¿Hay algo en tu forma de acercarte a Dios que sugiere que todavía crees que hay una barrera?</div>
+      </div>
+
+      <div class="verso">Mateo 27:51 — "Y he aquí, el velo del templo se rasgó en dos, de arriba abajo."</div>
+      <div class="verso">Hebreos 10:19 — "Teniendo libertad para entrar en el Lugar Santísimo por la sangre de Jesucristo."</div>
+      <div class="verso">Hebreos 4:16 — "Acerquémonos, pues, confiadamente al trono de la gracia."</div>
+    </div>
+  </div>
+
+  <div class="cumplimiento">
+    <div class="cu-header">
+      <span class="cu-badge cb6">Cierre pastoral</span>
+      <span class="cu-titulo">Una sola pregunta para llevar — no un resumen</span>
+    </div>
+    <div class="cu-body">
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">El error más común al cerrar una charla densa es hacer un resumen. "Hoy vimos que Jesús es el sacrificio, el sacerdote, el pan, la vara y el velo rasgado." Eso suena a examen. El grupo sale pensando en la lista, no en Dios.</div></div>
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">En cambio: una sola pregunta. Que resuene. Que sea personal. Que no tenga respuesta fácil. Y luego la oración.</div></div>
+
+      <div class="pregunta-box">
+        <div class="pq-label">La única pregunta de cierre</div>
+        <div class="pq-texto">"Todo este sistema — siglos de sacrificios, sacerdotes, templo, velo — existió porque Dios se negaba a dejar la distancia como estaba. Se negaba a ignorar el problema. Se negaba a ignorarte a ti.<br><br>
+        La pregunta con la que sales hoy no es si entendiste la teología. Es esta: ¿estás viviendo como alguien para quien el velo ya se rasgó?"</div>
+        <div class="pq-nota">No pedir respuesta verbal. Dar 30 segundos de silencio personal. Luego orar.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nota-final">
+    <div class="nf-label">La regla de oro de esta charla</div>
+    <div class="nf-texto">
+      Por cada versículo que lees — una pregunta que el grupo responde.<br>
+      Por cada cumplimiento que explicas — una aplicación que aterriza en esta semana.<br>
+      Por cada momento de enseñanza — un momento de silencio que deja espacio.<br><br>
+      El objetivo no es que salgan sabiendo más. Es que salgan viviendo diferente.<br>
+      Y eso no lo produce la cantidad de información — lo produce el encuentro con la persona que todo el sistema antiguo estaba anunciando.
+    </div>
+  </div>
+
+</div>

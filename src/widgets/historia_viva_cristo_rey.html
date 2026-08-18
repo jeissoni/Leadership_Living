@@ -1,0 +1,130 @@
+
+<style>
+  .hist { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .bloque-titulo { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .bloque-sub { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 1.5rem; }
+  .tiempo-chip { font-size: 13px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 4px 12px; color: var(--color-text-secondary); display: inline-block; margin-bottom: 1.5rem; }
+  .nota-uso { background: #E6F1FB; border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; color: #185FA5; margin-bottom: 1.5rem; border: 0.5px solid #B5D4F4; }
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .card-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-contexto { background: #E1F5EE; color: #0F6E56; }
+  .b-historia { background: #EEEDFE; color: #534AB7; }
+  .b-jose { background: #FAECE7; color: #993C1D; }
+  .b-puente { background: #FAEEDA; color: #854F0B; }
+  .card-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-body { padding: 14px 16px; }
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d-teal { background: #1D9E75; }
+  .d-purple { background: #7F77DD; }
+  .d-coral { background: #D85A30; }
+  .d-amber { background: #BA7517; }
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .cita-narrativa { background: var(--color-background-secondary); border-left: 3px solid #7F77DD; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 12px 16px; margin: 10px 0; font-size: 14px; color: var(--color-text-primary); line-height: 1.7; font-style: italic; }
+  .dato-historico { display: flex; gap: 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin: 8px 0; align-items: flex-start; }
+  .dato-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; margin-top: 2px; }
+  .dato-valor { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .sub-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 12px 0 6px; }
+  .cierre-reflexion { border: 0.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-md); padding: 14px 16px; margin-top: 10px; }
+  .cr-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .cr-texto { font-size: 14px; color: #3C3489; line-height: 1.7; }
+  .linea-tiempo { display: flex; flex-direction: column; gap: 0; margin: 10px 0; }
+  .lt-item { display: flex; gap: 14px; align-items: flex-start; }
+  .lt-left { display: flex; flex-direction: column; align-items: center; width: 36px; flex-shrink: 0; }
+  .lt-año { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-align: center; }
+  .lt-dot { width: 10px; height: 10px; border-radius: 50%; background: #7F77DD; margin: 4px 0; flex-shrink: 0; }
+  .lt-line { width: 2px; flex: 1; background: var(--color-border-tertiary); min-height: 20px; }
+  .lt-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; padding-bottom: 14px; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="hist">
+  <p class="bloque-titulo">Bloque narrativo — "Viva Cristo Rey"</p>
+  <p class="bloque-sub">Historia para usar como ilustración dentro de la charla</p>
+  <span class="tiempo-chip">3–5 min · recomendado después del fundamento o al inicio de los atributos</span>
+
+  <div class="nota-uso">Este relato funciona como puente emocional entre el fundamento teológico y los atributos del Reino. Cuando el grupo escucha que esa frase costó la vida a personas reales, el concepto de "Reino" deja de ser abstracto y se vuelve urgente.</div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-contexto">Contexto</span>
+      <span class="card-titulo">México, 1926 — Cuando proclamar un Rey era peligroso</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-teal"></div><div class="punto-text">En 1926, el gobierno mexicano de Plutarco Elías Calles aprobó leyes que buscaban, en la práctica, eliminar a la Iglesia Católica del país: prohibió el culto público, cerró templos, expulsó sacerdotes y persiguió a creyentes.</div></div>
+      <div class="punto"><div class="dot d-teal"></div><div class="punto-text">Miles de católicos, en su mayoría campesinos, se negaron a obedecer. No tenían ejército profesional ni recursos. Tenían fe. Y tomaron las armas al grito de una sola frase que resumía todo lo que creían y todo lo que el gobierno quería borrar.</div></div>
+      <div class="cita-narrativa">"¡Viva Cristo Rey! ¡Viva la Virgen de Guadalupe!" — No era solo un lema de guerra. Era una declaración: hay un Rey por encima de cualquier gobierno humano, y ese Rey está vivo.</div>
+
+      <div class="sub-label">Línea de tiempo</div>
+      <div class="linea-tiempo">
+        <div class="lt-item">
+          <div class="lt-left"><span class="lt-año">1914</span><div class="lt-dot"></div><div class="lt-line"></div></div>
+          <div class="lt-texto">Los obispos mexicanos consagran a México al Sagrado Corazón de Jesús. La frase "Viva Cristo Rey" se escucha por primera vez públicamente el 6 de enero de ese año en la Catedral Metropolitana.</div>
+        </div>
+        <div class="lt-item">
+          <div class="lt-left"><span class="lt-año">1925</span><div class="lt-dot"></div><div class="lt-line"></div></div>
+          <div class="lt-texto">El Papa Pío XI instituye la Fiesta de Cristo Rey en respuesta al avance de regímenes que negaban la soberanía de Dios sobre la vida pública.</div>
+        </div>
+        <div class="lt-item">
+          <div class="lt-left"><span class="lt-año">1926</span><div class="lt-dot"></div><div class="lt-line"></div></div>
+          <div class="lt-texto">Comienza la Guerra Cristera en México. Miles de católicos se levantan en defensa de su fe. La frase se convierte en el grito de identidad del movimiento.</div>
+        </div>
+        <div class="lt-item">
+          <div class="lt-left"><span class="lt-año">1928</span><div class="lt-dot"></div></div>
+          <div class="lt-texto">Dos figuras quedan grabadas para siempre en la historia: el padre Miguel Agustín Pro y el joven José Luis Sánchez del Río. Ambos mueren con esa frase en los labios.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-historia">Historia 1</span>
+      <span class="card-titulo">El padre Miguel Agustín Pro — Morir con los brazos abiertos</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-purple"></div><div class="punto-text">Miguel Agustín Pro era un sacerdote jesuita que servía clandestinamente en México — disfrazado, de casa en casa, llevando los sacramentos a quien no podía recibirlos en público. Era buscado por el gobierno.</div></div>
+      <div class="punto"><div class="dot d-purple"></div><div class="punto-text">El 23 de noviembre de 1927 fue apresado, acusado falsamente de un atentado. El gobierno de Calles ordenó su fusilamiento y, para mayor impacto político, mandó fotografiar la ejecución.</div></div>
+      <div class="punto"><div class="dot d-purple"></div><div class="punto-text">Ante el pelotón, el padre Pro no mostró miedo. Extendió los brazos en forma de cruz, perdonó a sus verdugos en voz alta, los bendijo — y con su último aliento gritó con fuerza:</div></div>
+      <div class="cita-narrativa">"¡Viva Cristo Rey!"<br><span style="font-size:13px; color: var(--color-text-secondary);">Fueron sus últimas palabras. Las fotografías de ese momento dieron la vuelta al mundo y, en lugar de intimidar a los creyentes, multiplicaron la fe.</span></div>
+      <div class="dato-historico">
+        <div style="flex-shrink:0"><div class="dato-label">Dato</div></div>
+        <div class="dato-valor">El padre Pro fue beatificado por Juan Pablo II en 1988. Las fotos de su fusilamiento con los brazos en cruz se convirtieron en uno de los testimonios visuales más poderosos del siglo XX.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-jose">Historia 2</span>
+      <span class="card-titulo">José Luis Sánchez del Río — 14 años, la misma frase</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-coral"></div><div class="punto-text">José Luis tenía 14 años cuando fue capturado combatiendo con los cristeros. Era tan joven que sus captores pensaron que cedería fácilmente. Le ofrecieron la vida a cambio de una sola cosa: que dijera "Muera Cristo Rey".</div></div>
+      <div class="punto"><div class="dot d-coral"></div><div class="punto-text">Se negó. Lo torturaron — le cortaron las plantas de los pies y lo obligaron a caminar hacia el lugar donde sería ejecutado. A cada paso, en lugar de pedir clemencia, gritaba más fuerte.</div></div>
+      <div class="cita-narrativa">"¡Viva Cristo Rey! ¡Viva la Virgen de Guadalupe!"<br><span style="font-size:13px; color: var(--color-text-secondary);">Fueron también sus últimas palabras. El 10 de febrero de 1928, fue fusilado y enterrado sin ataúd. Tenía 14 años.</span></div>
+      <div class="dato-historico">
+        <div style="flex-shrink:0"><div class="dato-label">Dato</div></div>
+        <div class="dato-valor">José Luis Sánchez del Río fue canonizado por el Papa Francisco en 2016. Su historia inspiró la película "Cristiada" (For Greater Glory, 2012).</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-puente">Puente</span>
+      <span class="card-titulo">¿Qué tiene que ver esto con nosotros hoy?</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot d-amber"></div><div class="punto-text">Ellos no gritaron esa frase porque era bonita o tradicional. La gritaron porque era lo más verdadero que conocían. Habían encontrado un Reino que valía más que su propia vida — y eso los hacía libres incluso frente a la muerte.</div></div>
+      <div class="punto"><div class="dot d-amber"></div><div class="punto-text">Nosotros no estamos frente a un pelotón. Pero sí enfrentamos cada semana una pregunta parecida, aunque más silenciosa: ¿a quién le damos la última palabra sobre nuestra vida? ¿Al cansancio, al reconocimiento, al miedo... o al Rey?</div></div>
+      <div class="punto"><div class="dot d-amber"></div><div class="punto-text">Servir como voluntarios en una iglesia puede parecer pequeño comparado con esas historias. Pero cada vez que servimos desde el Reino — no desde la obligación — estamos diciendo con nuestras acciones lo mismo que ellos dijeron con su último aliento.</div></div>
+
+      <div class="cierre-reflexion">
+        <div class="cr-label">Frase de transición hacia los atributos</div>
+        <div class="cr-texto">"Ellos entendieron que Cristo Rey no era un concepto religioso — era una realidad que cambia todo. Hoy quiero que exploremos juntos cómo se ve ese Reino en la vida de un voluntario. Cuáles son sus características. Y cómo lo impulsamos desde donde estamos parados."</div>
+      </div>
+    </div>
+  </div>
+</div>

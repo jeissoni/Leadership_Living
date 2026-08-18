@@ -1,0 +1,352 @@
+
+<style>
+  .pf { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+
+  .intro-box { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1.5px solid #AFA9EC; padding: 16px 18px; margin-bottom: 1.5rem; }
+  .ib-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .ib-titulo { font-size: 19px; font-weight: 500; color: #26215C; margin: 0 0 4px; }
+  .ib-sub { font-size: 13px; color: #534AB7; font-style: italic; margin: 0 0 10px; }
+  .ib-chips { display: flex; gap: 6px; flex-wrap: wrap; }
+  .chip { font-size: 12px; background: white; border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-md); padding: 3px 10px; color: #534AB7; }
+
+  .nota-apertura { background: #E6F1FB; border-radius: var(--border-radius-md); padding: 11px 14px; font-size: 13px; color: #185FA5; margin-bottom: 1.5rem; border: 0.5px solid #B5D4F4; }
+
+  .narrativa-apertura { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 16px 18px; margin-bottom: 1.5rem; border-left: 4px solid #7F77DD; }
+  .na-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .na-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.9; font-style: italic; }
+
+  .profecia { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .pf-header { display: flex; align-items: flex-start; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .pf-num { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+  .pn1{background:#FAEEDA;color:#633806;} .pn2{background:#FAECE7;color:#712B13;} .pn3{background:#EEEDFE;color:#3C3489;} .pn4{background:#E1F5EE;color:#085041;} .pn5{background:#EAF3DE;color:#27500A;} .pn6{background:#FCEBEB;color:#791F1F;} .pn7{background:#E6F1FB;color:#0C447C;}
+  .pf-info { flex: 1; }
+  .pf-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .pf-tipo { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tipo-badge { font-size: 11px; padding: 2px 7px; border-radius: var(--border-radius-md); font-weight: 500; }
+  .tb-conocida{background:#EAF3DE;color:#3B6D11;} .tb-sorprendente{background:#EEEDFE;color:#534AB7;} .tb-emocional{background:#FAECE7;color:#993C1D;}
+  .pf-body { padding: 14px 16px; }
+
+  .profecia-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 8px 0; }
+  .pg-card { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .pg-at { background: #F1EFE8; }
+  .pg-nt { background: #E1F5EE; }
+  .pg-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .pgl-at { color: #5F5E5A; } .pgl-nt { color: #0F6E56; }
+  .pg-ref { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .pg-texto { font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.5; }
+
+  .anos { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); background: #FAEEDA; color: #854F0B; display: inline-block; margin-bottom: 8px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#D85A30;} .d3{background:#7F77DD;} .d4{background:#1D9E75;} .d5{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .pregunta-box { border-radius: var(--border-radius-md); padding: 10px 13px; margin: 8px 0; border: 1.5px solid #AFA9EC; background: #EEEDFE; }
+  .pq-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .pq-texto { font-size: 13.5px; color: #26215C; font-style: italic; line-height: 1.6; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 10px 13px; margin: 8px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .il { color: #854F0B; } .ib-amber .it { color: #412402; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .il { color: #993C1D; } .ib-coral .it { color: #4A1B0C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .il { color: #534AB7; } .ib-purple .it { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .il { color: #0F6E56; } .ib-teal .it { color: #04342C; }
+  .il { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .it { font-size: 13.5px; line-height: 1.7; }
+
+  .verso { font-size: 12.5px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 6px 0; }
+
+  .probabilidad { border-radius: var(--border-radius-md); background: #1A1A2E; padding: 12px 14px; margin: 10px 0; }
+  .prob-label { font-size: 11px; font-weight: 500; color: #7F77DD; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .prob-texto { font-size: 13px; color: #C5C3BB; line-height: 1.6; }
+  .prob-numero { font-size: 20px; font-weight: 500; color: #9FE1CB; }
+
+  .cierre { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 7px 11px; margin: 6px 0; font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+</style>
+
+<div class="pf">
+
+  <div class="intro-box">
+    <div class="ib-label">Bloque de profecías — dentro de la Charla 3</div>
+    <div class="ib-titulo">"Lo que Dios anunció antes de hacerlo"</div>
+    <div class="ib-sub">El plan de rescate que llevaba siglos escrito — antes de que Jesús naciera</div>
+    <div class="ib-chips">
+      <span class="chip">~15 min dentro de la charla 3</span>
+      <span class="chip">7 profecías</span>
+      <span class="chip">Mezcla: conocidas + sorprendentes + emocionales</span>
+    </div>
+  </div>
+
+  <div class="nota-apertura">Este bloque va después de la apertura de la charla 3 y antes de los cumplimientos del sistema antiguo. Funciona como el fundamento que dice: Jesús no fue una sorpresa — fue un plan. Y ese plan estuvo escrito con siglos de anticipación.</div>
+
+  <div class="narrativa-apertura">
+    <div class="na-label">Apertura del bloque — en tus palabras</div>
+    <div class="na-texto">"Quiero comenzar con una pregunta. Si yo les dijera que alguien escribió hace 700 años la dirección exacta de su casa, el nombre de su madre, la forma en que iba a morir, y la cantidad exacta de dinero por la que sería traicionado — ¿qué pensarían?<br><br>
+    Eso es exactamente lo que ocurrió con Jesús. No con una profecía. Con más de 300.<br><br>
+    Pero no quiero que vean esto como un argumento de debate. Quiero que lo vean como lo que realmente es — la historia de un Padre que planificó el rescate de sus hijos con tanto detalle, con tanta anticipación, que no quería que cuando llegara el momento, nadie pudiera decir que no lo esperaba."</div>
+  </div>
+
+  <!-- PROFECÍA 1 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn1">1</div>
+      <div class="pf-info">
+        <div class="pf-titulo">El lugar de nacimiento — Belén</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-sorprendente">Sorprendente</span>
+          <span class="tipo-badge tb-conocida">Conocida</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~700 años antes</span>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Profecía — Miqueas 5:2</div>
+          <div class="pg-ref">~700 a.C.</div>
+          <div class="pg-texto">"Pero tú, Belén Efrata, pequeña para estar entre las familias de Judá, de ti me saldrá el que será Señor en Israel."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Mateo 2:1</div>
+          <div class="pg-ref">~4 a.C.</div>
+          <div class="pg-texto">"Cuando Jesús nació en Belén de Judea en días del rey Herodes..."</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">Israel tenía miles de aldeas. Miqueas nombra específicamente Belén — y la llama "pequeña." No Jerusalén la capital, no Nazaret donde vivía María. Una aldea pequeña. Escrito 700 años antes.</div></div>
+      <div class="infobox ib-amber">
+        <div class="il">Lo que hace esto extraordinario</div>
+        <div class="it">José y María vivían en Nazaret. No había razón humana para que Jesús naciera en Belén. Fue un censo del Imperio Romano — un evento político a 150 kilómetros de distancia — lo que los movió exactamente al lugar que Miqueas había nombrado. Dios usó el decreto de un César para cumplir la palabra de un profeta.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 2 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn2">2</div>
+      <div class="pf-info">
+        <div class="pf-titulo">Nacido de una virgen</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-conocida">Conocida</span>
+          <span class="tipo-badge tb-emocional">Emocional</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~700 años antes</span>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Profecía — Isaías 7:14</div>
+          <div class="pg-ref">~700 a.C.</div>
+          <div class="pg-texto">"Por tanto, el Señor mismo os dará señal: He aquí que la virgen concebirá y dará a luz un hijo, y llamará su nombre Emanuel."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Lucas 1:34-35</div>
+          <div class="pg-ref">~4 a.C.</div>
+          <div class="pg-texto">"Entonces María dijo al ángel: ¿Cómo será esto? pues no conozco varón. El ángel respondió: El Espíritu Santo vendrá sobre ti."</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Emanuel significa "Dios con nosotros." No solo un rey, no solo un profeta — Dios mismo entrando al mundo a través de una mujer. Eso era teológicamente impensable para el judaísmo. Y sin embargo estaba anunciado siglos antes.</div></div>
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta al grupo</div>
+        <div class="pq-texto">"¿Por qué creen que Dios eligió entrar al mundo de esta forma — a través de una mujer, en una aldea pequeña, sin poder político ni riqueza? ¿Qué dice eso sobre cómo opera el Reino?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 3 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn3">3</div>
+      <div class="pf-info">
+        <div class="pf-titulo">Traicionado por 30 monedas de plata — y el campo del alfarero</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-sorprendente">La más sorprendente</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~520 años antes</span>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Profecía — Zacarías 11:12-13</div>
+          <div class="pg-ref">~520 a.C.</div>
+          <div class="pg-texto">"Y les dije: Si os parece bien, dadme mi salario... Y pesaron por mi salario treinta piezas de plata. Y me dijo Jehová: Échalo al alfarero... Y tomé las treinta piezas de plata, y las eché en la casa de Jehová al alfarero."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Mateo 27:3-7</div>
+          <div class="pg-ref">~30 d.C.</div>
+          <div class="pg-texto">"Judas devolvió las treinta piezas de plata... Y tomando los principales sacerdotes las piezas de plata... compraron con ellas el campo del alfarero."</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">No solo la cantidad exacta — 30 monedas de plata. No solo que sería traicionado. Sino que el dinero sería devuelto, y que con ese dinero específico se compraría el campo de un alfarero. Tres detalles en un mismo versículo — todos cumplidos.</div></div>
+      <div class="probabilidad">
+        <div class="prob-label">Para dimensionar esto</div>
+        <div class="prob-texto">El matemático Peter Stoner calculó la probabilidad de que una persona cumpliera solo 8 profecías mesiánicas por coincidencia: <span class="prob-numero">1 en 10¹⁷</span> — un 1 seguido de 17 ceros. Para visualizarlo: sería como llenar el estado de Texas con monedas de un dólar hasta una altura de 60 cm, marcar una sola moneda, revolver todo, y que una persona con los ojos vendados la encuentre al primer intento. Jesús cumplió más de 300.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 4 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn4">4</div>
+      <div class="pf-info">
+        <div class="pf-titulo">La entrada a Jerusalén en burro</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-conocida">Conocida</span>
+          <span class="tipo-badge tb-sorprendente">Sorprendente en detalle</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~520 años antes</span>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Profecía — Zacarías 9:9</div>
+          <div class="pg-ref">~520 a.C.</div>
+          <div class="pg-texto">"Alégrate mucho, hija de Sion; da voces de júbilo, hija de Jerusalén; he aquí tu rey vendrá a ti, justo y salvador, humilde, y cabalgando sobre un asno."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Mateo 21:7-9</div>
+          <div class="pg-ref">~30 d.C.</div>
+          <div class="pg-texto">"Y trajeron el asno y el pollino, y pusieron sobre ellos sus mantos; y él se sentó encima... y la gente que iba delante y la que iba detrás aclamaba."</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Un rey que entra en burro — no en caballo de guerra. Eso en el mundo antiguo era una declaración deliberada: vengo en paz, no en conquista militar. Zacarías lo especificó. Jesús lo cumplió. Y lo hizo conscientemente — pidió específicamente que le trajeran un asno.</div></div>
+      <div class="infobox ib-teal">
+        <div class="il">El detalle que más impacta</div>
+        <div class="it">Jesús conocía las profecías. Cuando pidió el asno, sabía exactamente qué estaba cumpliendo. No fue coincidencia — fue declaración intencional: soy el que Zacarías anunció. Este es el momento. Esta es la ciudad.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 5 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn5">5</div>
+      <div class="pf-info">
+        <div class="pf-titulo">El Salmo 22 — la crucifixión descrita 1000 años antes</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-emocional">La más emocional</span>
+          <span class="tipo-badge tb-sorprendente">Sorprendente</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~1000 años antes — cuando la crucifixión no existía</span>
+      <div class="infobox ib-coral">
+        <div class="il">Contexto crucial</div>
+        <div class="it">El Salmo 22 fue escrito por David alrededor del año 1000 a.C. La crucifixión como método de ejecución fue inventada por los persas y adoptada por los romanos — al menos 500 años después de que David escribiera este Salmo. Es decir: David describe con precisión un método de ejecución que todavía no existía.</div>
+      </div>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Salmo 22 — detalle por detalle</div>
+          <div class="pg-ref">~1000 a.C. — David</div>
+          <div class="pg-texto">"Dios mío, Dios mío, ¿por qué me has desamparado?" (v.1) · "Horadaron mis manos y mis pies" (v.16) · "Repartieron entre sí mis vestidos, y sobre mi ropa echaron suertes" (v.18) · "Todos los que me ven me escarnecen" (v.7)</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Mateo 27</div>
+          <div class="pg-ref">~30 d.C.</div>
+          <div class="pg-texto">Jesús grita desde la cruz: "Dios mío, Dios mío, ¿por qué me has desamparado?" · Sus manos y pies son clavados · Los soldados se reparten su ropa echando suertes · La multitud lo escarnece.</div>
+        </div>
+      </div>
+      <div class="narrativa-apertura" style="margin:10px 0;">
+        <div class="na-label">Para decir al grupo</div>
+        <div class="na-texto">"Las primeras palabras que Jesús grita desde la cruz son las primeras palabras del Salmo 22. No es una coincidencia. Jesús está declarando en voz alta, desde la cruz: 'Esto es lo que David anunció. Esto es lo que estoy cumpliendo. Estoy aquí exactamente donde debía estar.'"</div>
+      </div>
+      <div class="pregunta-box">
+        <div class="pq-label">Pregunta al grupo</div>
+        <div class="pq-texto">"¿Qué dice sobre el amor de Dios el hecho de que planificó cada detalle de este momento con mil años de anticipación? ¿Qué siente alguien que descubre que su rescate fue planificado con ese nivel de cuidado?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 6 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn6">6</div>
+      <div class="pf-info">
+        <div class="pf-titulo">Isaías 53 — el retrato completo del siervo sufriente</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-emocional">La más pastoral</span>
+          <span class="tipo-badge tb-sorprendente">Sorprendente</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~700 años antes</span>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Isaías 53 es considerado por muchos teólogos el capítulo más extraordinario del Antiguo Testamento. Escrito 700 años antes de Cristo, describe con una precisión que no tiene explicación humana a alguien que: sería despreciado y rechazado, cargaría nuestros dolores, sería herido por nuestras transgresiones, moriría entre pecadores, y sería sepultado con los ricos.</div></div>
+
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Isaías 53:3-6</div>
+          <div class="pg-ref">~700 a.C.</div>
+          <div class="pg-texto">"Despreciado y desechado entre los hombres, varón de dolores... Ciertamente llevó él nuestras enfermedades... mas él herido fue por nuestras rebeliones, molido por nuestros pecados... y Jehová cargó en él el pecado de todos nosotros."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento</div>
+          <div class="pg-ref">La vida completa de Jesús</div>
+          <div class="pg-texto">Rechazado por los líderes religiosos · Cargó el dolor de los que sanó · Muerto entre dos criminales (pecadores) · Sepultado en la tumba de José de Arimatea (un hombre rico)</div>
+        </div>
+      </div>
+
+      <div class="infobox ib-purple">
+        <div class="il">La frase que lo resume todo</div>
+        <div class="it">Isaías 53:5 — "Mas él herido fue por nuestras rebeliones, molido por nuestros pecados; el castigo de nuestra paz fue sobre él, y por su llaga fuimos nosotros curados." Cuatro intercambios en una sola frase: él fue herido por lo que nosotros hicimos. Él cargó lo que nosotros merecíamos. El castigo que nos correspondía cayó sobre él. Y su herida produce nuestra sanidad.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROFECÍA 7 -->
+  <div class="profecia">
+    <div class="pf-header">
+      <div class="pf-num pn7">7</div>
+      <div class="pf-info">
+        <div class="pf-titulo">La resurrección — "no verá corrupción"</div>
+        <div class="pf-tipo">
+          <span class="tipo-badge tb-sorprendente">Sorprendente</span>
+          <span class="tipo-badge tb-emocional">Emocional</span>
+        </div>
+      </div>
+    </div>
+    <div class="pf-body">
+      <span class="anos">Escrita ~1000 años antes</span>
+      <div class="profecia-grid">
+        <div class="pg-card pg-at">
+          <div class="pg-label pgl-at">Profecía — Salmo 16:10</div>
+          <div class="pg-ref">~1000 a.C. — David</div>
+          <div class="pg-texto">"Porque no dejarás mi alma en el Seol, ni permitirás que tu santo vea corrupción."</div>
+        </div>
+        <div class="pg-card pg-nt">
+          <div class="pg-label pgl-nt">Cumplimiento — Hechos 2:31</div>
+          <div class="pg-ref">Pedro en Pentecostés</div>
+          <div class="pg-texto">"Viéndolo antes, habló de la resurrección de Cristo, que su alma no fue dejada en el Hades, ni su carne vio corrupción."</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">Pedro en Pentecostés usa exactamente este Salmo para explicar la resurrección. Dice: "David no pudo escribir esto de sí mismo — porque David murió y fue sepultado y su tumba está aquí." Lo escribió de alguien que no vería corrupción — alguien que moriría pero no permanecería muerto.</div></div>
+      <div class="verso">Hechos 2:29-31 — "Varones hermanos, se os puede decir libremente del patriarca David, que murió y fue sepultado... Pero siendo profeta... habló de la resurrección de Cristo."</div>
+    </div>
+  </div>
+
+  <!-- CIERRE DEL BLOQUE -->
+  <div class="cierre">
+    <div class="cierre-label">Cómo cerrar este bloque — el mensaje pastoral</div>
+    <div class="cierre-texto">
+      "Más de 300 profecías. Escritas por al menos 40 autores diferentes. En un período de más de 1500 años. Sin que ninguno de ellos pudiera coordinar con los demás.<br><br>
+      Eso no es coincidencia. Eso es un Padre que planificó el rescate de sus hijos con una precisión que no tiene explicación humana.<br><br>
+      Y lo que más me impacta no es la precisión de los detalles — es el amor que hay detrás de ellos. Que Dios no solo rescató a su pueblo, sino que lo anunció con anticipación. Como si quisiera que cuando llegara el momento, nadie pudiera decir que no lo esperaba. Como si quisiera que supiéramos: esto no fue un plan B. No fue una reacción al problema. Fue el plan desde siempre.<br><br>
+      <strong>Desde antes de que tú nacieras — tu rescate ya estaba planeado.</strong>"
+    </div>
+  </div>
+
+</div>

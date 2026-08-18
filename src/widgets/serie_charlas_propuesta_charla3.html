@@ -1,0 +1,199 @@
+
+<style>
+  .s { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .serie-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; margin-bottom: 1.5rem; }
+  .s-card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); padding: 14px; }
+  .s-num { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .s-titulo { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .s-preg { font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+  .c1 { background: #EEEDFE; border-color: #AFA9EC; }
+  .c1 .s-num { color: #534AB7; }
+  .c2 { background: #E1F5EE; border-color: #9FE1CB; }
+  .c2 .s-num { color: #0F6E56; }
+  .c3 { background: #FAEEDA; border-color: #FAC775; border-width: 1.5px; }
+  .c3 .s-num { color: #854F0B; }
+  .flecha { display: flex; align-items: center; justify-content: center; font-size: 20px; color: var(--color-text-secondary); }
+
+  .prop { border-radius: var(--border-radius-lg); border: 1.5px solid #FAC775; background: #FAEEDA; overflow: hidden; margin-bottom: 1rem; }
+  .prop-header { padding: 16px 18px; border-bottom: 0.5px solid #FAC775; }
+  .prop-titulo { font-size: 22px; font-weight: 500; color: #412402; margin: 0 0 4px; }
+  .prop-sub { font-size: 14px; color: #633806; font-style: italic; }
+  .prop-body { padding: 16px 18px; background: var(--color-background-primary); }
+
+  .seccion { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .sec-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-p { background: #EEEDFE; color: #534AB7; }
+  .b-t { background: #E1F5EE; color: #0F6E56; }
+  .b-a { background: #FAEEDA; color: #854F0B; }
+  .b-c { background: #FAECE7; color: #993C1D; }
+  .b-g { background: #EAF3DE; color: #3B6D11; }
+  .sec-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .sec-body { padding: 14px 16px; }
+  .punto { display: flex; gap: 10px; margin-bottom: 9px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .dp{background:#7F77DD;} .dt{background:#1D9E75;} .da{background:#BA7517;} .dc{background:#D85A30;} .dg{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+  .tension-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .tc { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .tm { background: #F1EFE8; }
+  .tr { background: #E1F5EE; }
+  .tl { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .lm { color: #888780; } .lr { color: #0F6E56; }
+  .tt { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-label { color: #854F0B; }
+  .ib-amber .ib-text { color: #412402; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-label { color: #0F6E56; }
+  .ib-teal .ib-text { color: #04342C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-label { color: #534AB7; }
+  .ib-purple .ib-text { color: #26215C; }
+  .ib-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-text { font-size: 14px; line-height: 1.7; }
+  .tiempo-chip { font-size: 13px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 4px 12px; color: var(--color-text-secondary); display: inline-block; margin-bottom: 1rem; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .posibles { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin-top: 10px; }
+  .pos-card { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); padding: 12px; }
+  .pos-num { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .pos-titulo { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .pos-texto { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+</style>
+
+<div class="s">
+
+  <div class="serie-grid">
+    <div class="s-card c1">
+      <div class="s-num">Charla 1</div>
+      <div class="s-titulo">El Reino de Dios</div>
+      <div class="s-preg">¿En qué realidad vivimos?</div>
+    </div>
+    <div class="s-card c2">
+      <div class="s-num">Charla 2</div>
+      <div class="s-titulo">Los ministerios</div>
+      <div class="s-preg">¿Cómo está diseñada la iglesia?</div>
+    </div>
+    <div class="s-card c3">
+      <div class="s-num">Charla 3 — propuesta</div>
+      <div class="s-titulo">El discípulo</div>
+      <div class="s-preg">¿Quién soy yo dentro de todo esto?</div>
+    </div>
+  </div>
+
+  <div class="prop">
+    <div class="prop-header">
+      <div class="prop-titulo">"De oyente a discípulo"</div>
+      <div class="prop-sub">Cómo pasar de saber el Reino a vivir el Reino</div>
+    </div>
+    <div class="prop-body">
+      <span class="tiempo-chip">30-40 min · voluntarios · reflexivo y práctico</span>
+
+      <div class="infobox ib-amber">
+        <div class="ib-label">Por qué esta charla ahora</div>
+        <div class="ib-text">El grupo entiende bien la Biblia — eso es el problema. Saben del Reino, saben de los ministerios, pero el conocimiento sin transformación se convierte en orgullo espiritual. La tercera charla hace la pregunta que el conocimiento solo no puede responder: ¿estás siendo cambiado por lo que sabes?</div>
+      </div>
+
+      <div class="infobox ib-purple">
+        <div class="ib-label">La tensión central</div>
+        <div class="ib-text">Santiago 1:22 — "Sed hacedores de la palabra y no tan solamente oidores, engañándoos a vosotros mismos." Un voluntario que sabe mucho sobre el Reino pero no está siendo transformado por él es exactamente lo que Santiago describe: alguien que se mira al espejo y olvida cómo es.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-p">Diagnóstico</span>
+      <span class="sec-titulo">La brecha entre saber y vivir</span>
+    </div>
+    <div class="sec-body">
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Hay una trampa especial para personas con buen conocimiento bíblico: confundir la claridad intelectual con la madurez espiritual. Puedo explicar el Reino con precisión teológica y al mismo tiempo no perdonar a mi compañero de servicio.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Jesús nunca llamó a nadie a un curso — llamó a personas a seguirle. El discipulado no es un proceso de acumulación de información sino de transformación de vida. La diferencia entre un oyente y un discípulo no está en cuánto sabe — está en cuánto obedece.</div></div>
+      <div class="verso">Mateo 7:24-26 — "El que oye mis palabras y las hace... el que las oye y no las hace..."</div>
+      <div class="tension-grid">
+        <div class="tc tm"><div class="tl lm">Oyente del Reino</div><div class="tt">Sabe qué es el Reino, puede explicarlo, enseña sobre él. Pero su vida cotidiana no es notablemente diferente.</div></div>
+        <div class="tc tr"><div class="tl lr">Discípulo del Reino</div><div class="tt">Vive bajo el gobierno del Rey en cada decisión. El Reino no es un tema que estudia — es el aire que respira.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-t">Núcleo</span>
+      <span class="sec-titulo">¿Qué hace un discípulo? — Las cuatro marcas</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Marca 1 — Obedece, no solo acuerda.</strong> Lucas 6:46 — "¿Por qué me llamáis Señor, Señor, y no hacéis lo que digo?" El discípulo no solo está de acuerdo con los valores del Reino — los practica donde le cuesta. Especialmente en lo que nadie ve.</div></div>
+
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Marca 2 — Abide — permanece en Cristo.</strong> Juan 15:5 — "El que permanece en mí y yo en él, ese lleva mucho fruto." El discípulo no opera desde su propio esfuerzo sino desde una conexión viva con el Rey. Sin esa conexión, todo el conocimiento del Reino es madera seca.</div></div>
+
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Marca 3 — Se deja transformar.</strong> Romanos 12:2 — "Transformaos por la renovación de vuestro entendimiento." El discípulo no resiste el cambio — lo invita. Reconoce que hay áreas donde todavía piensa y actúa con lógica del mundo, y coopera activamente con el Espíritu para que eso cambie.</div></div>
+
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Marca 4 — Hace discípulos.</strong> Mateo 28:19 — "Id y haced discípulos." El discípulo maduro no acumula conocimiento — lo transmite. Invierte en otros lo que recibió. Si llevas años siendo formado y no estás formando a nadie, algo en el ciclo está roto.</div></div>
+
+      <div class="verso">Juan 8:31 — "Si vosotros permaneciereis en mi palabra, seréis verdaderamente mis discípulos."</div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-a">Conexión</span>
+      <span class="sec-titulo">Cómo se une con las dos charlas anteriores</span>
+    </div>
+    <div class="sec-body">
+      <div class="punto"><div class="dot da"></div><div class="punto-text">Charla 1 dijo: el Reino es una realidad que ya está operando. Charla 3 pregunta: ¿estás operando dentro de esa realidad o solo describiendo desde afuera?</div></div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">Charla 2 dijo: Dios te equipó con un don y te puso en un ministerio con intención. Charla 3 pregunta: ¿ese don está siendo transformado por el Espíritu o está siendo operado por tu fuerza y tu agenda?</div></div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">La gran comisión conecta todo: el discípulo va, enseña a guardar todas las cosas que Jesús mandó — no datos sobre el Reino, sino la vida del Reino vivida desde adentro.</div></div>
+      <div class="infobox ib-teal">
+        <div class="ib-label">Frase puente entre charlas</div>
+        <div class="ib-text">"La primera charla te mostró el mapa. La segunda te mostró tu lugar en el equipo. Esta charla te pregunta algo más incómodo: ¿estás andando el camino, o llevas el mapa en el bolsillo sin moverte?"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-c">Propuesta</span>
+      <span class="sec-titulo">Posibles charlas 4 y 5 para completar la serie</span>
+    </div>
+    <div class="sec-body">
+      <div class="posibles">
+        <div class="pos-card">
+          <div class="pos-num">Charla 4</div>
+          <div class="pos-titulo">"El Reino en lo cotidiano"</div>
+          <div class="pos-texto">Cómo el lunes refleja lo del domingo. Los cinco territorios del discípulo: familia, trabajo, barrio, amistades, comunidad de fe. Principio de levadura y encarnación.</div>
+        </div>
+        <div class="pos-card">
+          <div class="pos-num">Charla 5</div>
+          <div class="pos-titulo">"El discípulo que multiplica"</div>
+          <div class="pos-texto">2 Timoteo 2:2 — lo que recibiste, entrégalo a otros. Cómo pasar de ser formado a formar. El ciclo completo del discipulado en el contexto de los ministerios.</div>
+        </div>
+        <div class="pos-card">
+          <div class="pos-num">Alternativa 4</div>
+          <div class="pos-titulo">"El precio del Reino"</div>
+          <div class="pos-texto">Lucas 14:28 — contar el costo antes de comenzar. Honestidad sobre lo que cuesta ser discípulo: tiempo, comodidad, relaciones, reputación. Para voluntarios que necesitan renovar su compromiso.</div>
+        </div>
+        <div class="pos-card">
+          <div class="pos-num">Alternativa 5</div>
+          <div class="pos-titulo">"Comunidad que impulsa el Reino"</div>
+          <div class="pos-texto">Hechos 2 como modelo. Cómo el equipo de voluntarios se convierte en comunidad apostólica — no solo personas que sirven juntas sino personas que se forman juntas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="infobox ib-purple" style="margin-top: 0.5rem;">
+    <div class="ib-label">La lógica completa de la serie</div>
+    <div class="ib-text">
+      Charla 1 — El Reino: <em>¿en qué realidad vivimos?</em><br>
+      Charla 2 — Los ministerios: <em>¿cómo está diseñada la iglesia?</em><br>
+      Charla 3 — El discípulo: <em>¿quién soy yo dentro de todo esto?</em><br>
+      Charla 4 — El Reino cotidiano: <em>¿cómo lo vivo de lunes a sábado?</em><br>
+      Charla 5 — La multiplicación: <em>¿a quién llevo conmigo?</em>
+    </div>
+  </div>
+
+</div>

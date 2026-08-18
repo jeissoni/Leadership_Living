@@ -1,0 +1,278 @@
+
+<style>
+  .c2 { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .portada { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1px solid #AFA9EC; padding: 18px 20px; margin-bottom: 1.5rem; }
+  .p-serie { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .p-titulo { font-size: 22px; font-weight: 500; color: #26215C; margin: 0 0 4px; }
+  .p-sub { font-size: 13px; color: #534AB7; font-style: italic; margin: 0 0 12px; }
+  .p-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12px; background: white; border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-md); padding: 3px 10px; color: #534AB7; }
+
+  .nota-enfoque { background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; font-size: 13px; color: #185FA5; margin-bottom: 1.5rem; border: 0.5px solid #B5D4F4; }
+  .nota-enfoque strong { color: #0C447C; }
+
+  .bloque { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .bloque-header { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 10px; }
+  .tiempo-badge { font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .t1{background:#FAEEDA;color:#854F0B;}
+  .t2{background:#FAECE7;color:#993C1D;}
+  .t3{background:#EEEDFE;color:#534AB7;}
+  .t4{background:#E1F5EE;color:#0F6E56;}
+  .t5{background:#EAF3DE;color:#3B6D11;}
+  .t6{background:#F1EFE8;color:#444441;}
+  .bloque-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .bloque-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#D85A30;} .d3{background:#7F77DD;} .d4{background:#1D9E75;} .d5{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-gray { background: #F1EFE8; border: 0.5px solid #D3D1C7; }
+  .ib-gray .ib-l { color: #5F5E5A; } .ib-gray .ib-t { color: #2C2C2A; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .arca-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 8px; margin: 12px 0; }
+  .arca-item { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); overflow: hidden; }
+  .ai-header { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .ai-num { width: 26px; height: 26px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
+  .an1{background:#FAEEDA;color:#633806;} .an2{background:#FAECE7;color:#712B13;} .an3{background:#EEEDFE;color:#3C3489;} .an4{background:#E1F5EE;color:#085041;}
+  .ai-titulo { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+  .ai-body { padding: 10px 14px; }
+  .ai-desc { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; margin-bottom: 6px; }
+  .ai-simbolo { font-size: 12px; color: var(--color-text-secondary); font-style: italic; padding: 6px 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); }
+  .ai-pista { font-size: 12px; font-weight: 500; padding: 5px 10px; border-radius: var(--border-radius-md); margin-top: 6px; display: inline-block; }
+  .ap1{background:#FFF3E0;color:#E65100;border:0.5px solid #FFB74D;}
+
+  .pregunta { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin: 10px 0; border: 0.5px solid var(--color-border-tertiary); }
+  .preg-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .preg-texto { font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.6; }
+
+  .suspenso { border-radius: var(--border-radius-lg); background: #2C2C2A; border: 1px solid #444441; padding: 18px 20px; margin-top: 1.5rem; }
+  .sus-label { font-size: 11px; font-weight: 500; color: #888780; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .sus-titulo { font-size: 17px; font-weight: 500; color: #F5F4F0; margin-bottom: 10px; }
+  .sus-preguntas { display: flex; flex-direction: column; gap: 6px; }
+  .sus-q { font-size: 13px; color: #C5C3BB; font-style: italic; line-height: 1.5; padding-left: 12px; border-left: 2px solid #534AB7; }
+  .sus-cierre { font-size: 14px; color: #9FE1CB; margin-top: 12px; font-style: italic; }
+
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 8px 12px; margin: 8px 0; font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="c2">
+
+  <div class="portada">
+    <div class="p-serie">Charla 2 de 3 — El Dios que viene</div>
+    <div class="p-titulo">"La sangre que cubría — pero no quitaba"</div>
+    <div class="p-sub">El sistema sacrificial, el sacerdocio y el arca del pacto — todo apunta a algo mayor</div>
+    <div class="p-chips">
+      <span class="chip">~50 min</span>
+      <span class="chip">Tono narrativo</span>
+      <span class="chip">Sin revelar a Jesús todavía</span>
+      <span class="chip">Dejar preguntas abiertas</span>
+    </div>
+  </div>
+
+  <div class="nota-enfoque">
+    <strong>Enfoque narrativo de esta charla:</strong> presentar cada elemento del sistema antiguo con toda su riqueza y belleza — pero siempre mostrando su limitación. El grupo debe salir con una sensación de suspenso: todo esto es poderoso, pero algo falta. Alguien falta. <strong>No dar las respuestas.</strong> Sembrar las preguntas.
+  </div>
+
+  <!-- BLOQUE 1 -->
+  <div class="bloque">
+    <div class="bloque-header">
+      <span class="tiempo-badge t1">0–8 min</span>
+      <span class="bloque-titulo">Apertura — La primera muerte</span>
+    </div>
+    <div class="bloque-body">
+      <div class="narrativa">
+        <div class="nar-label">Narración de apertura</div>
+        <div class="nar-texto">"Después de todo lo que ocurrió en el jardín — la desobediencia, la vergüenza, las hojas de higuera, las preguntas de Dios — hay un detalle en Génesis 3 que la mayoría pasa por alto. Un detalle pequeño, casi de paso. Pero que contiene todo lo que vamos a ver hoy.<br><br>
+        Génesis 3:21: 'Y Jehová Dios hizo al hombre y a su mujer túnicas de pieles, y los vistió.'<br><br>
+        Para hacer una túnica de piel, algo tuvo que morir. No se dice qué. No se dice cómo. Solo que Dios mismo lo hizo. La vida de un animal fue entregada para cubrir la vergüenza del hombre que había fallado.<br><br>
+        Ese es el patrón más antiguo de la Biblia. Y se va a repetir durante siglos. Hasta que algo cambie."</div>
+      </div>
+      <div class="verso">Génesis 3:21 — "Y Jehová Dios hizo al hombre y a su mujer túnicas de pieles, y los vistió."</div>
+      <div class="infobox ib-amber">
+        <div class="ib-l">El patrón que se establece</div>
+        <div class="ib-t">La vida de uno cubre al culpable. La sangre de uno da cobertura a otro. Ese patrón atraviesa toda la Biblia — desde Génesis 3 hasta un lugar en el que no vamos a entrar todavía.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 2 -->
+  <div class="bloque">
+    <div class="bloque-header">
+      <span class="tiempo-badge t2">8–20 min</span>
+      <span class="bloque-titulo">Los sacrificios — el sistema y su lógica</span>
+    </div>
+    <div class="bloque-body">
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Siglos después del jardín, Dios da a Israel en el Sinaí un sistema detallado de sacrificios. No es arbitrario — cada tipo responde a una dimensión específica de la relación rota entre Dios y el hombre. El holocausto — entrega total. La ofrenda de paz — comunión restaurada. La ofrenda por el pecado — expiación específica. La ofrenda por la culpa — reparación del daño.</div></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">El principio que lo gobierna todo aparece en Levítico 17:11 y es una de las frases más importantes del Antiguo Testamento: "la vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas." La vida está en la sangre. El pecado cuesta vida. Alguien tiene que pagar.</div></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">El animal moría en lugar del pecador. La mano del israelita se ponía sobre la cabeza del animal antes del sacrificio — gesto de transferencia, de identificación. "Este muere en mi lugar." Era poderoso. Era real. Pero tenía una limitación que el texto no oculta.</div></div>
+      <div class="verso">Levítico 17:11 — "La vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas."</div>
+      <div class="infobox ib-coral">
+        <div class="ib-l">La limitación que el mismo sistema reconocía</div>
+        <div class="ib-t">Había que repetirlo. Cada día. Cada semana. Cada año. El Día de la Expiación se repetía anualmente — lo cual significaba que lo de la vez anterior no era definitivo. Algo quedaba pendiente. El sistema era real pero provisional. Como un vendaje que necesita cambiarse cada cierto tiempo porque la herida no termina de sanar.</div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text"><strong>El Día de la Expiación — Yom Kippur.</strong> Era el momento más sagrado del año. Un día al año, el sumo sacerdote entraba solo al Lugar Santísimo con sangre para hacer expiación por todo el pueblo. Pero antes tenía que sacrificar un animal por sus propios pecados. El mediador también necesitaba mediación.</div></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Dos machos cabríos. Uno era sacrificado — su sangre cubría el pecado. El otro — el chivo expiatorio — el sacerdote ponía las manos sobre su cabeza, confesaba los pecados del pueblo, y lo enviaba al desierto. Dos gestos complementarios: el pecado necesita ser pagado y necesita ser alejado. El sistema lo mostraba con dramatismo visual extraordinario.</div></div>
+      <div class="pregunta">
+        <div class="preg-label">Pregunta al grupo — sin responder todavía</div>
+        <div class="preg-texto">"¿Se imaginan la escena? Año tras año, el mismo ritual. La misma sangre. El mismo chivo enviado al desierto. ¿Por qué habría que repetirlo si realmente funcionaba? ¿Qué estaba esperando ese sistema?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 3 -->
+  <div class="bloque">
+    <div class="bloque-header">
+      <span class="tiempo-badge t3">20–30 min</span>
+      <span class="bloque-titulo">El sacerdocio — el mediador que moría</span>
+    </div>
+    <div class="bloque-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Nadie podía acercarse a Dios directamente. El pecado lo impedía. El sacerdote era el puente — el único autorizado para entrar al Lugar Santo, para ofrecer los sacrificios, para interceder, para pronunciar la bendición sobre el pueblo. Era una figura de autoridad y misterio.</div></div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Pero el sacerdote tenía dos problemas que el sistema no podía resolver. Primero: era pecador. Antes de ofrecer por el pueblo, tenía que ofrecer por sí mismo. El puente necesitaba ser cruzado antes de cruzarlo. Segundo: moría. El puente entre Dios y el hombre eventualmente desaparecía y había que construir uno nuevo.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">Imagen narrativa</div>
+        <div class="nar-texto">"Imagínense una ciudad con un solo puente sobre un río muy peligroso. El puente es real — funciona, permite el paso. Pero está hecho de madera. Necesita reparación constante. Y eventualmente se pudre y hay que construir otro. Generación tras generación, el mismo puente, la misma madera, el mismo proceso.<br><br>
+        ¿Qué necesitaría esa ciudad? Un puente de un material diferente. Uno que no se pudra. Que no necesite reemplazo. Que no dependa de quién lo construyó."</div>
+      </div>
+
+      <div class="divider"></div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text"><strong>Melquisedec — el sacerdote sin origen.</strong> Hay una figura extraña en Génesis 14 que aparece de repente y sin contexto: Melquisedec, rey de Salem, sacerdote del Dios Altísimo. No tiene genealogía registrada — sin padre, sin madre, sin comienzo ni fin en el texto. Bendice a Abraham y recibe diezmos de él. Y luego desaparece del relato.</div></div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Siglos después el Salmo 110:4 hace una promesa extraordinaria: "Jehová ha jurado y no se arrepentirá: Tú eres sacerdote para siempre según el orden de Melquisedec." Un sacerdote para siempre — no del orden de Aarón que muere, sino del orden de alguien que no tiene registrado ni comienzo ni fin.</div></div>
+      <div class="infobox ib-purple">
+        <div class="ib-l">La pregunta que el Salmo 110 deja abierta</div>
+        <div class="ib-t">¿Quién podría ser sacerdote para siempre? ¿Quién no necesitaría ofrecer primero por sus propios pecados? ¿Quién podría ser un puente que nunca se pudra? El Salmo lo promete — pero no lo explica. La respuesta tendrá que esperar.</div>
+      </div>
+      <div class="verso">Salmo 110:4 — "Jehová ha jurado y no se arrepentirá: Tú eres sacerdote para siempre según el orden de Melquisedec."</div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 4 — EL ARCA -->
+  <div class="bloque">
+    <div class="bloque-header">
+      <span class="tiempo-badge t4">30–45 min</span>
+      <span class="bloque-titulo">El arca del pacto — el objeto más sagrado del universo</span>
+    </div>
+    <div class="bloque-body">
+      <div class="narrativa">
+        <div class="nar-label">Apertura narrativa del bloque</div>
+        <div class="nar-texto">"Hay un objeto en el Antiguo Testamento que produce una fascinación que nunca ha desaparecido — ni en la cultura cristiana ni en la secular. El arca del pacto. Los arqueólogos la buscan. Las películas la retratan. Los estudios bíblicos la analizan.<br><br>
+        Pero más allá de la fascinación, hay algo en ese objeto que es extraordinariamente preciso. Cada detalle fue diseñado por Dios mismo. Cada medida, cada material, cada elemento en su interior — nada es arbitrario. Todo habla. Todo señala.<br><br>
+        Hoy vamos a leer ese lenguaje."</div>
+      </div>
+
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Éxodo 25:10-22 — Dios da las instrucciones exactas: madera de acacia cubierta de oro puro por dentro y por fuera. Medidas precisas: dos codos y medio de largo, codo y medio de ancho, codo y medio de alto. Cuatro anillas de oro en las esquinas para transportarla con varas — nadie podía tocarla directamente. Dos querubines de oro sobre la tapa con las alas extendidas mirándose el uno al otro.</div></div>
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Estaba en el Lugar Santísimo — la habitación más interior del tabernáculo y luego del templo. Separada del resto por el velo. Solo el sumo sacerdote podía entrar una vez al año. La presencia de Dios habitaba sobre ella. Era literalmente el trono de Dios en la tierra.</div></div>
+
+      <div class="arca-grid">
+
+        <div class="arca-item">
+          <div class="ai-header">
+            <div class="ai-num an1">1</div>
+            <div class="ai-titulo">Las tablas de la Ley — dentro del arca</div>
+          </div>
+          <div class="ai-body">
+            <div class="ai-desc">Las dos tablas de piedra con los Diez Mandamientos — escritas por el dedo de Dios en el Sinaí — reposaban dentro del arca. La Ley de Dios en el corazón mismo del trono. Todo el estándar de justicia de Dios, guardado bajo su presencia.</div>
+            <div class="ai-simbolo">Significado: la Ley de Dios es el fundamento de su gobierno. Todo el pacto descansa sobre ella.</div>
+            <div class="ai-pista ap1">⚡ Guarda esta imagen — pregúntate: ¿quién podría guardar la Ley perfectamente, sin romperla ni una sola vez?</div>
+          </div>
+        </div>
+
+        <div class="arca-item">
+          <div class="ai-header">
+            <div class="ai-num an2">2</div>
+            <div class="ai-titulo">El maná — dentro del arca</div>
+          </div>
+          <div class="ai-body">
+            <div class="ai-desc">Una vasija de oro con maná del desierto — el pan del cielo que Dios proveyó milagrosamente durante cuarenta años. Cada mañana aparecía en el suelo. Era el símbolo más concreto de la provisión de Dios: sustento sobrenatural, dado gratuitamente, cada día, sin mérito del pueblo.</div>
+            <div class="ai-simbolo">Significado: Dios es la fuente de sustento. El pueblo vive de lo que él da, no de lo que produce.</div>
+            <div class="ai-pista ap1">⚡ Guarda esta imagen — ¿quién podría ser ese pan de otra manera? ¿El sustento no solo físico sino eterno?</div>
+          </div>
+        </div>
+
+        <div class="arca-item">
+          <div class="ai-header">
+            <div class="ai-num an3">3</div>
+            <div class="ai-titulo">La vara de Aarón — dentro del arca</div>
+          </div>
+          <div class="ai-body">
+            <div class="ai-desc">La vara de Aarón que reverdeció y floreció milagrosamente — señal del sacerdocio legítimo de Aarón ante los que lo cuestionaban. Una vara seca que produjo vida. Un objeto muerto que fructificó. Dios usó esa vara para confirmar quién tenía autoridad para mediar entre él y el pueblo.</div>
+            <div class="ai-simbolo">Significado: la autoridad sacerdotal viene de Dios, no de los hombres. Y puede dar vida donde parece que no hay vida.</div>
+            <div class="ai-pista ap1">⚡ Guarda esta imagen — algo muerto que produce vida. ¿Dónde más veremos ese patrón en la historia?</div>
+          </div>
+        </div>
+
+        <div class="arca-item">
+          <div class="ai-header">
+            <div class="ai-num an4">4</div>
+            <div class="ai-titulo">El propiciatorio — la tapa del arca</div>
+          </div>
+          <div class="ai-body">
+            <div class="ai-desc">La tapa del arca se llamaba "propiciatorio" — en hebreo kapporeth, del verbo kafar: cubrir, expiar. Era el lugar más sagrado de toda la tierra. Una vez al año el sumo sacerdote rociaba sangre del sacrificio sobre esa tapa. Sobre ella. Entre los querubines. Allí la justicia de Dios y la misericordia de Dios se encontraban — la Ley estaba debajo, la sangre estaba encima.</div>
+            <div class="ai-simbolo">Significado: el lugar donde la justicia y la misericordia se encuentran. Donde la sangre cubre lo que la Ley condena.</div>
+            <div class="ai-pista ap1">⚡ Guarda esta imagen — la justicia debajo, la sangre encima. ¿Dónde se resolverá esto definitivamente?</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="infobox ib-teal">
+        <div class="ib-l">El arca como resumen de todo el sistema</div>
+        <div class="ib-t">El arca contenía todo lo que definía la relación entre Dios y su pueblo: la Ley que nadie podía guardar perfectamente, el pan que los sostuvo en el desierto, la vara que confirmó el sacerdocio, y el propiciatorio donde la sangre cubría lo que la Ley condenaba. Era el resumen visual del problema y de la solución provisional. Pero seguía siendo provisional.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 5 — EL TEMPLO Y EL VELO -->
+  <div class="bloque">
+    <div class="bloque-header">
+      <span class="tiempo-badge t5">45–50 min</span>
+      <span class="bloque-titulo">El templo y el velo — Dios cerca pero no del todo</span>
+    </div>
+    <div class="bloque-body">
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">El templo de Salomón era la estructura más gloriosa que Israel jamás construyó. Todo el oro, toda la habilidad, toda la devoción del pueblo — concentrada en un solo edificio. Y en su corazón: el Lugar Santísimo, donde reposaba el arca, donde habitaba la presencia de Dios.</div></div>
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">Pero la estructura misma del templo gritaba una realidad que nadie podía ignorar: había capas de separación. El atrio exterior — para todos. El atrio de Israel — solo israelitas. El Lugar Santo — solo sacerdotes. El Lugar Santísimo — solo el sumo sacerdote, solo una vez al año, solo con sangre. Cada capa era una declaración: todavía no podemos acercarnos completamente.</div></div>
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">El velo que separaba el Lugar Santo del Lugar Santísimo medía aproximadamente 18 metros de alto y 10 centímetros de grosor. No era una cortina decorativa — era una declaración teológica. Detrás de ese velo estaba la presencia de Dios. Y ese velo permanecía cerrado. Para todos. Siempre.</div></div>
+      <div class="verso">Éxodo 26:33 — "Y pondrás el velo debajo de los corchetes, y meterás allí, del velo adentro, el arca del testimonio; y aquel velo os hará separación entre el lugar santo y el santísimo."</div>
+      <div class="infobox ib-gray">
+        <div class="ib-l">La imagen que cierra la charla</div>
+        <div class="ib-t">Todo el sistema era real. Los sacrificios eran reales. El sacerdocio era real. El arca era real. La presencia de Dios era real. Pero el velo seguía ahí. La distancia seguía ahí. Año tras año, generación tras generación, el velo permanecía cerrado. Alguien tendría que abrirlo. Pero eso — eso no lo vamos a contar hoy.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CIERRE EN SUSPENSO -->
+  <div class="suspenso">
+    <div class="sus-label">Cierre de la charla — dejar en suspenso</div>
+    <div class="sus-titulo">"Todo esto era real. Todo esto era poderoso. Y todo esto esperaba algo."</div>
+    <div class="sus-preguntas">
+      <div class="sus-q">"¿Por qué había que repetir los sacrificios si realmente resolvían el problema?"</div>
+      <div class="sus-q">"¿Quién podría ser sacerdote para siempre — sin necesitar primero ofrecer por sus propios pecados?"</div>
+      <div class="sus-q">"¿Quién podría guardar perfectamente la Ley que estaba dentro del arca?"</div>
+      <div class="sus-q">"¿Quién sería ese pan del cielo de una forma definitiva y no solo temporal?"</div>
+      <div class="sus-q">"¿Quién abriría ese velo — y cómo?"</div>
+    </div>
+    <div class="sus-cierre">"La próxima charla no presenta nuevos símbolos. Presenta a alguien. Y cuando lo vean, van a reconocer en él cada imagen que estudiamos hoy."</div>
+  </div>
+
+</div>

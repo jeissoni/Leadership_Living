@@ -1,0 +1,359 @@
+
+<style>
+  .s { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .serie-titulo { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .serie-sub { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 1.5rem; font-style: italic; }
+  .chip { font-size: 13px; background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); padding: 4px 12px; color: var(--color-text-secondary); display: inline-block; margin: 0 4px 12px 0; }
+
+  .charla { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .charla-header { padding: 16px 18px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .charla-top { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .c-badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .cb1 { background: #FAEEDA; color: #854F0B; }
+  .cb2 { background: #EEEDFE; color: #534AB7; }
+  .cb3 { background: #E1F5EE; color: #0F6E56; }
+  .charla-titulo { font-size: 19px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
+  .charla-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+  .charla-body { padding: 16px 18px; }
+
+  .bloque { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 10px; overflow: hidden; }
+  .bloque-header { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .bloque-tiempo { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); }
+  .bloque-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .bloque-body { padding: 10px 12px; }
+  .punto { display: flex; gap: 8px; margin-bottom: 7px; align-items: flex-start; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#7F77DD;} .d3{background:#1D9E75;} .d4{background:#D85A30;}
+  .punto-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+  .verso { font-size: 12px; color: var(--color-text-secondary); font-style: italic; padding-left: 8px; border-left: 2px solid var(--color-border-secondary); margin: 6px 0; }
+  .infobox { border-radius: var(--border-radius-md); padding: 10px 12px; margin: 8px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; }
+  .ib-amber .ib-t { color: #412402; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; }
+  .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; }
+  .ib-teal .ib-t { color: #04342C; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; }
+  .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .ib-t { font-size: 13px; line-height: 1.6; }
+  .pregunta { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; margin-top: 8px; border: 0.5px solid var(--color-border-tertiary); }
+  .preg-l { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .preg-t { font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.5; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .tension { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 8px 0; }
+  .tc { border-radius: var(--border-radius-md); padding: 8px 10px; }
+  .tc-gray { background: #F1EFE8; }
+  .tc-teal { background: #E1F5EE; }
+  .tc-purple { background: #EEEDFE; }
+  .tc-amber { background: #FAEEDA; }
+  .tc-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; color: var(--color-text-secondary); }
+  .tc-t { font-size: 12px; color: var(--color-text-primary); line-height: 1.5; }
+
+  .hilo { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 0.5px solid #AFA9EC; padding: 14px 16px; margin-top: 1rem; }
+  .hilo-l { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .hilo-grid { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .hilo-item { font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: var(--border-radius-md); }
+  .hi1 { background: #FAEEDA; color: #854F0B; }
+  .hi2 { background: #EEEDFE; color: #534AB7; }
+  .hi3 { background: #E1F5EE; color: #0F6E56; }
+  .hilo-flecha { font-size: 14px; color: var(--color-text-secondary); }
+</style>
+
+<div class="s">
+  <p class="serie-titulo">El Dios que viene — de la promesa al cumplimiento</p>
+  <p class="serie-sub">Una serie de 3 charlas sobre Jesús desde el Antiguo Testamento</p>
+  <span class="chip">3 charlas</span>
+  <span class="chip">Voluntarios con base bíblica</span>
+  <span class="chip">Profundidad + narrativa</span>
+  <span class="chip">~45 min cada una</span>
+
+  <!-- ── CHARLA 1 ── -->
+  <div class="charla">
+    <div class="charla-header">
+      <div class="charla-top">
+        <span class="c-badge cb1">Charla 1</span>
+        <span class="chip" style="margin:0">45 min</span>
+      </div>
+      <div class="charla-titulo">"El problema que Dios se negó a ignorar"</div>
+      <div class="charla-tagline">La necesidad del pacto — por qué Dios no podía simplemente perdonar y ya</div>
+    </div>
+    <div class="charla-body">
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">0–8 min</span>
+          <span class="bloque-titulo">Apertura narrativa — El jardín y la grieta</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Narrar Génesis 3 como historia — no como lección. Dios camina por el jardín, llama a Adán, y algo ha cambiado para siempre. La grieta no es solo desobediencia — es una ruptura de relación, de confianza, de naturaleza.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">La pregunta que abre todo: ¿por qué Dios no simplemente perdonó en ese momento y listo? ¿Por qué fue necesario todo lo que vino después — el tabernáculo, los sacerdotes, los sacrificios, siglos de historia? Dejar esa pregunta abierta.</div></div>
+          <div class="verso">Génesis 3:8-9 — "Y oyeron la voz de Dios que se paseaba en el huerto... y Dios llamó al hombre: ¿Dónde estás tú?"</div>
+          <div class="infobox ib-amber">
+            <div class="ib-l">La pregunta de fondo</div>
+            <div class="ib-t">Dios no pregunta dónde está Adán porque no lo sabe. Pregunta porque quiere que Adán entienda dónde está. Es la primera pregunta pastoral de la historia.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">8–18 min</span>
+          <span class="bloque-titulo">El problema real — por qué el perdón no era simple</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Explicar la naturaleza del problema: no es solo una infracción legal que necesita perdón. Es una ruptura de naturaleza. El ser humano ahora lleva en sí algo que lo separa de Dios estructuralmente — la muerte, la tendencia al mal, la incapacidad de ser justo por su propia fuerza.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Dios es perfectamente justo y perfectamente amoroso al mismo tiempo. El problema del pecado pone esas dos cosas en tensión aparente: si perdonas sin justicia, no eres justo. Si aplicas justicia sin amor, destruyes lo que amas. El pacto es la solución de Dios a esa tensión.</div></div>
+          <div class="tension">
+            <div class="tc tc-gray"><div class="tc-l">El dilema de Dios</div><div class="tc-t">Perdonar sin consecuencia viola la justicia. Aplicar justicia sin misericordia destruye al hombre.</div></div>
+            <div class="tc tc-teal"><div class="tc-l">La solución del pacto</div><div class="tc-t">Un sistema donde la justicia se satisface y la misericordia alcanza al culpable. Alguien más paga.</div></div>
+          </div>
+          <div class="verso">Romanos 3:25-26 — "Para manifestar su justicia... para que él sea justo, y el que justifica al que es de la fe de Jesús."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">18–28 min</span>
+          <span class="bloque-titulo">El primer pacto — Abraham, Moisés y la estructura del pacto</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Explicar qué era un pacto en el mundo antiguo — no es un contrato moderno. Era una unión de vida y muerte entre dos partes. Cuando Dios hace pacto con Abraham en Génesis 15, divide animales por la mitad y pasa en medio — la señal de que el que rompa el pacto merece ser partido como esos animales. Y Dios pasa solo. Se hace responsable de ambos lados.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">El pacto mosaico en el Sinaí: Dios da la Ley no como sistema para ganarse la salvación sino como constitución de un pueblo que ya fue rescatado. "Yo soy el Señor tu Dios que te saqué de Egipto" viene antes de los mandamientos — la gracia precede a la ley.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Estructura del pacto: hay un Gran Rey (Dios), un pueblo vassallo (Israel), condiciones (la Ley), bendiciones por obediencia y maldiciones por desobediencia, y un mediador (Moisés). Esa estructura apunta a algo mayor.</div></div>
+          <div class="verso">Génesis 15:17-18 — "Cuando el sol se puso... un horno humeando y una antorcha de fuego pasó entre los animales... Jehová hizo pacto con Abram."</div>
+          <div class="verso">Éxodo 20:2 — "Yo soy Jehová tu Dios, que te saqué de la tierra de Egipto, de casa de servidumbre." — antes del primer mandamiento.</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">28–38 min</span>
+          <span class="bloque-titulo">Los mandamientos — para qué eran realmente</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Los Diez Mandamientos no son un sistema para ganarse la salvación — son el retrato del carácter de Dios y la descripción de cómo vive un pueblo redimido. Están organizados en dos tablas: los primeros cuatro hablan de la relación con Dios, los últimos seis de la relación con el prójimo — exactamente el resumen de Jesús en Mateo 22.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">El problema que los mandamientos revelaron: nadie podía guardarlos perfectamente. No porque fueran malos — sino porque el corazón humano era incapaz. Pablo lo dice en Romanos 7: la Ley es santa, pero yo soy carnal. La Ley hizo visible la enfermedad — no la curó.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Función profética de la Ley: cada mandamiento roto señalaba hacia la necesidad de alguien que sí los guardara perfectamente. El que obedeciera la Ley completamente podría representar a los que no podían.</div></div>
+          <div class="verso">Romanos 3:20 — "Por medio de la ley es el conocimiento del pecado."</div>
+          <div class="verso">Gálatas 3:24 — "La ley ha sido nuestro ayo para llevarnos a Cristo."</div>
+          <div class="infobox ib-purple">
+            <div class="ib-l">La imagen del ayo</div>
+            <div class="ib-t">En el mundo greco-romano el "ayo" era el esclavo que llevaba al niño a la escuela y lo entregaba al maestro. La Ley llevaba a Israel hacia Cristo — no era el destino, era el camino.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">38–45 min</span>
+          <span class="bloque-titulo">Cierre — La promesa que se cuela por todo</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Desde Génesis 3:15 — "pondré enemistad entre tú y la mujer, y entre tu simiente y la simiente suya" — hay una promesa que atraviesa todo el Antiguo Testamento: alguien vendrá a resolver lo que el pacto antiguo no podía resolver definitivamente.</div></div>
+          <div class="punto"><div class="dot d1"></div><div class="punto-text">Cerrar con la imagen: el Antiguo Testamento es una historia con un final que no llega. Cada sacrificio resuelve temporalmente. Cada sacerdote eventualmente muere. Cada templo eventualmente es destruido. La historia entera está esperando algo — o a alguien.</div></div>
+          <div class="verso">Génesis 3:15 — "Pondré enemistad entre tú y la mujer... él te herirá en la cabeza, y tú le herirás en el calcañar." — el primer anuncio del Mesías.</div>
+          <div class="pregunta">
+            <div class="preg-l">Pregunta para llevar</div>
+            <div class="preg-t">"¿Alguna vez has sentido que intentas guardar las reglas de Dios con tus propias fuerzas y que siempre quedas corto? Eso es exactamente lo que Israel vivió por siglos. La próxima charla explica por qué era necesario."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHARLA 2 ── -->
+  <div class="charla">
+    <div class="charla-header">
+      <div class="charla-top">
+        <span class="c-badge cb2">Charla 2</span>
+        <span class="chip" style="margin:0">45 min</span>
+      </div>
+      <div class="charla-titulo">"La sangre que cubría — pero no quitaba"</div>
+      <div class="charla-tagline">El sistema sacrificial, el sacerdocio, el templo y el arca — y por qué todo apuntaba más lejos</div>
+    </div>
+    <div class="charla-body">
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">0–8 min</span>
+          <span class="bloque-titulo">Apertura — La primera muerte</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">Narrar Génesis 3:21 — después del pecado, Dios hace túnicas de piel para Adán y Eva. Para hacer túnicas de piel, algo tuvo que morir. Es el primer sacrificio de la historia — no lo hizo el hombre, lo hizo Dios. Y ese patrón se repite a lo largo de todo el Antiguo Testamento: la vida de uno cubre al culpable.</div></div>
+          <div class="verso">Génesis 3:21 — "Y Jehová Dios hizo al hombre y a su mujer túnicas de pieles, y los vistió."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">8–20 min</span>
+          <span class="bloque-titulo">Los sacrificios — el sistema y su lógica</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">Explicar el sistema levítico de sacrificios. Había cinco tipos principales: el holocausto (ofrenda total), la ofrenda de paz (comunión con Dios), la ofrenda por el pecado, la ofrenda por la culpa, y la ofrenda de grano. Cada uno tenía una función específica en la relación entre Dios y el pueblo.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El principio central: "sin derramamiento de sangre no hay remisión" (Hebreos 9:22). No porque Dios sea violento — sino porque la vida está en la sangre (Levítico 17:11) y el pecado cuesta vida. El animal moría en lugar del pecador — sustitución. Pero era temporal: había que repetirlo.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El Día de la Expiación — Yom Kippur — era el momento más sagrado del año. El sumo sacerdote entraba solo al Lugar Santísimo con sangre. Dos machos cabríos: uno se sacrificaba, el otro — el chivo expiatorio — cargaba simbólicamente los pecados del pueblo y era enviado al desierto. Imagen poderosa: el pecado necesita ser pagado Y alejado.</div></div>
+          <div class="verso">Levítico 17:11 — "La vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas."</div>
+          <div class="verso">Hebreos 10:3-4 — "En esos sacrificios cada año se hace memoria de los pecados; porque la sangre de los toros y de los machos cabríos no puede quitar los pecados."</div>
+          <div class="infobox ib-purple">
+            <div class="ib-l">La limitación del sistema</div>
+            <div class="ib-t">Cubría el pecado temporalmente — como tapar una herida sin curarla. Se necesitaba algo definitivo: una sangre que no solo cubriera sino que quitara de raíz.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">20–30 min</span>
+          <span class="bloque-titulo">El sacerdocio — el mediador que moría</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El sacerdote era el mediador entre Dios y el pueblo. Nadie podía acercarse a Dios directamente — el pecado lo impedía. El sacerdote ofrecía los sacrificios, intercedía por el pueblo, pronunciaba la bendición. Era el puente entre lo santo y lo profano.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El problema: el sacerdote era también pecador. Antes de ofrecer sacrificio por el pueblo, tenía que ofrecer uno por sí mismo. Y eventualmente moría — el puente desaparecía y había que consagrar uno nuevo. El sacerdocio levítico era poderoso pero imperfecto y temporal.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">Melquisedec — el sacerdote misterioso de Génesis 14 que aparece sin genealogía, sin principio ni fin registrado. El Salmo 110:4 promete un sacerdote "para siempre según el orden de Melquisedec." Alguien vendría que sería sacerdote permanente — sin necesidad de sucesor.</div></div>
+          <div class="verso">Hebreos 7:23-24 — "Y los otros sacerdotes llegaron a ser muchos, debido a que por la muerte no podían continuar; mas este, por cuanto permanece para siempre, tiene un sacerdocio inmutable."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">30–40 min</span>
+          <span class="bloque-titulo">El templo y el arca — Dios buscando habitar con su pueblo</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El tabernáculo primero, el templo después — eran la respuesta de Dios al deseo más profundo del ser humano: estar cerca de Dios. Pero la estructura misma del templo revelaba la distancia: el atrio exterior (todos), el atrio de Israel (solo israelitas), el Lugar Santo (solo sacerdotes), el Lugar Santísimo (solo el sumo sacerdote, solo una vez al año). Capas de separación.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El arca del pacto — en el Lugar Santísimo — era el símbolo de la presencia de Dios. Contenía las tablas de la Ley, el maná del desierto y la vara de Aarón. Encima estaba el propiciatorio — el lugar donde la sangre del sacrificio era rociada. Era literalmente el trono de Dios en la tierra. Y nadie podía acercarse.</div></div>
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El velo del templo — una cortina de 18 metros de alto y 10 centímetros de grosor separaba el Lugar Santo del Lugar Santísimo. Representaba la barrera entre Dios santo y el hombre pecador. Ese velo tiene un papel protagónico en la historia de Jesús.</div></div>
+          <div class="verso">Éxodo 25:8 — "Y harán un santuario para mí, y habitaré en medio de ellos."</div>
+          <div class="infobox ib-teal">
+            <div class="ib-l">La tensión del templo</div>
+            <div class="ib-t">Dios quiere habitar con su pueblo. El pecado lo impide. El templo es el intento más cercano posible dentro del antiguo pacto — pero sigue siendo imperfecto. El velo permanece.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">40–45 min</span>
+          <span class="bloque-titulo">Cierre — Todo apuntaba a uno</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d2"></div><div class="punto-text">El sistema entero — sacrificios, sacerdotes, templo, arca — era una sombra. Hebreos 10:1 lo dice: "la ley, teniendo la sombra de los bienes venideros, no la imagen misma de las cosas." Una sombra revela la forma del objeto real. El sistema apuntaba a alguien que sería el sacrificio definitivo, el sacerdote eterno, el templo verdadero y la presencia plena de Dios.</div></div>
+          <div class="verso">Colosenses 2:17 — "Todo lo cual es sombra de lo que ha de venir; pero el cuerpo es de Cristo."</div>
+          <div class="pregunta">
+            <div class="preg-l">Pregunta para llevar</div>
+            <div class="preg-t">"¿Puedes ver el patrón? Cada parte del sistema antiguo tenía una limitación — el sacrificio era temporal, el sacerdote moría, el templo podía ser destruido. La próxima charla presenta a quien lo cumplió todo de una vez y para siempre."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHARLA 3 ── -->
+  <div class="charla">
+    <div class="charla-header">
+      <div class="charla-top">
+        <span class="c-badge cb3">Charla 3</span>
+        <span class="chip" style="margin:0">45 min</span>
+      </div>
+      <div class="charla-titulo">"El que todo lo cumplió"</div>
+      <div class="charla-tagline">Jesús como el cumplimiento de todo lo que el Antiguo Testamento prometió y anticipó</div>
+    </div>
+    <div class="charla-body">
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">0–8 min</span>
+          <span class="bloque-titulo">Apertura — Las profecías que nadie podía inventar</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">Abrir con el dato: el Antiguo Testamento contiene más de 300 profecías sobre el Mesías escritas siglos antes de Jesús. Lugar de nacimiento (Miqueas 5:2 — Belén), nacido de virgen (Isaías 7:14), entrada en burro a Jerusalén (Zacarías 9:9), traicionado por 30 monedas de plata (Zacarías 11:12-13), crucificado (Salmo 22 — escrito 1000 años antes de que existiera la crucifixión como método).</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">No se trata de coincidencias — se trata de que Dios llevaba siglos anunciando lo que iba a hacer. El Antiguo Testamento no es un libro diferente — es el primer acto de la misma historia.</div></div>
+          <div class="verso">Mateo 5:17 — "No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">8–22 min</span>
+          <span class="bloque-titulo">Jesús cumple cada elemento del sistema antiguo</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d3"></div><div class="punto-text"><strong>El sacrificio definitivo.</strong> Juan el Bautista lo anuncia con precisión quirúrgica: "He aquí el Cordero de Dios que quita el pecado del mundo" (Juan 1:29). No "cubre" — quita. Jesús no repite el sacrificio año tras año — lo hace una vez para siempre. Hebreos 9:26 — "se presentó una vez para siempre para quitar el pecado."</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text"><strong>El sumo sacerdote eterno.</strong> Jesús no ofrece un sacrificio por sí mismo antes de ofrecer uno por el pueblo — Él es el sacrificio y el que ofrece al mismo tiempo. Es el sacerdote perfecto que no muere sino que resucita y intercede para siempre. Hebreos 7:25 — "siempre vive para interceder por ellos."</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text"><strong>El templo verdadero.</strong> Juan 2:19 — "Destruid este templo y en tres días lo levantaré." Hablaba de su cuerpo. Jesús es el lugar donde Dios y el hombre se encuentran. Ya no se necesita un edificio — el acceso a Dios pasa por una persona.</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text"><strong>El arca del pacto cumplida.</strong> El arca contenía la Ley — Jesús la cumplió perfectamente. Contenía el maná — Jesús es "el pan de vida" (Juan 6:35). Tenía el propiciatorio donde se rociaba la sangre — Romanos 3:25 llama a Jesús "propiciación." El arca era símbolo. Jesús es la realidad.</div></div>
+          <div class="verso">Juan 1:29 — "He aquí el Cordero de Dios que quita el pecado del mundo."</div>
+          <div class="verso">Hebreos 9:12 — "Y no por sangre de machos cabríos ni de becerros, sino por su propia sangre, entró una vez para siempre al Lugar Santísimo, habiendo obtenido eterna redención."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">22–32 min</span>
+          <span class="bloque-titulo">El velo que se rasgó — el momento que lo cambió todo</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">Narrar la crucifixión con el foco en un detalle: en el momento en que Jesús muere, el velo del templo se rasga de arriba a abajo. No de abajo a arriba — como si un hombre lo rasgara. De arriba a abajo — como si Dios lo rasgara desde su lado.</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">Ese velo de 18 metros de alto y 10 centímetros de grosor que separaba al hombre de la presencia de Dios. Rasgado. Para siempre. El camino al Lugar Santísimo — a la presencia plena de Dios — quedó abierto. No para el sumo sacerdote una vez al año. Para todo el que venga a través de Jesús, en cualquier momento, en cualquier lugar.</div></div>
+          <div class="verso">Mateo 27:50-51 — "Mas Jesús, habiendo otra vez clamado a gran voz, entregó el espíritu. Y he aquí, el velo del templo se rasgó en dos, de arriba abajo."</div>
+          <div class="verso">Hebreos 10:19-20 — "Así que, hermanos, teniendo libertad para entrar en el Lugar Santísimo por la sangre de Jesucristo, por el camino nuevo y vivo que él nos abrió a través del velo, esto es, de su carne."</div>
+          <div class="infobox ib-coral">
+            <div class="ib-l">El momento definitivo</div>
+            <div class="ib-t">Todo el sistema del Antiguo Testamento apuntaba a ese instante. El velo rasgado no es un detalle menor — es la declaración visual de que el problema entre Dios y el hombre ha sido resuelto definitivamente.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">32–40 min</span>
+          <span class="bloque-titulo">El nuevo pacto — mejor en todo sentido</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">Jeremías 31:31-34 — siglos antes de Jesús, Dios promete un nuevo pacto. No como el antiguo — escrito en piedra, dependiente de la obediencia humana. Este sería escrito en el corazón. La diferencia es radical: el antiguo pacto decía "haz esto para estar bien con Dios." El nuevo dice "estás bien con Dios — ahora vive de esa realidad."</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">En la última cena, Jesús toma la copa y dice: "Esta copa es el nuevo pacto en mi sangre" (Lucas 22:20). No hace referencia accidental al sistema antiguo — lo está cumpliendo y superando deliberadamente. Él es el mediador del nuevo pacto.</div></div>
+          <div class="tension">
+            <div class="tc tc-gray"><div class="tc-l">Antiguo pacto</div><div class="tc-t">Ley en piedra. Sacrificios repetidos. Sacerdote temporal. Acceso limitado. Cobertura del pecado.</div></div>
+            <div class="tc tc-purple"><div class="tc-l">Nuevo pacto</div><div class="tc-t">Ley en el corazón. Sacrificio definitivo. Sacerdote eterno. Acceso pleno. Perdón total.</div></div>
+          </div>
+          <div class="verso">Jeremías 31:33-34 — "Daré mi ley en su mente y la escribiré en su corazón... porque perdonaré la maldad de ellos y no me acordaré más de su pecado."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header">
+          <span class="bloque-tiempo">40–45 min</span>
+          <span class="bloque-titulo">Cierre — ¿Qué cambia para nosotros hoy?</span>
+        </div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">El voluntario que entiende todo esto no sirve con la lógica del antiguo pacto — "si hago suficiente, Dios estará satisfecho." Sirve desde el nuevo pacto — "Dios ya está satisfecho en Cristo, sirvo desde esa realidad."</div></div>
+          <div class="punto"><div class="dot d3"></div><div class="punto-text">El velo está rasgado. No hay barrera entre tú y Dios. No necesitas un sacerdote, un templo, un sacrificio. Tienes acceso directo — en cualquier momento, en cualquier lugar — porque Jesús pagó el precio que el sistema antiguo solo podía anticipar.</div></div>
+          <div class="verso">Hebreos 4:16 — "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro."</div>
+          <div class="pregunta">
+            <div class="preg-l">Pregunta de cierre para el grupo</div>
+            <div class="preg-t">"¿Hay algún área de tu vida donde todavía estás viviendo con lógica del antiguo pacto — intentando ganarte lo que ya fue dado? El velo se rasgó. La pregunta es si has entrado."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── HILO CONDUCTOR ── -->
+  <div class="hilo">
+    <div class="hilo-l">El hilo conductor de las tres charlas</div>
+    <div class="hilo-grid">
+      <span class="hilo-item hi1">El problema — pecado y pacto</span>
+      <span class="hilo-flecha">→</span>
+      <span class="hilo-item hi2">El sistema — sacrificios, sacerdotes, templo</span>
+      <span class="hilo-flecha">→</span>
+      <span class="hilo-item hi3">El cumplimiento — Jesús lo completa todo</span>
+    </div>
+  </div>
+
+</div>

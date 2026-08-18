@@ -1,0 +1,210 @@
+
+<style>
+  .ex { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .card-header { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-coral { background: #FAECE7; color: #993C1D; }
+  .b-teal { background: #E1F5EE; color: #0F6E56; }
+  .b-purple { background: #EEEDFE; color: #534AB7; }
+  .b-amber { background: #FAEEDA; color: #854F0B; }
+  .b-green { background: #EAF3DE; color: #3B6D11; }
+  .card-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-body { padding: 14px 16px; }
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .dc{background:#D85A30;} .dt{background:#1D9E75;} .dp{background:#7F77DD;} .da{background:#BA7517;} .dg{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+  .tension { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .tc { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .tc-gray { background: #F1EFE8; }
+  .tc-teal { background: #E1F5EE; }
+  .tc-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; color: var(--color-text-secondary); }
+  .lm { color: #888780; } .lt { color: #0F6E56; }
+  .tc-t { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .arco { display: flex; align-items: center; gap: 0; margin: 12px 0; flex-wrap: nowrap; overflow-x: auto; }
+  .arco-item { flex: 1; min-width: 0; border-radius: var(--border-radius-md); padding: 10px 8px; text-align: center; }
+  .ai1 { background: #E1F5EE; }
+  .ai2 { background: #FAECE7; }
+  .ai3 { background: #EEEDFE; }
+  .ai4 { background: #EAF3DE; }
+  .arco-flecha { font-size: 16px; color: var(--color-text-secondary); flex-shrink: 0; padding: 0 4px; }
+  .arco-ref { font-size: 10px; margin-bottom: 3px; font-weight: 500; }
+  .ar1 { color: #0F6E56; } .ar2 { color: #993C1D; } .ar3 { color: #534AB7; } .ar4 { color: #3B6D11; }
+  .arco-texto { font-size: 12px; color: var(--color-text-primary); line-height: 1.4; font-weight: 500; }
+  .arco-sub { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; line-height: 1.3; }
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+  .tres-razones { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin: 10px 0; }
+  .tr-card { border-radius: var(--border-radius-md); padding: 12px; border: 0.5px solid var(--color-border-tertiary); }
+  .tr-num { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .tr-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .tr-texto { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .cierre { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+</style>
+
+<div class="ex">
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-coral">El texto</span>
+      <span class="card-titulo">Lo que Génesis dice exactamente sobre la expulsión</span>
+    </div>
+    <div class="card-body">
+      <div class="verso">Génesis 3:22-23 — "Y dijo Jehová Dios: He aquí el hombre es como uno de nosotros, sabiendo el bien y el mal; ahora, pues, que no alargue su mano, y tome también del árbol de la vida, y coma, y viva para siempre. Y lo sacó Jehová del huerto de Edén."</div>
+      <div class="punto"><div class="dot dc"></div><div class="punto-text">La razón explícita es clara: impedir que el hombre coma del árbol de la vida y viva para siempre en su estado caído. No es solo castigo — es prevención. Dios no quiere que el hombre quede atrapado eternamente en su condición rota.</div></div>
+      <div class="infobox ib-coral">
+        <div class="ib-l">La pregunta que abre todo</div>
+        <div class="ib-t">¿Qué habría pasado si el hombre hubiera comido del árbol de la vida en ese momento — con naturaleza caída, con imagen distorsionada, con la muerte espiritual ya operando? Habría quedado inmortal en ese estado. Para siempre. Sin posibilidad de redención. La expulsión impidió ese horror.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-teal">Las tres razones</span>
+      <span class="card-titulo">Por qué Dios expulsó al hombre — nivel por nivel</span>
+    </div>
+    <div class="card-body">
+      <div class="tres-razones">
+        <div class="tr-card">
+          <div class="tr-num" style="color:#993C1D;">Razón 1</div>
+          <div class="tr-titulo">Justicia</div>
+          <div class="tr-texto">El pecado tiene consecuencias reales. Dios es justo — no puede ignorar la desobediencia sin violar su propia naturaleza.</div>
+        </div>
+        <div class="tr-card">
+          <div class="tr-num" style="color:#0F6E56;">Razón 2</div>
+          <div class="tr-titulo">Misericordia</div>
+          <div class="tr-texto">Impedir que el hombre quede atrapado eternamente en su estado caído. La expulsión fue un acto de amor disfrazado de juicio.</div>
+        </div>
+        <div class="tr-card">
+          <div class="tr-num" style="color:#534AB7;">Razón 3</div>
+          <div class="tr-titulo">Propósito</div>
+          <div class="tr-texto">Abrir el camino hacia la redención. Salir del jardín era necesario para que la historia de rescate pudiera comenzar.</div>
+        </div>
+      </div>
+      <div class="tension">
+        <div class="tc tc-gray">
+          <div class="tc-l lm">Lectura superficial</div>
+          <div class="tc-t">Dios castigó al hombre cerrando la puerta del jardín. Punto final.</div>
+        </div>
+        <div class="tc tc-teal">
+          <div class="tc-l lt">Lectura profunda</div>
+          <div class="tc-t">Dios cerró una puerta para poder abrir otra. La expulsión fue el inicio del plan de redención, no su fin.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-purple">La espada de fuego</span>
+      <span class="card-titulo">¿Barrera o guardián? — La espada que preservaba</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">El texto dice que los querubines fueron puestos "para guardar el camino del árbol de la vida." Guardar en hebreo es <em>shamar</em> — custodiar, preservar, proteger. La misma palabra usada cuando Dios le dice a Adán que "guarde" el jardín.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">La espada de fuego no solo bloqueaba el acceso — preservaba el árbol. Lo mantenía intacto, esperando. Como un padre que cierra con llave algo peligroso para un niño — no para siempre, sino hasta el momento correcto.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">El arco completo</div>
+        <div class="nar-texto">
+          Génesis 3 — el árbol de vida bloqueado por una espada de fuego.<br>
+          Toda la historia de la Biblia — el camino de regreso al árbol.<br>
+          Juan 19 — Jesús en la cruz, traspasado por una lanza de hierro. La espada cae sobre él.<br>
+          Apocalipsis 22 — el árbol de vida en el centro de la ciudad, libre para todos, sin barrera.<br><br>
+          Lo que la espada guardaba en Génesis — Jesús lo abrió con su cuerpo en la cruz.
+        </div>
+      </div>
+      <div class="verso">Génesis 3:24 — "Puso al oriente del huerto de Edén querubines, y una espada encendida que se revolvía por todos lados, para guardar el camino del árbol de la vida."</div>
+      <div class="verso">Apocalipsis 22:2 — "En medio de la calle de la ciudad, y a uno y otro lado del río, estaba el árbol de la vida, que produce doce frutos... y las hojas del árbol eran para la sanidad de las naciones."</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-amber">El árbol de la vida</span>
+      <span class="card-titulo">El arco completo — de Génesis a Apocalipsis</span>
+    </div>
+    <div class="card-body">
+      <div class="arco">
+        <div class="arco-item ai1">
+          <div class="arco-ref ar1">Gn 2</div>
+          <div class="arco-texto">Árbol disponible</div>
+          <div class="arco-sub">En el jardín, accesible</div>
+        </div>
+        <div class="arco-flecha">→</div>
+        <div class="arco-item ai2">
+          <div class="arco-ref ar2">Gn 3</div>
+          <div class="arco-texto">Árbol bloqueado</div>
+          <div class="arco-sub">Espada de fuego, querubines</div>
+        </div>
+        <div class="arco-flecha">→</div>
+        <div class="arco-item ai3">
+          <div class="arco-ref ar3">Juan 19</div>
+          <div class="arco-texto">La espada cae</div>
+          <div class="arco-sub">Sobre Jesús en la cruz</div>
+        </div>
+        <div class="arco-flecha">→</div>
+        <div class="arco-item ai4">
+          <div class="arco-ref ar4">Ap 22</div>
+          <div class="arco-texto">Árbol libre</div>
+          <div class="arco-sub">Para todos, sin barrera</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">La expulsión del Edén no es el final de la historia del árbol de la vida — es el inicio de la búsqueda. Toda la Biblia es el relato de cómo Dios abre el camino de regreso a ese árbol. Y el camino pasa por la cruz.</div></div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">En Apocalipsis 22 el árbol da doce frutos — uno cada mes — y sus hojas son para la sanidad de las naciones. No solo de Israel, no solo de los judíos, no solo de los creyentes de una época. De todas las naciones. Lo que fue cerrado para dos personas en un jardín es abierto para toda la humanidad en la nueva creación.</div></div>
+      <div class="infobox ib-amber">
+        <div class="ib-l">Lo que cambió entre Génesis y Apocalipsis</div>
+        <div class="ib-t">En el Edén el árbol estaba disponible pero el hombre podía perder el acceso — y lo perdió. En la nueva creación el árbol está disponible y el acceso es permanente e irreversible. La redención no solo restaura lo que se perdió — lo asegura para siempre.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-green">Aplicación</span>
+      <span class="card-titulo">¿Qué cambia en mi vida cuando entiendo esto?</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dg"></div><div class="punto-text"><strong>La expulsión no fue abandono.</strong> Si Dios hubiera querido abandonar al hombre, no habría caminado por el jardín, no habría preguntado, no habría pronunciado la promesa, no habría hecho las túnicas. La expulsión fue el inicio de un viaje de rescate, no el cierre de la relación.</div></div>
+      <div class="punto"><div class="dot dg"></div><div class="punto-text"><strong>Las puertas cerradas de Dios también son misericordia.</strong> Hay momentos en la vida donde Dios cierra una puerta y no entendemos por qué. La expulsión del Edén enseña que a veces Dios cierra lo que nos destruiría si permaneciéramos. No toda puerta cerrada es castigo — algunas son protección.</div></div>
+      <div class="punto"><div class="dot dg"></div><div class="punto-text"><strong>El árbol de la vida ya está disponible para ti.</strong> Lo que la espada de fuego bloqueaba — el acceso a la vida de Dios — fue abierto por Jesús en la cruz. Juan 10:10 — "yo he venido para que tengan vida y para que la tengan en abundancia." No en el futuro solamente — ahora. El árbol de la vida ya no está bloqueado para el que está en Cristo.</div></div>
+      <div class="punto"><div class="dot dg"></div><div class="punto-text"><strong>Tu historia no terminó en tu caída.</strong> La historia de Adán no terminó en Génesis 3 — continuó. La historia de Israel no terminó en el exilio — continuó. Tu historia no termina en el momento más oscuro — continúa. Dios es especialista en escribir capítulos después de los que parecen ser el final.</div></div>
+      <div class="verso">Juan 10:10 — "El ladrón no viene sino para hurtar y matar y destruir; yo he venido para que tengan vida, y para que la tengan en abundancia."</div>
+      <div class="infobox ib-green">
+        <div class="ib-l">La pregunta más personal</div>
+        <div class="ib-t">¿Hay alguna "expulsión" en tu historia — una puerta que se cerró, algo que perdiste, un lugar al que no puedes volver — que todavía estás interpretando como abandono de Dios? La historia del Edén dice que esa lectura puede estar equivocada. A veces lo que parece una expulsión es el inicio de un rescate.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">La razón de la expulsión — completa</div>
+    <div class="cierre-texto">
+      La expulsión del Edén fue simultáneamente justicia, misericordia y propósito.<br><br>
+      <strong>Justicia</strong> — porque el pecado tiene consecuencias reales que Dios no ignora.<br>
+      <strong>Misericordia</strong> — porque impidió que el hombre quedara atrapado eternamente en su estado caído.<br>
+      <strong>Propósito</strong> — porque abrió el camino hacia la redención que el jardín no podía ofrecer.<br><br>
+      La espada que bloqueaba el árbol de la vida en Génesis 3 cayó sobre Jesús en la cruz.<br>
+      Y en Apocalipsis 22 el árbol está en el centro de la ciudad — sin barrera, sin espada, para siempre.<br><br>
+      <em>Dios no expulsó al hombre del jardín para abandonarlo. Lo sacó para ir a buscarlo.</em>
+    </div>
+  </div>
+
+</div>

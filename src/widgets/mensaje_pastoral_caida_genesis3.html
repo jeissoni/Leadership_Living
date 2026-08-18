@@ -1,0 +1,295 @@
+
+<style>
+  .mp { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .card-header { padding: 16px 18px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .card-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b1 { background: #FAECE7; color: #993C1D; }
+  .b2 { background: #E1F5EE; color: #0F6E56; }
+  .b3 { background: #EEEDFE; color: #534AB7; }
+  .card-titulo { font-size: 19px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
+  .card-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+  .card-body { padding: 16px 18px; }
+
+  .bloque { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); margin-bottom: 12px; overflow: hidden; }
+  .bloque-header { padding: 8px 12px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 8px; }
+  .bloque-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .bloque-body { padding: 12px 14px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 9px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .dc{background:#D85A30;} .dt{background:#1D9E75;} .dp{background:#7F77DD;} .da{background:#BA7517;} .dg{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .aplicacion-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .ap-card { border-radius: var(--border-radius-md); padding: 12px 14px; border: 0.5px solid var(--color-border-tertiary); }
+  .ap-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ap-preg { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; font-style: italic; font-weight: 500; margin-bottom: 4px; }
+  .ap-texto { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+
+  .espejo { border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 1rem; border: 0.5px solid var(--color-border-tertiary); }
+  .esp-headers { display: grid; grid-template-columns: 160px minmax(0,1fr) minmax(0,1fr); }
+  .esp-h { padding: 8px 12px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .eh0 { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .eh1 { background: #FAECE7; color: #993C1D; }
+  .eh2 { background: #E1F5EE; color: #0F6E56; }
+  .esp-fila { display: grid; grid-template-columns: 160px minmax(0,1fr) minmax(0,1fr); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .esp-fila:last-child { border-bottom: none; }
+  .esp-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); padding: 9px 12px; background: var(--color-background-secondary); border-right: 0.5px solid var(--color-border-tertiary); }
+  .esp-cel { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; padding: 9px 12px; border-right: 0.5px solid var(--color-border-tertiary); }
+  .esp-cel:last-child { border-right: none; }
+
+  .cierre { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 10px 14px; margin: 8px 0; font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+</style>
+
+<div class="mp">
+
+  <!-- PARTE 1: MENSAJE PASTORAL -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-top"><span class="badge b1">Parte 1</span></div>
+      <div class="card-titulo">El mensaje pastoral de la caída</div>
+      <div class="card-tagline">Génesis 3 no es la historia de cómo fallamos — es la historia de cómo somos</div>
+    </div>
+    <div class="card-body">
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">1. El relato describe la condición humana universal</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Génesis 3 no es solo la historia de dos personas en un jardín hace miles de años. Es el retrato más preciso que existe de lo que ocurre en cada ser humano. La tentación, la racionalización, la desobediencia, la vergüenza, el escondite, la acusación — esa secuencia se repite en cada vida, en cada generación, en cada corazón.</div></div>
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Cuando la serpiente dice "¿conque Dios os ha dicho...?" está haciendo lo que siempre hace: poner en duda la bondad de Dios. No niega que Dios exista — niega que Dios sea bueno, que sus límites sean para bien, que confiar en él valga la pena. Esa es la tentación fundamental — no el pecado específico sino la desconfianza en el carácter del Padre.</div></div>
+          <div class="verso">Génesis 3:1 — "¿Conque Dios os ha dicho que no comáis de todo árbol del huerto?"</div>
+          <div class="infobox ib-coral">
+            <div class="ib-l">El patrón de toda tentación</div>
+            <div class="ib-t">La serpiente no atacó primero la obediencia — atacó la confianza. Primero hizo dudar de la bondad de Dios, luego la desobediencia fue consecuencia natural. Toda tentación sigue ese orden: primero te hace creer que Dios te está quitando algo bueno, luego te invita a tomarlo por tu cuenta.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">2. La vergüenza — el primer fruto del pecado</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Antes de la caída: "estaban desnudos y no se avergonzaban." Después: lo primero que sintieron fue vergüenza. No culpa jurídica — vergüenza existencial. La sensación de que algo en mí no está bien, de que si me ven completamente me rechazarán. Esa vergüenza es la raíz de casi todo el dolor humano.</div></div>
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">El mensaje pastoral es profundo: la vergüenza no es solo una emoción — es una señal de que algo se rompió en la relación. Y la respuesta humana natural a la vergüenza siempre es la misma: cubrirse y esconderse. Las hojas de higuera son el primer intento humano de autoredención — y no funcionaron.</div></div>
+          <div class="verso">Génesis 2:25 — "Y estaban ambos desnudos y no se avergonzaban."</div>
+          <div class="verso">Génesis 3:7 — "Entonces fueron abiertos los ojos de ambos, y conocieron que estaban desnudos; entonces cosieron hojas de higuera y se hicieron delantales."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">3. El escondite — y el Dios que busca</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Adán se escondió entre los árboles. Nosotros nos escondemos de formas más sofisticadas — detrás del éxito, de la actividad religiosa, del conocimiento, de la comparación con otros. Pero el instinto es el mismo: cuando sentimos que fallamos ante Dios, nos alejamos en lugar de acercarnos.</div></div>
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Y aquí está el corazón del mensaje pastoral: mientras Adán se esconde, Dios camina. Mientras el hombre huye, Dios busca. La iniciativa siempre es de Dios. Esa es la buena noticia que atraviesa toda la Biblia — Dios no espera que volvamos para entonces recibirnos. Sale a buscarnos.</div></div>
+          <div class="narrativa">
+            <div class="nar-label">La imagen más poderosa del relato</div>
+            <div class="nar-texto">"Y oyeron la voz de Jehová Dios que se paseaba en el huerto al aire del día."<br><br>
+            Dios no envió un mensajero. No pronunció un decreto desde el cielo. Bajó. Caminó. Llamó. En el momento más oscuro de la historia humana, Dios se acerca — no se aleja. Eso es gracia antes de que existiera la palabra gracia.</div>
+          </div>
+          <div class="verso">Génesis 3:9 — "Mas Jehová Dios llamó al hombre y le dijo: ¿Dónde estás tú?"</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">4. La acusación — el pecado fractura las relaciones</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Cuando Dios pregunta, Adán no confiesa — acusa. "La mujer que me diste." Dos acusaciones en una frase: acusa a la mujer y acusa a Dios implícitamente. El pecado no solo rompió la relación con Dios — inmediatamente fracturó la relación entre ellos. La comunión se convirtió en competencia, el amor en acusación.</div></div>
+          <div class="punto"><div class="dot dc"></div><div class="punto-text">Mensaje pastoral: cuando estamos en vergüenza y dolor, el instinto natural es señalar hacia afuera. La madurez espiritual — y la restauración — comienza cuando podemos decir lo que Adán no pudo decir: "fui yo."</div></div>
+          <div class="verso">Génesis 3:12 — "La mujer que me diste por compañera me dio del árbol, y yo comí."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PARTE 2: MENSAJE DE GRACIA -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-top"><span class="badge b2">Parte 2</span></div>
+      <div class="card-titulo">El mensaje de gracia en la caída</div>
+      <div class="card-tagline">Cinco actos de gracia que ocurren en el capítulo más oscuro de la Biblia</div>
+    </div>
+    <div class="card-body">
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">Gracia 1 — Dios pregunta antes de juzgar</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Dios no llega con la sentencia preparada. Pregunta. "¿Dónde estás? ¿Quién te enseñó que estabas desnudo? ¿Has comido del árbol?" Son preguntas de un padre que da oportunidad de confesión antes de pronunciar consecuencia. La gracia siempre abre espacio para la honestidad antes de aplicar la justicia.</div></div>
+          <div class="infobox ib-teal">
+            <div class="ib-l">La gracia en las preguntas</div>
+            <div class="ib-t">Dios hace cuatro preguntas en Génesis 3 antes de pronunciar las consecuencias. No porque necesite información — sino porque le da al hombre la oportunidad de responder con honestidad. La confesión siempre precede a la restauración. Dios crea el espacio para que ocurra.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">Gracia 2 — La promesa en medio del juicio</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Génesis 3:15 es llamado el "Protoevangelio" — el primer evangelio. En medio de las consecuencias del pecado, antes de que terminen las maldiciones, Dios pronuncia una promesa: alguien vendrá que derrotará definitivamente al enemigo. La primera palabra de esperanza de la historia humana se pronuncia en el momento de mayor oscuridad.</div></div>
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">La estructura es poderosa: primero el juicio — consecuencias reales, no ignoradas. Pero dentro del juicio, una promesa. Dios no niega la gravedad del problema, pero tampoco deja al hombre sin esperanza. La gracia no elimina las consecuencias — opera dentro de ellas.</div></div>
+          <div class="verso">Génesis 3:15 — "Pondré enemistad entre tú y la mujer... él te herirá en la cabeza, y tú le herirás en el calcañar."</div>
+          <div class="infobox ib-purple">
+            <div class="ib-l">El primer evangelio</div>
+            <div class="ib-t">"Él te herirá en la cabeza" — victoria definitiva sobre el mal. "Tú le herirás en el calcañar" — costará sufrimiento, pero no será derrota. En esa asimetría está el resumen de la cruz: Jesús sufrió, pero venció. La serpiente hirió, pero fue aplastada.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">Gracia 3 — Dios viste al que falló</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Génesis 3:21 — después del juicio, después de las maldiciones, Dios hace túnicas de pieles y viste a Adán y Eva. Las hojas de higuera que ellos cosieron no eran suficientes. Dios mismo provee la cobertura adecuada. Y para hacerlo, algo tuvo que morir — el primer sacrificio de la historia, hecho por Dios, para cubrir la vergüenza del hombre.</div></div>
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">El mensaje de gracia es extraordinario: Dios no deja que el hombre viva con la cobertura inadecuada que él mismo fabricó. La responde con algo mejor. Nuestras hojas de higuera — todo lo que usamos para cubrir nuestra vergüenza — nunca son suficientes. La cobertura real siempre viene de él.</div></div>
+          <div class="verso">Génesis 3:21 — "Y Jehová Dios hizo al hombre y a su mujer túnicas de pieles y los vistió."</div>
+          <div class="narrativa">
+            <div class="nar-label">El patrón que se repite</div>
+            <div class="nar-texto">Dios viste a Adán con pieles en el Génesis.<br>
+            Dios viste al hijo pródigo con el mejor manto cuando regresa.<br>
+            Dios nos viste con la justicia de Cristo en el nuevo pacto.<br><br>
+            El patrón es siempre el mismo: nuestra cobertura no alcanza. La suya sí.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">Gracia 4 — Las consecuencias son reales pero no son rechazo</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Dios expulsa a Adán y Eva del jardín — eso es consecuencia real, no anulada. Pero la expulsión no es abandono. Dios los viste antes de sacarlos. Pronuncia la promesa antes de cerrar la puerta. Las consecuencias del pecado son reales en la Biblia — la gracia no las elimina mágicamente. Pero las consecuencias no son la última palabra.</div></div>
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Mensaje pastoral profundo: estar en medio de las consecuencias de tus errores no significa que Dios te haya abandonado. Adán vivió con las consecuencias — pero también vivió con la promesa. Las dos cosas son simultáneas.</div></div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bloque-header"><span class="bloque-titulo">Gracia 5 — La imagen de Dios no fue destruida</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dt"></div><div class="punto-text">Después de la caída, Génesis 9:6 todavía habla del ser humano como imagen de Dios. La caída distorsionó la imagen — no la borró. Eso tiene implicaciones enormes: en cada ser humano, por roto que esté, hay algo del diseño original de Dios. Eso es lo que la redención viene a restaurar — no a crear de cero, sino a limpiar lo que estaba allí desde el principio.</div></div>
+          <div class="verso">Génesis 9:6 — "...porque a imagen de Dios es hecho el hombre." — dicho después de la caída.</div>
+          <div class="infobox ib-green">
+            <div class="ib-l">La imagen distorsionada, no destruida</div>
+            <div class="ib-t">Como un espejo roto — todavía refleja, pero de forma fragmentada. La redención no fabrica un espejo nuevo desde cero — restaura el que fue roto. Por eso la salvación se describe como "renovación" y "transformación" — no como creación de una identidad completamente diferente.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PARTE 3: APLICACIÓN -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-top"><span class="badge b3">Parte 3</span></div>
+      <div class="card-titulo">Cómo aplicarlo en mi vida</div>
+      <div class="card-tagline">Génesis 3 como espejo — el relato antiguo y la vida de hoy</div>
+    </div>
+    <div class="card-body">
+
+      <div class="espejo">
+        <div class="esp-headers">
+          <div class="esp-h eh0">En el relato</div>
+          <div class="esp-h eh1">Lo que ocurrió en Génesis 3</div>
+          <div class="esp-h eh2">Cómo se ve en mi vida hoy</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">La tentación</div>
+          <div class="esp-cel">"¿Conque Dios os ha dicho...?" — poner en duda la bondad de Dios</div>
+          <div class="esp-cel">Las voces que me dicen que Dios me está quitando algo bueno, que sus límites son restricciones injustas, que puedo manejarlo yo solo.</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">Las hojas de higuera</div>
+          <div class="esp-cel">Adán y Eva cosieron hojas para cubrir su vergüenza</div>
+          <div class="esp-cel">Lo que uso para cubrir mi vergüenza: actividad, logros, comparación, conocimiento, distancia emocional, humor, servicio religioso.</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">El escondite</div>
+          <div class="esp-cel">Se escondieron entre los árboles de la presencia de Dios</div>
+          <div class="esp-cel">Las formas en que me alejo de Dios cuando fallo: dejo de orar, dejo de leer, me sumerjo en actividad, evito la comunidad.</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">La acusación</div>
+          <div class="esp-cel">"La mujer que me diste" — señalar hacia afuera</div>
+          <div class="esp-cel">La tendencia a culpar a otros, las circunstancias o a Dios mismo cuando las cosas salen mal.</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">La pregunta de Dios</div>
+          <div class="esp-cel">"¿Dónde estás tú?" — Dios busca antes de juzgar</div>
+          <div class="esp-cel">Dios me sigue haciendo esa pregunta. No porque no sepa — sino porque quiere que yo lo sepa y lo diga en voz alta.</div>
+        </div>
+        <div class="esp-fila">
+          <div class="esp-label">Las túnicas de piel</div>
+          <div class="esp-cel">Dios cubrió lo que ellos no podían cubrir bien</div>
+          <div class="esp-cel">La justicia de Cristo cubre lo que yo no puedo cubrir con mis propias hojas de higuera. No tengo que arreglarme antes de acercarme.</div>
+        </div>
+      </div>
+
+      <div class="aplicacion-grid">
+        <div class="ap-card">
+          <div class="ap-label" style="color:#993C1D;">Pregunta 1</div>
+          <div class="ap-preg">"¿Cuáles son mis hojas de higuera?"</div>
+          <div class="ap-texto">¿Con qué cubro la distancia real que siento con Dios? ¿Actividad, conocimiento, comparación con otros, apariencia religiosa?</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#993C1D;">Pregunta 2</div>
+          <div class="ap-preg">"¿Dónde me estoy escondiendo?"</div>
+          <div class="ap-texto">¿Hay un área de mi vida donde he estado huyendo de la presencia de Dios? ¿Un pecado, una herida, una duda que no he traído ante él?</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#0F6E56;">Pregunta 3</div>
+          <div class="ap-preg">"¿A quién estoy culpando?"</div>
+          <div class="ap-texto">¿Hay alguien a quien he estado señalando para no ver mi propia parte? ¿Hay una acusación que necesita convertirse en confesión?</div>
+        </div>
+        <div class="ap-card">
+          <div class="ap-label" style="color:#0F6E56;">Pregunta 4</div>
+          <div class="ap-preg">"¿Confío en la bondad de Dios?"</div>
+          <div class="ap-texto">¿Hay algún límite de Dios en mi vida que siento como restricción injusta? ¿Estoy creyendo la voz que dice que Dios me está quitando algo bueno?</div>
+        </div>
+      </div>
+
+      <div class="bloque" style="margin-top:12px;">
+        <div class="bloque-header"><span class="bloque-titulo">La respuesta práctica — tres pasos concretos</span></div>
+        <div class="bloque-body">
+          <div class="punto"><div class="dot dp"></div><div class="punto-text"><strong>Paso 1 — Sal del escondite.</strong> Responde la pregunta de Dios: "¿dónde estás tú?" No en términos generales — con especificidad. "Estoy aquí, en esta área de mi vida, con esto que no he querido traerte." La honestidad específica es el primer movimiento de la restauración. No el último.</div></div>
+          <div class="punto"><div class="dot dp"></div><div class="punto-text"><strong>Paso 2 — Suelta las hojas de higuera.</strong> Identifica qué estás usando para cubrir tu vergüenza y deja de depender de ello. No porque sea malo — sino porque nunca fue suficiente. La cobertura real viene de la justicia de Cristo, no de tu desempeño, tu conocimiento ni tu servicio.</div></div>
+          <div class="punto"><div class="dot dp"></div><div class="punto-text"><strong>Paso 3 — Recibe la túnica.</strong> Lo que Dios hizo en Génesis 3:21 — cubrir al que falló con algo que él mismo proveyó — sigue siendo lo que hace hoy. No tienes que arreglarte antes de acercarte. Acércate roto y recibe la cobertura. Esa es la lógica del Evangelio desde el primer capítulo de la historia humana.</div></div>
+          <div class="verso">Hebreos 4:16 — "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">El mensaje completo de Génesis 3 en tres frases</div>
+    <div class="cierre-texto">
+      <strong>El mensaje pastoral:</strong> todos nos escondemos, todos cosemos hojas de higuera, todos acusamos en lugar de confesar. No es la historia de Adán — es el retrato de cada uno de nosotros.<br><br>
+      <strong>El mensaje de gracia:</strong> mientras tú te escondías, Dios ya estaba caminando por el jardín. Pronunció una promesa en medio del juicio. Te vistió con lo que tú no podías proveerte. No te abandonó — te buscó.<br><br>
+      <strong>La aplicación:</strong> sal del escondite. Responde la pregunta. Suelta las hojas. Recibe la túnica. El Dios que caminó por el jardín en Génesis 3 sigue caminando hacia ti hoy — y sigue haciendo la misma pregunta: <em>¿dónde estás tú?</em>
+    </div>
+  </div>
+
+</div>

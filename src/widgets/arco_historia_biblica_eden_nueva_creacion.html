@@ -1,0 +1,217 @@
+
+<style>
+  .arco { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .movimientos { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 8px; margin-bottom: 1.5rem; }
+  .mov { border-radius: var(--border-radius-lg); padding: 14px 12px; border: 0.5px solid var(--color-border-tertiary); }
+  .m1 { background: #E1F5EE; border-color: #9FE1CB; }
+  .m2 { background: #FAECE7; border-color: #F5C4B3; }
+  .m3 { background: #EEEDFE; border-color: #AFA9EC; }
+  .m4 { background: #EAF3DE; border-color: #C0DD97; }
+  .mov-num { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .n1{color:#0F6E56;} .n2{color:#993C1D;} .n3{color:#534AB7;} .n4{color:#3B6D11;}
+  .mov-titulo { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .mt1{color:#085041;} .mt2{color:#712B13;} .mt3{color:#26215C;} .mt4{color:#27500A;}
+  .mov-ref { font-size: 11px; font-style: italic; margin-bottom: 6px; }
+  .mr1{color:#0F6E56;} .mr2{color:#993C1D;} .mr3{color:#534AB7;} .mr4{color:#3B6D11;}
+  .mov-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+
+  .card { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .card-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-teal { background: #E1F5EE; color: #0F6E56; }
+  .b-coral { background: #FAECE7; color: #993C1D; }
+  .b-purple { background: #EEEDFE; color: #534AB7; }
+  .b-green { background: #EAF3DE; color: #3B6D11; }
+  .b-amber { background: #FAEEDA; color: #854F0B; }
+  .card-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .card-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .dt{background:#1D9E75;} .dc{background:#D85A30;} .dp{background:#7F77DD;} .dg{background:#639922;} .da{background:#BA7517;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .comparacion { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); overflow: hidden; margin-bottom: 1rem; }
+  .comp-headers { display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); }
+  .comp-h { padding: 8px 12px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .ch0 { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .ch1 { background: #E1F5EE; color: #0F6E56; }
+  .ch2 { background: #FAECE7; color: #993C1D; }
+  .ch3 { background: #EAF3DE; color: #3B6D11; }
+  .comp-fila { display: grid; grid-template-columns: 140px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .comp-fila:last-child { border-bottom: none; }
+  .comp-cel { padding: 9px 12px; font-size: 13px; color: var(--color-text-primary); line-height: 1.5; border-right: 0.5px solid var(--color-border-tertiary); }
+  .comp-cel:last-child { border-right: none; }
+  .comp-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); padding: 9px 12px; background: var(--color-background-secondary); border-right: 0.5px solid var(--color-border-tertiary); }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; }
+  .ib-amber .ib-t { color: #412402; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; }
+  .ib-purple .ib-t { color: #26215C; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; }
+  .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .cierre { border: 1.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #26215C; line-height: 1.9; }
+</style>
+
+<div class="arco">
+
+  <div class="movimientos">
+    <div class="mov m1">
+      <div class="mov-num n1">Movimiento 1</div>
+      <div class="mov-titulo mt1">Creación</div>
+      <div class="mov-ref mr1">Gn 1-2</div>
+      <div class="mov-desc">Shalom original. Comunión perfecta. Sin barrera. Sin mediador.</div>
+    </div>
+    <div class="mov m2">
+      <div class="mov-num n2">Movimiento 2</div>
+      <div class="mov-titulo mt2">Caída</div>
+      <div class="mov-ref mr2">Gn 3</div>
+      <div class="mov-desc">Ruptura. Barrera. Distancia. El sistema antiguo como respuesta provisional.</div>
+    </div>
+    <div class="mov m3">
+      <div class="mov-num n3">Movimiento 3</div>
+      <div class="mov-titulo mt3">Redención</div>
+      <div class="mov-ref mr3">Todo el AT → Jesús</div>
+      <div class="mov-desc">El camino de regreso. Jesús cumple y supera el sistema antiguo.</div>
+    </div>
+    <div class="mov m4">
+      <div class="mov-num n4">Movimiento 4</div>
+      <div class="mov-titulo mt4">Nueva Creación</div>
+      <div class="mov-ref mr4">Ap 21-22</div>
+      <div class="mov-desc">Más que el Edén. Comunión plena, confirmada, irreversible para siempre.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-teal">Antes de la caída</span>
+      <span class="card-titulo">¿Qué había realmente en el jardín?</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Comunión directa con Dios</strong> — sin mediador, sin cortina, sin distancia. Dios caminaba con ellos. La relación era natural, cotidiana, sin esfuerzo. No había necesidad de templo, sacerdote ni sacrificio.</div></div>
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Imagen perfecta de Dios</strong> — el ser humano era la imagen y semejanza de Dios en la tierra. No una copia idéntica — una representación que reflejaba su carácter, su autoridad, su amor. Como un hijo que se parece al padre sin ser el padre.</div></div>
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Armonía en cuatro dimensiones</strong> — con Dios, consigo mismo, con el otro, con la creación. El shalom bíblico no es solo paz — es la integración perfecta de todo lo que fue creado para funcionar junto.</div></div>
+      <div class="punto"><div class="dot dt"></div><div class="punto-text"><strong>Inocencia — no perfección confirmada.</strong> Este detalle es crucial: Adán y Eva eran inocentes pero no confirmados en la bondad. Podían pecar — y lo hicieron. La nueva creación los supera en esto: los redimidos están sellados por el Espíritu. Ya no pueden perder lo que tienen.</div></div>
+      <div class="verso">Génesis 1:27 — "Y creó Dios al hombre a su imagen, a imagen de Dios lo creó."</div>
+      <div class="verso">Génesis 2:25 — "Y estaban ambos desnudos, Adán y su mujer, y no se avergonzaban."</div>
+      <div class="infobox ib-amber">
+        <div class="ib-l">La distinción más importante</div>
+        <div class="ib-t">No éramos "uno con Dios" en el sentido de fusión de naturalezas — eso nunca existió. Éramos su imagen en la tierra — relacionados perfectamente, sin barrera, pero siempre distintos. Criatura y Creador. La diferencia es teológicamente enorme: la comunión no requiere fusión. Requiere amor.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-coral">La caída</span>
+      <span class="card-titulo">¿Qué se rompió exactamente?</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dc"></div><div class="punto-text">No se rompió la naturaleza de Dios — él siguió siendo el mismo. No se destruyó completamente la imagen de Dios en el hombre — quedó distorsionada, no borrada. Lo que se rompió fue la <em>relación</em> — el canal de comunión, la confianza mutua, el acceso directo.</div></div>
+      <div class="punto"><div class="dot dc"></div><div class="punto-text">Cuatro rupturas simultáneas: con Dios (vergüenza, esconderse), consigo mismo (culpa, desnudez), entre ellos (acusación — "la mujer que me diste"), con la creación (maldición de la tierra, dolor en el parto).</div></div>
+      <div class="punto"><div class="dot dc"></div><div class="punto-text">Y apareció algo que no existía antes: la muerte. No solo física — espiritual. Una separación estructural de la fuente de vida. Como un árbol cortado de sus raíces — sigue en pie por un tiempo, pero ya no tiene de dónde vivir.</div></div>
+      <div class="verso">Génesis 3:8 — "Y oyeron la voz de Jehová Dios que se paseaba en el huerto... y el hombre y su mujer se escondieron de la presencia de Jehová Dios."</div>
+    </div>
+  </div>
+
+  <div class="comparacion">
+    <div class="comp-headers">
+      <div class="comp-h ch0"></div>
+      <div class="comp-h ch1">Edén original</div>
+      <div class="comp-h ch2">Después de la caída</div>
+      <div class="comp-h ch3">Nueva creación en Cristo</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">Relación con Dios</div>
+      <div class="comp-cel">Directa, sin barrera, cotidiana</div>
+      <div class="comp-cel">Rota. Requiere mediación y sacrificio</div>
+      <div class="comp-cel">Restaurada y mejorada — Espíritu en nosotros</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">Naturaleza humana</div>
+      <div class="comp-cel">Inocente — podía pecar</div>
+      <div class="comp-cel">Caída — inclinada al pecado</div>
+      <div class="comp-cel">Redimida y sellada — no puede perderse</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">Presencia de Dios</div>
+      <div class="comp-cel">En el jardín, con ellos</div>
+      <div class="comp-cel">En el templo, detrás del velo</div>
+      <div class="comp-cel">En nosotros — el cuerpo es templo del Espíritu</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">Acceso a Dios</div>
+      <div class="comp-cel">Libre y natural</div>
+      <div class="comp-cel">Solo por sacrificio y sacerdote</div>
+      <div class="comp-cel">Libre y permanente — el velo se rasgó</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">La muerte</div>
+      <div class="comp-cel">No existía</div>
+      <div class="comp-cel">Reinaba — espiritual y física</div>
+      <div class="comp-cel">Vencida — "la muerte es tragada en victoria"</div>
+    </div>
+    <div class="comp-fila">
+      <div class="comp-label">El árbol de vida</div>
+      <div class="comp-cel">Disponible en el jardín</div>
+      <div class="comp-cel">Bloqueado — espada de fuego</div>
+      <div class="comp-cel">En el centro de la ciudad — libre para todos</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-purple">La restauración</span>
+      <span class="card-titulo">¿Jesús nos devuelve al Edén o nos lleva más lejos?</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Nos lleva más lejos. La restauración en Cristo no es un simple regreso al punto de partida — es un avance hacia algo que el Edén solo anticipaba. Adán tenía comunión con Dios desde afuera. El creyente en Cristo tiene a Dios habitando en su interior — el Espíritu Santo como presencia permanente.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Adán era inocente pero podía caer. El creyente es justificado y está sellado — "el que comenzó en vosotros la buena obra la perfeccionará" (Filipenses 1:6). La relación restaurada en Cristo es más segura que la relación original en el Edén.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Adán era imagen de Dios. El creyente está siendo transformado a la imagen de Cristo — "de gloria en gloria" (2 Corintios 3:18). No solo recuperar lo perdido — ser conformado a la imagen del Hijo.</div></div>
+      <div class="verso">Romanos 5:15 — "Pero el don no fue como la transgresión; porque si por la transgresión de aquel uno murieron los muchos, abundaron mucho más para los muchos la gracia y el don de Dios."</div>
+      <div class="verso">1 Corintios 15:45 — "El primer hombre Adán fue hecho alma viviente; el postrer Adán, espíritu vivificante."</div>
+      <div class="infobox ib-purple">
+        <div class="ib-l">Adán vs Cristo — Pablo lo dice directamente</div>
+        <div class="ib-t">En Romanos 5 Pablo compara a Adán y a Cristo como los dos representantes de la humanidad. Lo que Adán perdió para todos, Cristo lo restauró — y lo multiplicó. El "mucho más" de la gracia supera al daño del pecado. La nueva creación es mejor que la primera.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="badge b-green">Nueva creación</span>
+      <span class="card-titulo">El destino final — más que el Edén</span>
+    </div>
+    <div class="card-body">
+      <div class="punto"><div class="dot dg"></div><div class="punto-text">Apocalipsis 21-22 describe la nueva creación con imágenes tomadas directamente del Génesis — pero todo amplificado. El jardín se convierte en ciudad. El árbol de la vida está en el centro de la ciudad y da fruto cada mes. El río de vida fluye desde el trono de Dios. Y la presencia de Dios no está en un lugar especial — lo llena todo.</div></div>
+      <div class="punto"><div class="dot dg"></div><div class="punto-text">Apocalipsis 21:3 es la declaración más hermosa de la Biblia entera: "He aquí el tabernáculo de Dios con los hombres, y él morará con ellos; y ellos serán su pueblo, y Dios mismo estará con ellos como su Dios." El jardín, el tabernáculo, el templo, la cruz — todo apuntaba a ese momento.</div></div>
+      <div class="punto"><div class="dot dg"></div><div class="punto-text">Y hay algo que la nueva creación tiene que el Edén no tenía: historia. Los redimidos llegan al destino final habiendo sido rescatados, habiendo conocido la gracia, habiendo experimentado el amor de Dios en la oscuridad. Eso añade una dimensión de adoración que Adán nunca pudo tener.</div></div>
+      <div class="verso">Apocalipsis 21:3-4 — "He aquí el tabernáculo de Dios con los hombres... Dios enjugará toda lágrima de los ojos de ellos; y ya no habrá muerte, ni habrá más llanto, ni clamor, ni dolor."</div>
+      <div class="verso">Apocalipsis 22:5 — "No habrá allí más noche; y no tienen necesidad de luz de lámpara, ni de luz del sol, porque Dios el Señor los iluminará; y reinarán por los siglos de los siglos."</div>
+      <div class="infobox ib-green">
+        <div class="ib-l">Lo que el Edén no tenía</div>
+        <div class="ib-t">Adán nunca cantó "Sublime gracia." Nunca pudo decir "fui rescatado." La nueva creación tiene algo que el Edén no podía tener: el conocimiento del amor de Dios probado en la oscuridad. Eso hace la adoración eterna más profunda que cualquier cosa que existiera antes de la caída.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">La respuesta completa a tu pregunta</div>
+    <div class="cierre-texto">
+      Sí — antes de la caída había comunión perfecta con Dios. No fusión de naturalezas, sino relación sin barrera, acceso directo, presencia cotidiana.<br><br>
+      Sí — Jesús vino a restaurar ese plan. Pero no simplemente a devolvernos al Génesis 2. Nos lleva más allá — a algo que el jardín solo soñaba: Dios no caminando <em>con</em> nosotros en un jardín, sino <em>en</em> nosotros para siempre.<br><br>
+      La historia no es un círculo que regresa al inicio. Es una espiral que sube — el final es más grande que el principio. Y el puente entre el Génesis y el Apocalipsis tiene un solo nombre.
+    </div>
+  </div>
+
+</div>

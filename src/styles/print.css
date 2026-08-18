@@ -15,7 +15,8 @@
   .site-footer,
   .reading-bar,
   .btn,
-  .no-print {
+  .no-print,
+  .series-pager {
     display: none !important;
   }
 
@@ -47,13 +48,9 @@
     line-height: 1.55;
   }
 
-  .prose h2,
-  .prose h3,
-  .prose blockquote,
-  .resource-list a,
-  .resource-list span {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  .prose table,
+  .widget-stack {
+    break-inside: auto;
   }
 
   .prose h2,

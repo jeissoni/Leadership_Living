@@ -1,0 +1,193 @@
+
+<style>
+  .rm { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .sub-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 0 0 10px; }
+  .seccion { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .sec-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-reino { background: #EEEDFE; color: #534AB7; }
+  .b-canal { background: #E1F5EE; color: #0F6E56; }
+  .b-tension { background: #FAECE7; color: #993C1D; }
+  .b-vol { background: #FAEEDA; color: #854F0B; }
+  .sec-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .sec-body { padding: 14px 16px; }
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#1D9E75;} .d2{background:#7F77DD;} .d3{background:#D85A30;} .d4{background:#BA7517;} .d5{background:#639922;} .dp{background:#7F77DD;} .da{background:#BA7517;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .verso-inline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0 12px; }
+  .mapa-fila { display: grid; grid-template-columns: 95px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; padding: 10px 0; border-bottom: 0.5px solid var(--color-border-tertiary); align-items: start; }
+  .mapa-fila:last-child { border-bottom: none; }
+  .mapa-headers { display: grid; grid-template-columns: 95px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; padding-bottom: 8px; border-bottom: 0.5px solid var(--color-border-secondary); margin-bottom: 4px; }
+  .col-h { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; }
+  .mf-nombre { font-size: 13px; font-weight: 500; }
+  .mf-atrib { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .mf-como { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .mf-sin { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; font-style: italic; }
+  .n1{color:#085041;} .n2{color:#3C3489;} .n3{color:#712B13;} .n4{color:#633806;} .n5{color:#27500A;}
+  .tension-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .tension-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .t-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .lbl-mal { color: #A32D2D; } .lbl-bien { color: #3B6D11; }
+  .t-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .diagrama { margin: 10px 0 16px; }
+  .diag-fila { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .diag-box { border-radius: var(--border-radius-md); padding: 8px 14px; font-size: 13px; font-weight: 500; }
+  .db-reino { background: #EEEDFE; color: #3C3489; border: 0.5px solid #AFA9EC; }
+  .db-min { background: #E1F5EE; color: #085041; border: 0.5px solid #9FE1CB; }
+  .db-don { background: #FAEEDA; color: #633806; border: 0.5px solid #FAC775; }
+  .db-vol { background: #EAF3DE; color: #27500A; border: 0.5px solid #C0DD97; }
+  .db-mundo { background: #FAECE7; color: #712B13; border: 0.5px solid #F5C4B3; }
+  .diag-flecha { font-size: 16px; color: var(--color-text-secondary); }
+  .cierre { border: 0.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-md); padding: 14px 16px; margin-top: 10px; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .cierre-texto { font-size: 14px; color: #3C3489; line-height: 1.7; }
+  .pregunta { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin-top: 10px; border: 0.5px solid var(--color-border-tertiary); }
+  .preg-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .preg-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.6; font-style: italic; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="rm">
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-reino">La lógica central</span>
+      <span class="sec-titulo">El flujo completo — del Reino al mundo</span>
+    </div>
+    <div class="sec-body">
+      <div class="diagrama">
+        <div class="diag-fila">
+          <div class="diag-box db-reino">Reino de Dios</div>
+          <div class="diag-flecha">→</div>
+          <div class="diag-box db-min">Cinco ministerios</div>
+          <div class="diag-flecha">→</div>
+          <div class="diag-box db-don">Dones en cada creyente</div>
+          <div class="diag-flecha">→</div>
+          <div class="diag-box db-vol">Voluntario equipado</div>
+          <div class="diag-flecha">→</div>
+          <div class="diag-box db-mundo">Mundo transformado</div>
+        </div>
+      </div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">El Reino es el origen y el destino. Los ministerios son el sistema de distribución que Dios diseñó para que lo que existe en el cielo llegue a manifestarse en la tierra — en personas concretas, comunidades reales, situaciones específicas.</div></div>
+      <div class="punto"><div class="dot dp"></div><div class="punto-text">Cada eslabón de esa cadena es necesario. Si el voluntario no está conectado con su don, el flujo se interrumpe. Si los ministerios no están orientados al Reino, el flujo pierde dirección. Si la iglesia no apunta al mundo, el flujo se estanca.</div></div>
+      <div class="verso-inline">Mateo 6:10 — "Hágase tu voluntad, como en el cielo, así también en la tierra." — eso es exactamente lo que los ministerios hacen: traen el cielo a la tierra.</div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-canal">El mapa completo</span>
+      <span class="sec-titulo">Cada ministerio — qué atributo del Reino impulsa y cómo</span>
+    </div>
+    <div class="sec-body">
+      <div class="mapa-headers">
+        <div class="col-h">Ministerio</div>
+        <div class="col-h">Atributo del Reino que impulsa</div>
+        <div class="col-h">Cómo lo hace concreto</div>
+        <div class="col-h">Sin él el Reino...</div>
+      </div>
+
+      <div class="mapa-fila">
+        <div class="mf-nombre n1">Apóstol</div>
+        <div class="mf-atrib">Poder y autoridad — lleva el Reino a territorios donde aún no está presente.</div>
+        <div class="mf-como">Cruza fronteras geográficas, culturales y espirituales. Planta la bandera del Rey donde no había nada.</div>
+        <div class="mf-sin">Queda confinado. No avanza. Se administra a sí mismo en lugar de expandirse.</div>
+      </div>
+
+      <div class="mapa-fila">
+        <div class="mf-nombre n2">Profeta</div>
+        <div class="mf-atrib">Justicia y paz — denuncia lo que contradice al Rey y señala el camino correcto.</div>
+        <div class="mf-como">Habla la verdad que nadie quiere decir. Confronta la injusticia. Trae paz donde hay confusión espiritual.</div>
+        <div class="mf-sin">Se distorsiona silenciosamente. Nadie corrige el rumbo. La iglesia se acomoda al mundo sin notarlo.</div>
+      </div>
+
+      <div class="mapa-fila">
+        <div class="mf-nombre n3">Evangelista</div>
+        <div class="mf-atrib">Poder y autoridad + Comunidad — expande los límites del Reino trayendo nuevos ciudadanos.</div>
+        <div class="mf-como">Proclama al Rey con urgencia. Cada persona que entra al Reino es un territorio recuperado del enemigo.</div>
+        <div class="mf-sin">Deja de crecer. Los que están adentro se cuidan a sí mismos mientras el mundo queda sin escuchar.</div>
+      </div>
+
+      <div class="mapa-fila">
+        <div class="mf-nombre n4">Pastor</div>
+        <div class="mf-atrib">Comunidad y pertenencia — construye la vida comunitaria del Reino donde nadie queda atrás.</div>
+        <div class="mf-como">Cuida al herido, sostiene al débil, restaura al caído. Hace visible que en el Reino hay lugar para todos.</div>
+        <div class="mf-sin">Se vuelve eficiente pero frío. Produce resultados pero pierde personas. La comunidad es nominal.</div>
+      </div>
+
+      <div class="mapa-fila">
+        <div class="mf-nombre n5">Maestro</div>
+        <div class="mf-atrib">Justicia y paz — ancla al pueblo en la verdad que sostiene una vida justa y en paz con Dios.</div>
+        <div class="mf-como">Forma mentes y corazones con la Palabra. Sin raíces doctrinales la justicia y la paz son frágiles y superficiales.</div>
+        <div class="mf-sin">Flota. Es entusiasta pero sin raíces. Es fácilmente desviado por cualquier viento de doctrina.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-tension">La distorsión</span>
+      <span class="sec-titulo">Qué pasa cuando los ministerios se desconectan del Reino</span>
+    </div>
+    <div class="sec-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Este es el diagnóstico más honesto que se puede hacer de una iglesia — y conecta directamente con la problemática de tu charla. Cuando los ministerios pierden su orientación al Reino, se convierten en algo muy diferente a lo que Dios diseñó.</div></div>
+
+      <div class="tension-grid">
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Ministerio apostólico sin Reino</div>
+          <div class="t-texto">Se convierte en expansión institucional — más campus, más números, más influencia. Pero sin transformación real de vidas ni territorios.</div>
+        </div>
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Ministerio profético sin Reino</div>
+          <div class="t-texto">Se convierte en crítica destructiva o en control espiritual. La voz que debería liberar termina sometiendo.</div>
+        </div>
+      </div>
+      <div class="tension-grid" style="margin-top:8px;">
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Ministerio evangelístico sin Reino</div>
+          <div class="t-texto">Se convierte en reclutamiento — números, estadísticas, decisiones de fe sin discipulado real ni transformación.</div>
+        </div>
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Ministerio pastoral sin Reino</div>
+          <div class="t-texto">Se convierte en dependencia emocional — las personas son cuidadas pero nunca equipadas para salir y cuidar a otros.</div>
+        </div>
+      </div>
+      <div class="tension-grid" style="margin-top:8px;">
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Ministerio docente sin Reino</div>
+          <div class="t-texto">Se convierte en acumulación de conocimiento sin obediencia — personas que saben mucho pero transforman poco.</div>
+        </div>
+        <div class="tension-card">
+          <div class="t-label lbl-bien">Con Reino como centro</div>
+          <div class="t-texto">Cada ministerio sabe para qué existe, hacia dónde apunta y cómo su función específica hace avanzar el gobierno de Dios.</div>
+        </div>
+      </div>
+
+      <div class="verso-inline" style="margin-top:12px;">Romanos 14:17 — "El reino de Dios no es comida ni bebida, sino justicia, paz y gozo en el Espíritu Santo." — esos tres frutos son el termómetro de si los ministerios están conectados al Reino o no.</div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-vol">Para tu charla</span>
+      <span class="sec-titulo">Cómo el voluntario vive esta conexión</span>
+    </div>
+    <div class="sec-body">
+      <div class="punto"><div class="dot da"></div><div class="punto-text">Un voluntario que entiende esta relación ya no pregunta "¿en qué ministerio sirvo?" — pregunta "¿qué atributo del Reino estoy haciendo visible con lo que hago?" Son dos preguntas muy distintas y generan dos tipos de voluntarios completamente diferentes.</div></div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">El voluntario del primer tipo sirve en una estructura. El voluntario del segundo tipo impulsa una realidad. El primero se agota. El segundo se renueva — porque su fuente no es la tarea sino el Rey al que representa.</div></div>
+      <div class="punto"><div class="dot da"></div><div class="punto-text">Y aquí cierra el círculo de toda la charla: los cristeros no gritaron "¡Viva la iglesia!" ni "¡Viva el ministerio!" — gritaron "¡Viva Cristo Rey!" Porque al final, los ministerios son medios. El Reino es el fin. Y el Rey es la persona.</div></div>
+
+      <div class="pregunta">
+        <div class="preg-label">Pregunta final para el grupo</div>
+        <div class="preg-texto">"¿Qué atributo del Reino estás haciendo visible esta semana — con tu don, en tu ministerio, desde donde estás parado?"</div>
+      </div>
+
+      <div class="cierre">
+        <div class="cierre-label">La síntesis de toda la charla en una frase</div>
+        <div class="cierre-texto">Dios diseñó los ministerios para que los dones fluyan, para que la iglesia sea equipada, para que el Reino avance — hasta que toda la tierra esté llena de su gloria. Tú, voluntario, eres un eslabón en esa cadena. No el más pequeño. El más necesario en el lugar donde Dios te puso.</div>
+      </div>
+    </div>
+  </div>
+
+</div>

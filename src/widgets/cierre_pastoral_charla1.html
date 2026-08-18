@@ -1,0 +1,226 @@
+
+<style>
+  .cp { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .titulo { font-size: 20px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .subtitulo { font-size: 13px; color: var(--color-text-secondary); margin: 0 0 1.5rem; font-style: italic; }
+  .nota { background: #E6F1FB; border-radius: var(--border-radius-md); padding: 10px 14px; font-size: 13px; color: #185FA5; margin-bottom: 1.5rem; border: 0.5px solid #B5D4F4; }
+
+  .paso { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .paso-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .paso-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; }
+  .pn1 { background: #FAEEDA; color: #633806; }
+  .pn2 { background: #EEEDFE; color: #3C3489; }
+  .pn3 { background: #FAECE7; color: #712B13; }
+  .pn4 { background: #E1F5EE; color: #085041; }
+  .pn5 { background: #EAF3DE; color: #27500A; }
+  .paso-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .paso-tiempo { font-size: 12px; color: var(--color-text-secondary); }
+  .paso-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#7F77DD;} .d3{background:#D85A30;} .d4{background:#1D9E75;} .d5{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 14px 16px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .narrativa-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .narrativa-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; }
+  .ib-amber .ib-t { color: #412402; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; }
+  .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; }
+  .ib-teal .ib-t { color: #04342C; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; }
+  .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; }
+  .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 10px 14px; margin: 8px 0; display: flex; gap: 10px; align-items: flex-start; }
+  .sil-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+  .sil-texto { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; font-style: italic; }
+
+  .oracion { border-radius: var(--border-radius-lg); border: 1.5px solid #9FE1CB; background: #E1F5EE; overflow: hidden; margin-top: 1rem; }
+  .oracion-header { padding: 12px 16px; border-bottom: 0.5px solid #9FE1CB; }
+  .oracion-titulo { font-size: 15px; font-weight: 500; color: #085041; }
+  .oracion-body { padding: 14px 16px; }
+  .oracion-texto { font-size: 14px; color: #04342C; line-height: 1.9; font-style: italic; }
+
+  .frase-final { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1.5px solid #AFA9EC; padding: 18px 20px; margin-top: 1rem; text-align: center; }
+  .ff-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .ff-texto { font-size: 17px; font-weight: 500; color: #26215C; line-height: 1.7; }
+  .ff-ref { font-size: 13px; color: #534AB7; margin-top: 8px; font-style: italic; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="cp">
+  <p class="titulo">Cierre pastoral — Charla 1</p>
+  <p class="subtitulo">"El problema que Dios se negó a ignorar" · Últimos 8-10 minutos</p>
+
+  <div class="nota">Este cierre tiene cinco movimientos que fluyen uno al otro sin cortes bruscos. No es una lista de puntos — es una conversación que baja desde la cabeza al corazón. El objetivo es que cada persona salga con la pregunta de Dios resonando en su interior: "¿dónde estás tú?"</div>
+
+  <!-- PASO 1 -->
+  <div class="paso">
+    <div class="paso-header">
+      <div class="paso-num pn1">1</div>
+      <span class="paso-titulo">Volver al jardín — pero personalizarlo</span>
+      <span class="paso-tiempo">~2 min</span>
+    </div>
+    <div class="paso-body">
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">Retomar la imagen del jardín con la que abriste la charla. Pero ahora ya no hablas de Adán — hablas de ellos. La transición es suave: ya no es historia antigua, es espejo.</div></div>
+
+      <div class="narrativa">
+        <div class="narrativa-label">Texto sugerido — en tus palabras</div>
+        <div class="narrativa-texto">
+          "Quiero que volvamos por un momento al jardín. Dios camina. Llama. Y hace una pregunta que parece sencilla pero que tiene una profundidad enorme: ¿dónde estás tú?<br><br>
+          Yo creo que esa pregunta no quedó sepultada en el Génesis. Creo que Dios la sigue haciendo. No porque no sepa dónde estás — sino porque quiere que tú lo sepas. Que lo digas en voz alta. Que dejes de esconderte detrás de las hojas de higuera que cada uno de nosotros ha cosido."
+        </div>
+      </div>
+
+      <div class="silencio">
+        <div class="sil-icon">🤫</div>
+        <div class="sil-texto">Hacer una pausa real aquí. No llenar el silencio. Dejar que la pregunta aterrice antes de continuar.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASO 2 -->
+  <div class="paso">
+    <div class="paso-header">
+      <div class="paso-num pn2">2</div>
+      <span class="paso-titulo">Nombrar las hojas de higuera modernas</span>
+      <span class="paso-tiempo">~2 min</span>
+    </div>
+    <div class="paso-body">
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Adán se cubrió con hojas de higuera y se escondió entre los árboles. Eso no terminó en el Génesis. Cada persona en ese salón tiene sus propias hojas de higuera — las cosas con las que cubre la distancia real que siente con Dios. Nómbralas sin acusar, con ternura.</div></div>
+
+      <div class="narrativa">
+        <div class="narrativa-label">Texto sugerido</div>
+        <div class="narrativa-texto">
+          "Las hojas de higuera de Adán eran literales. Las nuestras son más sofisticadas.<br><br>
+          A veces son la actividad — nos cubrimos con el servicio, con los ministerios, con la agenda del domingo, y así evitamos la pregunta incómoda de cómo está realmente nuestra relación con Dios.<br><br>
+          A veces son la doctrina — sabemos mucho, podemos explicar el pacto, los sacrificios, la teología — y ese conocimiento se convierte en una cortina muy elegante detrás de la que nos escondemos.<br><br>
+          A veces son la comparación — 'yo no soy tan malo como...' Las mismas hojas, diferente árbol.<br><br>
+          Y Dios camina por el jardín. Y pregunta: ¿dónde estás tú?"
+        </div>
+      </div>
+
+      <div class="infobox ib-amber">
+        <div class="ib-l">Nota pastoral</div>
+        <div class="ib-t">Habla en primera persona plural — "nos cubrimos", "nuestras hojas." No apuntes con el dedo. Tú también estás en esa lista. Eso baja las defensas y abre el corazón.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASO 3 -->
+  <div class="paso">
+    <div class="paso-header">
+      <div class="paso-num pn3">3</div>
+      <span class="paso-titulo">La ternura del que busca — no del que condena</span>
+      <span class="paso-tiempo">~2 min</span>
+    </div>
+    <div class="paso-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Este es el giro pastoral más importante del cierre. Dios no grita "¿DÓNDE ESTÁS?" con ira de juez. Lo dice como Padre que extraña a su hijo. Antes de hablar de sacrificios, pactos y ley — Dios busca. Ese es el corazón de todo lo que viene después en la Biblia.</div></div>
+
+      <div class="narrativa">
+        <div class="narrativa-label">Texto sugerido</div>
+        <div class="narrativa-texto">
+          "Quiero que notes algo en ese texto del Génesis. Dios no manda un ángel. No pronuncia el juicio desde el cielo. Él mismo baja. Él mismo camina. Él mismo llama.<br><br>
+          La pregunta '¿dónde estás?' no es la pregunta de un juez que ya tiene la sentencia preparada. Es la pregunta de un padre que no puede dejar de buscar a su hijo.<br><br>
+          Y eso — eso que ves en Génesis 3 — es el resumen de toda la Biblia. Todo el sistema que estudiamos hoy, todos los sacrificios, todos los sacerdotes, todo el templo, todos los siglos de historia — es Dios caminando por el jardín. Buscando. Sin rendirse. Negándose a ignorar el problema porque se niega a ignorar a su hijo."
+        </div>
+      </div>
+
+      <div class="verso">Génesis 3:9 — "Mas Jehová Dios llamó al hombre, y le dijo: ¿Dónde estás tú?"</div>
+
+      <div class="infobox ib-coral">
+        <div class="ib-l">El corazón del mensaje</div>
+        <div class="ib-t">El problema que Dios se negó a ignorar no era el pecado en abstracto. Era la persona detrás del pecado. Te negó a ignorar a ti. Esa es la pastoral del Antiguo Testamento completo.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASO 4 -->
+  <div class="paso">
+    <div class="paso-header">
+      <div class="paso-num pn4">4</div>
+      <span class="paso-titulo">La promesa que dejó encendida</span>
+      <span class="paso-tiempo">~1 min</span>
+    </div>
+    <div class="paso-body">
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Antes de cerrar con oración, dejar encendida la promesa de Génesis 3:15 — el primer destello de esperanza en medio del juicio. No la desarrolles todavía — eso es para la charla 3. Pero nómbrala. Es el hilo que los trae de vuelta la próxima semana.</div></div>
+
+      <div class="narrativa">
+        <div class="narrativa-label">Texto sugerido</div>
+        <div class="narrativa-texto">
+          "Y en ese mismo momento — en el momento más oscuro de la historia humana — Dios hace algo que nadie esperaba. En medio del juicio, pronuncia una promesa.<br><br>
+          'Pondré enemistad entre tú y la mujer, y entre tu simiente y la simiente suya. Él te herirá en la cabeza.'<br><br>
+          Alguien vendría. Alguien que terminaría con el problema de raíz. No solo lo cubriría — lo quitaría. Esa promesa atraviesa cada sacrificio, cada sacerdote, cada templo que vamos a estudiar las próximas semanas. Toda la historia está esperando a ese alguien.<br><br>
+          Pero eso es para la próxima vez."
+        </div>
+      </div>
+
+      <div class="verso">Génesis 3:15 — "Y pondré enemistad entre tú y la mujer, y entre tu simiente y la simiente suya; esta te herirá en la cabeza, y tú le herirás en el calcañar."</div>
+    </div>
+  </div>
+
+  <!-- PASO 5 — ORACIÓN -->
+  <div class="paso">
+    <div class="paso-header">
+      <div class="paso-num pn5">5</div>
+      <span class="paso-titulo">La oración — retomar la pregunta de Dios</span>
+      <span class="paso-tiempo">~2 min</span>
+    </div>
+    <div class="paso-body">
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">La oración no cierra la charla — la abre hacia adentro. No es un resumen de puntos doctrinales. Es una respuesta a la pregunta "¿dónde estás tú?" dicha en voz alta ante Dios. Corta, honesta, sin religiosidad innecesaria.</div></div>
+
+      <div class="silencio">
+        <div class="sil-icon">🤫</div>
+        <div class="sil-texto">Antes de orar, invitar a 30 segundos de silencio personal: "Antes de que oremos juntos, quiero darte un momento para que respondas tú solo esa pregunta. No en voz alta. Solo tú y Dios. ¿Dónde estás tú?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORACIÓN -->
+  <div class="oracion">
+    <div class="oracion-header">
+      <div class="oracion-titulo">Oración de cierre — modelo</div>
+    </div>
+    <div class="oracion-body">
+      <div class="oracion-texto">
+        "Padre,<br><br>
+        Gracias porque en Génesis 3 no dijiste 'lo merece' y cerraste el jardín para siempre.<br>
+        Gracias porque caminaste. Porque llamaste. Porque preguntaste.<br><br>
+        Hoy reconocemos que todos tenemos un lugar donde nos hemos escondido de ti.<br>
+        Un área donde hemos cosido hojas de higuera — actividad, conocimiento, comparación, distancia.<br><br>
+        Y te pedimos que hagas lo que solo tú puedes hacer:<br>
+        que tu pregunta llegue hasta ahí.<br>
+        Que la hagamos nuestra.<br><br>
+        Porque tú no te negaste a ignorar el problema.<br>
+        Y el problema que no ignoraste — éramos nosotros.<br><br>
+        Gracias por buscarnos.<br>
+        Amén."
+      </div>
+    </div>
+  </div>
+
+  <!-- FRASE FINAL -->
+  <div class="frase-final">
+    <div class="ff-label">Frase con la que los envías</div>
+    <div class="ff-texto">"Dios se negó a ignorar el problema.<br>El problema que no ignoró — eras tú."</div>
+    <div class="ff-ref">Génesis 3:9 — "¿Dónde estás tú?"</div>
+  </div>
+
+</div>

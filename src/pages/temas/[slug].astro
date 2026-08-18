@@ -1,41 +1,69 @@
 ---
 import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import { dateValue, formatDate } from "../../lib/dates";
+import { seriesById } from "../../lib/series";
+
+const widgetFiles = import.meta.glob<string>("../../widgets/*.html", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+});
+
+function widgetHtml(name: string) {
+  const match = Object.entries(widgetFiles).find(([path]) => {
+    const file = path.split("/").pop()?.replace(/\.html$/, "");
+    return file === name;
+  });
+  return match?.[1] ?? "";
+}
 
 export async function getStaticPaths() {
   const temas = await getCollection("temas");
-  return temas.map((tema) => ({
-    params: { slug: tema.id },
-    props: { tema },
-  }));
+  return temas.map((tema) => {
+    const siblings = temas
+      .filter((item) => item.data.series === tema.data.series)
+      .sort((a, b) => a.data.order - b.data.order);
+    const index = siblings.findIndex((item) => item.id === tema.id);
+    return {
+      params: { slug: tema.id },
+      props: {
+        tema,
+        prev: index > 0 ? siblings[index - 1] : undefined,
+        next: index < siblings.length - 1 ? siblings[index + 1] : undefined,
+        total: siblings.length,
+      },
+    };
+  });
 }
 
-const { tema } = Astro.props;
+const { tema, prev, next, total } = Astro.props;
 const { Content } = await render(tema);
-const dateLabel = formatDate(tema.data.date);
+const serie = seriesById(tema.data.series);
 const homeHref = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL;
+const blocks = tema.data.widgets.map((name) => ({
+  name,
+  html: widgetHtml(name),
+}));
+const mindMapSrc = `${base}mapa-mental-reino-de-dios.png`;
 ---
 
 <Base title={tema.data.title} description={tema.data.description} current="tema">
   <article class="reading-shell" id="tema">
-    <p class="print-masthead">Leadership Living · Recursos teológicos</p>
+    <p class="print-masthead">
+      Leadership Living · {serie?.title} · Charla {tema.data.order} de {total}
+    </p>
 
     <div class="reading-bar no-print">
-      <a class="back" href={homeHref}>← Temas</a>
+      <a class="back" href={`${homeHref}#${tema.data.series}`}>← {serie?.title}</a>
       <button class="btn" id="exportar-pdf" type="button">Exportar PDF</button>
     </div>
 
-    <p class="reading-kicker">{tema.data.tags[0] ?? "Estudio"}</p>
+    <p class="reading-kicker">{serie?.title}</p>
     <h1 class="reading-title">{tema.data.title}</h1>
     <div class="meta">
-      <time datetime={dateValue(tema.data.date)}>{dateLabel}</time>
+      <span>Charla {tema.data.order} de {total}</span>
       {tema.data.duration && <span>· {tema.data.duration}</span>}
-      {
-        tema.data.tags.map((tag) => (
-          <span class="tag">{tag}</span>
-        ))
-      }
     </div>
     <div class="gold-rule"></div>
 
@@ -44,9 +72,28 @@ const homeHref = import.meta.env.BASE_URL;
     </div>
 
     {
+      blocks.map((block) =>
+        block.html ? (
+          <div class="widget-stack" set:html={block.html} />
+        ) : (
+          <p class="prose">No se encontró el material “{block.name}”.</p>
+        ),
+      )
+    }
+
+    {
+      tema.data.showMindMap && (
+        <figure class="mind-map">
+          <img src={mindMapSrc} alt="Mapa mental del Reino de Dios" />
+          <figcaption>Mapa mental de la serie El Reino y el voluntario</figcaption>
+        </figure>
+      )
+    }
+
+    {
       tema.data.resources.length > 0 && (
         <section class="resources">
-          <h2>Recursos relacionados</h2>
+          <h2>Pasajes</h2>
           <ul class="resource-list">
             {tema.data.resources.map((resource) => (
               <li>
@@ -63,6 +110,29 @@ const homeHref = import.meta.env.BASE_URL;
         </section>
       )
     }
+
+    <nav class="series-pager no-print" aria-label="Charlas de la serie">
+      {
+        prev ? (
+          <a href={`${base}temas/${prev.id}/`}>
+            <span>Anterior</span>
+            <strong>{prev.data.title}</strong>
+          </a>
+        ) : (
+          <span></span>
+        )
+      }
+      {
+        next ? (
+          <a class="series-pager-next" href={`${base}temas/${next.id}/`}>
+            <span>Siguiente</span>
+            <strong>{next.data.title}</strong>
+          </a>
+        ) : (
+          <span></span>
+        )
+      }
+    </nav>
   </article>
 
   <script>

@@ -1,0 +1,290 @@
+
+<style>
+  .mp { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+
+  .intro { border-radius: var(--border-radius-lg); background: #FAECE7; border: 1px solid #F5C4B3; padding: 16px 18px; margin-bottom: 1.5rem; }
+  .intro-label { font-size: 11px; font-weight: 500; color: #993C1D; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .intro-texto { font-size: 14px; color: #4A1B0C; line-height: 1.8; }
+
+  .pastoral { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .pas-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .pas-ico { width: 36px; height: 36px; border-radius: var(--border-radius-md); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; flex-shrink: 0; }
+  .pi1{background:#FAEEDA;color:#633806;} .pi2{background:#FAECE7;color:#712B13;} .pi3{background:#EEEDFE;color:#3C3489;} .pi4{background:#E1F5EE;color:#085041;} .pi5{background:#EAF3DE;color:#27500A;} .pi6{background:#F1EFE8;color:#444441;}
+  .pas-info { flex: 1; }
+  .pas-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+  .pas-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; margin-top: 2px; }
+  .pas-body { padding: 14px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#D85A30;} .d3{background:#7F77DD;} .d4{background:#1D9E75;} .d5{background:#639922;} .d6{background:#888780;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .nar-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .ib-t { font-size: 14px; line-height: 1.7; }
+
+  .tension { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .tc { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .tc-gray { background: #F1EFE8; }
+  .tc-teal { background: #E1F5EE; }
+  .tc-purple { background: #EEEDFE; }
+  .tc-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; color: var(--color-text-secondary); }
+  .lm { color: #888780; } .lt { color: #0F6E56; } .lp { color: #534AB7; }
+  .tc-t { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+
+  .pregunta { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin: 10px 0; border: 0.5px solid var(--color-border-tertiary); }
+  .preg-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .preg-texto { font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.6; }
+
+  .aplicacion { border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+  .ap-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ap-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ap-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ap-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .apl-a { color: #854F0B; } .apl-t { color: #0F6E56; } .apl-p { color: #534AB7; }
+  .ap-texto { font-size: 14px; line-height: 1.7; }
+  .apt-a { color: #412402; } .apt-t { color: #04342C; } .apt-p { color: #26215C; }
+
+  .oracion { border-radius: var(--border-radius-lg); border: 1.5px solid #9FE1CB; background: #E1F5EE; overflow: hidden; margin-top: 1.5rem; }
+  .or-header { padding: 12px 16px; border-bottom: 0.5px solid #9FE1CB; }
+  .or-titulo { font-size: 15px; font-weight: 500; color: #085041; }
+  .or-body { padding: 14px 16px; }
+  .or-texto { font-size: 14px; color: #04342C; line-height: 2; font-style: italic; }
+
+  .cierre { border: 1.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #26215C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .silencio { background: #F1EFE8; border-radius: var(--border-radius-md); padding: 8px 12px; margin: 8px 0; font-size: 12px; color: var(--color-text-secondary); font-style: italic; }
+</style>
+
+<div class="mp">
+
+  <div class="intro">
+    <div class="intro-label">El hilo pastoral de la charla 2</div>
+    <div class="intro-texto">Cada elemento del sistema antiguo — los sacrificios, el sacerdocio, el arca, el velo — tiene un equivalente en la experiencia humana de hoy. El mensaje pastoral no contradice el suspenso narrativo — lo profundiza. Puedes entregar verdad pastoral sin revelar todavía a quién apunta todo.</div>
+  </div>
+
+  <!-- PASTORAL 1 -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi1">1</div>
+      <div class="pas-info">
+        <div class="pas-titulo">Vivimos repitiendo lo que no resuelve</div>
+        <div class="pas-tagline">Del sacrificio repetido a los ciclos que no terminan</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">El sistema sacrificial tenía que repetirse. Cada año, el mismo Día de la Expiación. Cada semana, los mismos sacrificios. No porque Dios no escuchara — sino porque la solución era provisional. Cubría pero no quitaba.</div></div>
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">Muchas personas viven exactamente así espiritualmente. Tienen ciclos que se repiten: pecado, culpa, confesión, alivio temporal, mismo pecado otra vez. O ciclos emocionales: se acercan a Dios cuando están en crisis, se alejan cuando están bien, vuelven en la próxima crisis. El sistema antiguo describe eso con precisión: funciona, pero no es definitivo.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">Para decir al grupo</div>
+        <div class="nar-texto">"¿Alguno aquí siente que está viviendo en el Día de la Expiación perpetuo? Que cada vez que fallas tienes que volver a empezar desde cero. Que el alivio dura un tiempo y luego hay que repetir el proceso. El sistema del Antiguo Testamento describe ese agotamiento con honestidad. Y también promete que no tiene que ser así para siempre."</div>
+      </div>
+      <div class="pregunta">
+        <div class="preg-label">Pregunta reflexiva</div>
+        <div class="preg-texto">"¿Hay un ciclo en tu vida que llevas años repitiendo sin que se resuelva definitivamente? ¿Qué sería diferente si hubiera una solución que no necesitara repetirse?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTORAL 2 -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi2">2</div>
+      <div class="pas-info">
+        <div class="pas-titulo">El costo de la cercanía con Dios</div>
+        <div class="pas-tagline">La sangre enseña que la reconciliación no es barata</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">El sistema de sacrificios enseña algo que la cultura contemporánea rechaza: la reconciliación con Dios tiene un costo. No porque Dios sea cruel — sino porque el pecado tiene peso real. Algo tiene que morir para que algo viva. Algo tiene que ser pagado para que la deuda quede saldada.</div></div>
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Pastoralmente esto responde a una pregunta que muchos tienen sin formular: ¿por qué no puedo simplemente "seguir adelante"? ¿Por qué el pasado pesa? Porque el pecado no es una idea — tiene consecuencias reales en personas reales. El sistema sacrificial tomaba eso en serio. No era simbólico — era un animal real, sangre real, muerte real.</div></div>
+      <div class="infobox ib-coral">
+        <div class="ib-l">El mensaje que la sangre enseña</div>
+        <div class="ib-t">Cuando el israelita ponía su mano sobre la cabeza del animal antes del sacrificio, estaba haciendo algo profundamente personal: "este muere en mi lugar." No era una transacción anónima. Era un encuentro con la gravedad real del propio pecado — y con la misericordia real de un Dios que aceptó esa sustitución.</div>
+      </div>
+      <div class="aplicacion ap-amber">
+        <div class="ap-label apl-a">Aplicación pastoral</div>
+        <div class="ap-texto apt-a">¿Has tomado en serio el peso de tu propio pecado — no para vivir en culpa, sino para valorar profundamente lo que costó tu reconciliación? El sistema antiguo hacía imposible minimizarlo. Cada sacrificio era un recordatorio visual: esto costó algo.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTORAL 3 -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi3">3</div>
+      <div class="pas-info">
+        <div class="pas-titulo">Necesitamos un mediador que no falle</div>
+        <div class="pas-tagline">Del sacerdote que moría al mediador que permanece</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">El sacerdote levítico era el mediador entre Dios y el pueblo. Pero tenía el problema más humano posible: era pecador y era mortal. Necesitaba mediación antes de mediar. Y eventualmente moría — dejando al pueblo sin su intercesor.</div></div>
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Hay personas que viven con una versión moderna de ese problema: necesitan que alguien interceda por ellas ante Dios, pero todas las personas en las que confían eventualmente fallan, se van o mueren. El pastor que los formó. El líder que los acompañó. El amigo que oraba por ellos. Todos son sacerdotes levíticos — reales pero temporales.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">Para decir al grupo</div>
+        <div class="nar-texto">"¿Alguno aquí ha experimentado la caída de alguien en quien confiaba espiritualmente? Un líder que falló. Un pastor que se fue. Una figura de autoridad que resultó ser humana — demasiado humana. El sistema antiguo enseña que eso no es una sorpresa. Los sacerdotes levíticos siempre fueron imperfectos y temporales. El problema era real. Y la solución tendría que ser diferente."</div>
+      </div>
+      <div class="tension">
+        <div class="tc tc-gray"><div class="tc-l lm">Sacerdote levítico</div><div class="tc-t">Pecador. Mortal. Necesitaba mediación para mediar. Eventual­mente desaparecía.</div></div>
+        <div class="tc tc-purple"><div class="tc-l lp">Lo que se necesitaba</div><div class="tc-t">Alguien sin pecado propio. Permanente. Que pudiera interceder sin interrupción. Para siempre.</div></div>
+      </div>
+      <div class="pregunta">
+        <div class="preg-label">Pregunta reflexiva</div>
+        <div class="preg-texto">"¿Estás descansando tu relación con Dios en personas que eventualmente te van a fallar? ¿O tienes un acceso directo a Dios que no depende de ningún mediador humano?"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTORAL 4 — EL ARCA -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi4">4</div>
+      <div class="pas-info">
+        <div class="pas-titulo">El arca — lo que tu corazón más necesita</div>
+        <div class="pas-tagline">Cuatro necesidades humanas universales en cuatro objetos</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Los cuatro elementos del arca no son solo objetos históricos — son el retrato de las cuatro necesidades más profundas del ser humano. Y el hecho de que estuvieran juntos, en el lugar más sagrado, debajo de la presencia de Dios, dice algo sobre quién puede satisfacerlas.</div></div>
+
+      <div class="infobox ib-amber">
+        <div class="ib-l">Las tablas de la Ley — la necesidad de dirección</div>
+        <div class="ib-t">El ser humano necesita saber cómo vivir. Necesita una norma externa que no cambie con las modas, las culturas ni las opiniones. Las tablas de la Ley dentro del arca decían: hay un estándar que existe independiente de lo que tú pienses. Y ese estándar viene de Dios.<br><br>
+        Pastoralmente: en un mundo que dice "cada quien tiene su verdad," hay personas profundamente hambrientas de algo firme. El arca dice que ese algo existe — y vive en el corazón de la presencia de Dios.</div>
+      </div>
+
+      <div class="infobox ib-coral">
+        <div class="ib-l">El maná — la necesidad de sustento diario</div>
+        <div class="ib-t">El maná era pan del cielo — sustento sobrenatural dado cada día sin mérito del pueblo. No se podía acumular para mañana. Era provision diaria, fresca, gratuita. El arca guardaba esa memoria: Dios sostiene a los suyos en el desierto.<br><br>
+        Pastoralmente: hay personas que viven con ansiedad sobre el futuro — si habrá suficiente, si podrán sostenerse. El maná en el arca es la respuesta de Dios: "he sostenido a mi pueblo en el desierto más hostil. ¿Por qué no confías en que lo hago hoy?"</div>
+      </div>
+
+      <div class="infobox ib-purple">
+        <div class="ib-l">La vara de Aarón — la necesidad de autoridad legítima</div>
+        <div class="ib-t">La vara floreció para confirmar quién tenía autoridad real — no la que el hombre se otorga a sí mismo, sino la que Dios confirma. En un mundo lleno de voces que reclaman autoridad espiritual, el arca pregunta: ¿quién te ha confirmado Dios a ti? ¿Quién en tu vida tiene autoridad que fructifica — que da vida donde parecía no haberla?<br><br>
+        Pastoralmente: muchos han sido dañados por autoridad ilegítima — líderes que se nombraron a sí mismos, que no dieron fruto, que tomaron en lugar de dar. La vara de Aarón habla de una autoridad diferente — confirmada por Dios, fructífera, que produce vida.</div>
+      </div>
+
+      <div class="infobox ib-teal">
+        <div class="ib-l">El propiciatorio — la necesidad de reconciliación</div>
+        <div class="ib-t">El propiciatorio era el lugar donde la justicia y la misericordia se encontraban. La Ley condenaba — la sangre cubría. Ese encuentro era el corazón de todo el sistema. Y describe la necesidad más profunda del ser humano: no solo ser perdonado — ser reconciliado. Que la distancia quede cerrada. Que la deuda quede pagada. Que la relación quede restaurada.<br><br>
+        Pastoralmente: el perdón intelectual no satisface. Hay personas que saben que Dios las ha perdonado pero no sienten que la relación está bien. El propiciatorio habla de algo más profundo que la transacción — habla de la restauración de la comunión.</div>
+      </div>
+
+      <div class="aplicacion ap-teal">
+        <div class="ap-label apl-t">Pregunta integradora</div>
+        <div class="ap-texto apt-t">"¿Cuál de estos cuatro elementos resuena más contigo hoy? ¿La necesidad de dirección firme, de sustento diario, de autoridad legítima, o de reconciliación profunda? El arca los tenía todos juntos — en el mismo lugar, bajo la misma presencia. No separados."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTORAL 5 -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi5">5</div>
+      <div class="pas-info">
+        <div class="pas-titulo">El velo — la distancia que sentimos</div>
+        <div class="pas-tagline">Hay personas que sienten que Dios está cerca pero no del todo</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">El velo de 18 metros de alto y 10 centímetros de grosor no era solo arquitectura — era teología visible. Describía una realidad que el sistema antiguo no podía resolver: Dios está aquí, pero no del todo accesible. Su presencia es real pero hay una barrera. El Lugar Santísimo existe pero la puerta está cerrada.</div></div>
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">Hay personas que viven exactamente con esa sensación. Creen en Dios. Oran. Sirven. Pero hay algo — una distancia que no pueden nombrar pero sí sienten. Como si hubiera un velo entre ellos y la presencia plena. Como si la comunión profunda fuera para otros — para los muy espirituales, para los muy consagrados — pero no para ellos.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">Para decir al grupo</div>
+        <div class="nar-texto">"¿Alguno aquí siente eso? Que Dios existe, que es real, que ha experimentado su presencia en momentos — pero que hay algo que impide la intimidad completa. Como si hubiera un velo. Como si pudieras ver la luz por debajo de la puerta pero no entrar.<br><br>
+        El sistema antiguo validaba esa sensación. El velo era real. La distancia era real. Y había una razón — no para quedarse ahí, sino para entender que algo tenía que ocurrir para que ese velo se abriera. Algo que todavía no vamos a contar hoy."</div>
+      </div>
+      <div class="tension">
+        <div class="tc tc-gray"><div class="tc-l lm">Lo que el velo producía</div><div class="tc-t">Presencia de Dios real pero inaccesible. Comunión posible solo para uno, solo una vez al año, solo con sangre.</div></div>
+        <div class="tc tc-teal"><div class="tc-l lt">Lo que el corazón necesita</div><div class="tc-t">Acceso directo. Presencia continua. Comunión sin barrera. En cualquier momento, en cualquier lugar.</div></div>
+      </div>
+      <div class="pregunta">
+        <div class="preg-label">Pregunta más personal de la charla</div>
+        <div class="preg-texto">"¿Sientes que hay un velo entre tú y Dios? ¿Qué lo sostiene? ¿Culpa no resuelta, heridas, dudas, distancia acumulada? El sistema antiguo enseña que ese velo no fue diseñado para ser permanente."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PASTORAL 6 -->
+  <div class="pastoral">
+    <div class="pas-header">
+      <div class="pas-ico pi6">6</div>
+      <div class="pas-info">
+        <div class="pas-titulo">El chivo expiatorio — la necesidad de que algo sea alejado</div>
+        <div class="pas-tagline">No solo perdonado — lejano</div>
+      </div>
+    </div>
+    <div class="pas-body">
+      <div class="punto"><div class="dot d6"></div><div class="punto-text">El Día de la Expiación tenía dos gestos complementarios que juntos dicen algo que ninguno dice solo. El primer macho cabrío era sacrificado — el pecado era pagado. El segundo — el chivo expiatorio — cargaba los pecados confesados del pueblo y era enviado al desierto. No solo perdonado. Alejado. "Tan lejos como el oriente del occidente."</div></div>
+      <div class="punto"><div class="dot d6"></div><div class="punto-text">Hay personas que han recibido perdón pero no han experimentado el alejamiento. Saben intelectualmente que Dios los perdonó — pero el pecado pasado sigue presente en su mente, en su identidad, en cómo se relacionan consigo mismos. El perdón llegó pero el chivo expiatorio todavía está en el campamento.</div></div>
+      <div class="narrativa">
+        <div class="nar-label">Para decir al grupo</div>
+        <div class="nar-texto">"El gesto del chivo expiatorio era deliberadamente visual. Todo el pueblo lo veía partir. Lo seguían con los ojos hasta que desaparecía en el horizonte. No volvía. El mensaje era inequívoco: esto ya no está aquí. Ya no te pertenece. Ya no te define.<br><br>
+        ¿Hay algo en tu pasado que fue perdonado pero que tú no has dejado que se vaya? ¿Un pecado, una vergüenza, un fracaso al que sigues volviendo aunque Dios ya lo envió al desierto?"</div>
+      </div>
+      <div class="verso">Salmo 103:12 — "Cuanto está lejos el oriente del occidente, hizo alejar de nosotros nuestras rebeliones."</div>
+      <div class="aplicacion ap-purple">
+        <div class="ap-label apl-p">Aplicación pastoral</div>
+        <div class="ap-texto apt-p">El chivo expiatorio no regresaba. Si lo que Dios alejó sigue presente en tu vida — no es porque Dios no lo alejó, sino porque tú lo sigues trayendo de vuelta. La sanidad de algunas personas requiere específicamente aprender a dejar ir lo que Dios ya envió al desierto.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ORACIÓN -->
+  <div class="oracion">
+    <div class="or-header">
+      <div class="or-titulo">Oración pastoral de cierre — modelo</div>
+    </div>
+    <div class="or-body">
+      <div class="or-texto">
+        "Padre,<br><br>
+        Hoy vimos que tu pueblo vivió durante siglos con un sistema que era real y poderoso — pero que tenía límites. Sacrificios que se repetían. Sacerdotes que morían. Un velo que permanecía cerrado.<br><br>
+        Y reconocemos que algunos de nosotros vivimos también así. Con ciclos que se repiten. Con distancias que no se cierran. Con cosas que fueron perdonadas pero que seguimos trayendo de vuelta.<br><br>
+        Hoy queremos dejar lo que llevas demasiado tiempo cargando.<br>
+        El pecado que ya fue pagado — no necesitas seguir pagándolo tú.<br>
+        La vergüenza que ya fue cubierta — no necesitas seguir cubriéndola con tus propias hojas.<br>
+        Lo que ya fue alejado — no necesitas seguir trayéndolo de vuelta.<br><br>
+        No vamos a decir todavía cómo se resuelve todo esto definitivamente.<br>
+        Pero sí podemos decir que el mismo Dios que diseñó ese sistema — lo hizo porque no quería dejarnos en la distancia.<br><br>
+        La próxima vez, terminamos la historia.<br><br>
+        Amén."
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">El arco pastoral completo de la charla 2</div>
+    <div class="cierre-texto">
+      Los sacrificios repetidos hablan a quienes viven en ciclos que no terminan.<br>
+      La sangre que costó habla a quienes minimizan el peso de su pecado.<br>
+      El sacerdote que moría habla a quienes descansaron en personas que fallaron.<br>
+      El arca habla a las cuatro necesidades más profundas del corazón humano.<br>
+      El velo habla a quienes sienten la presencia de Dios pero no la intimidad.<br>
+      El chivo expiatorio habla a quienes fueron perdonados pero no han soltado.<br><br>
+      <em>Todo esto sin revelar todavía quién lo resuelve. Solo mostrando cuánto lo necesitamos.</em>
+    </div>
+  </div>
+
+</div>

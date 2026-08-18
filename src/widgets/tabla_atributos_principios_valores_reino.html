@@ -1,0 +1,250 @@
+
+<style>
+  .t { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .headers { display: grid; grid-template-columns: 44px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 0; margin-bottom: 2px; }
+  .h-cel { padding: 10px 14px; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0; }
+  .h0 { background: transparent; }
+  .h1 { background: #EEEDFE; color: #534AB7; margin-right: 2px; }
+  .h2 { background: #E1F5EE; color: #0F6E56; margin-right: 2px; }
+  .h3 { background: #FAEEDA; color: #854F0B; }
+  .h-sub { font-size: 11px; font-weight: 400; opacity: 0.8; display: block; margin-top: 1px; font-style: italic; }
+
+  .fila { display: grid; grid-template-columns: 44px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 0; margin-bottom: 2px; }
+  .f-num { display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--color-text-secondary); background: var(--color-background-secondary); border-radius: var(--border-radius-md) 0 0 var(--border-radius-md); }
+  .f-a { background: #F5F4FE; padding: 10px 14px; margin-right: 2px; border-left: 2px solid #AFA9EC; }
+  .f-p { background: #F0FAF5; padding: 10px 14px; margin-right: 2px; border-left: 2px solid #9FE1CB; }
+  .f-v { background: #FDF6EC; padding: 10px 14px; border-left: 2px solid #FAC775; }
+  .f-titulo { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+  .f-texto { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .f-verso { font-size: 11px; color: var(--color-text-secondary); margin-top: 4px; font-style: italic; opacity: 0.85; }
+
+  .resumen { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; margin-top: 1.5rem; }
+  .r-card { border-radius: var(--border-radius-lg); padding: 12px 14px; }
+  .r1 { background: #EEEDFE; border: 1px solid #AFA9EC; }
+  .r2 { background: #E1F5EE; border: 1px solid #9FE1CB; }
+  .r3 { background: #FAEEDA; border: 1px solid #FAC775; }
+  .r-titulo { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .rt1 { color: #26215C; } .rt2 { color: #04342C; } .rt3 { color: #412402; }
+  .r-preg { font-size: 12px; font-style: italic; margin-bottom: 6px; }
+  .rp1 { color: #534AB7; } .rp2 { color: #0F6E56; } .rp3 { color: #854F0B; }
+  .r-count { font-size: 11px; color: var(--color-text-secondary); }
+</style>
+
+<div class="t">
+
+  <div class="headers">
+    <div class="h-cel h0"></div>
+    <div class="h-cel h1">Atributo <span class="h-sub">¿Cómo ES el Reino?</span></div>
+    <div class="h-cel h2">Principio <span class="h-sub">¿Cómo FUNCIONA?</span></div>
+    <div class="h-cel h3">Valor <span class="h-sub">¿Qué IMPORTA?</span></div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">1</div>
+    <div class="f-a">
+      <div class="f-titulo">Justicia</div>
+      <div class="f-texto">El Reino establece lo recto en cada relación y situación.</div>
+      <div class="f-verso">Ro 14:17</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Inversión</div>
+      <div class="f-texto">Lo último es primero. El grande sirve. El poder baja.</div>
+      <div class="f-verso">Mt 20:26-27</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La persona</div>
+      <div class="f-texto">Una sola persona vale más que todo un sistema.</div>
+      <div class="f-verso">Lc 15:7</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">2</div>
+    <div class="f-a">
+      <div class="f-titulo">Paz</div>
+      <div class="f-texto">Shalom — bienestar integral, no solo ausencia de conflicto.</div>
+      <div class="f-verso">Ro 14:17</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Semilla</div>
+      <div class="f-texto">Lo que muere multiplica. Lo pequeño crece exponencialmente.</div>
+      <div class="f-verso">Jn 12:24</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La fidelidad</div>
+      <div class="f-texto">Ser confiable en lo pequeño vale más que ser famoso en lo grande.</div>
+      <div class="f-verso">Mt 25:21</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">3</div>
+    <div class="f-a">
+      <div class="f-titulo">Poder y autoridad</div>
+      <div class="f-texto">El Rey gobierna con poder real sobre toda creación.</div>
+      <div class="f-verso">Mt 28:18</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Levadura</div>
+      <div class="f-texto">Lo pequeño transforma lo grande desde adentro, invisiblemente.</div>
+      <div class="f-verso">Mt 13:33</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La humildad</div>
+      <div class="f-texto">Evaluación correcta de uno mismo. El que se humilla es exaltado.</div>
+      <div class="f-verso">Mt 23:12</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">4</div>
+    <div class="f-a">
+      <div class="f-titulo">Comunidad y pertenencia</div>
+      <div class="f-texto">El Reino se vive en plural. Nadie queda excluido ni atrás.</div>
+      <div class="f-verso">Hch 2:44</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Gracia</div>
+      <div class="f-texto">No se gana, se recibe. Se sirve desde lo que ya fue dado.</div>
+      <div class="f-verso">Mt 10:8</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La compasión</div>
+      <div class="f-texto">El Rey se detiene por el que sufre. El uno interrumpe el plan.</div>
+      <div class="f-verso">Mt 9:36</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">5</div>
+    <div class="f-a">
+      <div class="f-titulo">Gozo</div>
+      <div class="f-texto">Alegría profunda e inamovible, independiente de las circunstancias.</div>
+      <div class="f-verso">Ro 14:17</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Mayordomía</div>
+      <div class="f-texto">Todo es administrado, no poseído. Lo no invertido se pierde.</div>
+      <div class="f-verso">Mt 25:14</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La generosidad</div>
+      <div class="f-texto">Dar produce más, no menos. No se espera tener suficiente.</div>
+      <div class="f-verso">2Co 9:6</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">6</div>
+    <div class="f-a">
+      <div class="f-titulo">Santidad</div>
+      <div class="f-texto">Separación no del mundo sino dentro del mundo. Diferencia visible.</div>
+      <div class="f-verso">1Pe 1:15</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Encarnación</div>
+      <div class="f-texto">El Rey entró al mundo. Nosotros también. Presencia antes que proclama.</div>
+      <div class="f-verso">Jn 1:14</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La verdad</div>
+      <div class="f-texto">No se negocia por conveniencia. Verdad dicha en amor.</div>
+      <div class="f-verso">Ef 4:15</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">7</div>
+    <div class="f-a">
+      <div class="f-titulo">Misericordia</div>
+      <div class="f-texto">Dios no trata al pecador según sus méritos sino según su amor.</div>
+      <div class="f-verso">Lm 3:22-23</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Reconciliación</div>
+      <div class="f-texto">El Reino restaura lo que el pecado rompió. Relaciones, comunidades, creación.</div>
+      <div class="f-verso">2Co 5:18</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">El perdón</div>
+      <div class="f-texto">Decisión de no retener la deuda del otro. Condición, no sugerencia.</div>
+      <div class="f-verso">Mt 18:22</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">8</div>
+    <div class="f-a">
+      <div class="f-titulo">Verdad</div>
+      <div class="f-texto">El Reino opera sobre la realidad, no sobre apariencias ni ilusiones.</div>
+      <div class="f-verso">Jn 8:32</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Multiplicación</div>
+      <div class="f-texto">El Reino se propaga haciendo discípulos, no audiencias. Lo recibido se entrega.</div>
+      <div class="f-verso">Mt 28:19</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La santidad</div>
+      <div class="f-texto">Diferencia desde adentro, no religiosa por fuera. Transformación real.</div>
+      <div class="f-verso">Mt 23:27</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">9</div>
+    <div class="f-a">
+      <div class="f-titulo">Amor</div>
+      <div class="f-texto">El amor es la naturaleza misma del Rey y el sello de su Reino.</div>
+      <div class="f-verso">1Jn 4:8</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Fe y obediencia</div>
+      <div class="f-texto">El Reino avanza por fe activa, no por comprensión completa previa.</div>
+      <div class="f-verso">Hb 11:6</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La eternidad</div>
+      <div class="f-texto">El Rey juega largo. Lo sembrado en fe tiene peso eterno aunque sea invisible ahora.</div>
+      <div class="f-verso">2Co 4:17</div>
+    </div>
+  </div>
+
+  <div class="fila">
+    <div class="f-num">10</div>
+    <div class="f-a">
+      <div class="f-titulo">Esperanza</div>
+      <div class="f-texto">El Reino tiene un futuro garantizado. La consumación es cierta.</div>
+      <div class="f-verso">Ro 8:24-25</div>
+    </div>
+    <div class="f-p">
+      <div class="f-titulo">Dependencia del Espíritu</div>
+      <div class="f-texto">El Reino no avanza por fuerza humana sino por el Espíritu de Dios.</div>
+      <div class="f-verso">Zac 4:6</div>
+    </div>
+    <div class="f-v">
+      <div class="f-titulo">La obediencia</div>
+      <div class="f-texto">No basta conocer — hay que guardar. El discípulo hace, no solo acuerda.</div>
+      <div class="f-verso">Jn 14:15</div>
+    </div>
+  </div>
+
+  <div class="resumen">
+    <div class="r-card r1">
+      <div class="r-titulo rt1">Atributos</div>
+      <div class="r-preg rp1">"¿Cómo es el Reino?"</div>
+      <div class="r-count">10 atributos — la naturaleza del Reino. Te dicen en qué realidad vives y operas.</div>
+    </div>
+    <div class="r-card r2">
+      <div class="r-titulo rt2">Principios</div>
+      <div class="r-preg rp2">"¿Cómo funciona?"</div>
+      <div class="r-count">10 principios — las leyes internas. Te dicen cómo tomar decisiones dentro del Reino.</div>
+    </div>
+    <div class="r-card r3">
+      <div class="r-titulo rt3">Valores</div>
+      <div class="r-preg rp3">"¿Qué importa?"</div>
+      <div class="r-count">10 valores — el corazón del Rey. Te dicen qué evaluar y qué considerar éxito.</div>
+    </div>
+  </div>
+
+</div>

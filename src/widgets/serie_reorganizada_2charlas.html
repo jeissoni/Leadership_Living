@@ -1,0 +1,548 @@
+
+<style>
+  .r { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .serie-header { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1px solid #AFA9EC; padding: 16px 18px; margin-bottom: 1.5rem; }
+  .sh-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .sh-titulo { font-size: 20px; font-weight: 500; color: #26215C; margin: 0 0 4px; }
+  .sh-sub { font-size: 13px; color: #534AB7; font-style: italic; margin: 0 0 12px; }
+  .sh-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12px; background: white; border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-md); padding: 3px 10px; color: #534AB7; }
+
+  .progresion { display: grid; grid-template-columns: minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr); gap: 0; align-items: center; margin-bottom: 1.5rem; }
+  .prog-card { border-radius: var(--border-radius-lg); padding: 14px 12px; border: 0.5px solid var(--color-border-tertiary); }
+  .pc1 { background: #FAEEDA; border-color: #FAC775; }
+  .pc2 { background: #FAECE7; border-color: #F5C4B3; }
+  .pc3 { background: #E1F5EE; border-color: #9FE1CB; }
+  .prog-num { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .pn1{color:#854F0B;} .pn2{color:#993C1D;} .pn3{color:#0F6E56;}
+  .prog-titulo { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+  .pt1{color:#412402;} .pt2{color:#4A1B0C;} .pt3{color:#04342C;}
+  .prog-preg { font-size: 12px; font-style: italic; }
+  .pp1{color:#854F0B;} .pp2{color:#993C1D;} .pp3{color:#0F6E56;}
+  .prog-flecha { text-align: center; font-size: 18px; color: var(--color-text-secondary); }
+
+  .charla { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1.25rem; overflow: hidden; }
+  .charla-header { padding: 16px 18px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .ch-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b1{background:#FAEEDA;color:#854F0B;}
+  .b2{background:#FAECE7;color:#993C1D;}
+  .b3{background:#E1F5EE;color:#0F6E56;}
+  .ch-titulo { font-size: 19px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 3px; }
+  .ch-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+  .charla-body { padding: 0; }
+
+  .bloque { border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .bloque:last-child { border-bottom: none; }
+  .bl-header { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .bl-tiempo { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .bt1{background:#FAEEDA;color:#854F0B;} .bt2{background:#FAECE7;color:#993C1D;} .bt3{background:#EEEDFE;color:#534AB7;} .bt4{background:#E1F5EE;color:#0F6E56;} .bt5{background:#EAF3DE;color:#3B6D11;} .bt6{background:#F1EFE8;color:#444441;}
+  .bl-titulo { font-size: 14px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .bl-body { padding: 12px 16px; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#D85A30;} .d3{background:#7F77DD;} .d4{background:#1D9E75;} .d5{background:#639922;}
+  .punto-text { font-size: 13.5px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 12.5px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 6px 0; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 10px 12px; margin: 8px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .ib-l { color: #854F0B; } .ib-amber .ib-t { color: #412402; }
+  .ib-coral { background: #FAECE7; border: 0.5px solid #F5C4B3; }
+  .ib-coral .ib-l { color: #993C1D; } .ib-coral .ib-t { color: #4A1B0C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .ib-l { color: #534AB7; } .ib-purple .ib-t { color: #26215C; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .ib-l { color: #0F6E56; } .ib-teal .ib-t { color: #04342C; }
+  .ib-green { background: #EAF3DE; border: 0.5px solid #C0DD97; }
+  .ib-green .ib-l { color: #3B6D11; } .ib-green .ib-t { color: #1A3B06; }
+  .ib-l { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .ib-t { font-size: 13px; line-height: 1.6; }
+
+  .tabla-resumen { border-radius: var(--border-radius-md); overflow: hidden; border: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+  .tr-headers { display: grid; grid-template-columns: 130px minmax(0,1fr) minmax(0,1fr); background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .tr-h { padding: 7px 10px; font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--color-text-secondary); }
+  .tr-fila { display: grid; grid-template-columns: 130px minmax(0,1fr) minmax(0,1fr); border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .tr-fila:last-child { border-bottom: none; }
+  .tr-label { padding: 8px 10px; font-size: 12px; font-weight: 500; color: var(--color-text-secondary); background: var(--color-background-secondary); border-right: 0.5px solid var(--color-border-tertiary); }
+  .tr-cel { padding: 8px 10px; font-size: 12px; color: var(--color-text-primary); line-height: 1.5; border-right: 0.5px solid var(--color-border-tertiary); }
+  .tr-cel:last-child { border-right: none; }
+
+  .narrativa { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; margin: 8px 0; border-left: 3px solid #7F77DD; }
+  .nar-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .nar-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.7; font-style: italic; }
+
+  .pregunta { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 9px 12px; margin: 8px 0; border: 0.5px solid var(--color-border-tertiary); }
+  .preg-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .preg-texto { font-size: 13px; color: var(--color-text-primary); font-style: italic; line-height: 1.5; }
+
+  .suspenso { background: #1A1A2E; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .sus-label { font-size: 11px; font-weight: 500; color: #7F77DD; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .sus-titulo { font-size: 16px; font-weight: 500; color: #F5F4F0; margin-bottom: 10px; }
+  .sus-q { font-size: 13px; color: #C5C3BB; font-style: italic; padding-left: 10px; border-left: 2px solid #534AB7; margin-bottom: 6px; line-height: 1.5; }
+  .sus-cierre { font-size: 13px; color: #9FE1CB; margin-top: 10px; font-style: italic; }
+
+  .cumplimiento-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .cg-item { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); overflow: hidden; }
+  .cg-header { display: grid; grid-template-columns: minmax(0,1fr) 16px minmax(0,1fr); gap: 8px; padding: 8px 12px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); align-items: center; }
+  .cg-at { font-size: 12px; font-weight: 500; }
+  .cat1{color:#854F0B;} .cat2{color:#993C1D;} .cat3{color:#534AB7;} .cat4{color:#0F6E56;} .cat5{color:#3B6D11;}
+  .cg-flecha { text-align: center; font-size: 14px; color: var(--color-text-secondary); }
+  .cg-nt { font-size: 12px; font-weight: 500; color: #0F6E56; }
+  .cg-body { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 0; }
+  .cg-at-text { padding: 8px 12px; font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; border-right: 0.5px solid var(--color-border-tertiary); font-style: italic; }
+  .cg-nt-text { padding: 8px 12px; font-size: 12px; color: var(--color-text-primary); line-height: 1.5; }
+  .cg-verso { padding: 6px 12px 8px; font-size: 11.5px; color: var(--color-text-secondary); font-style: italic; background: var(--color-background-secondary); border-top: 0.5px solid var(--color-border-tertiary); }
+
+  .oracion { border-radius: var(--border-radius-lg); border: 1.5px solid #9FE1CB; background: #E1F5EE; overflow: hidden; margin-top: 1rem; }
+  .or-header { padding: 10px 16px; border-bottom: 0.5px solid #9FE1CB; }
+  .or-titulo { font-size: 14px; font-weight: 500; color: #085041; }
+  .or-body { padding: 14px 16px; }
+  .or-texto { font-size: 13.5px; color: #04342C; line-height: 2; font-style: italic; }
+
+  .cierre-serie { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cs-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cs-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 8px 0; }
+</style>
+
+<div class="r">
+
+  <div class="serie-header">
+    <div class="sh-label">Serie completa reorganizada</div>
+    <div class="sh-titulo">El Dios que viene</div>
+    <div class="sh-sub">De la promesa al cumplimiento — 3 charlas de 45 minutos</div>
+    <div class="sh-chips">
+      <span class="chip">Charla 1 — El problema</span>
+      <span class="chip">Charla 2 — El sistema</span>
+      <span class="chip">Charla 3 — El cumplimiento</span>
+    </div>
+  </div>
+
+  <div class="progresion">
+    <div class="prog-card pc1">
+      <div class="prog-num pn1">Charla 1</div>
+      <div class="prog-titulo pt1">El problema</div>
+      <div class="prog-preg pp1">"¿Por qué no podía Dios simplemente perdonar?"</div>
+    </div>
+    <div class="prog-flecha">→</div>
+    <div class="prog-card pc2">
+      <div class="prog-num pn2">Charla 2</div>
+      <div class="prog-titulo pt2">El sistema</div>
+      <div class="prog-preg pp2">"¿Qué diseñó Dios mientras esperábamos?"</div>
+    </div>
+    <div class="prog-flecha">→</div>
+    <div class="prog-card pc3">
+      <div class="prog-num pn3">Charla 3</div>
+      <div class="prog-titulo pt3">El cumplimiento</div>
+      <div class="prog-preg pp3">"¿Quién es el que todo lo cumple?"</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CHARLA 2 ═══════════════════════════════ -->
+  <div class="charla">
+    <div class="charla-header">
+      <div class="ch-top">
+        <span class="badge b2">Charla 2</span>
+        <span style="font-size:12px;color:var(--color-text-secondary);">45 min · Sistema resumido · Sin revelar a Jesús</span>
+      </div>
+      <div class="ch-titulo">"La sangre que cubría — pero no quitaba"</div>
+      <div class="ch-tagline">El sistema completo en sus elementos esenciales — cada uno poderoso, cada uno con su límite</div>
+    </div>
+    <div class="charla-body">
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt1">0–5 min</span>
+          <span class="bl-titulo">Apertura — La primera muerte</span>
+        </div>
+        <div class="bl-body">
+          <div class="narrativa">
+            <div class="nar-label">Narrativa de apertura</div>
+            <div class="nar-texto">"Después del jardín, antes de que comenzara todo el sistema que vamos a ver hoy, hay un detalle pequeño en Génesis 3:21 que lo resume todo. Dios hizo túnicas de piel para vestir al hombre. Para hacer una túnica de piel — algo tuvo que morir. Ese patrón se repetirá durante siglos: la vida de uno cubre al otro."</div>
+          </div>
+          <div class="verso">Génesis 3:21 — "Y Jehová Dios hizo al hombre y a su mujer túnicas de pieles, y los vistió."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt2">5–15 min</span>
+          <span class="bl-titulo">Los sacrificios y el sacerdocio — el sistema que Dios diseñó</span>
+        </div>
+        <div class="bl-body">
+
+          <div class="tabla-resumen">
+            <div class="tr-headers">
+              <div class="tr-h">Elemento</div>
+              <div class="tr-h">Qué era</div>
+              <div class="tr-h">Su límite</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">Los sacrificios</div>
+              <div class="tr-cel">La vida de un animal en lugar del pecador. Sangre real, muerte real, sustitución real.</div>
+              <div class="tr-cel">Había que repetirlos. Cubrían el pecado pero no lo quitaban definitivamente.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">El sacerdote</div>
+              <div class="tr-cel">El mediador entre Dios y el pueblo. El único que podía entrar al Lugar Santo.</div>
+              <div class="tr-cel">Era pecador — necesitaba mediación para mediar. Y eventualmente moría.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">Yom Kippur</div>
+              <div class="tr-cel">Un día al año el sumo sacerdote entraba solo al Lugar Santísimo con sangre.</div>
+              <div class="tr-cel">Se repetía cada año. Si fuera definitivo no necesitaría repetirse.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">Chivo expiatorio</div>
+              <div class="tr-cel">Cargaba los pecados confesados y era enviado al desierto. Nunca volvía.</div>
+              <div class="tr-cel">Gesto poderoso pero temporal. El año siguiente el proceso comenzaba de nuevo.</div>
+            </div>
+          </div>
+
+          <div class="infobox ib-coral">
+            <div class="ib-l">El principio que lo gobierna todo</div>
+            <div class="ib-t">Levítico 17:11 — "La vida de la carne en la sangre está, y yo os la he dado para hacer expiación." El pecado cuesta vida. Alguien tiene que pagar. El sistema era real — pero provisional. Como un vendaje que necesita cambiarse porque la herida no termina de sanar.</div>
+          </div>
+
+          <div class="pregunta">
+            <div class="preg-label">Pastoral — dejar abierta</div>
+            <div class="preg-texto">"¿Alguno aquí siente que vive en el Día de la Expiación perpetuo? Que cada vez que falla tiene que volver a empezar desde cero. El sistema antiguo describe ese agotamiento con honestidad — y promete que no tiene que ser así para siempre."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt3">15–32 min</span>
+          <span class="bl-titulo">El arca del pacto — el objeto que lo resume todo</span>
+        </div>
+        <div class="bl-body">
+          <div class="narrativa">
+            <div class="nar-label">Introducción narrativa</div>
+            <div class="nar-texto">"Si los sacrificios eran el sistema — el arca era el corazón del sistema. El objeto más sagrado que existió. Diseñado por Dios mismo, medida por medida, material por material. Y dentro de ella — cuatro objetos que no son arbitrarios. Cada uno habla. Hoy vamos a aprender a escucharlos."</div>
+          </div>
+
+          <div class="tabla-resumen">
+            <div class="tr-headers">
+              <div class="tr-h">Objeto en el arca</div>
+              <div class="tr-h">Qué representaba</div>
+              <div class="tr-h">Pregunta que deja</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">Las tablas de la Ley</div>
+              <div class="tr-cel">El estándar de Dios. Su carácter expresado en mandatos. Nadie podía guardarla perfectamente.</div>
+              <div class="tr-cel" style="font-style:italic;color:var(--color-text-secondary);">¿Quién podría guardar esta Ley sin romperla ni una vez?</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">El maná</div>
+              <div class="tr-cel">El pan del cielo dado cada día en el desierto. Sustento sobrenatural, gratuito, sin mérito.</div>
+              <div class="tr-cel" style="font-style:italic;color:var(--color-text-secondary);">¿Quién podría ser ese sustento de forma permanente, no solo por 40 años?</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">La vara de Aarón</div>
+              <div class="tr-cel">Floreció milagrosamente — una vara seca que produjo vida. Confirmó autoridad legítima.</div>
+              <div class="tr-cel" style="font-style:italic;color:var(--color-text-secondary);">¿Quién tendría autoridad confirmada por Dios mismo — que produzca vida donde no la hay?</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">El propiciatorio</div>
+              <div class="tr-cel">La tapa donde la sangre era rociada. Donde la justicia y la misericordia se encontraban.</div>
+              <div class="tr-cel" style="font-style:italic;color:var(--color-text-secondary);">¿Dónde se resolverá esto definitivamente — no año tras año?</div>
+            </div>
+          </div>
+
+          <div class="infobox ib-purple">
+            <div class="ib-l">El arca como retrato de las necesidades más profundas</div>
+            <div class="ib-t">Las tablas hablan a quien necesita dirección firme. El maná habla a quien vive con ansiedad sobre el futuro. La vara habla a quien ha sido dañado por autoridad ilegítima. El propiciatorio habla a quien necesita reconciliación real — no solo perdón intelectual. Los cuatro juntos, bajo la presencia de Dios, dicen: todo lo que tu corazón más necesita está aquí.</div>
+          </div>
+
+          <div class="pregunta">
+            <div class="preg-label">Pastoral — para el grupo</div>
+            <div class="preg-texto">"¿Cuál de estos cuatro objetos resuena más contigo hoy? ¿Necesitas dirección firme, sustento diario, autoridad legítima o reconciliación profunda? Guarda esa respuesta. Porque la próxima charla va a responder exactamente a lo que necesitas."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt4">32–40 min</span>
+          <span class="bl-titulo">El templo y el velo — Dios cerca, pero no del todo</span>
+        </div>
+        <div class="bl-body">
+          <div class="punto"><div class="dot d4"></div><div class="punto-text">El templo era la estructura más gloriosa de Israel. Todo apuntaba hacia el centro — hacia el Lugar Santísimo donde reposaba el arca. Pero la estructura misma gritaba una realidad: había capas de separación. Atrio exterior, atrio de Israel, Lugar Santo, Lugar Santísimo. Cada capa era una declaración: todavía no podemos acercarnos completamente.</div></div>
+          <div class="punto"><div class="dot d4"></div><div class="punto-text">El velo — 18 metros de alto, 10 centímetros de grosor — separaba el Lugar Santo del Lugar Santísimo. Detrás estaba la presencia de Dios. Y ese velo permanecía cerrado. Para todos. Siempre. Solo el sumo sacerdote, solo una vez al año, solo con sangre. La presencia era real — la distancia también.</div></div>
+
+          <div class="infobox ib-amber">
+            <div class="ib-l">El mensaje pastoral del velo</div>
+            <div class="ib-t">Hay personas que sienten exactamente eso: Dios es real, han tenido experiencias con él, pero hay algo — una distancia que no pueden nombrar pero sí sienten. Como si hubiera un velo. El sistema antiguo valida esa sensación. No es falta de fe — es el reconocimiento honesto de que algo tiene que ocurrir para que ese velo se abra. Algo que todavía no vamos a contar hoy.</div>
+          </div>
+
+          <div class="verso">Éxodo 26:33 — "Y aquel velo os hará separación entre el lugar santo y el santísimo."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt5">40–45 min</span>
+          <span class="bl-titulo">Cierre pastoral — El sistema en mi vida</span>
+        </div>
+        <div class="bl-body">
+          <div class="punto"><div class="dot d5"></div><div class="punto-text">Todo este sistema era extraordinariamente poderoso. Y todo este sistema tenía límites. Los sacrificios se repetían. El sacerdote moría. El propiciatorio necesitaba sangre nueva cada año. El velo permanecía cerrado. No porque Dios fuera incapaz — sino porque todo apuntaba hacia algo que estaba por venir.</div></div>
+
+          <div class="narrativa">
+            <div class="nar-label">Texto de cierre</div>
+            <div class="nar-texto">"Imaginen que reciben una carta de amor. La carta es hermosa. Está bien escrita. Dice cosas verdaderas y profundas. Pero al final dice: 'esto es solo un anticipo. Lo mejor viene en persona.'<br><br>
+            Eso es el sistema del Antiguo Testamento. Real. Poderoso. Verdadero. Pero al final de cada sacrificio, al final de cada Yom Kippur, al final de cada vez que el sacerdote salía del Lugar Santísimo — había una sensación colectiva de pueblo entero que decía: esto no es todo. Alguien viene."</div>
+          </div>
+
+          <div class="verso">Hebreos 10:1 — "La ley, teniendo la sombra de los bienes venideros, no la imagen misma de las cosas."</div>
+        </div>
+      </div>
+
+      <div class="suspenso">
+        <div class="sus-label">Las cinco preguntas con las que el grupo sale</div>
+        <div class="sus-titulo">Sin respuesta todavía. Eso es intencional.</div>
+        <div class="sus-q">"¿Por qué había que repetir los sacrificios si realmente resolvían el problema?"</div>
+        <div class="sus-q">"¿Quién podría ser sacerdote para siempre — sin necesitar ofrecer primero por sus propios pecados?"</div>
+        <div class="sus-q">"¿Quién podría guardar perfectamente la Ley que estaba dentro del arca?"</div>
+        <div class="sus-q">"¿Quién sería ese pan del cielo permanente, esa vara que produce vida, ese propiciatorio definitivo?"</div>
+        <div class="sus-q">"¿Quién abriría ese velo — y cómo?"</div>
+        <div class="sus-cierre">"La próxima charla no presenta más símbolos. Presenta a alguien. Y cuando lo vean — van a reconocerlo."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CHARLA 3 ═══════════════════════════════ -->
+  <div class="charla">
+    <div class="charla-header">
+      <div class="ch-top">
+        <span class="badge b3">Charla 3</span>
+        <span style="font-size:12px;color:var(--color-text-secondary);">45 min · El cumplimiento · Revelar todo</span>
+      </div>
+      <div class="ch-titulo">"El que todo lo cumplió"</div>
+      <div class="ch-tagline">Jesús como respuesta a cada pregunta que el sistema antiguo dejó abierta</div>
+    </div>
+    <div class="charla-body">
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt1">0–7 min</span>
+          <span class="bl-titulo">Apertura — Retomar las preguntas</span>
+        </div>
+        <div class="bl-body">
+          <div class="narrativa">
+            <div class="nar-label">Apertura — conectar con charla anterior</div>
+            <div class="nar-texto">"La semana pasada terminamos con cinco preguntas abiertas. Hoy no voy a presentar nuevos conceptos. Solo voy a presentar a una persona. Y mientras la presento — van a ir reconociendo en él todo lo que vimos la semana pasada. Como cuando ves el objeto que estaba proyectando la sombra que habías estudiado."</div>
+          </div>
+          <div class="verso">Mateo 5:17 — "No penséis que he venido para abrogar la ley o los profetas; no he venido para abrogar, sino para cumplir."</div>
+          <div class="verso">Colosenses 2:17 — "Todo lo cual es sombra de lo que ha de venir; pero el cuerpo es de Cristo."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt2">7–25 min</span>
+          <span class="bl-titulo">Jesús cumple cada elemento — punto por punto</span>
+        </div>
+        <div class="bl-body">
+
+          <div class="cumplimiento-grid">
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at cat1">Los sacrificios repetidos</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">El sacrificio definitivo</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Cada año, el mismo ritual. Cada vez, la misma sangre. Cubría — pero no quitaba.</div>
+                <div class="cg-nt-text">Juan 1:29 — "He aquí el Cordero de Dios que <strong>quita</strong> el pecado del mundo." No "cubre." Quita. Una vez. Para siempre. Sin repetición.</div>
+              </div>
+              <div class="cg-verso">Hebreos 9:12 — "Por su propia sangre entró una vez para siempre al Lugar Santísimo, habiendo obtenido eterna redención."</div>
+            </div>
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at cat2">El sacerdote que moría</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">El sacerdote eterno</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Pecador. Mortal. Necesitaba ofrecer por sí mismo antes de ofrecer por el pueblo.</div>
+                <div class="cg-nt-text">Jesús es simultáneamente el sacerdote que ofrece y el sacrificio que es ofrecido. Sin pecado propio. Sin muerte permanente. Resucitado — intercede para siempre.</div>
+              </div>
+              <div class="cg-verso">Hebreos 7:25 — "Siempre vive para interceder por ellos."</div>
+            </div>
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at cat3">Las tablas de la Ley</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">El que la guardó perfectamente</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Nadie podía guardarla perfectamente. La Ley mostraba el estándar — y revelaba que nadie lo alcanzaba.</div>
+                <div class="cg-nt-text">Jesús vivió 33 años sin romper la Ley ni una sola vez. Su obediencia perfecta es la que se nos acredita a nosotros. No guardamos la Ley para ser justos — somos justos porque él la guardó.</div>
+              </div>
+              <div class="cg-verso">Romanos 8:3-4 — "Lo que era imposible para la ley... Dios lo hizo, para que la justicia de la ley se cumpliese en nosotros."</div>
+            </div>
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at cat4">El maná del desierto</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">El pan de vida eterno</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Sostuvo al pueblo por 40 años. Real. Milagroso. Pero temporal — los que comieron igualmente murieron.</div>
+                <div class="cg-nt-text">Jesús lo dice directamente: "Yo soy el pan de vida. El que a mí viene nunca tendrá hambre." No 40 años — para siempre. No para el cuerpo — para el ser entero.</div>
+              </div>
+              <div class="cg-verso">Juan 6:35 — "Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás."</div>
+            </div>
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at cat5">La vara que floreció</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">El que resucitó de entre los muertos</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Una vara seca que produjo vida de forma milagrosa. Señal de autoridad confirmada por Dios. Lo muerto que da vida.</div>
+                <div class="cg-nt-text">Jesús murió — completamente. Y resucitó — completamente. Su resurrección es la confirmación definitiva de su autoridad. Lo que la vara prefiguraba en pequeño, él lo cumplió en lo más grande.</div>
+              </div>
+              <div class="cg-verso">Romanos 1:4 — "Declarado Hijo de Dios con poder... por la resurrección de entre los muertos."</div>
+            </div>
+
+            <div class="cg-item">
+              <div class="cg-header">
+                <span class="cg-at" style="color:#712B13;">El propiciatorio</span>
+                <span class="cg-flecha">→</span>
+                <span class="cg-nt">La propiciación definitiva</span>
+              </div>
+              <div class="cg-body">
+                <div class="cg-at-text">Donde la justicia y la misericordia se encontraban. La sangre sobre la Ley. Una vez al año. Temporal.</div>
+                <div class="cg-nt-text">Pablo llama a Jesús "propiciación" en Romanos 3:25. Él es el lugar donde la justicia de Dios y el amor de Dios se encuentran — en su propio cuerpo. No una vez al año — de una vez para siempre.</div>
+              </div>
+              <div class="cg-verso">Romanos 3:25 — "A quien Dios puso como propiciación por medio de la fe en su sangre."</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt3">25–33 min</span>
+          <span class="bl-titulo">El velo que se rasgó — el momento que lo cambió todo</span>
+        </div>
+        <div class="bl-body">
+          <div class="narrativa">
+            <div class="nar-label">Narración del momento cumbre</div>
+            <div class="nar-texto">"La semana pasada hablamos de ese velo. 18 metros de alto. 10 centímetros de grosor. Cerrado para todos. Siempre. Siglos de historia detrás de ese velo.<br><br>
+            El día que Jesús murió en la cruz, Mateo registra un detalle que los sacerdotes del templo deben haber visto con terror: el velo se rasgó en dos. De arriba hacia abajo.<br><br>
+            No de abajo hacia arriba — como si un hombre lo rasgara desde adentro. De arriba hacia abajo — como si Dios lo rasgara desde su lado.<br><br>
+            Lo que había estado cerrado por siglos. Lo que solo el sumo sacerdote podía cruzar una vez al año con sangre ajena. Abierto. De una vez. Para siempre. Para todos."</div>
+          </div>
+          <div class="verso">Mateo 27:50-51 — "Mas Jesús, habiendo otra vez clamado a gran voz, entregó el espíritu. Y he aquí, el velo del templo se rasgó en dos, de arriba abajo."</div>
+          <div class="verso">Hebreos 10:19-20 — "Teniendo libertad para entrar en el Lugar Santísimo por la sangre de Jesucristo, por el camino nuevo y vivo que él nos abrió a través del velo."</div>
+          <div class="infobox ib-teal">
+            <div class="ib-l">Lo que el velo rasgado significa hoy</div>
+            <div class="ib-t">El acceso que antes era exclusivo para un solo hombre, una sola vez al año, ahora es tuyo. En cualquier momento. En cualquier lugar. Sin sacerdote intermediario. Sin sangre que ofrecer primero. El velo que sentías entre tú y Dios — ya fue rasgado. La pregunta es si has entrado.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt4">33–40 min</span>
+          <span class="bl-titulo">El nuevo pacto — mejor en todo</span>
+        </div>
+        <div class="bl-body">
+          <div class="punto"><div class="dot d4"></div><div class="punto-text">Jeremías 31 — siglos antes, Dios promete un nuevo pacto. No como el antiguo escrito en piedra. Este sería escrito en el corazón. La diferencia es radical: el antiguo decía "haz esto para estar bien." El nuevo dice "estás bien — ahora vive desde esa realidad."</div></div>
+          <div class="punto"><div class="dot d4"></div><div class="punto-text">En la última cena Jesús toma la copa y dice: "Esta copa es el nuevo pacto en mi sangre." No es referencia accidental — está cumpliendo y superando deliberadamente todo lo que el sistema antiguo anticipaba. Él es el mediador del nuevo pacto.</div></div>
+
+          <div class="tabla-resumen">
+            <div class="tr-headers">
+              <div class="tr-h">Dimensión</div>
+              <div class="tr-h">Antiguo pacto</div>
+              <div class="tr-h">Nuevo pacto en Cristo</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">La Ley</div>
+              <div class="tr-cel">Escrita en piedra. Exterior. Condenaba al incumplidor.</div>
+              <div class="tr-cel">Escrita en el corazón. Interior. Produce obediencia desde adentro.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">El sacrificio</div>
+              <div class="tr-cel">Repetido cada año. Temporal. Cubría.</div>
+              <div class="tr-cel">Una vez para siempre. Definitivo. Quita.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">El acceso</div>
+              <div class="tr-cel">Un solo hombre. Una vez al año. Solo con sangre ajena.</div>
+              <div class="tr-cel">Todo creyente. Siempre. A través de la sangre de Cristo.</div>
+            </div>
+            <div class="tr-fila">
+              <div class="tr-label">La presencia</div>
+              <div class="tr-cel">En el templo. Detrás del velo. Inaccesible para la mayoría.</div>
+              <div class="tr-cel">En el creyente. El Espíritu Santo habita en nosotros.</div>
+            </div>
+          </div>
+          <div class="verso">Jeremías 31:33-34 — "Daré mi ley en su mente y la escribiré en su corazón... porque perdonaré su maldad y no me acordaré más de su pecado."</div>
+        </div>
+      </div>
+
+      <div class="bloque">
+        <div class="bl-header">
+          <span class="bl-tiempo bt5">40–45 min</span>
+          <span class="bl-titulo">Cierre pastoral — ¿Has entrado?</span>
+        </div>
+        <div class="bl-body">
+          <div class="narrativa">
+            <div class="nar-label">Texto de cierre</div>
+            <div class="nar-texto">"El sistema antiguo era extraordinario. Real. Poderoso. Diseñado por Dios mismo. Pero tenía límites — porque era provisional. Era la carta de amor que decía: lo mejor viene en persona.<br><br>
+            Hoy conocimos a la persona.<br><br>
+            El sacrificio que no necesita repetirse. El sacerdote que no muere. El que guardó la Ley perfectamente en tu lugar. El pan de vida eterno. El que resucitó para confirmar su autoridad. La propiciación definitiva. Y el que rasgó el velo para que puedas entrar.<br><br>
+            Todo el sistema antiguo era una habitación preparada. Jesús abrió la puerta.<br><br>
+            La pregunta que te llevo hoy es simple: ¿has entrado?"</div>
+          </div>
+          <div class="verso">Hebreos 4:16 — "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro."</div>
+        </div>
+      </div>
+
+      <div class="oracion">
+        <div class="or-header"><div class="or-titulo">Oración de cierre — modelo</div></div>
+        <div class="or-body">
+          <div class="or-texto">
+            "Padre,<br><br>
+            Gracias porque no nos dejaste con preguntas sin respuesta.<br>
+            Gracias porque todo el sistema que construiste durante siglos<br>
+            no era un fin en sí mismo — era una flecha apuntando a tu Hijo.<br><br>
+            Hoy queremos recibir lo que él cumplió.<br>
+            No más ciclos que se repiten.<br>
+            No más velo que nos separa.<br>
+            No más distancia que no se cierra.<br><br>
+            El sacrificio fue hecho. El sacerdote vive. El velo se rasgó.<br>
+            La puerta está abierta.<br><br>
+            Ayúdanos a entrar — y a vivir desde adentro.<br><br>
+            Amén."
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cierre-serie">
+    <div class="cs-label">El arco completo de las tres charlas</div>
+    <div class="cs-texto">
+      <strong>Charla 1</strong> — El problema: ¿por qué no podía Dios simplemente perdonar? El pecado tiene peso real. El pacto fue la solución de Dios a la tensión entre justicia y amor.<br><br>
+      <strong>Charla 2</strong> — El sistema: sacrificios, sacerdocio, arca, templo, velo. Real y poderoso — pero provisional. Todo apuntaba hacia algo mayor. Dejar las preguntas abiertas.<br><br>
+      <strong>Charla 3</strong> — El cumplimiento: Jesús responde a cada pregunta, cumple cada símbolo, supera cada límite. El velo se rasgó. La puerta está abierta. ¿Has entrado?
+    </div>
+  </div>
+
+</div>

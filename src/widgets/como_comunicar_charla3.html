@@ -1,0 +1,302 @@
+
+<style>
+  .c { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+
+  .alerta { border-radius: var(--border-radius-lg); background: #FCEBEB; border: 1.5px solid #F5A5A5; padding: 16px 18px; margin-bottom: 1.5rem; }
+  .al-label { font-size: 11px; font-weight: 500; color: #791F1F; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .al-titulo { font-size: 17px; font-weight: 500; color: #4A0F0F; margin: 0 0 8px; }
+  .al-texto { font-size: 13.5px; color: #4A0F0F; line-height: 1.7; }
+
+  .filosofia { border-radius: var(--border-radius-lg); background: #EEEDFE; border: 1.5px solid #AFA9EC; padding: 16px 18px; margin-bottom: 1.5rem; }
+  .fil-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .fil-titulo { font-size: 19px; font-weight: 500; color: #26215C; margin: 0 0 10px; }
+  .fil-texto { font-size: 14px; color: #3C3489; line-height: 1.8; }
+
+  .cambio { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .cm-header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .cm-num { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; }
+  .cn1{background:#FAEEDA;color:#633806;} .cn2{background:#EEEDFE;color:#3C3489;} .cn3{background:#E1F5EE;color:#085041;} .cn4{background:#FAECE7;color:#712B13;} .cn5{background:#EAF3DE;color:#27500A;}
+  .cm-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .cm-body { padding: 14px 16px; }
+
+  .comparacion { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 8px 0; }
+  .comp-card { border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .cc-mal { background: #FCEBEB; }
+  .cc-bien { background: #E1F5EE; }
+  .cc-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .ccl-mal { color: #791F1F; } .ccl-bien { color: #0F6E56; }
+  .cc-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+
+  .ejemplo { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 8px 0; border-left: 3px solid #7F77DD; }
+  .ej-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .ej-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.8; font-style: italic; }
+
+  .punto { display: flex; gap: 10px; margin-bottom: 9px; align-items: flex-start; }
+  .dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .d1{background:#BA7517;} .d2{background:#7F77DD;} .d3{background:#1D9E75;} .d4{background:#D85A30;} .d5{background:#639922;}
+  .punto-text { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .verso { font-size: 12.5px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 6px 0; }
+
+  .infobox { border-radius: var(--border-radius-md); padding: 11px 13px; margin: 8px 0; }
+  .ib-amber { background: #FAEEDA; border: 0.5px solid #FAC775; }
+  .ib-amber .il { color: #854F0B; } .ib-amber .it { color: #412402; }
+  .ib-teal { background: #E1F5EE; border: 0.5px solid #9FE1CB; }
+  .ib-teal .il { color: #0F6E56; } .ib-teal .it { color: #04342C; }
+  .ib-purple { background: #EEEDFE; border: 0.5px solid #AFA9EC; }
+  .ib-purple .il { color: #534AB7; } .ib-purple .it { color: #26215C; }
+  .il { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .it { font-size: 13.5px; line-height: 1.7; }
+
+  .estructura { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .est-header { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 10px; }
+  .est-badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); }
+  .eb1{background:#FAEEDA;color:#854F0B;} .eb2{background:#EEEDFE;color:#534AB7;} .eb3{background:#FAECE7;color:#993C1D;} .eb4{background:#E1F5EE;color:#0F6E56;} .eb5{background:#EAF3DE;color:#3B6D11;}
+  .est-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .est-body { padding: 14px 16px; }
+
+  .regla { border-radius: var(--border-radius-md); background: #F1EFE8; padding: 10px 13px; margin: 8px 0; display: flex; gap: 10px; align-items: flex-start; }
+  .reg-icono { font-size: 14px; flex-shrink: 0; }
+  .reg-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+
+  .silencio { background: #1A1A2E; border-radius: var(--border-radius-md); padding: 8px 13px; margin: 8px 0; font-size: 12px; color: #9FE1CB; font-style: italic; }
+
+  .pregunta-box { border-radius: var(--border-radius-md); padding: 10px 13px; margin: 8px 0; border: 1.5px solid #AFA9EC; background: #EEEDFE; }
+  .pq-label { font-size: 11px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .pq-texto { font-size: 13.5px; color: #26215C; font-style: italic; line-height: 1.6; }
+
+  .cierre { border: 1.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 16px 18px; margin-top: 1rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px; }
+  .cierre-texto { font-size: 14px; color: #04342C; line-height: 1.9; }
+
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="c">
+
+  <!-- EL PROBLEMA REAL -->
+  <div class="alerta">
+    <div class="al-label">El problema real</div>
+    <div class="al-titulo">No es un problema de material — es un problema de filosofía</div>
+    <div class="al-texto">Tienes demasiado material bueno y el instinto natural es querer usarlo todo. Pero la charla 3 no falla por falta de contenido — falla cuando el predicador actúa como mensajero de información en lugar de guía de una experiencia. El grupo no necesita saber más sobre Jesús. Necesita encontrarse con él.</div>
+  </div>
+
+  <!-- LA FILOSOFÍA -->
+  <div class="filosofia">
+    <div class="fil-label">La filosofía que cambia todo</div>
+    <div class="fil-titulo">La charla 3 no es una clase — es un reconocimiento</div>
+    <div class="fil-texto">
+      En Lucas 24, cuando Jesús camina con los discípulos en el camino a Emaús, les explica las Escrituras desde Moisés hasta los profetas. Y ellos no lo reconocen mientras habla. Lo reconocen en el momento en que él parte el pan.<br><br>
+      Eso es lo que debe ocurrir en la charla 3. No que el grupo salga con más información sobre Jesús — sino que en algún momento de la charla, algo se encienda. Un reconocimiento. "Es él. Era él todo el tiempo."<br><br>
+      Tu trabajo no es explicar todos los cumplimientos. Es crear las condiciones para que ese reconocimiento ocurra.
+    </div>
+  </div>
+
+  <!-- CAMBIO 1 -->
+  <div class="cambio">
+    <div class="cm-header">
+      <div class="cm-num cn1">1</div>
+      <span class="cm-titulo">Elige menos — profundiza más</span>
+    </div>
+    <div class="cm-body">
+      <div class="punto"><div class="dot d1"></div><div class="punto-text">Tienes 7 profecías y 6 cumplimientos del sistema antiguo. Si intentas cubrir los 13 en 45 minutos, tocas todo superficialmente y nada profundamente. El grupo sale con una lista, no con un encuentro.</div></div>
+      <div class="comparacion">
+        <div class="comp-card cc-mal">
+          <div class="cc-label ccl-mal">Lo que no funciona</div>
+          <div class="cc-texto">Recorrer 13 puntos en 45 minutos. Cada uno bien explicado pero sin tiempo para respirar. El grupo siente que está leyendo un índice.</div>
+        </div>
+        <div class="comp-card cc-bien">
+          <div class="cc-label ccl-bien">Lo que funciona</div>
+          <div class="cc-texto">Elegir 3 o 4 momentos. Desarrollarlos despacio, con narrativa, con pregunta, con silencio. El grupo sale con 3 cosas que no puede olvidar.</div>
+        </div>
+      </div>
+      <div class="infobox ib-amber">
+        <div class="il">La selección recomendada para 45 minutos</div>
+        <div class="it">
+          <strong>1. Una profecía sorprendente</strong> — las 30 monedas de plata o el Salmo 22. Para establecer que esto no es coincidencia.<br>
+          <strong>2. Isaías 53</strong> — siempre. Es el corazón emocional y pastoral de toda la serie.<br>
+          <strong>3. El sacrificio definitivo</strong> — del sistema antiguo. Conecta la charla 2 con la charla 3.<br>
+          <strong>4. El velo rasgado</strong> — siempre. Es el climax visual de las tres charlas.<br><br>
+          El resto del material queda como documento de apoyo que el grupo puede leer después.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMBIO 2 -->
+  <div class="cambio">
+    <div class="cm-header">
+      <div class="cm-num cn2">2</div>
+      <span class="cm-titulo">El versículo llega al final — no al principio</span>
+    </div>
+    <div class="cm-body">
+      <div class="punto"><div class="dot d2"></div><div class="punto-text">Este es el cambio más simple y más transformador de toda la charla. La mayoría de predicadores abre el versículo y luego lo explica. Eso pone al grupo en modo pasivo — espera que tú lo descifres. Cambia el orden y cambia todo.</div></div>
+      <div class="comparacion">
+        <div class="comp-card cc-mal">
+          <div class="cc-label ccl-mal">Orden equivocado</div>
+          <div class="cc-texto">"Lean conmigo Isaías 53:5... Aquí vemos que Jesús fue herido... lo que esto significa es..."</div>
+        </div>
+        <div class="comp-card cc-bien">
+          <div class="cc-label ccl-bien">Orden correcto</div>
+          <div class="cc-texto">Narras la escena de la cruz. Das tiempo para que el grupo la sienta. Luego dices: "Isaías escribió esto 700 años antes." Y lees el versículo como confirmación de lo que ya experimentaron.</div>
+        </div>
+      </div>
+      <div class="ejemplo">
+        <div class="ej-label">Ejemplo concreto — Isaías 53</div>
+        <div class="ej-texto">
+          "Quiero que cierren los ojos por un momento. Imaginen a alguien que durante toda su vida fue rechazado por los líderes de su pueblo. Alguien que cargó el dolor de otros — los enfermos, los marginados, los que nadie quería. Que fue acusado sin haber hecho nada. Que fue golpeado. Que murió entre criminales. Que fue sepultado en la tumba prestada de un hombre rico.<br><br>
+          Ahora abran los ojos. Quiero leerles algo que fue escrito 700 años antes de que ese hombre naciera."<br><br>
+          [Leer Isaías 53:3-6 despacio]<br><br>
+          "¿De quién está hablando Isaías?"
+        </div>
+      </div>
+      <div class="silencio">Pausa. Dejar que el grupo responda. La mayoría dirá "Jesús" — y en ese momento de reconocimiento está el corazón de toda la charla.</div>
+    </div>
+  </div>
+
+  <!-- CAMBIO 3 -->
+  <div class="cambio">
+    <div class="cm-header">
+      <div class="cm-num cn3">3</div>
+      <span class="cm-titulo">Narra las escenas — no las expliques</span>
+    </div>
+    <div class="cm-body">
+      <div class="punto"><div class="dot d3"></div><div class="punto-text">Cada cumplimiento tiene una escena detrás. El problema de la charla de "solo versículos" es que salta de texto a texto sin pasar por la escena humana. Cuando narras la escena, el grupo está adentro. Cuando solo lees el versículo, el grupo está afuera observando.</div></div>
+
+      <div class="ejemplo">
+        <div class="ej-label">Ejemplo — el velo rasgado sin versículo primero</div>
+        <div class="ej-texto">
+          "Son las tres de la tarde. El sol se oscureció desde el mediodía. Hay un terremoto. En el templo, los sacerdotes están haciendo su trabajo del día — los sacrificios de la tarde.<br><br>
+          Y de repente escuchan algo.<br><br>
+          No es el terremoto. Es algo más cercano. Es el sonido de tela rasgándose. Pero no cualquier tela — es el velo. El velo que separa el Lugar Santo del Lugar Santísimo. El velo de 18 metros de alto. El que lleva siglos cerrado. El que ningún ser humano podía tocar sin morir.<br><br>
+          Se está rasgando. De arriba hacia abajo. De adentro hacia afuera."
+        </div>
+      </div>
+      <div class="silencio">Pausa larga — 6 o 7 segundos. Luego lees Mateo 27:51 como la confirmación histórica de lo que acaban de imaginar.</div>
+
+      <div class="infobox ib-teal">
+        <div class="il">La regla de la escena</div>
+        <div class="it">Antes de leer cualquier versículo de la charla 3, pasa 30-60 segundos narrando la escena humana que hay detrás. Dónde estaba la gente. Qué sentían. Qué veían. Qué olían. Luego el versículo llega como confirmación de lo que ya vivieron.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CAMBIO 4 -->
+  <div class="cambio">
+    <div class="cm-header">
+      <div class="cm-num cn4">4</div>
+      <span class="cm-titulo">Una sola pregunta personal por bloque</span>
+    </div>
+    <div class="cm-body">
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Después de cada momento cumbre, no expliques la aplicación. Hazla pregunta. Una sola. Personal. Que no tenga respuesta fácil. Y da tiempo real para que el grupo la piense — no 3 segundos, sino 20 o 30 segundos de silencio genuino.</div></div>
+
+      <div class="comparacion">
+        <div class="comp-card cc-mal">
+          <div class="cc-label ccl-mal">Explicar la aplicación</div>
+          <div class="cc-texto">"Esto significa que no tienes que vivir con culpa. Que el sacrificio fue definitivo. Que puedes estar en paz con Dios." — El grupo asiente pero no procesa nada personalmente.</div>
+        </div>
+        <div class="comp-card cc-bien">
+          <div class="cc-label ccl-bien">Preguntar la aplicación</div>
+          <div class="cc-texto">"Si el sacrificio de Jesús fue definitivo y no necesita repetirse — ¿qué estás pagando tú todavía que ya fue pagado?" — El grupo no puede no pensar en algo concreto.</div>
+        </div>
+      </div>
+
+      <div class="punto"><div class="dot d4"></div><div class="punto-text">Las preguntas más poderosas para esta charla tienen estas características: son en primera persona ("¿qué estás tú..."), son específicas ("esta semana", "en este momento"), y no tienen respuesta correcta — tienen respuesta honesta.</div></div>
+    </div>
+  </div>
+
+  <!-- CAMBIO 5 -->
+  <div class="cambio">
+    <div class="cm-header">
+      <div class="cm-num cn5">5</div>
+      <span class="cm-titulo">El momento Emaús — dejar que el grupo lo diga</span>
+    </div>
+    <div class="cm-body">
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">En el camino a Emaús Jesús no les dice "soy yo." Les explica las Escrituras y luego parte el pan — y ellos lo reconocen solos. Ese patrón es el modelo perfecto para la charla 3.</div></div>
+      <div class="punto"><div class="dot d5"></div><div class="punto-text">Hay un momento específico donde puedes hacer que el grupo llegue al reconocimiento solo. Es cuando presentas las profecías acumuladas — Belén, la virgen, las 30 monedas, el Salmo 22 — y antes de nombrar a Jesús, preguntas al grupo: "¿De quién están hablando todos estos textos?" Y dejas que ellos lo digan.</div></div>
+
+      <div class="ejemplo">
+        <div class="ej-label">Cómo crear el momento Emaús</div>
+        <div class="ej-texto">
+          "Quiero que escuchen estos datos juntos:<br><br>
+          Alguien escribió hace 700 años que nacería en Belén — una aldea pequeña.<br>
+          Alguien escribió hace 700 años que nacería de una virgen.<br>
+          Alguien escribió hace 520 años que sería traicionado por exactamente 30 monedas de plata — y que ese dinero compraría el campo de un alfarero.<br>
+          Alguien escribió hace 1000 años — cuando la crucifixión no existía — que le horadarían las manos y los pies, y que se repartirían su ropa echando suertes.<br>
+          Alguien escribió hace 700 años que sería herido por nuestras rebeliones, molido por nuestros pecados.<br><br>
+          [Pausa de 5 segundos]<br><br>
+          ¿De quién están hablando todos estos textos?"
+        </div>
+      </div>
+
+      <div class="silencio">Dejar que el grupo responda. Ese momento de reconocimiento colectivo — "Jesús" — es el corazón de toda la serie. No lo robes diciéndolo tú primero.</div>
+
+      <div class="infobox ib-purple">
+        <div class="il">Por qué esto funciona</div>
+        <div class="it">Cuando una persona dice en voz alta "Jesús" después de escuchar esas evidencias acumuladas, no está repitiendo una respuesta que memorizó — está llegando a una conclusión. Y las conclusiones propias no se olvidan. Las que te dan tampoco se olvidan así de fácil, pero las propias tienen más peso personal.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESTRUCTURA FINAL -->
+  <div class="estructura">
+    <div class="est-header">
+      <span class="est-badge eb1">Estructura final</span>
+      <span class="est-titulo">La charla 3 en 5 movimientos — 45 minutos</span>
+    </div>
+    <div class="est-body">
+
+      <div class="regla">
+        <span class="reg-icono">⏱</span>
+        <span class="reg-texto"><strong>0–5 min — El gancho.</strong> "¿Alguien recuerda las preguntas con las que terminamos la semana pasada?" Dejar que el grupo las recuerde. No las repitas tú. Esto activa lo sembrado.</span>
+      </div>
+
+      <div class="regla">
+        <span class="reg-icono">🔍</span>
+        <span class="reg-texto"><strong>5–18 min — El momento Emaús.</strong> Presentar las profecías acumuladas (Belén, virgen, 30 monedas, Salmo 22, Isaías 53) sin nombrar a Jesús todavía. Narrar cada una. Al final preguntar: "¿De quién hablan todos estos textos?" — Dejar que el grupo lo diga.</span>
+      </div>
+
+      <div class="regla">
+        <span class="reg-icono">🔗</span>
+        <span class="reg-texto"><strong>18–30 min — Los dos cumplimientos más importantes.</strong> El sacrificio definitivo (conecta con la charla 2) y la vara/resurrección. Para cada uno: narrar la escena, dar la pregunta personal, silencio, versículo como confirmación.</span>
+      </div>
+
+      <div class="regla">
+        <span class="reg-icono">⚡</span>
+        <span class="reg-texto"><strong>30–38 min — El velo rasgado.</strong> Solo este. Sin apurar. Narrar la escena desde los sacerdotes que lo escuchan rasgarse. Silencio largo. La pregunta más personal: "¿Estás viviendo con el velo rasgado — o sigues comportándote como si estuviera cerrado?"</span>
+      </div>
+
+      <div class="regla">
+        <span class="reg-icono">🙏</span>
+        <span class="reg-texto"><strong>38–45 min — Cierre y oración.</strong> Sin resumen. Sin lista de puntos. Solo la pregunta final: "Desde antes de que nacieras — tu rescate ya estaba planeado. ¿Qué haces con eso?" Silencio. Oración.</span>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="infobox ib-amber">
+        <div class="il">La regla de oro de los 45 minutos</div>
+        <div class="it">
+          Por cada versículo que lees — narra la escena primero.<br>
+          Por cada afirmación teológica — haz una pregunta personal después.<br>
+          Por cada momento de enseñanza — un momento de silencio que deja espacio.<br>
+          Por cada punto que explicas — uno que el grupo descubre solo.<br><br>
+          Si sigues estas cuatro reglas — la charla no puede convertirse en una lectura de versículos.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">La prueba final antes de dar la charla</div>
+    <div class="cierre-texto">
+      Antes de pararte a dar la charla 3, hazte estas preguntas:<br><br>
+      ¿Hay al menos un momento donde el grupo llega a una conclusión solo — sin que yo se la diga?<br>
+      ¿Hay al menos dos o tres momentos de silencio planificados?<br>
+      ¿Cada versículo tiene una escena narrativa antes y una pregunta personal después?<br>
+      ¿El material que no cabe — lo tengo preparado como documento de apoyo para dar al grupo después?<br><br>
+      Si las cuatro respuestas son sí — la charla 3 no será una lectura de versículos.<br>
+      Será un encuentro.
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,183 @@
+
+<style>
+  .d { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .tres-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 10px; margin-bottom: 1.5rem; }
+  .t-card { border-radius: var(--border-radius-lg); padding: 16px; border: 1px solid; }
+  .tc-a { background: #EEEDFE; border-color: #AFA9EC; }
+  .tc-p { background: #E1F5EE; border-color: #9FE1CB; }
+  .tc-v { background: #FAEEDA; border-color: #FAC775; }
+  .t-num { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .na { color: #534AB7; } .np { color: #0F6E56; } .nv { color: #854F0B; }
+  .t-titulo { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+  .ta { color: #26215C; } .tp { color: #04342C; } .tv { color: #412402; }
+  .t-preg { font-size: 13px; font-style: italic; margin-bottom: 8px; }
+  .pa { color: #534AB7; } .pp { color: #0F6E56; } .pv { color: #854F0B; }
+  .t-def { font-size: 13px; line-height: 1.6; }
+  .da2 { color: #3C3489; } .dp2 { color: #085041; } .dv2 { color: #633806; }
+  .t-ejemplo { font-size: 12px; font-weight: 500; margin-top: 10px; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .t-ej-texto { font-size: 13px; font-style: italic; }
+
+  .analogia { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .an-header { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 10px; }
+  .an-badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); background: var(--color-background-secondary); color: var(--color-text-secondary); }
+  .an-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .an-body { padding: 14px 16px; }
+  .an-grid { display: grid; grid-template-columns: 80px minmax(0,1fr) minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+  .an-col-h { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; padding-bottom: 6px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .an-fila { display: contents; }
+  .an-cel { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .an-cel-label { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); padding: 8px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .an-cel:last-child, .an-cel-label:last-child { border-bottom: none; }
+
+  .aplicacion { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .ap-header { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
+  .ap-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .ap-body { padding: 14px 16px; }
+  .ap-fila { display: grid; grid-template-columns: 110px minmax(0,1fr); gap: 12px; margin-bottom: 12px; align-items: start; }
+  .ap-fila:last-child { margin-bottom: 0; }
+  .ap-tag { font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: var(--border-radius-md); text-align: center; }
+  .tag-a { background: #EEEDFE; color: #534AB7; }
+  .tag-p { background: #E1F5EE; color: #0F6E56; }
+  .tag-v { background: #FAEEDA; color: #854F0B; }
+  .ap-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+
+  .cierre { border: 0.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-md); padding: 14px 16px; margin-top: 0.5rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .cierre-texto { font-size: 14px; color: #3C3489; line-height: 1.7; }
+</style>
+
+<div class="d">
+
+  <div class="tres-grid">
+    <div class="t-card tc-a">
+      <div class="t-num na">Concepto 1</div>
+      <div class="t-titulo ta">Atributos</div>
+      <div class="t-preg pa">"¿Cómo ES el Reino?"</div>
+      <div class="t-def da2">Describen la naturaleza y el carácter del Reino. Son lo que el Reino ES, independientemente de lo que hagamos.</div>
+      <div class="t-ejemplo na">Ejemplos</div>
+      <div class="t-ej-texto da2">Justicia, paz, poder, comunidad, gozo.</div>
+    </div>
+    <div class="t-card tc-p">
+      <div class="t-num np">Concepto 2</div>
+      <div class="t-titulo tp">Principios</div>
+      <div class="t-preg pp">"¿Cómo FUNCIONA el Reino?"</div>
+      <div class="t-def dp2">Describen las leyes internas que gobiernan cómo opera el Reino. Son las reglas del juego que no cambian.</div>
+      <div class="t-ejemplo np">Ejemplos</div>
+      <div class="t-ej-texto dp2">Inversión, semilla, levadura, gracia, mayordomía.</div>
+    </div>
+    <div class="t-card tc-v">
+      <div class="t-num nv">Concepto 3</div>
+      <div class="t-titulo tv">Valores</div>
+      <div class="t-preg pv">"¿Qué IMPORTA en el Reino?"</div>
+      <div class="t-def dv2">Describen el sistema de evaluación del Rey. Lo que Dios premia, prioriza y considera éxito.</div>
+      <div class="t-ejemplo nv">Ejemplos</div>
+      <div class="t-ej-texto dv2">La persona, la fidelidad, la humildad, el perdón, la eternidad.</div>
+    </div>
+  </div>
+
+  <div class="analogia">
+    <div class="an-header">
+      <span class="an-badge">Analogía</span>
+      <span class="an-titulo">El fuego — tres formas de describirlo</span>
+    </div>
+    <div class="an-body">
+      <div class="an-grid">
+        <div class="an-col-h"></div>
+        <div class="an-col-h" style="color:#534AB7;">Atributo</div>
+        <div class="an-col-h" style="color:#0F6E56;">Principio</div>
+        <div class="an-col-h" style="color:#854F0B;">Valor</div>
+
+        <div class="an-cel-label">Fuego</div>
+        <div class="an-cel">Es caliente, luminoso, consume. Esa es su naturaleza.</div>
+        <div class="an-cel">Necesita oxígeno para existir. Sin combustible se apaga. El calor sube.</div>
+        <div class="an-cel">Se usa para calentar, no para quemar. La vida humana importa más que el fuego.</div>
+
+        <div class="an-cel-label">Reino</div>
+        <div class="an-cel">Es justo, es paz, es poder, es comunidad.</div>
+        <div class="an-cel">Lo pequeño crece. Lo dado multiplica. La gracia precede al mérito.</div>
+        <div class="an-cel">La persona vale más que el programa. La fidelidad vale más que la fama.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="analogia">
+    <div class="an-header">
+      <span class="an-badge">Analogía 2</span>
+      <span class="an-titulo">Una empresa — tres formas de describirla</span>
+    </div>
+    <div class="an-body">
+      <div class="an-grid">
+        <div class="an-col-h"></div>
+        <div class="an-col-h" style="color:#534AB7;">Atributo</div>
+        <div class="an-col-h" style="color:#0F6E56;">Principio</div>
+        <div class="an-col-h" style="color:#854F0B;">Valor</div>
+
+        <div class="an-cel-label">Empresa</div>
+        <div class="an-cel">Es innovadora, ágil, global. Así es su cultura.</div>
+        <div class="an-cel">El cliente primero. Lo que no se mide no mejora. Sin equipo no hay resultado.</div>
+        <div class="an-cel">La honestidad no se negocia. Las personas importan más que las ganancias.</div>
+
+        <div class="an-cel-label">Reino</div>
+        <div class="an-cel">Es justo, pacífico, poderoso, comunitario.</div>
+        <div class="an-cel">Lo invertido multiplica. Lo humilde es exaltado. La gracia precede.</div>
+        <div class="an-cel">La persona sobre el resultado. La fidelidad sobre la fama.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="aplicacion">
+    <div class="ap-header">
+      <div class="ap-titulo">Cómo se usan los tres en la vida del voluntario</div>
+    </div>
+    <div class="ap-body">
+      <div class="ap-fila">
+        <span class="ap-tag tag-a">Atributo</span>
+        <div class="ap-texto">Te dice en qué realidad estás operando. Cuando sirves, estás dentro de un Reino que ya es justo, ya es paz, ya tiene poder. No lo produces — lo manifiestas. Es el fundamento de tu identidad como voluntario.</div>
+      </div>
+      <div class="ap-fila">
+        <span class="ap-tag tag-p">Principio</span>
+        <div class="ap-texto">Te dice cómo tomar decisiones dentro del Reino. Si el principio de semilla dice que lo pequeño multiplica, entonces no descartes el servicio invisible. Si el principio de gracia dice que no se gana, entonces deja de servir para merecer. Los principios guían la acción.</div>
+      </div>
+      <div class="ap-fila">
+        <span class="ap-tag tag-v">Valor</span>
+        <div class="ap-texto">Te dice qué evaluar y qué premiar. Si el valor de la fidelidad supera el de la fama, entonces el domingo en que nadie te reconoció fue un domingo exitoso ante los ojos del Rey. Los valores reencuadran qué significa el éxito.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="analogia">
+    <div class="an-header">
+      <span class="an-badge">La pregunta de cada uno</span>
+      <span class="an-titulo">Tres preguntas distintas para el mismo voluntario</span>
+    </div>
+    <div class="an-body">
+      <div class="an-grid">
+        <div class="an-col-h"></div>
+        <div class="an-col-h" style="color:#534AB7;">Atributo</div>
+        <div class="an-col-h" style="color:#0F6E56;">Principio</div>
+        <div class="an-col-h" style="color:#854F0B;">Valor</div>
+
+        <div class="an-cel-label">Situación</div>
+        <div class="an-cel">"Nadie reconoció mi trabajo hoy"</div>
+        <div class="an-cel">"Nadie reconoció mi trabajo hoy"</div>
+        <div class="an-cel">"Nadie reconoció mi trabajo hoy"</div>
+
+        <div class="an-cel-label">Responde</div>
+        <div class="an-cel">Estás en un Reino que ya ES justo. No necesitas que la gente lo sea para que tú operes en esa realidad.</div>
+        <div class="an-cel">El principio de inversión dice que lo invisible en la tierra es visible en el cielo. Tu trabajo tiene peso aunque nadie lo vea.</div>
+        <div class="an-cel">El valor de la fidelidad dice que el Rey mide diferente. Lo que hiciste hoy fue exactamente lo que él premia.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">La síntesis en una frase</div>
+    <div class="cierre-texto">
+      Los <strong>atributos</strong> describen lo que el Reino es — su naturaleza.<br>
+      Los <strong>principios</strong> explican cómo funciona el Reino — sus leyes.<br>
+      Los <strong>valores</strong> revelan lo que le importa al Rey — su corazón.<br><br>
+      Un voluntario maduro conoce los tres: sabe en qué realidad vive, cómo operar dentro de ella, y qué considera éxito el Rey que sirve.
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,198 @@
+
+<style>
+  .imp { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .titulo { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .subtitulo { font-size: 14px; color: var(--color-text-secondary); margin: 0 0 1.5rem; }
+  .verso-box { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); padding: 14px 16px; margin-bottom: 1.5rem; }
+  .verso-ref { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .verso-texto { font-size: 14px; color: var(--color-text-primary); font-style: italic; line-height: 1.7; }
+  .flecha-grid { display: grid; grid-template-columns: minmax(0,1fr) 28px minmax(0,1fr); gap: 8px; align-items: center; margin-bottom: 1.5rem; }
+  .flecha-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; border: 0.5px solid var(--color-border-tertiary); }
+  .flecha-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; color: var(--color-text-secondary); }
+  .flecha-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .flecha-centro { text-align: center; font-size: 18px; color: var(--color-text-secondary); }
+  .seccion { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .sec-header { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .badge { font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .b-crey { background: #E1F5EE; color: #0F6E56; }
+  .b-vol { background: #EEEDFE; color: #534AB7; }
+  .b-peligro { background: #FAECE7; color: #993C1D; }
+  .b-puente { background: #FAEEDA; color: #854F0B; }
+  .sec-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+  .sec-body { padding: 14px 16px; }
+  .implicacion { border-radius: var(--border-radius-md); border: 0.5px solid var(--color-border-tertiary); padding: 12px 14px; margin-bottom: 10px; }
+  .imp-num { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .imp-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 6px; }
+  .imp-texto { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; }
+  .imp-aplicacion { font-size: 13px; color: var(--color-text-secondary); margin-top: 8px; padding-top: 8px; border-top: 0.5px solid var(--color-border-tertiary); font-style: italic; }
+  .tension-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; margin: 10px 0; }
+  .tension-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; }
+  .t-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; }
+  .lbl-mal { color: #A32D2D; }
+  .lbl-bien { color: #3B6D11; }
+  .t-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .pregunta-reflexion { background: #EEEDFE; border-radius: var(--border-radius-md); padding: 12px 14px; margin-top: 10px; border: 0.5px solid #AFA9EC; }
+  .preg-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 5px; }
+  .preg-texto { font-size: 14px; color: #3C3489; line-height: 1.6; font-style: italic; }
+  .sub-label { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin: 12px 0 6px; }
+  .verso-inline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 8px 0; }
+  .cierre { border: 0.5px solid #9FE1CB; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 14px 16px; margin-top: 10px; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .cierre-texto { font-size: 14px; color: #085041; line-height: 1.7; }
+  .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 10px 0; }
+</style>
+
+<div class="imp">
+  <p class="titulo">Implicaciones para el creyente y el voluntario</p>
+  <p class="subtitulo">Efesios 4:11 y 1 Corintios 12:28 — leídos juntos</p>
+
+  <div class="verso-box">
+    <div class="verso-ref">Efesios 4:11-12</div>
+    <div class="verso-texto">"Y él mismo constituyó a unos apóstoles, a otros profetas, a otros evangelistas, a otros pastores y maestros, a fin de perfeccionar a los santos para la obra del ministerio, para la edificación del cuerpo de Cristo."</div>
+  </div>
+  <div class="verso-box">
+    <div class="verso-ref">1 Corintios 12:28</div>
+    <div class="verso-texto">"Y a unos puso Dios en la iglesia: primeramente apóstoles, luego profetas, lo tercero maestros, luego los que hacen milagros, después los que sanan, los que ayudan, los que administran, los que tienen don de lenguas."</div>
+  </div>
+
+  <div style="margin-bottom:1.5rem;">
+    <div class="sub-label">La lógica que une los dos versículos</div>
+    <div class="flecha-grid">
+      <div class="flecha-card"><div class="flecha-label">Dios pone</div><div class="flecha-texto">Dones y funciones específicas en personas específicas dentro de la iglesia</div></div>
+      <div class="flecha-centro">→</div>
+      <div class="flecha-card"><div class="flecha-label">Para que</div><div class="flecha-texto">Los santos sean equipados y el cuerpo sea edificado hacia afuera</div></div>
+    </div>
+    <div class="flecha-grid">
+      <div class="flecha-card"><div class="flecha-label">1 Corintios 12</div><div class="flecha-texto">Responde: ¿qué hay disponible? — diversidad de dones y funciones</div></div>
+      <div class="flecha-centro">+</div>
+      <div class="flecha-card"><div class="flecha-label">Efesios 4</div><div class="flecha-texto">Responde: ¿para qué? — dirección y propósito de esos dones</div></div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-crey">Para el creyente</span>
+      <span class="sec-titulo">Tres implicaciones que cambian la autopercepción</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 1</div>
+        <div class="imp-titulo">Tu lugar en la iglesia no es accidental</div>
+        <div class="imp-texto">Ambos versículos usan palabras deliberadas: Efesios dice que Dios "constituyó" — estableció, colocó con intención. Corintios dice que Dios "puso" — mismo peso. No llegaste a esta iglesia ni a este equipo por casualidad, por simpatía o por conveniencia geográfica. Fuiste colocado. Eso tiene implicaciones enormes para cómo te tratas a ti mismo y cómo tratas a los que sirven contigo.</div>
+        <div class="imp-aplicacion">Pregunta: ¿Vives tu lugar en la iglesia como una asignación de Dios o como una rutina que adoptaste?</div>
+      </div>
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 2</div>
+        <div class="imp-titulo">Tu don no es tuyo — es un encargo</div>
+        <div class="imp-texto">En 1 Corintios 12, Pablo es explícito: es Dios quien distribuye los dones "como él quiere" (v.11). No los elegiste, no los ganaste, no los mereces más que otros. Son una administración — te fueron confiados para ser invertidos en otros. El creyente que acumula su don sin derramarlo en la comunidad está malversando lo que no le pertenece.</div>
+        <div class="imp-aplicacion">Imagen útil: el don es agua que corre, no agua que se estanca. El estanque se pudre. El río da vida.</div>
+      </div>
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 3</div>
+        <div class="imp-titulo">La madurez cristiana se mide por edificación, no por acumulación</div>
+        <div class="imp-texto">Efesios 4:12 dice que los dones ministeriales existen "para perfeccionar a los santos para la obra del ministerio." La palabra griega es <em>katartismos</em> — equipar, poner en condición de funcionar. Un creyente maduro no es el que más sabe ni el que más años lleva — es el que más equipa a otros para que operen en su propio don.</div>
+        <div class="imp-aplicacion">La pregunta de madurez no es "¿cuánto he crecido yo?" sino "¿cuántos han crecido a través de mí?"</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-vol">Para el voluntario</span>
+      <span class="sec-titulo">Cuatro implicaciones que cambian el servicio</span>
+    </div>
+    <div class="sec-body">
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 1</div>
+        <div class="imp-titulo">Servir sin conocer tu don es servir a ciegas</div>
+        <div class="imp-texto">1 Corintios 12 muestra que hay dones muy distintos: algunos ayudan, otros administran, otros sanan, otros enseñan. No todos son iguales ni todos hacen lo mismo — y eso es intencional. Un voluntario que no sabe cuál es su don específico termina haciendo lo que le toca, no lo que fue diseñado para hacer. Y eso genera exactamente la problemática de la charla: agotamiento, falta de propósito, servicio vacío.</div>
+        <div class="imp-aplicacion">Desafío concreto: ¿Puedes nombrar en una sola frase cuál es tu don y cómo lo estás usando actualmente en tu área de servicio?</div>
+      </div>
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 2</div>
+        <div class="imp-titulo">Tu área de servicio es más grande de lo que parece</div>
+        <div class="imp-texto">Efesios 4 dice que los dones existen para "la edificación del cuerpo de Cristo." El cuerpo no es solo el equipo de voluntarios del domingo — es la comunidad entera, y a través de ella, el mundo al que sirve. El que administra no solo organiza logística — está creando condiciones para que el Reino opere con orden. El que ayuda no solo resuelve problemas — está encarnando la misericordia del Rey en cada acto.</div>
+        <div class="verso-inline">Efesios 4:16 — "De quien todo el cuerpo, bien concertado y unido entre sí... recibe su crecimiento para ir edificándose en amor."</div>
+      </div>
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 3</div>
+        <div class="imp-titulo">Necesitas a los otros dones — no son competencia</div>
+        <div class="imp-texto">1 Corintios 12:21 es directo: "el ojo no puede decir a la mano: no te necesito." Uno de los venenos más silenciosos en un equipo de voluntarios es la comparación — quien predica mirando por encima del hombro al que sirve café, o quien sirve en logística sintiéndose menos que quien lidera alabanza. Ambos versículos destruyen esa jerarquía: todos los dones vienen del mismo Espíritu, todos apuntan al mismo fin.</div>
+        <div class="tension-grid">
+          <div class="tension-card"><div class="t-label lbl-mal">Mentalidad sin Reino</div><div class="t-texto">Mi don es más visible, más espiritual, más importante que el tuyo.</div></div>
+          <div class="tension-card"><div class="t-label lbl-bien">Mentalidad del Reino</div><div class="t-texto">Tu don hace posible lo que yo solo no podría hacer. Te necesito.</div></div>
+        </div>
+      </div>
+
+      <div class="implicacion">
+        <div class="imp-num">Implicación 4</div>
+        <div class="imp-titulo">El que te lidera tiene un encargo específico contigo</div>
+        <div class="imp-texto">Efesios 4:11-12 revela algo que los líderes de voluntarios necesitan escuchar tanto como los voluntarios mismos: los apóstoles, profetas, evangelistas, pastores y maestros no existen para hacer el ministerio ellos solos. Existen para <em>equipar a otros</em> para que lo hagan. Si un líder de área acumula todas las funciones y no equipa a su equipo, está usando mal el don que recibió. Y si un voluntario no está siendo equipado, tiene derecho — y responsabilidad — de buscarlo.</div>
+        <div class="imp-aplicacion">La pregunta para líderes: ¿Estoy haciendo ministerio o estoy equipando a otros para que lo hagan?</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-peligro">El peligro</span>
+      <span class="sec-titulo">Cuando estos versículos se mal entienden</span>
+    </div>
+    <div class="sec-body">
+      <div class="tension-grid">
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Error 1 — Elitismo de dones</div>
+          <div class="t-texto" style="font-size:13px; line-height:1.5;">Creer que solo los dones "espirituales" visibles (profecía, milagros) importan, y que ayudar o administrar son dones de segunda categoría. Pablo los pone todos en la misma lista.</div>
+        </div>
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Error 2 — Pasividad disfrazada</div>
+          <div class="t-texto" style="font-size:13px; line-height:1.5;">Decir "no sé cuál es mi don" como excusa para no servir. Descubres tu don sirviéndose, no esperando una revelación especial antes de comenzar.</div>
+        </div>
+      </div>
+      <div class="tension-grid" style="margin-top:8px;">
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Error 3 — Don sin comunidad</div>
+          <div class="t-texto" style="font-size:13px; line-height:1.5;">Operar el don de forma independiente, sin rendición de cuentas, sin equipo. Ambos versículos ubican los dones dentro de un cuerpo — nunca como ministerio individual.</div>
+        </div>
+        <div class="tension-card">
+          <div class="t-label lbl-mal">Error 4 — Identidad en el don</div>
+          <div class="t-texto" style="font-size:13px; line-height:1.5;">Confundir quién eres con lo que haces. El don es lo que haces. Hijo del Rey es lo que eres. Cuando pierdes el don o el rol, no pierdes tu identidad.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="seccion">
+    <div class="sec-header">
+      <span class="badge b-puente">Puente a la charla</span>
+      <span class="sec-titulo">Cómo usar esto con tu grupo de voluntarios</span>
+    </div>
+    <div class="sec-body">
+      <div class="sub-label">Secuencia sugerida</div>
+      <div style="font-size:14px; color:var(--color-text-primary); line-height:1.8;">
+        1. Leer ambos versículos en voz alta — pedir a alguien del grupo que los lea.<br>
+        2. Preguntar: <em>"¿Qué tienen en común estos dos textos?"</em> — escuchar 2 respuestas.<br>
+        3. Señalar la palabra clave: Dios <strong>puso</strong>, Dios <strong>constituyó</strong> — no fue casualidad.<br>
+        4. Desarrollar las implicaciones seleccionadas según el tiempo disponible.<br>
+        5. Cerrar con la pregunta de reflexión personal.
+      </div>
+
+      <div class="pregunta-reflexion">
+        <div class="preg-label">Pregunta de cierre para el grupo</div>
+        <div class="preg-texto">"Si Dios te puso intencionalmente aquí, con el don específico que tienes, en este equipo y no en otro — ¿qué cambia en la forma en que llegas el próximo domingo a servir?"</div>
+      </div>
+
+      <div class="cierre" style="margin-top:12px;">
+        <div class="cierre-label">Frase de transición hacia el Reino</div>
+        <div class="cierre-texto">Los dones no son para que la iglesia funcione mejor. Son para que el Reino avance. Cuando sirves desde tu don con esa conciencia, dejas de ser un voluntario que cubre una necesidad — y te conviertes en un agente del Rey que cumple una misión."</div>
+      </div>
+    </div>
+  </div>
+
+</div>

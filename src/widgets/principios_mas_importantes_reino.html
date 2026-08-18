@@ -1,0 +1,216 @@
+
+<style>
+  .pi { font-family: var(--font-sans); max-width: 720px; margin: 0 auto; padding: 1rem 0; }
+  .nivel { border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); background: var(--color-background-primary); margin-bottom: 1rem; overflow: hidden; }
+  .nivel-header { padding: 12px 16px; border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 10px; }
+  .nivel-badge { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: var(--border-radius-md); white-space: nowrap; }
+  .nb1 { background: #EEEDFE; color: #534AB7; }
+  .nb2 { background: #E1F5EE; color: #0F6E56; }
+  .nb3 { background: #FAEEDA; color: #854F0B; }
+  .nivel-titulo { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .nivel-sub { font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+  .nivel-body { padding: 0; }
+
+  .principio { border-bottom: 0.5px solid var(--color-border-tertiary); padding: 14px 16px; }
+  .principio:last-child { border-bottom: none; }
+  .p-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .p-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; flex-shrink: 0; margin-top: 2px; }
+  .pn1 { background: #EEEDFE; color: #3C3489; }
+  .pn2 { background: #EEEDFE; color: #3C3489; }
+  .pn3 { background: #E1F5EE; color: #085041; }
+  .pn4 { background: #E1F5EE; color: #085041; }
+  .pn5 { background: #FAEEDA; color: #633806; }
+  .pn6 { background: #FAEEDA; color: #633806; }
+  .p-info { flex: 1; }
+  .p-titulo { font-size: 16px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 2px; }
+  .p-tagline { font-size: 13px; color: var(--color-text-secondary); font-style: italic; }
+  .p-cuerpo { font-size: 14px; color: var(--color-text-primary); line-height: 1.7; margin-bottom: 8px; }
+  .p-por-que { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; margin-bottom: 8px; }
+  .pq-label { font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .pq-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; }
+  .verso { font-size: 13px; color: var(--color-text-secondary); font-style: italic; padding-left: 10px; border-left: 2px solid var(--color-border-secondary); margin: 6px 0; }
+  .p-vol { border-radius: var(--border-radius-md); padding: 8px 12px; margin-top: 6px; }
+  .pv1 { background: #EEEDFE; }
+  .pv2 { background: #E1F5EE; }
+  .pv3 { background: #FAEEDA; }
+  .pv-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .pvl1 { color: #534AB7; } .pvl2 { color: #0F6E56; } .pvl3 { color: #854F0B; }
+  .pv-texto { font-size: 13px; color: var(--color-text-primary); line-height: 1.6; font-style: italic; }
+
+  .cierre { border: 0.5px solid #AFA9EC; background: #EEEDFE; border-radius: var(--border-radius-md); padding: 14px 16px; margin-top: 0.5rem; }
+  .cierre-label { font-size: 12px; font-weight: 500; color: #534AB7; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; }
+  .cierre-texto { font-size: 14px; color: #3C3489; line-height: 1.8; }
+</style>
+
+<div class="pi">
+
+  <div class="nivel">
+    <div class="nivel-header">
+      <span class="nivel-badge nb1">Nivel 1 — Fundacionales</span>
+      <div>
+        <div class="nivel-titulo">Sin estos, los otros no funcionan</div>
+        <div class="nivel-sub">Son la raíz del árbol — si fallan, todo lo demás colapsa</div>
+      </div>
+    </div>
+    <div class="nivel-body">
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn1">1</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de gracia</div>
+            <div class="p-tagline">Todo lo que eres y tienes fue dado, no ganado</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">Es el más fundamental de todos porque determina la motivación de todo lo demás. Si un voluntario no ha entendido la gracia, opera con lógica de mérito — sirve para ganarse algo, compara su esfuerzo con el de otros, se agota cuando no recibe reconocimiento. La gracia es el suelo sobre el que crecen todos los otros principios.</div>
+        <div class="p-por-que">
+          <div class="pq-label">Por qué es el primero</div>
+          <div class="pq-texto">Jesús lo enseña en la parábola de los talentos, en el hijo pródigo, en los obreros de la viña. Pablo lo convierte en el eje de toda su teología. Sin gracia comprendida, el servicio se convierte en religión — y la religión agota.</div>
+        </div>
+        <div class="verso">Mateo 10:8 — "De gracia recibisteis, dad de gracia."</div>
+        <div class="verso">Efesios 2:8-9 — "Por gracia sois salvos... no por obras, para que nadie se gloríe."</div>
+        <div class="p-vol pv1">
+          <div class="pv-label pvl1">Para el voluntario</div>
+          <div class="pv-texto">"¿Estás sirviendo para recibir algo, o porque ya lo recibiste todo? Esa diferencia cambia absolutamente todo sobre cómo llegas cada domingo."</div>
+        </div>
+      </div>
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn2">2</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de inversión</div>
+            <div class="p-tagline">La lógica del Reino va exactamente al revés del mundo</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">Es el principio más repetido en la enseñanza de Jesús — aparece en todas sus formas: el último es primero, el grande sirve, el que pierde su vida la encuentra, el que se humilla es exaltado. No es una paradoja poética, es la ley de operación del Reino. Si no la entiendes, vas a servir con la lógica equivocada toda la vida.</div>
+        <div class="p-por-que">
+          <div class="pq-label">Por qué es el segundo</div>
+          <div class="pq-texto">Porque choca directamente con los instintos naturales del ser humano. Nadie nace queriendo servir — nacemos queriendo ser servidos. Este principio es la renovación mental más profunda que necesita un voluntario.</div>
+        </div>
+        <div class="verso">Marcos 10:43-45 — "El que quiera ser grande será vuestro servidor... el Hijo del Hombre no vino para ser servido, sino para servir."</div>
+        <div class="p-vol pv1">
+          <div class="pv-label pvl1">Para el voluntario</div>
+          <div class="pv-texto">"El domingo en que nadie te vio, en que hiciste la tarea que nadie quería, en que cediste el protagonismo — ese día operaste en el principio más alto del Reino."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="nivel">
+    <div class="nivel-header">
+      <span class="nivel-badge nb2">Nivel 2 — Operativos</span>
+      <div>
+        <div class="nivel-titulo">Explican cómo el Reino avanza en la práctica</div>
+        <div class="nivel-sub">Son el motor — determinan cómo opera el Reino en el día a día</div>
+      </div>
+    </div>
+    <div class="nivel-body">
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn3">3</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de semilla</div>
+            <div class="p-tagline">Lo pequeño, lo invisible y lo lento es el método preferido de Dios</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">Jesús usa la semilla más que ninguna otra imagen para describir cómo funciona el Reino. No porque sea poética, sino porque captura algo esencial: el Reino crece de forma orgánica, invisible, sin que el sembrador entienda cómo. Lo que parece insignificante lleva el mayor potencial. Y la semilla tiene que morir para multiplicarse — la cruz es la semilla definitiva.</div>
+        <div class="p-por-que">
+          <div class="pq-label">Por qué es el tercero</div>
+          <div class="pq-texto">Porque protege al voluntario de dos venenos: la impaciencia (querer ver resultados inmediatos) y el desprecio de lo pequeño (creer que solo lo visible y masivo importa). Ambos destruyen ministerios enteros.</div>
+        </div>
+        <div class="verso">Marcos 4:26-27 — "El reino de Dios es como cuando un hombre echa semilla en la tierra... y la semilla brota y crece sin que él sepa cómo."</div>
+        <div class="verso">Juan 12:24 — "Si el grano de trigo no cae en la tierra y muere, queda solo; pero si muere, lleva mucho fruto."</div>
+        <div class="p-vol pv2">
+          <div class="pv-label pvl2">Para el voluntario</div>
+          <div class="pv-texto">"El servicio que hiciste hace tres años y del que nunca viste fruto puede estar germinando ahora en alguien que ni recuerdas. El Reino no tiene el ritmo del Instagram."</div>
+        </div>
+      </div>
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn4">4</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de mayordomía</div>
+            <div class="p-tagline">Todo es un encargo del Rey, no una posesión propia</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">Nadie en el Reino es dueño — todos son administradores. El tiempo, los dones, los recursos, las relaciones, la posición de liderazgo — todo es un encargo que será evaluado. Este principio produce responsabilidad sin ansiedad: no tienes que producir resultados por tu cuenta, pero sí eres responsable de invertir fielmente lo que fue confiado.</div>
+        <div class="p-por-que">
+          <div class="pq-label">Por qué es el cuarto</div>
+          <div class="pq-texto">Porque resuelve la pregunta que más paraliza a los voluntarios: "¿soy suficiente para esto?" La respuesta del principio de mayordomía es: no se te pide ser suficiente — se te pide ser fiel con lo que tienes.</div>
+        </div>
+        <div class="verso">Mateo 25:21 — "Bien, buen siervo y fiel; sobre poco has sido fiel, sobre mucho te pondré."</div>
+        <div class="verso">1 Corintios 4:2 — "Ahora bien, se requiere de los administradores que cada uno sea hallado fiel."</div>
+        <div class="p-vol pv2">
+          <div class="pv-label pvl2">Para el voluntario</div>
+          <div class="pv-texto">"Tu don no te pertenece. Tu área de servicio no te pertenece. Son encargos. La pregunta no es '¿qué quiero hacer con esto?' sino '¿qué quiere el Rey que haga con lo que me confió?'"</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="nivel">
+    <div class="nivel-header">
+      <span class="nivel-badge nb3">Nivel 3 — Expansivos</span>
+      <div>
+        <div class="nivel-titulo">Explican cómo el Reino se extiende más allá de la iglesia</div>
+        <div class="nivel-sub">Son las alas — llevan el Reino al mundo</div>
+      </div>
+    </div>
+    <div class="nivel-body">
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn5">5</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de encarnación</div>
+            <div class="p-tagline">El Rey entró al mundo — nosotros también</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">Dios no mandó instrucciones desde el cielo — vino a vivir dentro de la realidad humana. Eso es el modelo definitivo de cómo el Reino llega al mundo. No desde afuera hacia adentro, sino desde adentro. No gritar desde el edificio, sino entrar al territorio del otro. Es el principio que convierte a un voluntario de fin de semana en un agente del Reino de lunes a sábado.</div>
+        <div class="verso">Juan 1:14 — "Y aquel Verbo fue hecho carne y habitó entre nosotros."</div>
+        <div class="verso">Juan 20:21 — "Como el Padre me envió, así también yo os envío."</div>
+        <div class="p-vol pv3">
+          <div class="pv-label pvl3">Para el voluntario</div>
+          <div class="pv-texto">"¿En qué territorio de tu vida cotidiana — trabajo, barrio, familia — necesitas entrar con presencia del Reino en lugar de solo pasar por ahí?"</div>
+        </div>
+      </div>
+
+      <div class="principio">
+        <div class="p-top">
+          <div class="p-num pn6">6</div>
+          <div class="p-info">
+            <div class="p-titulo">Principio de multiplicación</div>
+            <div class="p-tagline">Lo recibido no se acumula — se transmite</div>
+          </div>
+        </div>
+        <div class="p-cuerpo">El modelo de Jesús no fue dar conferencias multitudinarias — fue invertir profundamente en doce personas que harían lo mismo con otros. El Reino no avanza por concentración sino por multiplicación. Un voluntario que ha sido equipado y no equipa a nadie está rompiendo la cadena que Dios diseñó. 2 Timoteo 2:2 describe cuatro generaciones de discipulado en una sola frase.</div>
+        <div class="verso">2 Timoteo 2:2 — "Lo que has oído de mí... encárgalo a hombres fieles que sean idóneos para enseñar también a otros."</div>
+        <div class="verso">Mateo 28:19 — "Id y haced discípulos a todas las naciones."</div>
+        <div class="p-vol pv3">
+          <div class="pv-label pvl3">Para el voluntario</div>
+          <div class="pv-texto">"¿A quién estás formando tú? No solo recibir entrenamiento — dar entrenamiento. El ciclo del Reino se rompe en ti si lo que recibes no llega a otros."</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="cierre-label">La jerarquía en una sola imagen</div>
+    <div class="cierre-texto">
+      <strong>Gracia</strong> — es el suelo. Sin ella todo lo demás es religión.<br>
+      <strong>Inversión</strong> — es la orientación. Te dice en qué dirección caminar.<br>
+      <strong>Semilla</strong> — es el método. Te dice cómo y a qué ritmo opera Dios.<br>
+      <strong>Mayordomía</strong> — es la responsabilidad. Te dice qué se espera de ti.<br>
+      <strong>Encarnación</strong> — es el alcance. Te dice hasta dónde llega tu misión.<br>
+      <strong>Multiplicación</strong> — es el horizonte. Te dice que esto no termina en ti.<br><br>
+      Un voluntario que vive estos seis principios no necesita motivación externa. Tiene la lógica interna del Reino operando en él.
+    </div>
+  </div>
+
+</div>
