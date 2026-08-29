@@ -1,0 +1,310 @@
+
+<style>
+body { font-family: var(--font-sans); }
+
+.nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.nav-btn { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nav-btn:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
+.nav-btn.active { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nav-btn.active { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+
+.section { display: none; }
+.section.active { display: block; }
+
+.time-badge { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 14px; }
+@media (prefers-color-scheme: dark) { .time-badge { background: #412402; color: #FAC775; } }
+
+.block { margin-bottom: 14px; border-radius: var(--border-radius-lg); overflow: hidden; border: 0.5px solid var(--color-border-tertiary); }
+.block-label { font-size: 11px; font-weight: 500; letter-spacing: 0.05em; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.block-body { padding: 14px 16px; background: var(--color-background-primary); }
+
+.guion { font-size: 14px; line-height: 1.75; color: var(--color-text-primary); }
+.guion em { font-style: italic; color: var(--color-text-secondary); }
+
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding-left: 10px; margin-top: 10px; border-radius: 0; }
+
+.verso { font-family: var(--font-serif); font-size: 14px; line-height: 1.75; color: var(--color-text-primary); padding: 12px 16px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .verso { background: #26215C; color: #CECBF6; } }
+.verso cite { display: block; font-size: 12px; font-style: normal; font-weight: 500; color: #534AB7; margin-top: 4px; }
+@media (prefers-color-scheme: dark) { .verso cite { color: #AFA9EC; } }
+
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; border-left: 3px solid #7F77DD; border-radius: 0; }
+
+.ilustracion { font-size: 13px; line-height: 1.65; color: #0F6E56; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustracion { background: #04342C; color: #9FE1CB; } }
+.ilustracion strong { color: #085041; font-weight: 500; }
+@media (prefers-color-scheme: dark) { .ilustracion strong { color: #5DCAA5; } }
+
+.transicion { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0; }
+
+.aplicacion { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .aplicacion { background: #042C53; color: #85B7EB; } }
+
+.progress { display: flex; gap: 4px; margin-bottom: 18px; }
+.prog-seg { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); }
+.prog-seg.done { background: #7F77DD; }
+.prog-seg.current { background: #AFA9EC; }
+</style>
+
+<h2 class="sr-only">Guión completo de la charla "En Cristo": lo que cambia cuando estás dentro</h2>
+
+<div class="nav" id="nav"></div>
+<div class="progress" id="progress"></div>
+<div id="content"></div>
+
+<script>
+const secciones = [
+  {
+    id: "apertura",
+    label: "Apertura",
+    tiempo: "0 – 5 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "Inicio · lo que vas a decir",
+        texto: `Quiero empezar con una pregunta que parece simple pero que va a marcar toda la charla de hoy.<br><br>
+¿Cuántas veces creen que aparece la frase "en Cristo" o "en él" en los primeros catorce versículos de Efesios?<br><br>
+<em>[Pausa. Dejar que respondan o adivinen.]</em><br><br>
+Doce veces. En catorce versículos, Pablo repite la misma preposición doce veces. Eso no es accidente. Eso es obsesión. Y cuando un autor como Pablo se obsesiona con algo, vale la pena preguntarse por qué.<br><br>
+Hoy vamos a responder esa pregunta. Y mi apuesta es que al final de esta hora, la forma en que oran, la forma en que se levantan en la mañana, y la forma en que entienden quiénes son va a ser diferente.`
+      },
+      {
+        tipo: "nota",
+        texto: "Tono: calmado, no predicado. Como quien comparte un descubrimiento, no como quien da una conferencia. La pregunta inicial crea intriga antes de abrir la Biblia."
+      }
+    ]
+  },
+  {
+    id: "problema",
+    label: "El problema",
+    tiempo: "5 – 12 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "Diagnóstico · lo que viven muchos",
+        texto: `Antes de entrar en el texto, quiero que pensemos en algo que pasa mucho en la iglesia, y que quizás pasa en nosotros.<br><br>
+Hay una manera de seguir a Jesús que se parece mucho a la siguiente imagen: estás afuera de un palacio enorme. Puedes verlo, sabes que es hermoso, sabes que adentro hay todo lo que necesitas. Y cada día te acercas a la puerta, haces lo que crees que se necesita hacer para que te dejen entrar, y esperas.<br><br>
+Oras para que Dios te escuche. Sirves para que Dios te use. Lees la Biblia para que Dios se acuerde de ti. Todo lo haces desde afuera, esperando que un día te dejen pasar.<br><br>
+Muchos de nosotros vivimos así. Y el problema no es que seamos flojos ni que no amemos a Dios. El problema es que no sabemos dónde estamos.`
+      },
+      {
+        tipo: "pregunta",
+        texto: "¿Alguien reconoce esa sensación? ¿La de servir a Dios pero sentir que siempre está un poco lejos?"
+      },
+      {
+        tipo: "nota",
+        texto: "Dejar 30 segundos de silencio después de la pregunta. No forzar respuesta verbal. El objetivo es que cada persona lo procese internamente."
+      }
+    ]
+  },
+  {
+    id: "preposicion",
+    label: "La preposición",
+    tiempo: "12 – 22 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "Punto 1 · la palabra más importante del NT",
+        texto: `Abran Efesios 1, versículos 3 al 14. Voy a leerlo despacio y quiero que cada vez que escuchen "en él", "en Cristo", "en el amado" o "en quien" — lo anoten o lo cuenten internamente.<br><br>
+<em>[Leer Efesios 1:3-14 en voz alta, lentamente.]</em><br><br>
+¿Cuántas veces? Doce. Y si siguen leyendo el resto de la carta, la frase aparece más de 30 veces solo en Efesios. En todas las cartas de Pablo, la combinación "en Cristo" o "en él" aparece más de 160 veces.<br><br>
+Pablo no está adornando. Está señalando una realidad que para él lo cambia todo: la pregunta no es solo si crees en Jesús. La pregunta es si estás en él.`
+      },
+      {
+        tipo: "verso",
+        texto: `"Bendito sea el Dios y Padre de nuestro Señor Jesucristo, que nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo."`,
+        referencia: "Efesios 1:3"
+      },
+      {
+        tipo: "guion",
+        label: "Desarrollo",
+        texto: `Noten lo que dice: nos bendijo — pasado, ya ocurrió — con toda bendición — no con algunas, con todas — en los lugares celestiales — no en el futuro cuando muramos, ahora — en Cristo.<br><br>
+La ubicación lo cambia todo. No estás esperando afuera del palacio. Ya estás adentro. La pregunta es si lo sabes.`
+      },
+      {
+        tipo: "ilustracion",
+        texto: `<strong>Ilustración — el avión:</strong> Hay una diferencia enorme entre creer que un avión puede volar y estar dentro del avión. Puedes estudiar aerodinámica, puedes admirar el avión, puedes estar convencido de que funciona. Pero solo cuando estás dentro, la física que lo sostiene te sostiene a ti también. "En Cristo" es eso. No es admirar a Jesús desde afuera. Es estar dentro de lo que él es.`
+      },
+      {
+        tipo: "transicion",
+        texto: "— Pero ¿qué significa exactamente estar 'en él'? Tres imágenes del Nuevo Testamento —"
+      }
+    ]
+  },
+  {
+    id: "tres",
+    label: "Tres imágenes",
+    tiempo: "22 – 33 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "Imagen 1 · unión — Romanos 6:3-5",
+        texto: `La primera imagen es la más radical. Pablo, en Romanos 6, dice algo que debería sorprendernos más de lo que nos sorprende:<br><br>`
+      },
+      {
+        tipo: "verso",
+        texto: `"¿O no saben que todos los que hemos sido bautizados en Cristo Jesús, hemos sido bautizados en su muerte? Porque somos sepultados juntamente con él para muerte... a fin de que como Cristo resucitó de los muertos... así también nosotros andemos en vida nueva."`,
+        referencia: "Romanos 6:3-4"
+      },
+      {
+        tipo: "guion",
+        label: "",
+        texto: `Cuando Jesús murió, tú moriste. Cuando fue sepultado, fuiste sepultado. Cuando resucitó, resucitaste. Esto no es una metáfora motivacional. Es una declaración de participación real.<br><br>
+Lo que le pasó a él te pasó a ti, porque estás en él. Como cuando una persona está dentro de un barco y el barco cruza el océano: la persona cruzó el océano. No porque ella remara, sino porque estaba adentro.`
+      },
+      {
+        tipo: "guion",
+        label: "Imagen 2 · posición — Efesios 2:6",
+        texto: `La segunda imagen habla de dónde estás ahora mismo, en este momento:`
+      },
+      {
+        tipo: "verso",
+        texto: `"Y juntamente con él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús."`,
+        referencia: "Efesios 2:6"
+      },
+      {
+        tipo: "guion",
+        label: "",
+        texto: `Estás sentado con él. Ahora. No cuando mueras. No si llegas a ser suficientemente espiritual. Ahora.<br><br>
+Esto tiene implicaciones prácticas enormes. Si yo estoy en una reunión con el presidente del país, tengo acceso a cosas que no tendría si estuviera en la calle. No por mis méritos, sino por mi posición. La posición determina el acceso.<br><br>
+¿Cuál es tu posición? Sentado con Cristo en los lugares celestiales. Eso no es orgullo. Es geografía espiritual.`
+      },
+      {
+        tipo: "guion",
+        label: "Imagen 3 · nueva creación — 2 Corintios 5:17",
+        texto: `La tercera imagen es quizás la más conocida, pero la menos entendida:`
+      },
+      {
+        tipo: "verso",
+        texto: `"De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas."`,
+        referencia: "2 Corintios 5:17"
+      },
+      {
+        tipo: "guion",
+        label: "",
+        texto: `Nueva criatura. No versión mejorada. No tú con más esfuerzo. Nueva.<br><br>
+Imaginen que tienen una computadora vieja y lenta. Pueden actualizarla: más memoria, sistema operativo nuevo, pantalla mejor. Sigue siendo la misma máquina, mejorada. Eso sería religión sin el evangelio.<br><br>
+Pero "nueva criatura" es diferente. Es como si apagaran esa máquina y encendieran una completamente nueva, que simplemente tiene acceso a los archivos que importaban. El punto de referencia cambió.<br><br>
+El error que cometemos es leer "nueva criatura" como una tarea: "debes ser nueva criatura". Pero Pablo lo dice en indicativo, no en imperativo. No es una orden. Es una declaración. Ya eres.`
+      },
+      {
+        tipo: "nota",
+        texto: "Este es el momento de mayor densidad teológica. Hablar más lento. Si hay pizarrón, escribir los tres conceptos: Unión · Posición · Nueva creación."
+      }
+    ]
+  },
+  {
+    id: "implicaciones",
+    label: "Implicaciones",
+    tiempo: "33 – 38 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "El giro práctico",
+        texto: `Entonces, ¿qué cambia en la vida diaria?<br><br>
+Voy a hacerles una pregunta que puede incomodar un poco, pero que creo que es honesta: ¿cómo oran normalmente?<br><br>
+La mayoría de nosotros oras así: "Señor, dame. Señor, ayúdame. Señor, ¿me escuchas? Señor, necesito que te aparezcas." Es la oración del que está afuera, tocando la puerta.<br><br>
+Pero si estás en Cristo, la oración puede ser diferente. No "Señor, ¿me darás acceso?" sino "Padre, gracias porque ya tengo acceso. Quiero entender lo que ya me pertenece." No como arrogancia, sino como un hijo que sabe que hay comida en la casa y simplemente va a la cocina.`
+      },
+      {
+        tipo: "ilustracion",
+        texto: `<strong>Ilustración — el hijo y el mendigo:</strong> Hay dos personas afuera de un palacio. Una es un mendigo que lleva años pidiendo que le abran la puerta. La otra es un hijo del rey que salió a caminar y está llamando para que le abran. Los dos están afuera, los dos están llamando, los dos quieren entrar. Pero solo uno lo hace desde su identidad. La diferencia no está en la puerta. Está en saber quién eres tú.`
+      },
+      {
+        tipo: "aplicacion",
+        texto: `Implicación práctica para voluntarios: si sirves en la iglesia esperando que Dios te acepte o te use en base a lo que haces, estás sirviendo como mendigo. Si sirves desde la conciencia de que ya eres hijo, que ya estás en él, que ya tienes todo lo necesario para el ministerio — la misma acción se hace desde un lugar completamente diferente. Y se nota.`
+      }
+    ]
+  },
+  {
+    id: "cierre",
+    label: "Cierre",
+    tiempo: "38 – 40 min",
+    bloques: [
+      {
+        tipo: "guion",
+        label: "Cierre · ejercicio final",
+        texto: `Quiero que hagamos algo juntos para terminar.<br><br>
+Vamos a volver a Efesios 1:3-14. Esta vez no voy a leerlo yo. Quiero que lo lean en silencio, internamente, muy despacio. Y cada vez que encuentren "en él", "en Cristo", "en el amado" — quiero que hagan una pausa y se pregunten: ¿esto me pertenece a mí?<br><br>
+<em>[Dar 2 minutos de silencio real.]</em><br><br>
+Antes de terminar, una pregunta para llevar a casa. No tienen que responderla ahora. Solo pensar en ella durante la semana:<br><br>`
+      },
+      {
+        tipo: "pregunta",
+        texto: "¿Cuál es la promesa de Dios que más me cuesta recibir como ya mía, en lugar de como algo que todavía debo ganarme?"
+      },
+      {
+        tipo: "guion",
+        label: "",
+        texto: `La próxima vez vamos a hablar de la primera identidad específica que viene de estar en Cristo: ser hijos. Pero ya saben que no vamos a hablar de algo que deben aspirar a ser. Vamos a hablar de algo que ya son, y de lo que eso cambia.<br><br>
+Oremos.`
+      },
+      {
+        tipo: "nota",
+        texto: "Oración de cierre: breve, en primera persona del plural. Declarativa, no suplicante. Algo como: 'Padre, gracias porque estamos en Cristo. Gracias porque no estamos afuera esperando. Ayúdanos a vivir desde adentro esta semana.'"
+      }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const progressEl = document.getElementById('progress');
+const content = document.getElementById('content');
+
+let current = 0;
+
+function render(idx) {
+  current = idx;
+  const s = secciones[idx];
+
+  nav.querySelectorAll('.nav-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+
+  progressEl.innerHTML = secciones.map((_, i) => {
+    let cls = 'prog-seg';
+    if (i < idx) cls += ' done';
+    else if (i === idx) cls += ' current';
+    return `<div class="${cls}"></div>`;
+  }).join('');
+
+  let html = `<div class="time-badge"><i class="ti ti-clock" aria-hidden="true" style="font-size:13px"></i>${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.tipo === 'guion') {
+      html += `<div class="block"><div class="block-label">${b.label || 'Guión'}</div><div class="block-body"><p class="guion">${b.texto}</p></div></div>`;
+    } else if (b.tipo === 'nota') {
+      html += `<div class="nota">${b.texto}</div>`;
+    } else if (b.tipo === 'verso') {
+      html += `<blockquote class="verso">${b.texto}<cite>${b.referencia}</cite></blockquote>`;
+    } else if (b.tipo === 'pregunta') {
+      html += `<div class="pregunta">${b.texto}</div>`;
+    } else if (b.tipo === 'ilustracion') {
+      html += `<div class="ilustracion">${b.texto}</div>`;
+    } else if (b.tipo === 'transicion') {
+      html += `<p class="transicion">${b.texto}</p>`;
+    } else if (b.tipo === 'aplicacion') {
+      html += `<div class="aplicacion">${b.texto}</div>`;
+    }
+  });
+
+  const prevNext = `<div style="display:flex;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:0.5px solid var(--color-border-tertiary)">
+    <button class="nav-btn" onclick="if(${idx}>0)render(${idx}-1)" style="${idx===0?'opacity:0.3;pointer-events:none':''}">&larr; Anterior</button>
+    <button class="nav-btn" onclick="if(${idx}<${secciones.length-1})render(${idx}+1)" style="${idx===secciones.length-1?'opacity:0.3;pointer-events:none':''}" >Siguiente &rarr;</button>
+  </div>`;
+
+  content.innerHTML = html + prevNext;
+}
+
+secciones.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nav-btn';
+  btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+
+  const seg = document.createElement('div');
+  seg.className = 'prog-seg';
+  progressEl.appendChild(seg);
+});
+
+render(0);
+</script>

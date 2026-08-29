@@ -1,0 +1,189 @@
+
+<style>
+.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nb:hover { background: var(--color-background-secondary); }
+.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+.panel { display: none; } .panel.on { display: block; }
+.prog { display: flex; gap: 3px; margin-bottom: 14px; }
+.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); }
+.ps.done { background: #534AB7; } .ps.cur { background: #AFA9EC; }
+.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
+.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.blk-bd { padding: 14px 16px; }
+.script { font-size: 14px; line-height: 1.85; color: var(--color-text-primary); }
+.script em { color: var(--color-text-secondary); font-style: italic; }
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; }
+.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; background: var(--color-background-secondary); line-height: 1.6; }
+.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
+.ilustra strong { color: #0F6E56; font-weight: 500; }
+.dato { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .dato { background: #042C53; color: #85B7EB; } }
+.dato strong { font-weight: 500; }
+.pastoral { font-size: 14px; line-height: 1.9; color: var(--color-text-primary); background: var(--color-background-secondary); border: 1.5px solid #7F77DD; border-radius: var(--border-radius-lg); padding: 16px 18px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .pastoral { border-color: #534AB7; } }
+.pastoral-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #534AB7; margin-bottom: 8px; }
+@media (prefers-color-scheme: dark) { .pastoral-lbl { color: #AFA9EC; } }
+.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0; }
+.armadura-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 0.5px solid var(--color-border-tertiary); align-items: flex-start; }
+.armadura-item:last-child { border-bottom: none; }
+.arm-pieza { font-size: 12px; font-weight: 500; color: #534AB7; min-width: 130px; padding-top: 1px; }
+@media (prefers-color-scheme: dark) { .arm-pieza { color: #AFA9EC; } }
+.arm-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.55; flex: 1; }
+.arm-desc strong { color: var(--color-text-primary); font-weight: 500; }
+.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+.navb:disabled { opacity: 0.3; cursor: default; }
+.navb:not(:disabled):hover { background: var(--color-background-secondary); }
+</style>
+
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 6 min",
+    bloques: [
+      { t: "blk", lbl: "Los dos errores", html: `<p class="script">La última vez hablamos del mundo y la carne. Dos enemigos que ya conocemos porque los vivimos — uno nos presiona desde afuera, el otro nos jala desde adentro.<br><br>Hoy vamos al tercero. El más malentendido de los tres.<br><br>Y lo primero que necesito decir es que hay dos errores igualmente peligrosos cuando se habla del diablo. El primero es ignorarlo — tratarlo como un símbolo, una metáfora del mal, algo que las personas cultas ya superaron. El segundo es obsesionarse con él — ver un demonio en cada circunstancia difícil, vivir en un estado de alerta permanente que termina siendo más paralizante que liberador.<br><br>La Biblia navega entre esos dos extremos con precisión. Y hoy vamos a hacer lo mismo.</p>` },
+      { t: "dato", html: `<strong>Lo que la Biblia dice que es — y lo que no es:</strong><br><br>Satanás es un ser creado, no eterno. Un ángel que se rebeló. Tiene poder real pero limitado — no es omnipresente, no es omnisciente, no es omnipotente. Solo Dios tiene esos atributos.<br><br>Sus nombres en el NT revelan su carácter: <em>Satán</em> en hebreo significa "adversario, el que se opone." <em>Diábolos</em> en griego significa "el que difama, el acusador." <em>Poneros</em> — el maligno. <em>El padre de mentira</em> (Juan 8:44). <em>El acusador de nuestros hermanos</em> (Apoc 12:10).<br><br>Sus estrategias no son de fuerza bruta — son de engaño. La guerra que libra no es de poder sino de verdad.` },
+      { t: "nota", html: "Tono: claro y sin dramatismo. El objetivo es que el grupo salga con precisión bíblica, no con fascinación ni con miedo. La claridad es el antídoto a ambos extremos." }
+    ]
+  },
+  {
+    label: "Quién es",
+    tiempo: "6 – 16 min",
+    bloques: [
+      { t: "blk", lbl: "Su naturaleza — lo que puede y lo que no puede", html: `<p class="script">Empecemos por lo que Pedro dice de él:</p>` },
+      { t: "verse", ref: "1 Pedro 5:8", texto: "Sed sobrios, y velad; porque vuestro adversario el diablo, como león rugiente, anda alrededor buscando a quien devorar." },
+      { t: "blk", lbl: "", html: `<p class="script">Dos cosas en ese versículo que son importantes no pasar por alto.<br><br>Primera: "como" león. No dice que es un león — dice que es como un león. Es una comparación que describe su actitud, no su naturaleza. Pedro está describiendo el terror que quiere producir, no la realidad de su poder.<br><br>Segunda: "anda alrededor buscando." Un ser omnipresente no necesita andar buscando — ya sabe dónde está todo. El diablo busca porque tiene limitaciones reales. No está en todas partes al mismo tiempo. No sabe todo.<br><br>Eso no minimiza la amenaza — la precisa. Y la precisión es útil porque nos dice dónde está la batalla real.</p>` },
+      { t: "blk", lbl: "Su arma principal — el engaño", html: `<p class="script">Si el mundo usa el sistema de valores y la carne usa los deseos internos, el diablo usa algo más específico: la mentira sobre identidad.<br><br>Jesús lo describe con una palabra que no deja lugar a duda:</p>` },
+      { t: "verse", ref: "Juan 8:44", texto: "Él ha sido homicida desde el principio, y no ha permanecido en la verdad, porque no hay verdad en él. Cuando habla mentira, de suyo habla; porque es mentiroso, y padre de mentira." },
+      { t: "blk", lbl: "", html: `<p class="script">El padre de mentira. No un mentiroso entre otros — el origen de la mentira. Y fíjense en la primera mentira registrada en la Biblia. En Génesis 3, la serpiente no ataca a Eva con fuerza — la ataca con una pregunta: "¿Conque Dios os ha dicho...?" Cuestiona la Palabra de Dios. Cuestiona el carácter de Dios. Y termina cuestionando la identidad de Eva: "seréis como Dios."<br><br>Ese es el patrón que se repite a lo largo de toda la Escritura. El diablo no necesita que hagas algo malo. Le basta con que dejes de creer algo verdadero sobre quién eres.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el Génesis 3 aplicado hoy:</strong><br><br>En el Edén: "¿Conque Dios os ha dicho...?" — duda sobre la Palabra.<br>"Dios sabe que el día que lo coman serán como Dios" — duda sobre el carácter de Dios.<br><br>Hoy, en la mente de un voluntario de iglesia, la misma estructura suena así:<br><br>"¿De verdad crees que eres suficiente para esto?" — duda sobre la identidad.<br>"Si Dios realmente te amara no estarías pasando por esto" — duda sobre el carácter del Padre.<br>"Lo que hiciste demuestra quién eres en realidad" — confundir un acto con la identidad.<br><br>El método tiene 6000 años. El contenido se adapta a cada persona.` },
+      { t: "blk", lbl: "El acusador — Apocalipsis 12:10", html: `<p class="script">Hay un nombre del diablo que define su actividad principal contra el creyente:</p>` },
+      { t: "verse", ref: "Apocalipsis 12:10", texto: "...porque ha sido lanzado fuera el acusador de nuestros hermanos, el que los acusaba delante de nuestro Dios día y noche." },
+      { t: "blk", lbl: "", html: `<p class="script">Día y noche. Su trabajo es acusar. Recordarte lo que hiciste. Compararte con quien deberías ser. Hacerte sentir que lo que declaraste en las charlas anteriores — que eres hijo, que estás en Cristo, que tienes acceso — no aplica para ti porque tú sabes lo que has hecho.<br><br>Y aquí hay una distinción teológica crucial que a veces se pierde: la diferencia entre convicción del Espíritu y acusación del diablo.<br><br>La convicción del Espíritu apunta a un acto específico y lleva al arrepentimiento y la restauración. Termina en paz.<br><br>La acusación del diablo apunta a la identidad y lleva a la vergüenza y el alejamiento. Termina en parálisis.</p>` },
+      { t: "pregunta", html: "¿Reconoces la diferencia en tu vida? ¿Hay una voz que te convence de que fallaste en algo específico y te lleva a volver? ¿O una voz que te dice que simplemente eres eso, y que por lo tanto no tiene sentido volver?" },
+      { t: "trans", html: "— Ahora la pregunta más importante: ¿desde dónde enfrenta el creyente a este enemigo? —" }
+    ]
+  },
+  {
+    label: "La autoridad",
+    tiempo: "16 – 28 min",
+    bloques: [
+      { t: "blk", lbl: "El error más común en la guerra espiritual", html: `<p class="script">La mayoría de los creyentes entienden la guerra espiritual como una batalla en la que el resultado es incierto. Como si Dios y el diablo fueran dos poderes equivalentes peleando, y dependiendo de cuánto ores y cuánto ayunes, uno u otro gana ese día en tu vida.<br><br>Esa imagen no es bíblica. El resultado de la guerra ya se conoce.</p>` },
+      { t: "verse", ref: "Colosenses 2:15", texto: "Y despojando a los principados y a las potestades, los exhibió públicamente, triunfando sobre ellos en la cruz." },
+      { t: "blk", lbl: "", html: `<p class="script">La cruz no es donde la batalla comenzó — es donde la batalla terminó. Jesús "despojó" a los principados — la imagen en griego es la de un general romano desarmando públicamente al ejército derrotado, exhibiéndolos en el desfile triunfal de la victoria.<br><br>El diablo no es un enemigo que todavía tiene que ser vencido. Es un enemigo derrotado que todavía pelea. Hay una diferencia enorme entre esas dos cosas.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el soldado japonés:</strong> Hiroo Onoda fue un soldado japonés que siguió peleando en la selva de Filipinas hasta 1974 — casi 30 años después de que Japón se rindió en 1945. Nadie le había comunicado la rendición. Seguía haciendo emboscadas, seguía causando daño real, seguía siendo peligroso. Pero la guerra había terminado décadas antes.<br><br>El diablo es algo así. Sigue activo, sigue causando daño real. Pero opera en un conflicto que ya tiene un resultado declarado. La victoria de Cristo en la cruz es el equivalente a la rendición — aunque el enemigo no haya aceptado los términos todavía.` },
+      { t: "verse", ref: "Efesios 2:6", texto: "Y juntamente con él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús." },
+      { t: "blk", lbl: "La posición del creyente", html: `<p class="script">Aquí está el fundamento de la autoridad espiritual. No una autoridad que ganamos por madurez espiritual ni por cantidad de ayunos. Una autoridad que tenemos por posición.<br><br>Estamos sentados con Cristo en los lugares celestiales. Esa posición está por encima de todo principado y potestad — Efesios 1:21 lo dice explícitamente: Cristo está "sobre todo principado, autoridad, poder y señorío."<br><br>Y si estamos en Cristo, estamos donde él está. Lo que la serie entera ha establecido — estar en Cristo, ser hijos — tiene implicaciones directas en la guerra espiritual. No peleamos para ganar. Peleamos desde la victoria ya obtenida.</p>` },
+      { t: "blk", lbl: "La armadura — Efesios 6:13-18", html: `<p class="script">Pablo describe la armadura del creyente en Efesios 6. Y hay algo crucial que entender sobre esta lista antes de verla: cada pieza de la armadura no es una disciplina que debes practicar — es una realidad que ya tienes en Cristo.</p>` },
+      { t: "armadura", items: [
+        { pieza: "Cinturón de la verdad", desc: "<strong>La verdad de quién eres en Cristo.</strong> El diablo opera con mentiras sobre identidad. El cinturón mantiene todo lo demás en su lugar. Conocer y declarar la verdad sobre tu posición en Cristo es lo que sostiene el resto." },
+        { pieza: "Coraza de justicia", desc: "<strong>La justicia de Cristo imputada, no ganada.</strong> Protege el corazón. Cuando el acusador señala tus fallos, la coraza es: 'no hay condenación para los que están en Cristo Jesús' (Rom 8:1)." },
+        { pieza: "Calzado del evangelio", desc: "<strong>La paz que viene de saber a quién perteneces.</strong> El soldado con buen calzado se mueve con confianza en cualquier terreno. El creyente que sabe que es hijo puede pararse firme en cualquier circunstancia." },
+        { pieza: "Escudo de la fe", desc: "<strong>Confianza activa en lo que Dios ha declarado.</strong> 'Con que podáis apagar todos los dardos de fuego del maligno' — los dardos son los pensamientos, las dudas, las acusaciones. La fe no es sentimiento — es elegir creer la verdad sobre lo que parece real." },
+        { pieza: "Yelmo de la salvación", desc: "<strong>Protege la mente — el campo de batalla principal.</strong> El diablo pelea en la mente: pensamientos de duda, de vergüenza, de comparación. El yelmo es saber que tu salvación no depende de tu rendimiento sino de lo que Cristo hizo." },
+        { pieza: "Espada del Espíritu", desc: "<strong>La única arma ofensiva — la Palabra de Dios.</strong> Jesús la usó en el desierto: 'escrito está.' No argumentación, no fuerza de voluntad, no experiencia. Verdad declarada, específica, sobre la situación específica." }
+      ]},
+      { t: "trans", html: "— ¿Cómo se combate en la práctica? —" }
+    ]
+  },
+  {
+    label: "Cómo combatirlo",
+    tiempo: "28 – 36 min",
+    bloques: [
+      { t: "blk", lbl: "Santiago 4:7 — el orden importa", html: `<p class="script">Santiago da la instrucción más clara y más condensada sobre cómo enfrentar al diablo. Y el orden en que la da no es accidental:</p>` },
+      { t: "verse", ref: "Santiago 4:7", texto: "Someteos, pues, a Dios; resistid al diablo, y huirá de vosotros." },
+      { t: "blk", lbl: "", html: `<p class="script">Primero: someteos a Dios. Después: resistid al diablo.<br><br>El orden lo cambia todo. Muchos intentan resistir al diablo desde una posición de independencia espiritual — pura fuerza de voluntad, puras palabras declaradas sin una vida sometida al Padre. Eso no funciona.<br><br>La autoridad para resistir al diablo no viene de quién eres tú. Viene de a quién estás sometido. Es autoridad delegada. Un policía de tránsito puede detener un camión de 20 toneladas con la mano levantada — no porque tenga fuerza física para hacerlo, sino porque detrás de su mano está la autoridad del Estado.<br><br>Cuando el creyente resiste al diablo desde la sumisión a Dios, no está usando su propio poder. Está usando la autoridad que le fue delegada en Cristo.</p>` },
+      { t: "blk", lbl: "El modelo de Jesús en el desierto — Mateo 4", html: `<p class="script">Jesús nos mostró exactamente cómo se hace. En el desierto, con hambre después de 40 días, en el momento de máxima vulnerabilidad física — tres tentaciones, tres respuestas.<br><br>Y las tres respuestas tienen exactamente la misma estructura: "escrito está." No argumentación. No debate. No experiencia personal. Verdad de la Palabra declarada directamente contra la mentira específica.<br><br>Primera tentación: "Si eres Hijo de Dios, di que estas piedras se conviertan en pan." — una duda sobre identidad disfrazada de solución práctica. Jesús no discute si es Hijo de Dios. Declara la Palabra: "No solo de pan vivirá el hombre."<br><br>Segunda tentación: "Si eres Hijo de Dios, échate abajo; porque escrito está que sus ángeles te guardarán." — el diablo citando la Escritura, pero fuera de contexto. Jesús responde con la Escritura correcta: "No tentarás al Señor tu Dios."<br><br>Tercera tentación: todos los reinos del mundo a cambio de adoración. Una oferta de identidad y poder por fuera de Dios. Jesús: "Al Señor tu Dios adorarás, y a él solo servirás."<br><br>El arma es la Palabra. Siempre la Palabra.</p>` },
+      { t: "pregunta", html: "¿Cuál es la mentira que el enemigo repite más en tu mente? ¿Y cuál es el versículo — la verdad específica — que la responde directamente?" },
+      { t: "dato", html: `<strong>La batalla es de verdad, no de poder:</strong><br><br>La investigación teológica y la experiencia pastoral convergen en un punto: la guerra espiritual con el diablo no es principalmente una lucha de poder sino una lucha de verdad. El campo de batalla principal es la mente.<br><br>"La lucha espiritual que los creyentes enfrentan con el diablo y sus demonios no es tanto una lucha de poder como una lucha de verdad — y el campo de batalla principal es la mente." — Precept Austin<br><br>Por eso Pablo dice en 2 Corintios 10:5: "llevando cautivo todo pensamiento a la obediencia a Cristo." El arma no es la emoción, ni el volumen de la oración, ni la experiencia. Es la verdad aplicada específicamente.` }
+    ]
+  },
+  {
+    label: "Cierre pastoral",
+    tiempo: "36 – 40 min",
+    bloques: [
+      { t: "blk", lbl: "Antes del cierre — lo que el diablo no puede hacer", html: `<p class="script">Antes de terminar, quiero dejar algo muy claro que creo que muchos no tienen claro.<br><br>El diablo no puede quitarte tu salvación. No puede separarte del amor de Dios. No puede entrar donde el Espíritu de Dios habita sin permiso. No puede conocer tus pensamientos — solo Dios hace eso. No puede obligarte a hacer nada.<br><br>Lo que puede hacer es mentirte. Acusarte. Tentarte. Engañarte sobre quién eres. Hacerte dudar del carácter de Dios.<br><br>Todo eso es serio. Pero es radicalmente diferente a un ser todopoderoso que te persigue. Es un adversario derrotado que todavía intenta convencerte de que ganó.</p>` },
+      { t: "verse", ref: "1 Juan 4:4", texto: "Hijitos, vosotros sois de Dios, y los habéis vencido; porque mayor es el que está en vosotros, que el que está en el mundo." },
+      { t: "pastoral", lbl: "Cierre pastoral", html: `<p class="script">Hemos hablado tres semanas de enemigos. El mundo que moldea. La carne que jala. El diablo que acusa y miente.<br><br>Y me pregunto si alguno de ustedes está cansado. No cansado de estas charlas — cansado de la guerra. Cansado de que parece que no termina. Cansado de caer en lo mismo, de escuchar la misma voz acusadora, de sentir que el terreno que ganas un día lo pierdes al siguiente.<br><br>Quiero decirles algo que no es optimismo barato.<br><br>La guerra no termina en esta vida. Pero el resultado ya está declarado. Y hay una diferencia enorme entre pelear una guerra que no saben si van a ganar y pelear desde una victoria que ya ocurrió.<br><br>Jesús no dijo "intenten vencer al mundo." Dijo "yo he vencido al mundo." El tiempo pasado importa. Lo que él hizo, lo hizo de una vez y para siempre. Y ustedes están en él.<br><br>El mayor que está en ustedes es mayor que el que está en el mundo. No marginalmente mayor. No el doble de fuerte. Mayor — de una categoría diferente.<br><br>Los días que lo olviden — y los habrá — hay un Espíritu que lo recordará. Y la respuesta correcta no es vergüenza ni agotamiento. Es lo mismo que han aprendido en estas semanas: volver. Volver a quienes son. Volver al Padre. Volver a la verdad de lo que está escrito.<br><br>No son voluntarios que intentan sobrevivir la guerra espiritual. Son personas sentadas con Cristo en los lugares celestiales. Y esa posición no cambia con los días malos.<br><br>Peleen desde ahí.</p>` },
+      { t: "verse", ref: "Romanos 8:37-39", texto: "Antes, en todas estas cosas somos más que vencedores por medio de aquel que nos amó. Por lo cual estoy seguro de que ni la muerte, ni la vida, ni ángeles, ni principados, ni potestades, ni lo presente, ni lo por venir, ni lo alto, ni lo profundo, ni ninguna otra cosa creada nos podrá separar del amor de Dios, que es en Cristo Jesús Señor nuestro." },
+      { t: "nota", html: `Oración de cierre — modelo: "Padre, gracias porque el mayor vive en nosotros. Gracias porque la guerra tiene resultado declarado. Ayúdanos a pelear desde la victoria de Cristo — con la verdad de tu Palabra, desde la posición que tenemos en él, sometidos a ti. Que ninguna acusación del enemigo nos convenza de algo que tú ya declaraste falso. Amén."` }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j<i);
+    s.classList.toggle('cur', j===i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb'; btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'pastoral') {
+      html += `<div class="pastoral"><div class="pastoral-lbl">${b.lbl}</div>${b.html}</div>`;
+    } else if (b.t === 'armadura') {
+      html += `<div class="blk"><div class="blk-hd">La armadura de Dios · Efesios 6:14-17</div><div class="blk-bd">`;
+      b.items.forEach(item => {
+        html += `<div class="armadura-item">
+          <span class="arm-pieza">${item.pieza}</span>
+          <span class="arm-desc">${item.desc}</span>
+        </div>`;
+      });
+      html += `</div></div>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html; panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>

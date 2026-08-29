@@ -9,6 +9,21 @@ export const seriesCatalog = [
     title: "De la Ley a Jesús",
     lede: "Una historia en tres actos: el problema que Dios no ignoró, el sistema que cubría y el cumplimiento en Cristo.",
   },
+  {
+    id: "identidad-en-cristo",
+    title: "Identidad en Cristo",
+    lede: "Dónde estás y quién eres: unión con Cristo y filiación.",
+  },
+  {
+    id: "enemigos-del-creyente",
+    title: "Enemigos del creyente",
+    lede: "El mundo y la carne, el diablo y la autoridad desde la que se le enfrenta.",
+  },
+  {
+    id: "espiritu-santo-y-dones",
+    title: "El Espíritu Santo y los dones",
+    lede: "Quién es el Espíritu, qué hace en el creyente, y los dones como gracia para el cuerpo.",
+  },
 ] as const;
 
 export type SeriesId = (typeof seriesCatalog)[number]["id"];

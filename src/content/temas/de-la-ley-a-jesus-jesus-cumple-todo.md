@@ -59,3 +59,9 @@ El momento no es un detalle más en una lista de cumplimientos. En la muerte de 
 Eso toca más que la culpa. Culpa dice «hice algo malo» y se resuelve con perdón. Vergüenza dice «yo soy algo malo» y produce escondite: las hojas de higuera de Génesis 3. Jesús no solo absuelve el acto; se identifica con el despreciado y el cubierto de quebranto (Isaías 53:3). La cobertura que Adán no pudo fabricarse, Dios la da otra vez —esta vez definitiva.
 
 Antes del velo rasgado: acceso restringido, mediado, temporal. Después: acceso directo. La pregunta con la que cierra la serie no es si se entendió la teología. Es si se vive como alguien para quien esa barrera ya no está.
+
+## Para quien sirve
+
+El riesgo de esta charla es volverse una lista de citas. El velo rasgado va solo: de arriba abajo, Dios abre el camino, no el hombre. Culpa dice «hice algo malo» y se resuelve con perdón. Vergüenza dice «yo soy algo malo» y produce escondite. Jesús no solo absuelve el acto; se identifica con el despreciado (Isaías 53:3). La cobertura que Adán no pudo fabricarse, Dios la da otra vez —esta vez definitiva.
+
+Pregunta de cierre, una sola: ¿estás viviendo con el velo rasgado? No si entendiste la lista. Si vives como alguien para quien el camino ya está abierto.

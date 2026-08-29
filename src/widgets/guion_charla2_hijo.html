@@ -1,0 +1,198 @@
+
+<style>
+.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nb:hover { background: var(--color-background-secondary); }
+.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+.panel { display: none; }
+.panel.on { display: block; }
+.prog { display: flex; gap: 3px; margin-bottom: 14px; }
+.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); transition: background 0.3s; }
+.ps.done { background: #534AB7; }
+.ps.cur { background: #AFA9EC; }
+.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
+.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.blk-bd { padding: 14px 16px; }
+.script { font-size: 14px; line-height: 1.8; color: var(--color-text-primary); }
+.script em { color: var(--color-text-secondary); font-style: italic; }
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; }
+.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; background: var(--color-background-secondary); }
+.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
+.ilustra strong { color: #0F6E56; font-weight: 500; }
+.dato { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .dato { background: #042C53; color: #85B7EB; } }
+.dato strong { font-weight: 500; }
+.puente { font-size: 13px; line-height: 1.65; color: #854F0B; background: #FAEEDA; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .puente { background: #412402; color: #FAC775; } }
+.contexto { font-size: 13px; line-height: 1.65; color: #3C3489; background: #EEEDFE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .contexto { background: #26215C; color: #CECBF6; } }
+.contexto strong { font-weight: 500; }
+.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0 4px; }
+.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+.navb:disabled { opacity: 0.3; cursor: default; }
+.navb:not(:disabled):hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
+</style>
+
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Puente",
+    tiempo: "0 – 6 min",
+    bloques: [
+      { t: "blk", lbl: "Conexión con la charla anterior", html: `<p class="script">La última vez hablamos de lo más fundamental: estar en Cristo. Que no es solo creer en él desde afuera, sino estar dentro de lo que él es. Y vimos tres figuras: el matrimonio, la vid, el cuerpo.<br><br>Hoy la pregunta cambia un poco. Ya sabemos dónde estamos. Ahora la pregunta es: ¿quién eres desde ahí?<br><br>Y la primera respuesta que el Nuevo Testamento da — la más personal, la más radical, la que cambia todo lo demás — es esta:</p>` },
+      { t: "verse", ref: "1 Juan 3:1", texto: "Mirad cuál amor nos ha dado el Padre, para que seamos llamados hijos de Dios. Por esto el mundo no nos conoce, porque no le conoció a él." },
+      { t: "blk", lbl: "", html: `<p class="script">Juan no dice "mirad qué privilegio." Dice "mirad cuál amor." Como si le costara encontrar la palabra correcta. Como si la realidad fuera demasiado grande para que cupiera en una frase sola.<br><br>Eso es lo que vamos a explorar hoy. La identidad de hijo — y lo que cambia cuando realmente vives desde ahí.</p>` },
+      { t: "nota", html: "Tono de apertura: maravillado, no solemne. Esta charla debe sentirse diferente a una clase — más cercana, más personal. El presentador debe haberla procesado emocionalmente antes de darla." }
+    ]
+  },
+  {
+    label: "El huérfano",
+    tiempo: "6 – 15 min",
+    bloques: [
+      { t: "blk", lbl: "El diagnóstico — la mentalidad de huérfano", html: `<p class="script">Antes de hablar de lo que es ser hijo, necesito hablar de lo que pasa cuando no lo sabemos.<br><br>Hay un patrón que aparece una y otra vez en personas que siguen a Dios genuinamente pero que no han apropiado esta verdad. Los psicólogos lo llaman de distintas formas — ansiedad de aprobación, locus de control externo, identidad contingente. En la iglesia lo podríamos llamar mentalidad de huérfano.<br><br>¿Cómo se ve eso en la práctica?</p>` },
+      { t: "pregunta", html: "Sirves en la iglesia — ¿pero necesitas que alguien lo note? ¿Te afecta profundamente cuando no te reconocen? ¿Oras distinto cuando sientes que las cosas van bien que cuando sientes que fallaste?" },
+      { t: "blk", lbl: "", html: `<p class="script">La mentalidad de huérfano no es necesariamente que hayas tenido un padre ausente — aunque eso puede influir. Es una postura espiritual: vivir como si no tuvieras Padre. Como si la aprobación de Dios fuera algo que puedes tener o perder dependiendo de cómo te portes.<br><br>Pablo lo llama de una manera muy específica. Lo llama el espíritu de esclavitud.</p>` },
+      { t: "verse", ref: "Romanos 8:15", texto: "Pues no habéis recibido el espíritu de esclavitud para estar otra vez en temor, sino que habéis recibido el espíritu de adopción, por el cual clamamos: ¡Abba, Padre!" },
+      { t: "blk", lbl: "", html: `<p class="script">Nota lo que dice Pablo: no recibieron el espíritu de esclavitud — pero "otra vez" implica que lo conocían. El espíritu de esclavitud produce una cosa: temor. Y el temor produce una manera de relacionarse con Dios que se parece más a un empleado que a un hijo.<br><br>El empleado trabaja bien para no perder el puesto. El hijo trabaja bien porque ama al padre y quiere su bien. La acción puede verse igual desde afuera. Por dentro son mundos diferentes.</p>` },
+      { t: "dato", html: `<strong>Lo que dice la psicología:</strong> James Marcia encontró que las personas con identidad no resuelta tienen locus de control predominantemente externo — es decir, su bienestar depende de factores fuera de ellas: la aprobación de otros, los resultados de sus acciones, el reconocimiento que reciben. Las personas con identidad consolidada tienen locus de control interno — actúan desde quiénes son, no desde lo que esperan recibir.<br><br>Pablo describe exactamente eso. El espíritu de esclavitud es locus de control externo aplicado a Dios. El espíritu de adopción es saber que ya tienes al Padre — y que eso no cambia.` },
+      { t: "nota", html: "Este punto puede tocar heridas reales — relaciones difíciles con padres, experiencias de rechazo, traumas de autoridad. No explorar eso públicamente. Nombrar la posibilidad con cuidado, sin dramatizar." }
+    ]
+  },
+  {
+    label: "La adopción romana",
+    tiempo: "15 – 24 min",
+    bloques: [
+      { t: "blk", lbl: "Contexto cultural — lo que Pablo quería decir", html: `<p class="script">Pablo escribe en un mundo romano. Y cuando usa la palabra adopción — en griego huiothesia — sus lectores tenían en la cabeza algo muy específico que nosotros no tenemos.<br><br>Hoy cuando pensamos en adopción pensamos en un bebé que necesita una familia. Eso es hermoso. Pero no es lo que Pablo tenía en mente.</p>` },
+      { t: "contexto", html: `<strong>La adopción romana — tres detalles que cambian todo:</strong><br><br><strong>1. Se adoptaba a adultos, no solo niños.</strong> Un ciudadano romano poderoso que no tenía heredero podía adoptar a un adulto — incluso a alguien que ya tenía su propia familia. El adoptado dejaba completamente su familia anterior y entraba a la nueva. Deudas anteriores: canceladas. Historia anterior: borrada legalmente. Identidad nueva: total.<br><br><strong>2. La posición del adoptado era idéntica a la del hijo natural.</strong> No era un hijo de segunda clase. Tenía los mismos derechos, la misma herencia, el mismo apellido, el mismo acceso al padre.<br><br><strong>3. El padre elegía activamente al adoptado.</strong> No era el adoptado quien buscaba una familia — era el padre quien lo seleccionaba. La iniciativa era completamente del padre.` },
+      { t: "blk", lbl: "", html: `<p class="script">¿Ven por qué Pablo usa esa imagen?<br><br>Dios no nos recogió porque nos vio solos y tuvo lástima. Nos eligió. La iniciativa fue suya. Y al adoptarnos, borró la deuda anterior, canceló la historia de esclavitud al pecado, y nos dio acceso pleno a todo lo que tiene.<br><br>No como hijos de segunda clase. Como coherederos con Cristo.</p>` },
+      { t: "verse", ref: "Efesios 1:5", texto: "Habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad." },
+      { t: "blk", lbl: "", html: `<p class="script">"Según el puro afecto de su voluntad." No por nuestro mérito. No porque lo convencimos. Porque quiso. Eso es lo que significa ser elegido.<br><br>Y hay un detalle más del contexto romano que es particularmente poderoso:</p>` },
+      { t: "contexto", html: `<strong>El reconocimiento público del hijo:</strong> En Roma, cuando el padre quería reconocer formalmente al hijo como heredero — ya fuera natural o adoptado — hacía una declaración pública: "Este es mi hijo." Esta declaración era el momento legal que le daba al hijo todos sus derechos.<br><br>Hay un momento en el evangelio que suena exactamente así. Cuando Jesús es bautizado, una voz del cielo dice: "Este es mi Hijo amado, en quien tengo complacencia." No es solo ternura — es una declaración legal del Padre delante de testigos.` },
+      { t: "blk", lbl: "", html: `<p class="script">Y Romanos 8 dice que el mismo Espíritu que le habló al Hijo le habla a nosotros — nos hace saber que somos hijos.</p>` },
+      { t: "verse", ref: "Romanos 8:16", texto: "El Espíritu mismo da testimonio a nuestro espíritu, de que somos hijos de Dios." },
+      { t: "trans", html: "— El Espíritu no solo nos lo dice una vez. Está en el trabajo constante de recordárnoslo —" }
+    ]
+  },
+  {
+    label: "Abba",
+    tiempo: "24 – 33 min",
+    bloques: [
+      { t: "blk", lbl: "La palabra más íntima del NT", html: `<p class="script">Quiero detenerme en una sola palabra. Dos sílabas. Pero cargadas de más peso teológico del que aparentan.<br><br>Abba.<br><br>Pablo la usa en Romanos 8:15 y en Gálatas 4:6. Jesús la usa en Getsemaní — el momento más oscuro, el más vulnerable, el más real de su vida humana. En Marcos 14:36 dice: "Abba, Padre, todas las cosas son posibles para ti."<br><br>¿Por qué ese detalle importa?</p>` },
+      { t: "contexto", html: `<strong>¿Qué es "Abba"?</strong><br><br>Es arameo — la lengua cotidiana de Jesús, la lengua de la casa, no la del templo. Era la palabra que un niño usaba con su padre en casa, no en el contexto formal de la sinagoga. No es el "Padre" solemne de la liturgia. Es el "Papá" de la intimidad familiar.<br><br>En el judaísmo del primer siglo, nadie se atrevía a dirigirse a Dios así. Era demasiado cercano, demasiado familiar. Jesús lo hace — y luego nos dice que nosotros también podemos hacerlo.` },
+      { t: "blk", lbl: "", html: `<p class="script">Piensen en lo que eso implica. El acceso que Jesús tiene al Padre en su humanidad — la intimidad, la confianza, la cercanía — ese mismo acceso lo tenemos nosotros. No una versión reducida. El mismo.<br><br>Por eso Pablo dice que clamamos — es una palabra fuerte en el griego, krazomen, la misma que se usa para gritar con urgencia — Abba, Padre. No es la oración cuidadosa del que pide audiencia. Es el grito del hijo que sabe que el padre lo escucha.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el niño en el acto público:</strong> Imagina un acto formal, solemne. El presidente de un país está en el estrado dando un discurso importante. Protocolo estricto. Nadie interrumpe. Y de repente un niño pequeño cruza el escenario, ignora completamente el protocolo, y le jala la manga al presidente diciendo "¡Papá!" El presidente sonríe, lo levanta, y sigue el discurso con el niño en brazos.<br><br>Eso es lo que significa tener acceso de hijo. No acceso formal, cauteloso, esperando turno. Acceso que interrumpe el protocolo porque la relación es más real que el protocolo.` },
+      { t: "verse", ref: "Hebreos 4:16", texto: "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro." },
+      { t: "blk", lbl: "", html: `<p class="script">"Confiadamente" — parresia en griego. Libertad total de expresión. Sin ensayar lo que vas a decir. Sin medir si es suficientemente espiritual. Sin esperar que el ambiente emocional sea el correcto. Confiadamente — como hijo.</p>` },
+      { t: "trans", html: "— Pero hay algo que complica esto para muchos de nosotros —" }
+    ]
+  },
+  {
+    label: "El obstáculo",
+    tiempo: "33 – 39 min",
+    bloques: [
+      { t: "blk", lbl: "El problema más honesto de la charla", html: `<p class="script">Quiero ser honesto sobre algo que no siempre se dice en estas conversaciones.<br><br>Para muchos de nosotros, la palabra "Padre" no viene cargada de seguridad y amor. Viene cargada de ausencia, de exigencia, de miedo, de decepción. Y eso hace que toda esta teología de la adopción y el Abba suene hermosa en papel pero difícil de recibir en el corazón.<br><br>Si eso te pasa, no estás roto. No tienes menos fe. Estás siendo honesto sobre algo real.</p>` },
+      { t: "pregunta", html: "¿Cuál es la imagen que tienes de Dios cuando las cosas van mal? ¿Un juez esperando que falles? ¿Un padre decepcionado? ¿Alguien que está lejos? ¿O un Padre que corre hacia ti?" },
+      { t: "blk", lbl: "", html: `<p class="script">Jesús contó una parábola específicamente para responder esa pregunta. La conocemos como el hijo pródigo — pero el punto central no es el hijo. Es el padre.</p>` },
+      { t: "verse", ref: "Lucas 15:20", texto: "Y levantándose, vino a su padre. Y cuando aún estaba lejos, lo vio su padre, y fue movido a misericordia, y corrió, y se echó sobre su cuello, y le besó." },
+      { t: "blk", lbl: "", html: `<p class="script">El padre no espera que el hijo llegue. Corre. En la cultura del primer siglo, un hombre de honor no corría — era una señal de indignidad. El padre de la parábola sacrifica su dignidad para llegar más rápido a su hijo.<br><br>Y llega antes de que el hijo pueda dar su discurso ensayado. Antes de que pueda pedir perdón formalmente. Antes de que pueda demostrar que cambió.<br><br>La carrera del padre es la respuesta de Dios a la mentalidad de huérfano. No espera a que lo merezcas. Ya está corriendo.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el discurso ensayado:</strong> El hijo de la parábola venía con un discurso preparado: "Ya no soy digno de ser llamado tu hijo; hazme como a uno de tus jornaleros." Lo había ensayado. Era lo más razonable que podía ofrecer.<br><br>¿Cuántas veces oramos con un discurso ensayado? "Señor, sé que no merezco... Señor, si pudieras... Señor, prometo que esta vez..." El padre interrumpe el discurso. No porque no le importe lo que el hijo tiene que decir — sino porque la relación es más urgente que el discurso.<br><br>La fiesta comienza antes de que el hijo termine de hablar.` },
+      { t: "nota", html: "Si alguien en el grupo tiene historia de padre ausente o abusivo, este punto puede ser el más difícil y el más liberador al mismo tiempo. No apresurarlo. Dejar que el texto haga el trabajo." }
+    ]
+  },
+  {
+    label: "Implicaciones",
+    tiempo: "39 – 43 min",
+    bloques: [
+      { t: "blk", lbl: "Lo que cambia cuando sabes que eres hijo", html: `<p class="script">Entonces, ¿qué cambia concretamente cuando vives desde esta identidad?<br><br>Tres cosas que son diferentes cuando sirves como hijo y no como huérfano:</p>` },
+      { t: "puente", html: `<strong>1. La fuente de la motivación cambia.</strong> El huérfano sirve para ganarse un lugar. El hijo sirve porque ya tiene un lugar. La diferencia no está en la acción — está en el origen. Uno actúa desde el vacío. El otro desde la plenitud.<br><br><strong>2. La respuesta al fracaso cambia.</strong> El huérfano que falla entra en vergüenza y se aleja. El hijo que falla vuelve al padre — porque sabe que la relación sobrevive al error. El pródigo volvió. No porque pensara que merecía ser recibido, sino porque recordó que tenía padre.<br><br><strong>3. La oración cambia.</strong> Dejas de orar para convencer a Dios o para ver si hoy está de buen humor. Oras como quien tiene acceso garantizado. No "¿me escuchas?" sino "Padre, aquí estoy."` },
+      { t: "verse", ref: "Gálatas 4:6-7", texto: "Y por cuanto sois hijos, Dios envió a vuestros corazones el Espíritu de su Hijo, el cual clama: ¡Abba, Padre! Así que ya no eres esclavo, sino hijo; y si hijo, también heredero de Dios por medio de Cristo." },
+      { t: "blk", lbl: "", html: `<p class="script">Ya no eres esclavo, sino hijo. Y si hijo, también heredero.<br><br>Eso no es una aspiración. Es una declaración. Pablo no dice "llegarás a ser." Dice "ya no eres — ya eres." El tiempo cambió. La posición cambió. Todo lo que queda es aprenderlo a vivir.</p>` }
+    ]
+  },
+  {
+    label: "Cierre",
+    tiempo: "43 – 45 min",
+    bloques: [
+      { t: "blk", lbl: "Ejercicio de cierre", html: `<p class="script">Para terminar, quiero que hagamos algo muy simple.<br><br>Voy a pedirles que oren. Pero no con palabras elaboradas. Solo quiero que digan — en voz baja, internamente, como sea que les salga — dos palabras.<br><br>Abba, Padre.<br><br><em>[Pausa de 60 segundos. Silencio real.]</em><br><br>No para cumplir un ejercicio. Sino para practicar lo que significa tener acceso. Porque la intimidad no se entiende con la cabeza — se practica.</p>` },
+      { t: "pregunta", html: "Pregunta para la semana: ¿En qué área de tu vida sigues actuando como huérfano — buscando aprobación, viviendo con miedo, sirviendo desde el vacío — en lugar de actuar como hijo?" },
+      { t: "blk", lbl: "Anticipación de la Charla 3", html: `<p class="script">La próxima vez vamos a ver las otras dos identidades que vienen de estar en Cristo: ser miembros de un cuerpo y ser ramas de la vid.<br><br>Ya exploraste la relación vertical — quién eres con Dios. La siguiente charla es la relación horizontal: quién eres con los demás, y cómo produces fruto desde la unión.<br><br>Oremos.</p>` },
+      { t: "nota", html: `Oración de cierre — modelo: "Padre, gracias porque no necesitamos ganarnos este nombre. Nos lo diste. Ayúdanos esta semana a vivir desde ahí — a orar como hijos, a servir como hijos, a volver como hijos cuando fallemos. Abba, Padre. Amén."` }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j < i);
+    s.classList.toggle('cur', j === i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb';
+  btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+
+  const ps = document.createElement('div');
+  ps.className = 'ps';
+  prog.appendChild(ps);
+
+  const panel = document.createElement('div');
+  panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += `<div class="blk"><div class="blk-hd">${b.lbl || 'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'puente') {
+      html += `<div class="puente">${b.html}</div>`;
+    } else if (b.t === 'contexto') {
+      html += `<div class="contexto">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="(function(){document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('on',j===${i-1}));document.querySelectorAll('.nb').forEach((b,j)=>b.classList.toggle('on',j===${i-1}));document.querySelectorAll('.ps').forEach((s,j)=>{s.classList.toggle('done',j<${i-1});s.classList.toggle('cur',j===${i-1});});})()">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="(function(){document.querySelectorAll('.panel').forEach((p,j)=>p.classList.toggle('on',j===${i+1}));document.querySelectorAll('.nb').forEach((b,j)=>b.classList.toggle('on',j===${i+1}));document.querySelectorAll('.ps').forEach((s,j)=>{s.classList.toggle('done',j<${i+1});s.classList.toggle('cur',j===${i+1});});})()">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>

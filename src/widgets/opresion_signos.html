@@ -1,0 +1,186 @@
+
+<style>
+.wrap { padding: 4px 0 12px; }
+
+.aviso { background: #FAEEDA; border-radius: var(--border-radius-lg); padding: 12px 14px; margin-bottom: 16px; font-size: 13px; color: #854F0B; line-height: 1.65; border: 0.5px solid #FAC775; }
+@media (prefers-color-scheme: dark) { .aviso { background: #412402; color: #FAC775; border-color: #633806; } }
+.aviso strong { font-weight: 500; }
+
+.sec-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-text-tertiary); margin: 18px 0 8px; }
+
+.diferencia { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px; }
+.dif-col { border-radius: var(--border-radius-lg); padding: 12px 14px; border: 0.5px solid var(--color-border-tertiary); }
+.dif-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 6px; }
+.dif-def { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
+.dif-def strong { color: var(--color-text-primary); font-weight: 500; }
+
+.signo-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 8px; cursor: pointer; }
+.signo-hd { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; background: var(--color-background-secondary); }
+.signo-icon { font-size: 16px; min-width: 24px; }
+.signo-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); flex: 1; line-height: 1.35; }
+.signo-arr { font-size: 11px; color: var(--color-text-tertiary); transition: transform 0.2s; padding-top: 2px; }
+.signo-arr.open { transform: rotate(90deg); }
+.signo-body { display: none; padding: 12px 14px; border-top: 0.5px solid var(--color-border-tertiary); }
+.signo-body.open { display: block; }
+.signo-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 8px; }
+.signo-verse { font-family: var(--font-serif); font-size: 12px; color: var(--color-text-primary); background: #EEEDFE; padding: 8px 11px; border-radius: var(--border-radius-md); margin-bottom: 6px; }
+@media (prefers-color-scheme: dark) { .signo-verse { background: #26215C; } }
+.signo-verse cite { display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500; color: #534AB7; margin-top: 3px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .signo-verse cite { color: #AFA9EC; } }
+.signo-ojo { font-size: 12px; color: #185FA5; line-height: 1.55; background: #E6F1FB; padding: 7px 10px; border-radius: var(--border-radius-md); }
+@media (prefers-color-scheme: dark) { .signo-ojo { background: #042C53; color: #85B7EB; } }
+
+.puertas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.puerta { background: var(--color-background-secondary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 10px 12px; }
+.puerta-title { font-size: 12px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+.puerta-desc { font-size: 11.5px; color: var(--color-text-secondary); line-height: 1.5; }
+
+.verse { font-family: var(--font-serif); font-size: 13px; line-height: 1.75; color: var(--color-text-primary); padding: 10px 14px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500; color: #534AB7; margin-top: 3px; font-style: normal; }
+
+.respuesta { background: #E1F5EE; border-radius: var(--border-radius-lg); padding: 12px 14px; border: 0.5px solid #9FE1CB; margin-top: 6px; }
+@media (prefers-color-scheme: dark) { .respuesta { background: #04342C; border-color: #1D9E75; } }
+.respuesta-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #0F6E56; margin-bottom: 6px; }
+@media (prefers-color-scheme: dark) { .respuesta-lbl { color: #9FE1CB; } }
+.respuesta-txt { font-size: 13px; color: #085041; line-height: 1.65; }
+@media (prefers-color-scheme: dark) { .respuesta-txt { color: #9FE1CB; } }
+
+.nota-pastoral { border-left: 3px solid #7F77DD; padding: 10px 12px; font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; margin-top: 14px; font-style: italic; }
+</style>
+
+<div class="wrap">
+
+<div class="aviso"><strong>Nota importante antes de empezar:</strong> Los signos de opresión se parecen mucho a síntomas de condiciones psicológicas o emocionales — depresión, ansiedad, trauma, agotamiento. No todo malestar espiritual es opresión demoníaca. Discernir bien requiere tiempo, conocimiento de la persona y, en muchos casos, acompañamiento pastoral sostenido. La lista que sigue son indicadores que sugieren explorar esta posibilidad — no diagnósticos automáticos.</div>
+
+<div class="sec-lbl">La diferencia fundamental</div>
+<div class="diferencia">
+  <div class="dif-col" style="border-left: 3px solid #993C1D">
+    <div class="dif-lbl" style="color:#993C1D">Posesión</div>
+    <div class="dif-def"><strong>Control interno.</strong> Un espíritu demoníaco habita dentro de la persona y controla mente y cuerpo. Manifestaciones físicas dramáticas. Un creyente genuino con el Espíritu Santo no puede ser poseído — 1 Juan 4:4, Col 1:13-14.</div>
+  </div>
+  <div class="dif-col" style="border-left: 3px solid #854F0B">
+    <div class="dif-lbl" style="color:#854F0B">Opresión</div>
+    <div class="dif-def"><strong>Presión externa sostenida.</strong> Influencia demoníaca desde afuera que ataca pensamientos, emociones, voluntad, cuerpo. Un creyente sí puede ser oprimido. Ef 6:12, 1 Pe 5:8, 2 Cor 2:11.</div>
+  </div>
+</div>
+
+<div class="sec-lbl">Signos que pueden indicar opresión — haz clic para desarrollar</div>
+<div id="signos"></div>
+
+<div class="sec-lbl" style="margin-top:20px">Las puertas que la facilitan</div>
+<div class="puertas-grid" id="puertas"></div>
+
+<div class="sec-lbl">La respuesta pastoral</div>
+<div class="respuesta">
+  <div class="respuesta-lbl">Cómo se cierra — pasos concretos</div>
+  <div class="respuesta-txt">
+    <strong>1. Arrepentimiento y confesión específicos</strong> — cerrar cada puerta abierta por nombre. No confesión genérica: confesión de lo específico que abrió la puerta.<br><br>
+    <strong>2. Renunciamiento explícito</strong> — declarar verbalmente el abandono de toda participación en ocultismo, amargura, pecado persistente. Santiago 4:7 — primero someterse a Dios, luego resistir.<br><br>
+    <strong>3. Llenarse del Espíritu</strong> — no basta con vaciar la casa. Mateo 12:43-45: la casa barrida y vacía atrae más. Debe llenarse de la Palabra, de adoración, de comunidad.<br><br>
+    <strong>4. Acompañamiento comunitario</strong> — la opresión crece en el aislamiento. La comunidad de fe, la oración de otros, la autoridad pastoral delegada son parte de la solución.<br><br>
+    <strong>5. Declaración de identidad sostenida</strong> — el antídoto a la acusación y la mentira es la verdad repetida. No una vez — como práctica constante.
+  </div>
+</div>
+
+<div class="verse">"Someteos, pues, a Dios; resistid al diablo, y huirá de vosotros. Acercaos a Dios, y él se acercará a vosotros."<cite>Santiago 4:7-8</cite></div>
+
+<div class="nota-pastoral">Para la charla: no es necesario desarrollar todos los signos en detalle. Lo más útil para el grupo es la distinción posesión/opresión, 2-3 signos que lo hagan concreto, las puertas principales y la respuesta pastoral. El objetivo no es que el grupo sepa diagnosticar — es que sepa qué hacer cuando lo sospecha.</div>
+
+</div>
+
+<script>
+const signos = [
+  {
+    icon: "🧠",
+    title: "Pensamientos intrusivos persistentes contra la identidad",
+    desc: "Pensamientos que no se sienten propios — voces internas que acusan, que dicen que Dios no perdona, que el creyente es inútil, que su situación no tiene salida. Se distinguen de la duda normal porque son obsesivos, repetitivos y siempre apuntan en la misma dirección: alejarse de Dios.",
+    verse: "El diablo pone pensamientos: 'y habiendo metido ya en el corazón de Judas Iscariote, hijo de Simón, que le entregase...'",
+    verseRef: "Juan 13:2",
+    ojo: "Importante: los pensamientos intrusivos también pueden ser síntoma de ansiedad, depresión o trauma. No asumir opresión automáticamente. Preguntar por el historial de la persona."
+  },
+  {
+    icon: "📖",
+    title: "Resistencia anormal a la Palabra y la oración",
+    desc: "Una dificultad que va más allá del cansancio o la distracción normal. El creyente siente un bloqueo físico o emocional intenso al intentar orar o leer la Biblia. No es falta de disciplina — es una resistencia que la persona misma nota como anormal.",
+    verse: "El maligno viene, y arrebata lo que fue sembrado en su corazón.",
+    verseRef: "Mateo 13:19",
+    ojo: "También puede ser agotamiento espiritual, síntoma de depresión, o período de sequedad espiritual normal. El patrón sostenido y la sensación de bloqueo activo son los diferenciadores."
+  },
+  {
+    icon: "😰",
+    title: "Miedo irracional y opresión emocional persistente",
+    desc: "Ansiedad o terror que no corresponde a las circunstancias reales. Sensación de amenaza constante, pesadillas recurrentes con contenido espiritual, presencia de algo perturbador. Se distingue de la ansiedad normal por su intensidad desproporcionada y su resistencia a la lógica.",
+    verse: "Porque no nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio.",
+    verseRef: "2 Timoteo 1:7",
+    ojo: "El miedo irracional tiene muchas causas posibles — trauma, trastorno de ansiedad, situaciones reales de peligro. El contexto espiritual de la persona es clave para discernir."
+  },
+  {
+    icon: "⛓️",
+    title: "Esclavitud persistente a un pecado específico",
+    desc: "Patrones de pecado que la persona genuinamente quiere abandonar pero que tienen una tenacidad inusual — como si hubiera algo más allá de la voluntad y el hábito jalando. Especialmente cuando la esclavitud comenzó después de una participación en ocultismo o se acompaña de otros signos.",
+    verse: "El ladrón no viene sino para hurtar y matar y destruir.",
+    verseRef: "Juan 10:10a",
+    ojo: "La mayoría de las esclavitudes a pecados son primariamente carne — naturaleza caída y hábito. La opresión puede amplificar lo que la carne ya hace, pero no siempre hay un componente demoníaco."
+  },
+  {
+    icon: "🚪",
+    title: "Historial de participación en ocultismo",
+    desc: "Cualquier participación pasada en ocultismo — tabla ouija, tarot, sesiones espiritistas, santería, brujería, horóscopos practicados con seriedad — puede haber dejado una puerta abierta. No como condena automática, sino como historial que requiere arrepentimiento y renunciamiento explícito.",
+    verse: "Y muchos de los que habían creído venían, confesando y dando cuenta de sus hechos... Y quemaron los libros.",
+    verseRef: "Hechos 19:18-19",
+    ojo: "No toda persona con ese historial está oprimida. Pero es una variable importante que preguntar cuando hay otros signos presentes."
+  },
+  {
+    icon: "💔",
+    title: "Amargura profunda y no resuelta",
+    desc: "La Escritura conecta explícitamente la amargura sostenida con dar lugar al diablo. No el dolor legítimo por una herida real — sino la amargura que se instaló, que la persona alimentó, que define la manera en que se relaciona con Dios y con los demás.",
+    verse: "Ni deis lugar al diablo.",
+    verseRef: "Efesios 4:27",
+    ojo: "Este es el más común en contextos de iglesia. La amargura hacia líderes, hacia la iglesia, hacia Dios por algo que no se resolvió puede ser una puerta real. Se cierra con perdón genuino, no con supresión."
+  }
+];
+
+const puertas = [
+  { title: "Ocultismo pasado o presente", desc: "Ouija, tarot, espiritismo, santería, brujería. Cualquier intento de contactar fuerzas espirituales fuera de Dios." },
+  { title: "Amargura sostenida", desc: "Efesios 4:27: 'Ni deis lugar al diablo.' La amargura no resuelta es una puerta explícita en la Escritura." },
+  { title: "Pecado habitual no confesado", desc: "No el fallo ocasional — el patrón deliberado mantenido que crea terreno para mayor influencia." },
+  { title: "Maldiciones generacionales", desc: "Participación en idolatría o prácticas ocultas de generaciones anteriores. Éxodo 20:5. Requiere renunciamiento explícito." },
+  { title: "Trauma no sanado", desc: "No toda herida es una puerta demoníaca, pero el trauma profundo sin procesar puede crear vulnerabilidad." },
+  { title: "Aislamiento espiritual", desc: "La oveja que se aleja del rebaño es la que el lobo busca. El aislamiento de la comunidad reduce la protección natural." }
+];
+
+const container = document.getElementById('signos');
+signos.forEach((s, i) => {
+  const div = document.createElement('div');
+  div.className = 'signo-card';
+  div.innerHTML = `
+    <div class="signo-hd" onclick="toggleSigno(${i})">
+      <span class="signo-icon">${s.icon}</span>
+      <span class="signo-title">${s.title}</span>
+      <span class="signo-arr" id="sarr-${i}">▶</span>
+    </div>
+    <div class="signo-body" id="sbody-${i}">
+      <p class="signo-desc">${s.desc}</p>
+      <div class="signo-verse">"${s.verse}"<cite>${s.verseRef}</cite></div>
+      <div class="signo-ojo">⚠ ${s.ojo}</div>
+    </div>
+  `;
+  container.appendChild(div);
+});
+
+const puertasContainer = document.getElementById('puertas');
+puertas.forEach(p => {
+  const div = document.createElement('div');
+  div.className = 'puerta';
+  div.innerHTML = `<div class="puerta-title">${p.title}</div><div class="puerta-desc">${p.desc}</div>`;
+  puertasContainer.appendChild(div);
+});
+
+function toggleSigno(i) {
+  const body = document.getElementById('sbody-' + i);
+  const arr = document.getElementById('sarr-' + i);
+  const open = body.classList.toggle('open');
+  arr.classList.toggle('open', open);
+}
+</script>

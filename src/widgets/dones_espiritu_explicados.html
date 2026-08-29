@@ -1,0 +1,265 @@
+
+<h2 class="sr-only">Los dones del Espíritu Santo explicados — tres categorías con descripción bíblica, ejemplo práctico y versículo para cada don.</h2>
+
+<style>
+.wrap { padding: 4px 0 12px; }
+.cat-header { margin: 20px 0 10px; }
+.cat-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 3px; }
+.cat-title { font-size: 15px; font-weight: 500; color: var(--text-primary); }
+.cat-desc { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; margin-bottom: 6px; }
+.card { background: var(--surface-1); border: 0.5px solid var(--border); border-radius: 12px; overflow: hidden; cursor: pointer; }
+.card-hd { padding: 12px 14px 10px; }
+.card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.don-pill { font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+.don-ref { font-size: 10px; color: var(--text-secondary); margin-left: auto; }
+.don-name { font-size: 14px; font-weight: 500; color: var(--text-primary); line-height: 1.3; }
+.don-hook { font-size: 12px; color: var(--text-secondary); margin-top: 3px; line-height: 1.5; }
+.card-body { padding: 0 14px 14px; border-top: 0.5px solid var(--border); display: none; margin-top: 10px; padding-top: 10px; }
+.card-body.open { display: block; }
+.body-section { margin-bottom: 10px; }
+.body-lbl { font-size: 9px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 4px; }
+.body-txt { font-size: 12px; color: var(--text-secondary); line-height: 1.65; }
+.body-verse { font-family: var(--font-voice); font-size: 12px; color: var(--text-primary); line-height: 1.65; background: var(--surface-0); padding: 8px 10px; border-radius: var(--radius); margin-top: 4px; }
+.body-verse cite { display: block; font-family: var(--font-sans); font-size: 10px; font-weight: 500; margin-top: 3px; font-style: normal; }
+.expand-hint { font-size: 11px; color: var(--text-secondary); margin-top: 6px; }
+.arr { display: inline-block; transition: transform 0.2s; font-size: 10px; }
+.arr.open { transform: rotate(90deg); }
+</style>
+
+<div class="wrap">
+  <div id="content"></div>
+</div>
+
+<script>
+const cats = [
+  {
+    id: "revelacion",
+    lbl: "Categoría 1",
+    title: "Dones de revelación",
+    desc: "El Espíritu revela — da a conocer algo que no se puede saber por medios naturales",
+    color_pill: "background:#EEEDFE;color:#534AB7",
+    color_verse: "#534AB7",
+    dones: [
+      {
+        nombre: "Palabra de sabiduría",
+        ref: "1 Cor 12:8",
+        hook: "Saber qué hacer cuando no hay respuesta humana suficiente",
+        que_es: "Capacidad sobrenatural de aplicar el conocimiento de Dios a situaciones concretas. No es inteligencia natural ni experiencia acumulada — es comprensión divina de cómo actuar en un momento específico. Diferente de la sabiduría general: esta es una palabra precisa para una situación precisa.",
+        como_opera: "Una persona enfrenta una decisión imposible. Alguien en el cuerpo recibe de repente una claridad que no tenía antes — ve la situación de una manera que resuelve lo que parecía irresoluble. No vino del razonamiento — llegó.",
+        distinguir: "No es consejo bien pensado ni experiencia pastoral — es iluminación sobrenatural para un momento específico. El que lo da frecuentemente se sorprende de lo que dijo.",
+        verse: "Si alguno de vosotros tiene falta de sabiduría, pídala a Dios.",
+        verse_ref: "Santiago 1:5"
+      },
+      {
+        nombre: "Palabra de conocimiento",
+        ref: "1 Cor 12:8",
+        hook: "Conocer algo sobre alguien que no se podría saber naturalmente",
+        que_es: "Revelación de información específica que la persona no podría conocer por medios naturales — sobre una situación, una condición física, un pensamiento o una necesidad de alguien. No es deducción ni intuición refinada. Es conocimiento revelado.",
+        como_opera: "En un momento de oración o ministerio, alguien recibe una impresión específica — un nombre, una condición, una circunstancia — que corresponde exactamente a lo que otra persona está viviendo sin haberlo dicho. Frecuente en ministerio de sanidad y consejería pastoral.",
+        distinguir: "El conocimiento revelado tiene una especificidad que lo distingue: no es 'alguien aquí tiene un problema' sino 'hay alguien aquí con dolor en el hombro derecho desde hace tres semanas.'",
+        verse: "Porque qué hombre sabe las cosas del hombre, sino el espíritu del hombre que está en él? Así tampoco nadie conoció las cosas de Dios, sino el Espíritu de Dios.",
+        verse_ref: "1 Corintios 2:11"
+      },
+      {
+        nombre: "Discernimiento de espíritus",
+        ref: "1 Cor 12:10",
+        hook: "Distinguir qué está operando realmente en una situación espiritual",
+        que_es: "Capacidad sobrenatural de distinguir si algo opera por el Espíritu de Dios, por el espíritu humano o por influencia demoníaca. No es suspicacia ni paranoia espiritual — es percepción clara de la fuente espiritual de lo que está ocurriendo.",
+        como_opera: "Alguien comparte una 'revelación' o una experiencia espiritual. Otro en el cuerpo percibe con claridad — sin poder explicarlo racionalmente — si proviene de Dios, de la imaginación o de algo oscuro. También opera en contextos de consejería cuando hay influencia demoníaca real detrás de patrones de conducta.",
+        distinguir: "No es crítica ni juicio humano. Es percepción espiritual. El que tiene este don frecuentemente no puede explicar por qué sabe lo que sabe — simplemente lo percibe con claridad.",
+        verse: "Amados, no creáis a todo espíritu, sino probad los espíritus si son de Dios.",
+        verse_ref: "1 Juan 4:1"
+      },
+      {
+        nombre: "Profecía",
+        ref: "1 Cor 12:10 · Rom 12:6",
+        hook: "Una palabra específica del Espíritu para edificar a alguien en un momento concreto",
+        que_es: "Hablar por inspiración del Espíritu para edificación, exhortación y consolación — 1 Corintios 14:3. No es predicar ni enseñar la Biblia, aunque puede incluirlo. Es una palabra específica, en un momento específico, para una persona o comunidad específica, que viene del Espíritu.",
+        como_opera: "En adoración o en ministerio personal, alguien recibe una impresión fuerte — palabras, una imagen, una sensación — que al compartirse confirma algo que la otra persona está viviendo o necesita escuchar. La persona que la recibe la reconoce como verdad, incluso cuando el que la da no conocía la situación.",
+        distinguir: "La profecía del NT no reemplaza ni iguala la Escritura en autoridad. Debe ser juzgada por el cuerpo (1 Cor 14:29). Siempre edifica, exhorta o consuela — nunca condena ni manipula.",
+        verse: "El que profetiza habla a los hombres para edificación, exhortación y consolación.",
+        verse_ref: "1 Corintios 14:3"
+      }
+    ]
+  },
+  {
+    id: "poder",
+    lbl: "Categoría 2",
+    title: "Dones de poder",
+    desc: "El Espíritu interviene — actúa de maneras que exceden el orden natural",
+    color_pill: "background:#FAECE7;color:#993C1D",
+    color_verse: "#993C1D",
+    dones: [
+      {
+        nombre: "Fe",
+        ref: "1 Cor 12:9",
+        hook: "Confianza sobrenatural en Dios para lo que parece imposible",
+        que_es: "No es la fe salvadora que todo creyente tiene. Es una confianza sobrenatural y específica en Dios para situaciones que exceden completamente la capacidad humana de creer. Funciona especialmente antes de milagros — una certeza que llega antes de ver el resultado.",
+        como_opera: "Alguien enfrenta una situación médicamente sin esperanza, o una circunstancia que todos consideran imposible. De repente hay en ellos — o en alguien cercano — una certeza tranquila, sin esfuerzo, de que Dios va a actuar. No es optimismo ni autoconvencimiento. Es una fe que llega como don.",
+        distinguir: "Se distingue porque no requiere esfuerzo de voluntad para mantenerla — simplemente está. Y con frecuencia opera justo antes de que el milagro ocurra, no después de verlo.",
+        verse: "Si tuviereis fe como un grano de mostaza, diréis a este monte: Pásate de aquí allá, y se pasará.",
+        verse_ref: "Mateo 17:20"
+      },
+      {
+        nombre: "Dones de sanidades",
+        ref: "1 Cor 12:9-10",
+        hook: "Instrumentos del Espíritu para la sanidad física, emocional o espiritual",
+        que_es: "El plural es significativo — 'dones de sanidades', no 'don de sanidad'. Sugiere que no es una capacidad general que una persona posee permanentemente, sino manifestaciones específicas del Espíritu en momentos específicos. Dios usa personas como instrumentos, pero él es el sanador.",
+        como_opera: "En oración o ministerio, hay momentos donde la presencia del Espíritu es palpable y la sanidad ocurre — física, emocional o espiritual. No depende de una fórmula, ni del nivel de fe del que recibe, ni de la 'habilidad' del que ora. El Espíritu actúa como y cuando quiere.",
+        distinguir: "No toda oración por sanidad produce sanidad inmediata. Esto no significa ausencia del don — significa que la soberanía del Espíritu determina cuándo y cómo. La fidelidad es orar, no garantizar resultados.",
+        verse: "¿Está alguno enfermo entre vosotros? Llame a los ancianos de la iglesia, y oren por él, ungiéndole con aceite en el nombre del Señor.",
+        verse_ref: "Santiago 5:14"
+      },
+      {
+        nombre: "Operación de milagros",
+        ref: "1 Cor 12:10",
+        hook: "Intervención sobrenatural que altera lo que parece imposible",
+        que_es: "Manifestación del poder del Espíritu que produce resultados que no pueden explicarse por causas naturales. Jesús lo hizo. La iglesia primitiva lo experimentó. El Espíritu lo sigue haciendo — no como técnica controlable sino como acto soberano de Dios.",
+        como_opera: "Puede manifestarse en liberación de ataduras imposibles de romper humanamente, en provisión sobrenatural en momentos de necesidad extrema, en cambios de circunstancias que desafían cualquier explicación natural. El patrón bíblico siempre apunta a Dios y produce fe en quienes lo presencian.",
+        distinguir: "El milagro genuino siempre glorifica a Dios — nunca al instrumento humano. Y siempre produce fe, no dependencia de la persona. Si el resultado produce más atención al que ora que al que sana, algo está mal.",
+        verse: "Y ellos, saliendo, predicaron en todas partes, ayudándoles el Señor y confirmando la palabra con las señales que la seguían.",
+        verse_ref: "Marcos 16:20"
+      },
+      {
+        nombre: "Lenguas e interpretación",
+        ref: "1 Cor 12:10",
+        hook: "Un lenguaje espiritual para la edificación personal y, con interpretación, del cuerpo",
+        que_es: "Hablar en un idioma no aprendido — ya sea un lenguaje humano desconocido (como en Hechos 2) o un lenguaje espiritual de oración e intercesión. Pablo distingue dos usos: en privado edifica al que ora (1 Cor 14:4); en la congregación requiere interpretación para edificar al cuerpo entero.",
+        como_opera: "En la oración personal, permite al creyente orar más allá de lo que su mente puede articular. En la reunión congregacional, cuando se da con interpretación, funciona de manera similar a la profecía — una palabra del Espíritu para el cuerpo. La interpretación no es traducción literal sino comunicación del significado espiritual.",
+        distinguir: "Pablo valora este don pero lo regula: en la congregación, sin interpretación no edifica (1 Cor 14:19). El orden y la edificación del cuerpo siempre son el criterio. Que sea genuino no significa que sea siempre apropiado en cualquier contexto.",
+        verse: "El que habla en lengua extraña, a sí mismo se edifica; pero el que profetiza, edifica a la iglesia.",
+        verse_ref: "1 Corintios 14:4"
+      }
+    ]
+  },
+  {
+    id: "servicio",
+    lbl: "Categoría 3",
+    title: "Dones de servicio",
+    desc: "El Espíritu equipa — capacita para funciones que edifican al cuerpo en lo cotidiano",
+    color_pill: "background:#E1F5EE;color:#0F6E56",
+    color_verse: "#0F6E56",
+    dones: [
+      {
+        nombre: "Enseñanza",
+        ref: "Rom 12:7 · Ef 4:11",
+        hook: "Iluminar la Palabra de manera que cambie la vida, no solo informe la mente",
+        que_es: "Capacidad sobrenatural de explicar, estructurar y aplicar la Palabra de Dios de manera que otros entiendan y sean transformados. No es solo conocimiento bíblico — es la habilidad de hacer que la verdad llegue de una manera que cambia cómo la gente piensa y vive.",
+        como_opera: "La persona con este don tiene una claridad natural para ver las conexiones en el texto, para estructurar el pensamiento de manera que fluya, y para encontrar las ilustraciones y aplicaciones que hacen que la verdad aterrice. Cuando enseña, otros dicen 'nunca había entendido eso así.'",
+        distinguir: "El don de enseñanza no garantiza que todo lo que se enseña sea correcto — por eso siempre va acompañado de responsabilidad y examinación de lo enseñado por el cuerpo. 'El que enseña, en la enseñanza' — hay una entrega total al proceso de transmisión fiel.",
+        verse: "La palabra de Cristo more en abundancia en vosotros, enseñándoos y exhortándoos unos a otros.",
+        verse_ref: "Colosenses 3:16"
+      },
+      {
+        nombre: "Exhortación",
+        ref: "Rom 12:8",
+        hook: "Saber exactamente qué decirle a alguien para que vuelva a levantarse",
+        que_es: "Don de animar, consolar, aconsejar y llamar a acción a otros en sus momentos difíciles. El griego es paraklesis — la misma raíz que Parakletos, el Consolador. No es optimismo vacío ni palabras dulces sin sustancia. Es la palabra correcta en el momento correcto que produce cambio real.",
+        como_opera: "Bernabé — cuyo nombre significa 'hijo de consolación' — es el ejemplo bíblico. Cuando nadie quería acercarse a Saulo después de su conversión, Bernabé lo llevó a los apóstoles. Cuando Marcos falló, Bernabé apostó por él de nuevo. El que tiene este don sabe quién necesita qué — y cómo decirlo.",
+        distinguir: "Se distingue de la enseñanza en que no explica tanto como aplica y motiva. Se distingue de la consolación sentimental en que produce acción y cambio, no solo alivio momentáneo.",
+        verse: "Antes exhortaos los unos a los otros cada día, entre tanto que se dice: Hoy; para que ninguno de vosotros se endurezca por el engaño del pecado.",
+        verse_ref: "Hebreos 3:13"
+      },
+      {
+        nombre: "Servicio y ayuda",
+        ref: "Rom 12:7 · 1 Cor 12:28",
+        hook: "Ver lo que necesita hacerse y hacerlo — antes de que alguien lo pida",
+        que_es: "Capacidad y disposición sobrenatural de identificar necesidades prácticas en el cuerpo y cubrirlas con gozo y eficacia. No es solo voluntad de ayudar — es el Espíritu equipando a alguien para que el servicio práctico más humilde sea ministerio real con impacto espiritual genuino.",
+        como_opera: "La persona con este don nota lo que otros no notan: que falta algo, que alguien necesita ayuda práctica, que hay un detalle que si se resuelve todo funciona mejor. Y lo cubre sin necesidad de reconocimiento. El servicio es una fuente de satisfacción genuina para ellos, no una carga.",
+        distinguir: "No es que este don sea menos espiritual que los más visibles. Pablo dice que 'los que ayudan' son parte de los que Dios puso en la iglesia (1 Cor 12:28). El cuerpo no funciona sin ellos — igual que el cuerpo físico no funciona sin los órganos que nadie ve.",
+        verse: "El que sirve, que sirva conforme al poder que Dios da, para que en todo sea Dios glorificado por Jesucristo.",
+        verse_ref: "1 Pedro 4:11"
+      },
+      {
+        nombre: "Liderazgo y administración",
+        ref: "Rom 12:8 · 1 Cor 12:28",
+        hook: "Ver cómo las partes encajan y guiar al cuerpo hacia su propósito",
+        que_es: "Don de organizar, dirigir y coordinar al cuerpo de Cristo para que funcione según el propósito de Dios. No es talento gerencial natural — es capacidad dada por el Espíritu de ver cómo las partes encajan, quién tiene qué capacidad, qué necesita hacerse y cómo lograrlo de manera que el cuerpo sea edificado.",
+        como_opera: "El que tiene este don puede ver el panorama completo cuando otros solo ven partes. Puede identificar qué roles necesitan cubrirse, quién encaja en qué función, y cómo movilizar al cuerpo hacia un objetivo sin crear confusión. La palabra en 1 Cor 12:28 es kubernesis — de donde viene gubernáculo, el timón del barco.",
+        distinguir: "El liderazgo como don no es autoridad para controlar — es capacidad para servir al cuerpo ayudándolo a encontrar su rumbo. El líder con este don dirige para que el cuerpo funcione, no para que lo sigan a él.",
+        verse: "El que preside, que presida con solicitud.",
+        verse_ref: "Romanos 12:8"
+      },
+      {
+        nombre: "Generosidad",
+        ref: "Rom 12:8",
+        hook: "Dar con una libertad y alegría que exceden lo que la lógica explicaría",
+        que_es: "Don de dar recursos — tiempo, dinero, bienes, atención — con una libertad y gozo que exceden lo natural. La persona con este don no experimenta el dar como sacrificio sino como satisfacción. Hay una capacidad sobrenatural de desprenderse y una confianza profunda en que Dios provee.",
+        como_opera: "No requiere que la persona sea rica — requiere que confíe. El ejemplo más poderoso en el NT es la viuda de Marcos 12: dio todo lo que tenía para vivir. No por obligación ni por cálculo sino por una generosidad que nació de una relación con Dios que excedía su situación económica.",
+        distinguir: "Dar por culpa, por presión o por reputación no es el don de generosidad. El don opera con libertad y gozo — 2 Corintios 9:7: 'al que da con alegría, Dios ama.' La alegría no es la consecuencia del don — es la señal de que el don está operando.",
+        verse: "El que reparte, que reparta con generosidad.",
+        verse_ref: "Romanos 12:8"
+      }
+    ]
+  }
+];
+
+const content = document.getElementById('content');
+const openCards = new Set();
+
+cats.forEach(cat => {
+  const catDiv = document.createElement('div');
+  catDiv.className = 'cat-header';
+  catDiv.innerHTML = `<div class="cat-lbl">${cat.lbl}</div>
+    <div class="cat-title">${cat.title}</div>
+    <div class="cat-desc">${cat.desc}</div>`;
+  content.appendChild(catDiv);
+
+  const grid = document.createElement('div');
+  grid.className = 'grid';
+
+  cat.dones.forEach((don, di) => {
+    const id = `${cat.id}-${di}`;
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `
+      <div class="card-hd" onclick="toggle('${id}', this)">
+        <div class="card-top">
+          <span class="don-pill" style="${cat.color_pill}">${cat.lbl.replace('Categoría ','C')}</span>
+          <span class="don-ref">${don.ref}</span>
+          <span class="arr" id="arr-${id}">▶</span>
+        </div>
+        <div class="don-name">${don.nombre}</div>
+        <div class="don-hook">${don.hook}</div>
+      </div>
+      <div class="card-body" id="body-${id}">
+        <div class="body-section">
+          <div class="body-lbl">Qué es</div>
+          <div class="body-txt">${don.que_es}</div>
+        </div>
+        <div class="body-section">
+          <div class="body-lbl">Cómo opera en la práctica</div>
+          <div class="body-txt">${don.como_opera}</div>
+        </div>
+        <div class="body-section">
+          <div class="body-lbl">Cómo distinguirlo</div>
+          <div class="body-txt">${don.distinguir}</div>
+        </div>
+        <div class="body-verse" style="border-left: 2px solid ${cat.color_verse}">
+          "${don.verse}"
+          <cite style="color:${cat.color_verse}">${don.verse_ref}</cite>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+
+  content.appendChild(grid);
+});
+
+function toggle(id, hd) {
+  const body = document.getElementById('body-' + id);
+  const arr = document.getElementById('arr-' + id);
+  const isOpen = body.classList.contains('open');
+  if (isOpen) {
+    body.classList.remove('open');
+    arr.classList.remove('open');
+    body.style.display = 'none';
+  } else {
+    body.classList.add('open');
+    arr.classList.add('open');
+    body.style.display = 'block';
+  }
+}
+</script>

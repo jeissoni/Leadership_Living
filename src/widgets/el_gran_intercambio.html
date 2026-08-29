@@ -1,0 +1,255 @@
+
+<style>
+.wrap { padding: 4px 0 8px; }
+
+.intro { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 18px; padding: 12px 14px; background: var(--color-background-secondary); border-radius: var(--border-radius-lg); border: 0.5px solid var(--color-border-tertiary); }
+.intro strong { color: var(--color-text-primary); font-weight: 500; }
+
+.sec-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-text-tertiary); margin: 18px 0 8px; }
+
+.intercambio { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.ic-header { padding: 10px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); display: flex; align-items: flex-start; gap: 10px; }
+.ic-num { font-size: 11px; font-weight: 500; min-width: 20px; padding-top: 1px; }
+.ic-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); flex: 1; line-height: 1.35; }
+.ic-body { padding: 0; }
+
+.exchange-cols { display: grid; grid-template-columns: 1fr 24px 1fr; align-items: stretch; }
+.col-left { padding: 12px 12px 12px 14px; border-right: none; }
+.col-arrow { display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--color-text-tertiary); background: var(--color-background-secondary); border-left: 0.5px solid var(--color-border-tertiary); border-right: 0.5px solid var(--color-border-tertiary); }
+.col-right { padding: 12px 14px 12px 12px; }
+
+.col-tag { font-size: 9px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 5px; }
+.col-tag-red { color: #993C1D; }
+.col-tag-green { color: #0F6E56; }
+
+.col-content { font-size: 13px; font-weight: 500; color: var(--color-text-primary); line-height: 1.4; margin-bottom: 5px; }
+
+.verse-small { font-family: var(--font-serif); font-size: 11.5px; color: var(--color-text-secondary); line-height: 1.6; font-style: italic; }
+.verse-ref { font-family: var(--font-sans); font-size: 10px; font-weight: 500; margin-top: 3px; display: block; font-style: normal; }
+.ref-purple { color: #534AB7; }
+@media (prefers-color-scheme: dark) { .ref-purple { color: #AFA9EC; } }
+
+.ic-footer { padding: 9px 14px; background: var(--color-background-secondary); border-top: 0.5px solid var(--color-border-tertiary); font-size: 11.5px; color: var(--color-text-secondary); line-height: 1.55; font-style: italic; }
+
+.quote-block { background: #EEEDFE; border-radius: var(--border-radius-lg); padding: 14px 16px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .quote-block { background: #26215C; } }
+.quote-who { font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 6px; }
+@media (prefers-color-scheme: dark) { .quote-who { color: #AFA9EC; } }
+.quote-txt { font-family: var(--font-serif); font-size: 13px; color: var(--color-text-primary); line-height: 1.75; }
+
+.central-verse { background: var(--color-background-secondary); border: 1.5px solid #7F77DD; border-radius: var(--border-radius-lg); padding: 14px 16px; margin: 14px 0; }
+.cv-label { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #534AB7; margin-bottom: 6px; }
+@media (prefers-color-scheme: dark) { .cv-label { color: #AFA9EC; } }
+.cv-text { font-family: var(--font-serif); font-size: 14px; color: var(--color-text-primary); line-height: 1.8; }
+.cv-ref { font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 5px; }
+@media (prefers-color-scheme: dark) { .cv-ref { color: #AFA9EC; } }
+
+.nota-charla { border-left: 3px solid #7F77DD; padding: 10px 12px; font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; font-style: italic; margin-top: 14px; }
+</style>
+
+<div class="wrap">
+
+<div class="intro">
+  El <strong>Gran Intercambio</strong> (en alemán: <em>fröhlicher Wechsel</em> — el "gozoso intercambio") es el nombre que Martín Lutero dio al corazón del evangelio. <strong>Calvin lo llamó "el maravilloso intercambio."</strong> La idea: en Cristo, Dios intercambió lo nuestro por lo de Cristo — no como transacción sino como unión. Lo que él era, lo tomamos. Lo que nosotros éramos, lo tomó él. Haz clic en cada intercambio para ver los versículos.
+</div>
+
+<div class="central-verse">
+  <div class="cv-label">El versículo central del gran intercambio</div>
+  <div class="cv-text">"Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él."</div>
+  <div class="cv-ref">2 Corintios 5:21</div>
+</div>
+
+<div class="sec-lbl">Los intercambios uno a uno — haz clic para expandir</div>
+
+<div id="cards"></div>
+
+<div class="sec-lbl" style="margin-top:22px">Lo que dijeron los reformadores</div>
+
+<div class="quote-block">
+  <div class="quote-txt">"Tu pecado está en mí, y mi inocencia y bienaventuranza te pertenecen a ti."</div>
+  <div class="quote-who">Martín Lutero — La Libertad del Cristiano (1520)</div>
+</div>
+
+<div class="quote-block">
+  <div class="quote-txt">"Haciéndose Hijo del hombre con nosotros, nos ha hecho hijos de Dios con él. Por su descenso a la tierra ha preparado un ascenso al cielo para nosotros. Tomando nuestra mortalidad, nos ha conferido su inmortalidad. Aceptando nuestra debilidad, nos ha fortalecido con su poder. Recibiendo nuestra pobreza, ha transferido su riqueza a nosotros. Tomando sobre sí el peso de nuestra iniquidad, nos ha vestido con su justicia."</div>
+  <div class="quote-who">Juan Calvino — Institución de la Religión Cristiana, IV.17.2</div>
+</div>
+
+<div class="nota-charla">
+  Para la charla: no es necesario citar a Lutero ni a Calvino. Pero vale la pena mencionar que esto no es una interpretación moderna — tiene 500 años de teólogos diciendo exactamente lo mismo. La doctrina es antigua. Lo que cambia es aprenderla a vivir.
+</div>
+
+</div>
+
+<script>
+const intercambios = [
+  {
+    num: "01",
+    color: "#534AB7",
+    title: "Él tomó nuestro pecado · nosotros recibimos su justicia",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestro pecado",
+      verse: "Al que no conoció pecado, por nosotros lo hizo pecado...",
+      ref: "2 Corintios 5:21a"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "Su justicia perfecta",
+      verse: "...para que nosotros fuésemos hechos justicia de Dios en él.",
+      ref: "2 Corintios 5:21b"
+    },
+    nota: "Este es el intercambio central. Todo lo demás fluye de este. Es el fundamento de la justificación: no que seamos mejores, sino que portamos su justicia ante Dios."
+  },
+  {
+    num: "02",
+    color: "#993C1D",
+    title: "Él se hizo pobre · nosotros nos hicimos ricos",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestra pobreza",
+      verse: "Ya conocéis la gracia de nuestro Señor Jesucristo, que por amor a vosotros se hizo pobre...",
+      ref: "2 Corintios 8:9a"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "Sus riquezas",
+      verse: "...siendo rico, para que vosotros con su pobreza fueseis enriquecidos.",
+      ref: "2 Corintios 8:9b"
+    },
+    nota: "No solo pobreza material — toda forma de indigencia espiritual. Todo lo que nos faltaba, él lo tomó. Todo lo que él tenía, nos lo dio."
+  },
+  {
+    num: "03",
+    color: "#185FA5",
+    title: "Él murió nuestra muerte · nosotros vivimos su vida",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestra muerte",
+      verse: "Somos sepultados juntamente con él para muerte por el bautismo...",
+      ref: "Romanos 6:4a"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "Su vida resucitada",
+      verse: "...como Cristo resucitó de los muertos, así también nosotros andemos en vida nueva.",
+      ref: "Romanos 6:4b"
+    },
+    nota: "La participación es real, no simbólica. Morir y resucitar con Cristo no es solo una imagen bautismal — es una declaración de lo que ocurrió en la unión con él."
+  },
+  {
+    num: "04",
+    color: "#0F6E56",
+    title: "Él fue maldición · nosotros recibimos la bendición",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestra maldición",
+      verse: "Cristo nos redimió de la maldición de la ley, hecho por nosotros maldición...",
+      ref: "Gálatas 3:13a"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "La bendición de Abraham",
+      verse: "...para que en Cristo Jesús la bendición de Abraham alcanzase a los gentiles.",
+      ref: "Gálatas 3:14a"
+    },
+    nota: "Recuerda la serie anterior: la ley pronunciaba maldición sobre quien no la cumplía perfectamente. Cristo tomó esa maldición específica. No la redujo — la tomó entera."
+  },
+  {
+    num: "05",
+    color: "#854F0B",
+    title: "Él tomó nuestro rechazo · nosotros recibimos su adopción",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestro rechazo y orfandad",
+      verse: "A lo suyo vino, y los suyos no le recibieron.",
+      ref: "Juan 1:11"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "El espíritu de adopción",
+      verse: "Pues no habéis recibido el espíritu de esclavitud para estar otra vez en temor, sino que habéis recibido el espíritu de adopción, por el cual clamamos: ¡Abba, Padre!",
+      ref: "Romanos 8:15"
+    },
+    nota: "Este intercambio es el corazón de la charla 2. Él fue rechazado para que nosotros pudiéramos ser recibidos. La adopción no es metáfora — es el resultado directo de que él tomó nuestro lugar de rechazo."
+  },
+  {
+    num: "06",
+    color: "#3B6D11",
+    title: "Él tomó nuestra debilidad · nosotros recibimos su fortaleza",
+    el: {
+      tag: "Él tomó →",
+      content: "Nuestra debilidad",
+      verse: "Porque también Cristo padeció por nosotros... siendo matado en la carne.",
+      ref: "1 Pedro 3:18"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "Su poder y su gloria",
+      verse: "Todo lo puedo en Cristo que me fortalece.",
+      ref: "Filipenses 4:13"
+    },
+    nota: "El poder no viene de disciplina espiritual propia — viene de la unión. La rama no produce fruto por su propio esfuerzo; lo produce porque está unida al tronco."
+  },
+  {
+    num: "07",
+    color: "#534AB7",
+    title: "Él se hizo siervo · nosotros nos hicimos hijos y herederos",
+    el: {
+      tag: "Él tomó →",
+      content: "Forma de siervo",
+      verse: "...se despojó a sí mismo, tomando forma de siervo, hecho semejante a los hombres.",
+      ref: "Filipenses 2:7"
+    },
+    nosotros: {
+      tag: "→ Nosotros recibimos",
+      content: "Posición de hijos herederos",
+      verse: "Y si hijos, también herederos; herederos de Dios y coherederos con Cristo.",
+      ref: "Romanos 8:17a"
+    },
+    nota: "El movimiento es opuesto y complementario: él descendió de hijo a siervo para que nosotros pudiéramos ascender de siervos a hijos. Este es el eje del Gran Intercambio."
+  }
+];
+
+const container = document.getElementById('cards');
+
+intercambios.forEach((ic, i) => {
+  const div = document.createElement('div');
+  div.className = 'intercambio';
+
+  const isOpen = i === 0;
+
+  div.innerHTML = `
+    <div class="ic-header" style="cursor:pointer" onclick="toggle(${i})">
+      <span class="ic-num" style="color:${ic.color}">${ic.num}</span>
+      <span class="ic-title">${ic.title}</span>
+      <span id="arr-${i}" style="font-size:11px;color:var(--color-text-tertiary);transition:transform 0.2s;transform:${isOpen?'rotate(90deg)':'rotate(0)'}"">▶</span>
+    </div>
+    <div class="ic-body" id="body-${i}" style="display:${isOpen?'block':'none'}">
+      <div class="exchange-cols">
+        <div class="col-left">
+          <div class="col-tag col-tag-red">${ic.el.tag}</div>
+          <div class="col-content">${ic.el.content}</div>
+          <div class="verse-small">"${ic.el.verse}"<span class="verse-ref ref-purple">${ic.el.ref}</span></div>
+        </div>
+        <div class="col-arrow">⇄</div>
+        <div class="col-right">
+          <div class="col-tag col-tag-green">${ic.nosotros.tag}</div>
+          <div class="col-content">${ic.nosotros.content}</div>
+          <div class="verse-small">"${ic.nosotros.verse}"<span class="verse-ref ref-purple">${ic.nosotros.ref}</span></div>
+        </div>
+      </div>
+      <div class="ic-footer">${ic.nota}</div>
+    </div>
+  `;
+  container.appendChild(div);
+});
+
+function toggle(i) {
+  const body = document.getElementById('body-' + i);
+  const arr = document.getElementById('arr-' + i);
+  const open = body.style.display === 'none';
+  body.style.display = open ? 'block' : 'none';
+  arr.style.transform = open ? 'rotate(90deg)' : 'rotate(0)';
+}
+</script>

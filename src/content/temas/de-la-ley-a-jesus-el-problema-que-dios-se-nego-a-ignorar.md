@@ -60,3 +60,11 @@ Hay gracia *dentro* del juicio. Dios pregunta antes de sentenciar. Pronuncia una
 Dios viste al que falló (3:21): las hojas no bastaban; él provee cobertura, y para eso algo tuvo que morir. Luego expulsa. La razón explícita no es solo castigo: impedir que el hombre coma del árbol de la vida y quede inmortal en estado caído, sin posibilidad de redención. Justicia (el pecado tiene consecuencias), misericordia (no dejarlo atrapado para siempre) y propósito (abrir el camino del rescate). Dios cerró una puerta para poder abrir otra.
 
 La imagen de Dios no fue borrada: Génesis 9:6 todavía habla del ser humano como imagen. Distorsionada, no destruida. Como un espejo roto: todavía refleja, fragmentado. La redención restaura; no fabrica de cero.
+
+## Para quien sirve
+
+Génesis 3 no es solo la historia de cómo fallamos: es el retrato de cómo somos. El patrón —tentación, racionalización, desobediencia, vergüenza, escondite, acusación— se reconoce en un turno difícil, en una conversación que se rompe, en el impulso de cubrir antes de confesar.
+
+La restauración empieza donde Adán no pudo: «fui yo». Mientras el hombre huye, Dios camina. La pregunta «¿dónde estás tú?» no es para localizarte. Es para que vuelvas.
+
+Génesis 3:15 se nombra aquí y no se explica del todo. Alguien herirá a la serpiente en la cabeza. La esperanza queda abierta a propósito: el sistema y el cumplimiento vienen después.

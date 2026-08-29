@@ -1,0 +1,294 @@
+
+<style>
+.wrap { padding: 4px 0 12px; }
+
+.tab-bar { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 18px; }
+.tab { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.tab:hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
+.tab.active { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .tab.active { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); margin-bottom: 12px; overflow: hidden; }
+.card-head { padding: 14px 16px 10px; }
+.card-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 6px; }
+.card-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); line-height: 1.35; }
+.card-body { padding: 0 16px 14px; font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; }
+.card-body p { margin-bottom: 8px; }
+.card-body p:last-child { margin-bottom: 0; }
+
+.lbl-purple { color: #534AB7; }
+.lbl-teal   { color: #0F6E56; }
+.lbl-coral  { color: #993C1D; }
+.lbl-amber  { color: #854F0B; }
+.lbl-blue   { color: #185FA5; }
+@media (prefers-color-scheme: dark) {
+  .lbl-purple { color: #AFA9EC; }
+  .lbl-teal   { color: #9FE1CB; }
+  .lbl-coral  { color: #F0997B; }
+  .lbl-amber  { color: #FAC775; }
+  .lbl-blue   { color: #85B7EB; }
+}
+
+.stat-row { display: flex; align-items: baseline; gap: 10px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 12px 14px; margin-bottom: 8px; }
+.stat-n { font-size: 24px; font-weight: 500; min-width: 56px; }
+.stat-txt { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+.stat-src { font-size: 11px; color: var(--color-text-tertiary); margin-top: 2px; }
+
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 16px 0; }
+
+.bridge { border-left: 3px solid #7F77DD; padding: 12px 14px; border-radius: 0; margin-bottom: 12px; }
+.bridge-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; color: #7F77DD; text-transform: uppercase; margin-bottom: 5px; }
+@media (prefers-color-scheme: dark) { .bridge-lbl { color: #AFA9EC; } .bridge { border-color: #534AB7; } }
+.bridge-txt { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; font-style: italic; }
+
+.versus { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px; }
+.vs-col { border-radius: var(--border-radius-lg); padding: 14px; border: 0.5px solid var(--color-border-tertiary); }
+.vs-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+.vs-item { font-size: 12px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 4px; padding-left: 14px; position: relative; }
+.vs-item::before { content: "—"; position: absolute; left: 0; color: var(--color-text-tertiary); }
+
+.quote { font-family: var(--font-serif); font-size: 14px; line-height: 1.75; color: var(--color-text-primary); padding: 12px 16px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); margin-bottom: 8px; }
+.quote-who { font-family: var(--font-sans); font-size: 11px; font-weight: 500; margin-top: 6px; }
+
+.flow-steps { display: flex; flex-direction: column; gap: 0; }
+.step { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.step:last-child { border-bottom: none; }
+.step-num { font-size: 11px; font-weight: 500; min-width: 20px; padding-top: 2px; }
+.step-content { flex: 1; }
+.step-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+.step-txt { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
+.arrow { text-align: center; color: var(--color-text-tertiary); font-size: 14px; padding: 2px 0; }
+</style>
+
+<div class="wrap">
+<div class="tab-bar" id="tabs"></div>
+<div id="panels"></div>
+</div>
+
+<script>
+const data = [
+  {
+    id: "fundamento",
+    label: "El principio",
+    content: () => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-lbl lbl-purple">El hallazgo central</div>
+          <div class="card-title">La identidad no es el resultado del comportamiento. Es su causa.</div>
+        </div>
+        <div class="card-body">
+          <p>Durante décadas, la psicología asumió que el cambio funciona así: cambia lo que haces, y eventualmente cambiarás quién eres. La investigación reciente invirtió esa lógica.</p>
+          <p>La Teoría de Motivación Basada en Identidad (IBM), desarrollada por Daphna Oyserman en la USC, demuestra que las personas actúan de manera consistente con quien <em>creen que son</em>. La identidad no sigue al comportamiento — lo precede y lo genera.</p>
+        </div>
+      </div>
+      <div class="quote">
+        "La motivación y el comportamiento son basados en identidad. Las personas prefieren actuar de maneras que sean consistentes con la identidad, no inconsistentes."
+        <div class="quote-who lbl-purple">Daphna Oyserman, USC — Identity-Based Motivation Theory</div>
+      </div>
+      <div class="bridge">
+        <div class="bridge-lbl">Puente teológico</div>
+        <div class="bridge-txt">Esto es exactamente lo que Pablo enseña. En Efesios, nunca dice "pórtate bien para ser hijo de Dios." Dice "eres hijo de Dios, por lo tanto vive como tal." El orden no es arbitrario — es la lógica del evangelio.</div>
+      </div>
+    `
+  },
+  {
+    id: "marcia",
+    label: "Los 4 estados",
+    content: () => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-lbl lbl-teal">James Marcia · 35+ años de investigación</div>
+          <div class="card-title">Los cuatro estados de identidad y sus consecuencias conductuales</div>
+        </div>
+        <div class="card-body">
+          <p>El psicólogo James Marcia identificó cuatro estados en los que puede estar la identidad de una persona, basándose en dos variables: si ha habido exploración y si hay compromiso. Las diferencias de comportamiento entre estados son dramáticas.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="card-lbl lbl-teal">Estado 1</div><div class="card-title">Logro de identidad — exploración + compromiso</div></div>
+        <div class="card-body">
+          <p>Personas que han explorado y llegado a comprometerse con una identidad clara. Los estudios muestran que son resistentes a la manipulación de su autoestima, no siguen la presión de grupo, piensan con eficacia bajo estrés, muestran razonamiento moral postconvencional y son más avanzadas en intimidad y madurez.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="card-lbl lbl-amber">Estado 2</div><div class="card-title">Cierre prematuro — compromiso sin exploración</div></div>
+        <div class="card-body">
+          <p>Adoptaron una identidad dada por otros (padres, cultura, institución) sin cuestionarla. Su autoestima depende de cumplir expectativas externas. Tienen locus de control externo y frecuentemente recurren al narcisismo defensivo para sostener la autoestima. No es una identidad propia — es prestada.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="card-lbl lbl-coral">Estado 3</div><div class="card-title">Difusión — sin exploración ni compromiso</div></div>
+        <div class="card-body">
+          <p>El estado más preocupante. Sin identidad resuelta, estas personas son frecuentemente apáticas y en casos extremos derivan hacia conductas antisociales o ideación suicida. Son las más vulnerables a influencias externas y tienen las puntuaciones más bajas en autonomía y madurez moral.</p>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-n lbl-purple" style="font-size:20px">6.85x</div>
+          <div class="stat-src">odds ratio</div>
+        </div>
+        <div class="stat-txt">Mayor probabilidad de razonamiento moral postconvencional en personas con identidad lograda, vs quienes no la tienen — meta-análisis de 17 estudios (1967–2005)</div>
+      </div>
+      <div class="bridge">
+        <div class="bridge-lbl">Puente teológico</div>
+        <div class="bridge-txt">El "cierre prematuro" de Marcia describe perfectamente a quien sirve en la iglesia por tradición o porque sus padres lo hacían — una identidad prestada, no apropiada. La conversión genuina es pasar del cierre prematuro o la difusión al logro de identidad: explorar quién eres en Cristo y comprometerte con eso.</div>
+      </div>
+    `
+  },
+  {
+    id: "conducta",
+    label: "Identidad → conducta",
+    content: () => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-lbl lbl-blue">Mecanismo psicológico</div>
+          <div class="card-title">Por qué la identidad genera conducta, no al revés</div>
+        </div>
+        <div class="card-body">
+          <p>Cuando una persona tiene una identidad clara, el cerebro trabaja activamente para mantener consistencia con ella. Esto no es fuerza de voluntad — es un mecanismo automático llamado consistencia cognitiva. La disonancia entre identidad y acción produce incomodidad, y el cerebro la resuelve cambiando la acción.</p>
+        </div>
+      </div>
+      <div class="versus">
+        <div class="vs-col" style="background:var(--color-background-secondary)">
+          <div class="vs-label lbl-coral">Sin identidad clara</div>
+          <div class="vs-item">Lucha constante con la fuerza de voluntad</div>
+          <div class="vs-item">El comportamiento dura mientras dure la motivación</div>
+          <div class="vs-item">Necesita refuerzo externo constante</div>
+          <div class="vs-item">Cada decisión es una batalla interna</div>
+          <div class="vs-item">Cambia según el contexto y la presión</div>
+        </div>
+        <div class="vs-col" style="background:var(--color-background-secondary)">
+          <div class="vs-label lbl-teal">Con identidad consolidada</div>
+          <div class="vs-item">El comportamiento fluye naturalmente</div>
+          <div class="vs-item">El cambio es estable y autosuficiente</div>
+          <div class="vs-item">La motivación es interna e intrínseca</div>
+          <div class="vs-item">Las decisiones son congruentes con el yo</div>
+          <div class="vs-item">Resiste la presión de grupo</div>
+        </div>
+      </div>
+      <div class="quote">
+        "Alguien que se identifica como 'atleta' continúa entrenando aunque llueva, haga frío o sea inconveniente. Alguien que solo 'intenta hacer ejercicio' siempre encuentra razones para no ir. La diferencia no es la disciplina. Es la identidad."
+        <div class="quote-who lbl-blue">Identity-Based Habits Blueprint — Behavior Science Research</div>
+      </div>
+      <div class="bridge">
+        <div class="bridge-lbl">Puente teológico</div>
+        <div class="bridge-txt">La diferencia entre obediencia por deber y obediencia por identidad es exactamente esta. "Debo orar" es diferente a "soy alguien que habla con su Padre." La primera requiere disciplina. La segunda es simplemente consistente con quien eres.</div>
+      </div>
+    `
+  },
+  {
+    id: "capas",
+    label: "Las capas del yo",
+    content: () => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-lbl lbl-amber">Modelo psicológico</div>
+          <div class="card-title">La identidad opera en capas — y la más profunda lo determina todo</div>
+        </div>
+        <div class="card-body">
+          <p>La psicología identifica al menos cuatro capas de la persona, de afuera hacia adentro. La mayoría de los intentos de cambio operan en las capas externas — y por eso fracasan.</p>
+        </div>
+      </div>
+      <div class="flow-steps">
+        <div class="step">
+          <div class="step-num lbl-coral">4</div>
+          <div class="step-content">
+            <div class="step-title">Entorno</div>
+            <div class="step-txt">Lo que me rodea: el ambiente, las circunstancias, las personas.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num lbl-amber">3</div>
+          <div class="step-content">
+            <div class="step-title">Conducta</div>
+            <div class="step-txt">Lo que hago: acciones, hábitos, decisiones.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num lbl-teal">2</div>
+          <div class="step-content">
+            <div class="step-title">Creencias y capacidades</div>
+            <div class="step-txt">Lo que creo que es posible y lo que creo que puedo hacer.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num lbl-purple">1</div>
+          <div class="step-content">
+            <div class="step-title">Identidad — el núcleo</div>
+            <div class="step-txt">Quién creo que soy. Todo lo demás se reorganiza alrededor de esto. Cuando la identidad cambia, todo lo que está por encima de ella también cambia.</div>
+          </div>
+        </div>
+      </div>
+      <div class="quote">
+        "Identidad influye creencias. Creencias influyen capacidades. Capacidades influyen conducta. Conducta influye entorno. Si intentas cambiar el entorno sin cambiar la identidad, el progreso es lento y frágil. Si cambias la identidad, todo lo demás se reorganiza."
+        <div class="quote-who lbl-amber">Mike Mandel Hypnosis — Psychology of Identity Transformation</div>
+      </div>
+      <div class="bridge">
+        <div class="bridge-lbl">Puente teológico</div>
+        <div class="bridge-txt">La religión tradicional opera en las capas 3 y 4: cambia lo que haces, cambia tu entorno. El evangelio opera en la capa 1: cambia quién eres. "Nueva criatura" (2 Cor 5:17) no es conducta nueva — es identidad nueva. Todo lo demás es consecuencia.</div>
+      </div>
+    `
+  },
+  {
+    id: "aplicacion",
+    label: "Para la charla",
+    content: () => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-lbl lbl-purple">Cómo usar esto en la charla</div>
+          <div class="card-title">De los datos a la ilustración que rompe esquemas</div>
+        </div>
+        <div class="card-body">
+          <p>No es necesario citar todos los estudios. Basta con anclar el concepto con una imagen que lo haga tangible.</p>
+        </div>
+      </div>
+      <div class="card" style="border-left: 3px solid #7F77DD; border-radius:0; background: var(--color-background-secondary)">
+        <div class="card-head"><div class="card-lbl lbl-purple">Ilustración 1 — Los dos fumadores</div></div>
+        <div class="card-body">
+          <p>Dos personas deciden dejar de fumar. En una fiesta alguien les ofrece un cigarrillo. La primera dice: <em>"Estoy tratando de no fumar."</em> La segunda dice: <em>"No fumo."</em> La primera libra una batalla interna. La segunda no tiene conflicto — simplemente no es lo que ella hace. La diferencia no es la fuerza de voluntad. Es la identidad.</p>
+        </div>
+      </div>
+      <div class="card" style="border-left: 3px solid #1D9E75; border-radius:0; background: var(--color-background-secondary)">
+        <div class="card-head"><div class="card-lbl lbl-teal">Ilustración 2 — La declaración de impuestos</div></div>
+        <div class="card-body">
+          <p>Una persona honesta no evita hacer trampa en sus impuestos porque tiene miedo de la multa. Lo hace porque no es un tramposo. La acción (no hacer trampa) es la misma, pero el origen es completamente diferente. Uno actúa desde el miedo. El otro desde la identidad. Y eso se siente diferente por dentro — y produce resultados diferentes a largo plazo.</p>
+        </div>
+      </div>
+      <div class="card" style="border-left: 3px solid #D85A30; border-radius:0; background: var(--color-background-secondary)">
+        <div class="card-head"><div class="card-lbl lbl-coral">La pregunta que cambia todo</div></div>
+        <div class="card-body">
+          <p>La psicología dice: la pregunta poderosa no es <em>"¿qué debo hacer?"</em> sino <em>"¿quién soy?"</em><br><br>El evangelio dice: la respuesta ya está dada. En Cristo, ya sabes quién eres. La pregunta ahora es si lo vives.</p>
+        </div>
+      </div>
+      <div class="stat-row">
+        <div>
+          <div class="stat-n lbl-teal">4–5x</div>
+        </div>
+        <div class="stat-txt">Los hábitos basados en identidad son 4 a 5 veces más sostenibles que los basados en objetivos o resultados, según meta-análisis de estudios de cambio de conducta.</div>
+      </div>
+    `
+  }
+];
+
+const tabBar = document.getElementById('tabs');
+const panelsEl = document.getElementById('panels');
+
+data.forEach((d, i) => {
+  const tab = document.createElement('button');
+  tab.className = 'tab' + (i === 0 ? ' active' : '');
+  tab.textContent = d.label;
+  tab.onclick = () => {
+    document.querySelectorAll('.tab').forEach((t,j) => t.classList.toggle('active', j===i));
+    document.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('active', j===i));
+  };
+  tabBar.appendChild(tab);
+
+  const panel = document.createElement('div');
+  panel.className = 'panel' + (i === 0 ? ' active' : '');
+  panel.innerHTML = d.content();
+  panelsEl.appendChild(panel);
+});
+</script>

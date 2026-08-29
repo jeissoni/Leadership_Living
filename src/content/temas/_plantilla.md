@@ -21,6 +21,6 @@ resources:
 
 ## Sustento
 
-Copia este archivo, quítale el `_` del nombre. `series` puede ser `el-reino-y-el-voluntario` o `de-la-ley-a-jesus`. `order` es el número dentro de la serie.
+Copia este archivo, quítale el `_` del nombre. `series` es el id del catálogo en `src/lib/series.ts`. `order` es el número dentro de la serie.
 
 El cuerpo de esta página es el apunte para quien vuelve a leer. Usa `>` para citas bíblicas. `widgets` lista archivos de `src/widgets/` sin `.html` y solo aparecen en `/temas/[slug]/guion/`.

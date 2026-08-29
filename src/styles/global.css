@@ -20,12 +20,19 @@
   --font-sans: var(--font-ui);
   --color-text-primary: var(--ink);
   --color-text-secondary: var(--ink-soft);
+  --color-text-tertiary: var(--ink-faint);
   --color-border-tertiary: var(--rule);
   --color-border-secondary: var(--gold-soft);
   --color-background-primary: var(--surface);
   --color-background-secondary: #efe8dc;
   --border-radius-lg: 14px;
   --border-radius-md: 10px;
+  --text-primary: var(--ink);
+  --text-secondary: var(--ink-soft);
+  --surface-0: var(--paper);
+  --surface-1: var(--surface);
+  --border: var(--rule);
+  --font-voice: var(--font-serif);
 }
 
 *,
@@ -351,16 +358,6 @@ a:hover {
   width: min(760px, calc(100% - 12vw));
   margin: 0 auto;
   padding: 2.2rem 0 4.5rem;
-}
-
-.widget-stack {
-  margin-top: 1.6rem;
-}
-
-.widget-stack + .widget-stack {
-  margin-top: 2.4rem;
-  padding-top: 1.6rem;
-  border-top: 1px solid var(--rule);
 }
 
 .mind-map {

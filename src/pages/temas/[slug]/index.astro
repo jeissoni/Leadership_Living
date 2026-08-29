@@ -33,13 +33,15 @@ const guionHref = `${base}temas/${tema.id}/guion/`;
       <button class="btn" id="exportar-pdf" type="button">Exportar PDF</button>
     </div>
 
-    <p class="reading-kicker">{serie?.title}</p>
+    <p class="reading-kicker">Recurso · {serie?.title}</p>
     <h1 class="reading-title">{tema.data.title}</h1>
     <div class="meta">
       <span>Charla {tema.data.order} de {total}</span>
       {tema.data.duration && <span>· {tema.data.duration}</span>}
     </div>
     <div class="gold-rule"></div>
+
+    <p class="guion-lede">{tema.data.description}</p>
 
     <blockquote class="thesis">
       <p class="thesis-label">En una frase</p>

@@ -59,3 +59,9 @@ Hebreos nombra la limitación que el mismo ritual ya insinuaba: esos sacrificios
 > En esos sacrificios cada año se hace memoria de los pecados; porque la sangre de los toros y de los machos cabríos no puede quitar los pecados.
 >
 > <cite>Hebreos 10:3–4</cite>
+
+## Para quien sirve
+
+Quien vive en ciclos de culpa, alivio y repetición reconoce el agotamiento del sistema. Cubrir no es lo mismo que quitar. El Día de la Expiación anual ya lo decía: lo de la vez anterior no era definitivo.
+
+El velo —alto, grueso, cerrado— no era decoración: era teología visible. Dios cerca, pero no del todo. Esta charla se queda ahí a propósito. El cumplimiento no se adelanta. Quien sirve desde la vergüenza cubierta, no quitada, sigue fabricando hojas de higuera: actividad, comparación, perfeccionismo. El sistema era poderoso. No era la última palabra.

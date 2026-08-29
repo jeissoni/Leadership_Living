@@ -1,0 +1,240 @@
+
+<style>
+.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nb:hover { background: var(--color-background-secondary); }
+.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+.panel { display: none; } .panel.on { display: block; }
+.prog { display: flex; gap: 3px; margin-bottom: 14px; }
+.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); }
+.ps.done { background: #534AB7; } .ps.cur { background: #AFA9EC; }
+.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
+.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.blk-bd { padding: 14px 16px; }
+.script { font-size: 14px; line-height: 1.85; color: var(--color-text-primary); }
+.script em { color: var(--color-text-secondary); font-style: italic; }
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; }
+.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; background: var(--color-background-secondary); line-height: 1.6; }
+.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
+.ilustra strong { color: #0F6E56; font-weight: 500; }
+.dato { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .dato { background: #042C53; color: #85B7EB; } }
+.dato strong { font-weight: 500; }
+.puente { font-size: 13px; line-height: 1.65; color: #854F0B; background: #FAEEDA; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .puente { background: #412402; color: #FAC775; } }
+.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0; }
+.don-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 7px; }
+.don-hd { display: flex; align-items: center; gap: 10px; padding: 9px 13px; background: var(--color-background-secondary); cursor: pointer; }
+.don-nombre { font-size: 13px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+.don-ref { font-size: 10px; color: var(--color-text-tertiary); }
+.don-arr { font-size: 11px; color: var(--color-text-tertiary); transition: transform 0.2s; }
+.don-arr.open { transform: rotate(90deg); }
+.don-body { display: none; padding: 10px 13px; border-top: 0.5px solid var(--color-border-tertiary); font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+.don-body.open { display: block; }
+.cat-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; margin: 14px 0 6px; }
+.pastoral { font-size: 14px; line-height: 1.9; color: var(--color-text-primary); background: var(--color-background-secondary); border: 1.5px solid #7F77DD; border-radius: var(--border-radius-lg); padding: 16px 18px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .pastoral { border-color: #534AB7; } }
+.pastoral-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #534AB7; margin-bottom: 8px; }
+@media (prefers-color-scheme: dark) { .pastoral-lbl { color: #AFA9EC; } }
+.obra-row { display: flex; gap: 10px; padding: 9px 0; border-bottom: 0.5px solid var(--color-border-tertiary); align-items: flex-start; }
+.obra-row:last-child { border-bottom: none; }
+.obra-titulo { font-size: 12px; font-weight: 500; color: var(--color-text-primary); min-width: 150px; padding-top: 1px; }
+.obra-desc { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; flex: 1; }
+.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+.navb:disabled { opacity: 0.3; cursor: default; }
+.navb:not(:disabled):hover { background: var(--color-background-secondary); }
+</style>
+
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const dones = {
+  revelacion: [
+    { nombre: "Palabra de sabiduría", ref: "1 Cor 12:8", desc: "Capacidad sobrenatural de aplicar el conocimiento de Dios a situaciones concretas. No es inteligencia natural — es comprensión divina de cómo actuar en un momento específico." },
+    { nombre: "Palabra de conocimiento", ref: "1 Cor 12:8", desc: "Revelación de información que la persona no podría saber por medios naturales. Frecuente en ministerio de sanidad y consejería pastoral — el Espíritu revela algo específico sobre alguien para su bien." },
+    { nombre: "Discernimiento de espíritus", ref: "1 Cor 12:10", desc: "Capacidad de distinguir si algo opera por el Espíritu de Dios, por espíritu humano o por influencia demoníaca. Crítico para la guerra espiritual que vimos en charlas anteriores." },
+    { nombre: "Profecía", ref: "1 Cor 12:10 · Rom 12:6", desc: "Hablar por inspiración del Espíritu para edificación, exhortación y consolación (1 Cor 14:3). No es predicar — es una palabra específica, en un momento específico, para una persona o comunidad específica." }
+  ],
+  poder: [
+    { nombre: "Fe", ref: "1 Cor 12:9", desc: "No la fe salvadora que todos tienen — sino una confianza sobrenatural en Dios para situaciones específicas que exceden la capacidad humana de creer. Opera especialmente antes de milagros." },
+    { nombre: "Dones de sanidades", ref: "1 Cor 12:9-10", desc: "Nótese el plural — dones de sanidades. Sugiere que no es una capacidad general sino manifestaciones específicas del Espíritu en momentos específicos. Siempre para la gloria de Dios y el bien del que recibe." },
+    { nombre: "Operación de milagros", ref: "1 Cor 12:10", desc: "Intervención sobrenatural que altera el orden natural. Jesús lo hizo. La iglesia primitiva lo experimentó. El Espíritu lo sigue haciendo cuando y como él quiere — no como técnica controlable." },
+    { nombre: "Lenguas e interpretación", ref: "1 Cor 12:10", desc: "Hablar en un idioma no aprendido — ya sea un lenguaje humano desconocido (como en Hechos 2) o un lenguaje espiritual. Cuando se usa en la congregación, requiere interpretación para edificar al cuerpo." }
+  ],
+  servicio: [
+    { nombre: "Enseñanza", ref: "Rom 12:7 · Ef 4:11", desc: "Capacidad de explicar y aplicar la Palabra de manera que otros entiendan y sean transformados. No es solo transmitir información — es iluminar la verdad de manera que cambie la vida." },
+    { nombre: "Exhortación", ref: "Rom 12:8", desc: "Don de animar, consolar y llamar a acción a otros. El que tiene este don sabe exactamente qué decir para que alguien vuelva a levantarse. Bernabé — 'hijo de consolación' — es el ejemplo bíblico." },
+    { nombre: "Servicio y ayuda", ref: "Rom 12:7 · 1 Cor 12:28", desc: "Capacidad y disposición sobrenatural de identificar necesidades prácticas y cubrirlas. No es solo voluntad de ayudar — es el Espíritu equipando a alguien para que el servicio práctico sea ministerio real." },
+    { nombre: "Liderazgo y administración", ref: "Rom 12:8 · 1 Cor 12:28", desc: "Don de organizar, dirigir y coordinar al cuerpo para que funcione. No es talento gerencial — es capacidad dada por el Espíritu de ver cómo las partes encajan y guiar hacia el propósito de Dios." },
+    { nombre: "Generosidad", ref: "Rom 12:8", desc: "Don de dar con una libertad y alegría que excede lo natural. La persona con este don no da por obligación — da porque el Espíritu hace que dar sea una fuente de gozo genuino." }
+  ]
+};
+
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 6 min",
+    bloques: [
+      { t: "blk", lbl: "Cierre de la serie y apertura de la charla", html: `<p class="script">Hemos recorrido mucho terreno en estas charlas. Hablamos de estar en Cristo — de que la posición lo cambia todo. Hablamos de ser hijos — de que tenemos acceso al Padre como Abba. Hablamos del mundo, de la carne, del diablo — de los que se oponen a esa identidad.<br><br>Y en todo ese recorrido hay algo que ha aparecido en el fondo de cada tema sin que lo hayamos desarrollado directamente. Una persona. Una presencia. El que hace posible que todo lo que hemos hablado no se quede en doctrina.<br><br>Hoy hablamos de él. Del Espíritu Santo.<br><br>Y quiero empezar con una pregunta honesta: ¿cómo lo describirías tú? ¿Qué imagen tienes del Espíritu Santo?</p>` },
+      { t: "pregunta", html: "¿Lo piensas como una persona — con quien tienes relación? ¿O como una fuerza, una experiencia, una energía que recibes cuando haces las cosas bien?" },
+      { t: "blk", lbl: "", html: `<p class="script">La respuesta a esa pregunta define todo lo que viene después. Porque hay una diferencia enorme entre relacionarse con una persona y tratar de acceder a una fuerza.<br><br>Y la Biblia es muy clara sobre cuál de las dos es correcta.</p>` },
+      { t: "nota", html: "Dejar que la pregunta inicial respire. No apresurarse a responderla. El objetivo es que el grupo note su propia imagen del Espíritu antes de que el texto la corrija o confirme." }
+    ]
+  },
+  {
+    label: "Quién es",
+    tiempo: "6 – 17 min",
+    bloques: [
+      { t: "blk", lbl: "Una persona, no una fuerza", html: `<p class="script">La teología tiene una palabra para el estudio del Espíritu Santo: pneumatología — de pneuma, que en griego significa aliento, viento, espíritu. Y la pneumatología empieza con una declaración que parece obvia pero que tiene implicaciones enormes:<br><br>El Espíritu Santo no es una fuerza. Es una persona.<br><br>Una persona con mente, con voluntad, con emociones. Y eso no es una afirmación mística — es lo que el texto dice explícitamente.</p>` },
+      { t: "dato", html: `<strong>Tres evidencias bíblicas de que el Espíritu es persona, no fuerza:</strong><br><br><strong>Habla:</strong> "Dijo el Espíritu Santo: Apartadme a Bernabé y a Saulo para la obra a que los he llamado." — Hechos 13:2. Las fuerzas no hablan. Las personas sí.<br><br><strong>Puede ser entristecido:</strong> "No entristezcáis al Espíritu Santo de Dios." — Efesios 4:30. Solo algo con emociones puede ser entristecido. Una corriente eléctrica no se entristece.<br><br><strong>Tiene voluntad propia:</strong> "Pero todas estas cosas las hace uno y el mismo Espíritu, repartiendo a cada uno en particular como él quiere." — 1 Corintios 12:11. Distribuye los dones según su voluntad — no según la nuestra.` },
+      { t: "blk", lbl: "El otro Consolador — Juan 14", html: `<p class="script">Jesús usa una imagen específica para describir al Espíritu que nos ayuda a entender quién es en relación con nosotros:</p>` },
+      { t: "verse", ref: "Juan 14:16-17", texto: "Y yo rogaré al Padre, y os dará otro Consolador, para que esté con vosotros para siempre: el Espíritu de verdad, al cual el mundo no puede recibir, porque no le ve, ni le conoce; pero vosotros le conocéis, porque mora con vosotros, y estará en vosotros." },
+      { t: "blk", lbl: "", html: `<p class="script">"Otro Consolador" — en griego allon Parakletos. Allon significa "otro del mismo tipo." Jesús no dijo "algo para reemplazarme." Dijo "alguien igual a mí para reemplazarme." El Espíritu es la presencia de Jesús con nosotros después de la ascensión.<br><br>Y noten las preposiciones: "mora con vosotros, y estará en vosotros." Con — presencia acompañante. En — presencia interna. El Espíritu no está cerca. Está adentro.<br><br>Eso cambia completamente cómo te relacionas con él. No lo buscas en algún lugar externo. Está donde tú estás.</p>` },
+      { t: "verse", ref: "1 Corintios 3:16", texto: "¿No sabéis que sois templo de Dios, y que el Espíritu de Dios mora en vosotros?" },
+      { t: "blk", lbl: "Su obra en el creyente — antes de los dones", html: `<p class="script">Antes de hablar de lo que el Espíritu hace a través de nosotros — los dones — necesitamos ver lo que hace en nosotros. Porque los dones son la expresión hacia afuera de una obra que primero ocurre adentro.</p>` },
+      { t: "obras", items: [
+        { titulo: "Convicción", desc: "Juan 16:8 — convence al mundo de pecado, de justicia y de juicio. Es el Espíritu quien hace que la Palabra no sea solo información sino verdad que toca el corazón." },
+        { titulo: "Regeneración", desc: "Juan 3:5-6 — el nuevo nacimiento es obra del Espíritu. No mejoramiento moral — nueva vida de una nueva fuente." },
+        { titulo: "Testimonio de filiación", desc: "Romanos 8:16 — el Espíritu mismo da testimonio a nuestro espíritu de que somos hijos de Dios. La certeza de ser hijo no viene de razonamiento — viene del Espíritu." },
+        { titulo: "Intercesión", desc: "Romanos 8:26 — el Espíritu intercede por nosotros con gemidos indecibles cuando no sabemos qué pedir. Ora en nosotros cuando nosotros no podemos." },
+        { titulo: "Santificación", desc: "2 Corintios 3:18 — nos transforma de gloria en gloria. La santificación no es esfuerzo moral — es rendirse al proceso del Espíritu." },
+        { titulo: "Llenura continua", desc: "Efesios 5:18 — 'sed llenos del Espíritu' en tiempo presente continuo. No un evento de una vez — una disposición constante de rendición y apertura." }
+      ]},
+      { t: "trans", html: "— Ahora: lo que el Espíritu hace a través de nosotros —" }
+    ]
+  },
+  {
+    label: "Los dones",
+    tiempo: "17 – 35 min",
+    bloques: [
+      { t: "blk", lbl: "La lógica de los dones", html: `<p class="script">Pablo habla de los dones en tres pasajes principales: 1 Corintios 12, Romanos 12 y Efesios 4. Y hay algo que los tres tienen en común que define la lógica entera:<br><br>Los dones no son para el que los tiene. Son para el cuerpo.</p>` },
+      { t: "verse", ref: "1 Corintios 12:7", texto: "Pero a cada uno le es dada la manifestación del Espíritu para provecho de todos." },
+      { t: "blk", lbl: "", html: `<p class="script">"Para provecho de todos." No para demostrar espiritualidad. No para hacer sentir bien al que lo tiene. Para que el cuerpo entero funcione mejor.<br><br>Y hay otro detalle crucial: los dones en griego se llaman charismata — de charis, gracia. Son dones de gracia. No se ganan. No se merecen. No son el resultado de madurez espiritual. Los reparte el Espíritu "como él quiere" — 1 Corintios 12:11.<br><br>Eso significa que el don que tienes no dice nada sobre cuánto vales espiritualmente. Dice algo sobre para qué te necesita el cuerpo en este momento.<br><br>Vamos a ver los dones en tres categorías naturales. No porque Pablo las llame así — sino porque ayuda a entender la lógica de cada uno.</p>` },
+      { t: "cat", color: "#534AB7", bg: "#EEEDFE", label: "Categoría 1 — Dones de revelación", desc: "El Espíritu revela — da a conocer algo que no se puede saber por medios naturales" },
+      { t: "dones", cat: "revelacion" },
+      { t: "cat", color: "#993C1D", bg: "#FAECE7", label: "Categoría 2 — Dones de poder", desc: "El Espíritu interviene — actúa de maneras que exceden el orden natural" },
+      { t: "dones", cat: "poder" },
+      { t: "cat", color: "#0F6E56", bg: "#E1F5EE", label: "Categoría 3 — Dones de servicio", desc: "El Espíritu equipa — capacita para funciones que edifican al cuerpo en lo cotidiano" },
+      { t: "dones", cat: "servicio" },
+      { t: "blk", lbl: "Una advertencia y una invitación", html: `<p class="script">Dos cosas que Pablo quiere que entendamos sobre los dones.<br><br>La advertencia: ningún don te hace más importante que otro miembro del cuerpo. El que habla en lenguas no es más espiritual que el que sirve mesas. El que profetiza no vale más que el que administra. Pablo lo dice con una imagen que no deja lugar a duda:</p>` },
+      { t: "verse", ref: "1 Corintios 12:21-22", texto: "Ni el ojo puede decir a la mano: No te necesito, ni tampoco la cabeza a los pies: No tengo necesidad de vosotros. Antes bien los miembros del cuerpo que parecen más débiles, son los más necesarios." },
+      { t: "blk", lbl: "", html: `<p class="script">La invitación: procura los dones. El Espíritu los distribuye como él quiere — pero Pablo también dice "procurad los mejores dones" (1 Cor 12:31) y "procurad profetizar" (1 Cor 14:1). Hay una tensión entre soberanía del Espíritu y búsqueda activa del creyente. Las dos son verdad al mismo tiempo.<br><br>Puedes pedir. Puedes desear. Puedes disponerte. Y el Espíritu decide.</p>` }
+    ]
+  },
+  {
+    label: "El más excelente",
+    tiempo: "35 – 40 min",
+    bloques: [
+      { t: "blk", lbl: "1 Corintios 13 — el giro que lo cambia todo", html: `<p class="script">Pablo lista todos los dones en 1 Corintios 12. Y entonces hace algo que nadie esperaba. Al final del capítulo dice: "Pero procurad los mejores dones. Mas yo os muestro un camino aún más excelente."<br><br>Y escribe 1 Corintios 13.<br><br>El capítulo del amor. Justo en el medio de la discusión sobre los dones espirituales.<br><br>No es casualidad. Es el argumento más importante de toda la sección.</p>` },
+      { t: "verse", ref: "1 Corintios 13:1-3", texto: "Si yo hablase lenguas humanas y angélicas, y no tengo amor, vengo a ser como metal que resuena, o címbalo que retiñe. Y si tuviese profecía, y entendiese todos los misterios y toda ciencia, y si tuviese toda la fe, de tal manera que trasladase los montes, y no tengo amor, nada soy. Y si repartiese todos mis bienes para dar de comer a los pobres, y si entregase mi cuerpo para ser quemado, y no tengo amor, de nada me sirve." },
+      { t: "blk", lbl: "", html: `<p class="script">Lenguas angélicas. Profecía perfecta. Fe que mueve montañas. Generosidad total. Martirio.<br><br>Sin amor — nada.<br><br>El amor no es un don más en la lista. Es la condición de validez de todos los demás. Los dones sin amor producen ruido, no edificación. Poder sin amor produce daño.<br><br>Y aquí está la conexión que cierra toda la serie: el amor es el fruto del Espíritu — Gálatas 5:22. No se fabrica. Se produce cuando estás conectado a la vid correcta. Cuando caminas en el Espíritu.<br><br>Los dones sin el fruto son herramientas sin manos. El fruto sin los dones son manos sin herramientas. La vida en el Espíritu tiene las dos cosas al mismo tiempo.</p>` },
+      { t: "puente", html: `<strong>Para cerrar la serie:</strong> Todo lo que hemos visto estas semanas tiene un hilo que lo une. Estás en Cristo — posición. Eres hijo — relación. Tienes enemigos que atacan esa identidad — pero también tienes al que venció al mundo viviendo en ti. Y ese mismo Espíritu te equipa con dones específicos para que lo que eres en Cristo se exprese hacia los demás a través de ti.<br><br>No eres un voluntario que intenta ser útil. Eres un miembro del cuerpo equipado por el Espíritu, con dones específicos, para una función específica, en este momento específico. El cuerpo te necesita siendo tú — no siendo la versión mejorada de otro.` }
+    ]
+  },
+  {
+    label: "Cierre pastoral",
+    tiempo: "40 – 45 min",
+    bloques: [
+      { t: "pastoral", lbl: "Cierre pastoral de la charla y de la serie", html: `<p class="script">Quiero terminar con algo que creo que necesitamos escuchar no solo como cierre de esta charla, sino como cierre de todo lo que hemos recorrido juntos.<br><br>Empezamos preguntando quiénes somos. En Cristo. Hijos. Miembros del cuerpo. Ramas de la vid.<br><br>Hablamos de los que se oponen a esa identidad — el mundo que moldea, la carne que jala, el diablo que acusa.<br><br>Y hoy llegamos al que hace posible que todo eso sea más que doctrina: el Espíritu Santo.<br><br>Él es quien te convenció de que necesitabas a Cristo. Él es quien te hizo nacer de nuevo. Él es quien te susurra que eres hijo cuando la voz del acusador dice lo contrario. Él es quien ora en ti cuando no sabes cómo orar. Él es quien produce el fruto cuando estás conectado a la vid. Él es quien distribuye dones al cuerpo para que ningún miembro esté sin función.<br><br>No es una fuerza que debes activar. Es una persona que ya vive en ti.<br><br>La pregunta que me gustaría que se llevaran es simple. No "¿qué dones tengo?" Eso viene después. La pregunta más importante es:<br><br>¿Cómo me relaciono con él?<br><br>¿Lo trato como a una persona con quien tengo conversación, con quien camino, a quien escucho? ¿O lo trato como a una experiencia que busco de vez en cuando cuando necesito algo?<br><br>Porque todo lo que hemos aprendido estas semanas — la identidad en Cristo, la filiación, la resistencia a los enemigos, los dones — todo eso fluye de esa relación. No de la información sobre el Espíritu. De caminar con él.<br><br>Pablo lo dice en dos palabras que son todo un programa de vida: "andad en el Espíritu."<br><br>No una experiencia. Un caminar.</p>` },
+      { t: "verse", ref: "Gálatas 5:25", texto: "Si vivimos por el Espíritu, andemos también por el Espíritu." },
+      { t: "pregunta", html: "Pregunta para llevar: ¿Qué cambiaría en tu servicio como voluntario si empezaras cada semana preguntándole al Espíritu qué don necesita el cuerpo de ti esta semana — en lugar de hacer lo que siempre haces?" },
+      { t: "nota", html: `Oración de cierre — modelo: "Espíritu Santo, gracias porque no eres una fuerza que activamos — eres una persona que vive en nosotros. Gracias porque oras cuando no sabemos cómo, porque testificas que somos hijos, porque repartes dones para que el cuerpo funcione. Enséñanos a caminar contigo — no solo a buscarte cuando necesitamos algo. Amén."` }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+let donCount = 0;
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j<i);
+    s.classList.toggle('cur', j===i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+function toggleDon(id) {
+  const body = document.getElementById('don-body-' + id);
+  const arr = document.getElementById('don-arr-' + id);
+  const open = body.classList.toggle('open');
+  arr.classList.toggle('open', open);
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb'; btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'puente') {
+      html += `<div class="puente">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'pastoral') {
+      html += `<div class="pastoral"><div class="pastoral-lbl">${b.lbl}</div>${b.html}</div>`;
+    } else if (b.t === 'obras') {
+      html += `<div class="blk"><div class="blk-hd">Su obra en el creyente — seis dimensiones</div><div class="blk-bd">`;
+      b.items.forEach(o => {
+        html += `<div class="obra-row"><span class="obra-titulo">${o.titulo}</span><span class="obra-desc">${o.desc}</span></div>`;
+      });
+      html += `</div></div>`;
+    } else if (b.t === 'cat') {
+      html += `<div class="cat-lbl" style="color:${b.color}">${b.label}</div>
+               <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;background:${b.bg};padding:6px 10px;border-radius:6px">${b.desc}</div>`;
+    } else if (b.t === 'dones') {
+      dones[b.cat].forEach(d => {
+        const id = donCount++;
+        html += `<div class="don-card">
+          <div class="don-hd" onclick="toggleDon(${id})">
+            <span class="don-nombre">${d.nombre}</span>
+            <span class="don-ref">${d.ref}</span>
+            <span class="don-arr" id="don-arr-${id}">▶</span>
+          </div>
+          <div class="don-body" id="don-body-${id}">${d.desc}</div>
+        </div>`;
+      });
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html; panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>

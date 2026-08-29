@@ -63,3 +63,7 @@ La misma situación —«nadie reconoció mi trabajo hoy»— se lee distinto en
 > Bien, buen siervo y fiel; sobre poco has sido fiel, sobre mucho te pondré.
 >
 > <cite>Mateo 25:21</cite>
+
+## Para quien sirve
+
+Oír sin hacer deja la Palabra en información. El discípulo no es el que más sabe: es el que encarna lo que sabe. El riesgo de un grupo que ya entiende la Biblia no es la ignorancia: es la comodidad intelectual.

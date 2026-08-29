@@ -1,0 +1,312 @@
+
+<style>
+.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nb:hover { background: var(--color-background-secondary); }
+.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+.panel { display: none; }
+.panel.on { display: block; }
+.prog { display: flex; gap: 3px; margin-bottom: 14px; }
+.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); transition: background 0.3s; }
+.ps.done { background: #534AB7; }
+.ps.cur { background: #AFA9EC; }
+.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
+.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.blk-bd { padding: 14px 16px; }
+.script { font-size: 14px; line-height: 1.8; color: var(--color-text-primary); }
+.script em { color: var(--color-text-secondary); font-style: italic; }
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; border-radius: 0; }
+.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; border-radius: 0; background: var(--color-background-secondary); }
+.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
+.ilustra strong { color: #0F6E56; font-weight: 500; }
+@media (prefers-color-scheme: dark) { .ilustra strong { color: #5DCAA5; } }
+.dato { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .dato { background: #042C53; color: #85B7EB; } }
+.dato strong { font-weight: 500; }
+.puente { font-size: 13px; line-height: 1.65; color: #854F0B; background: #FAEEDA; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .puente { background: #412402; color: #FAC775; } }
+.puente strong { font-weight: 500; }
+.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0 4px; }
+.estudio-blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 12px; }
+.estudio-hd { display: flex; align-items: center; gap: 10px; padding: 10px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); cursor: pointer; user-select: none; }
+.estudio-num { font-size: 11px; font-weight: 500; min-width: 20px; }
+.estudio-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+.estudio-desc { font-size: 12px; color: var(--color-text-secondary); }
+.estudio-arrow { font-size: 11px; color: var(--color-text-tertiary); transition: transform 0.2s; }
+.estudio-arrow.open { transform: rotate(90deg); }
+.estudio-body { padding: 12px 14px; display: none; }
+.estudio-body.open { display: block; }
+.estudio-verse { font-family: var(--font-serif); font-size: 13px; line-height: 1.75; color: var(--color-text-primary); padding: 9px 12px; background: var(--color-background-secondary); border-radius: var(--border-radius-md); margin-bottom: 7px; }
+.estudio-verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 3px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .estudio-verse cite { color: #AFA9EC; } }
+.estudio-aplicacion { font-size: 12px; color: var(--color-text-secondary); border-left: 2px solid #7F77DD; padding: 7px 10px; margin-top: 10px; border-radius: 0; line-height: 1.6; }
+.pill { display: inline-block; font-size: 10px; font-weight: 500; padding: 2px 8px; border-radius: 20px; margin-left: 6px; }
+.pill-oral { background: #E1F5EE; color: #085041; }
+.pill-estudio { background: #EEEDFE; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .pill-oral { background: #04342C; color: #9FE1CB; } .pill-estudio { background: #26215C; color: #CECBF6; } }
+.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+.navb:disabled { opacity: 0.3; cursor: default; }
+.navb:not(:disabled):hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
+</style>
+
+<h2 class="sr-only">Guión completo — Charla 1: En Cristo. Incluye guión oral (45 min) y material de profundización con 6 bloques temáticos y 20 versículos.</h2>
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const bloques_estudio = [
+  {
+    num: "01", color: "#534AB7",
+    title: "Representación y herencia compartida",
+    desc: "Su historia ahora cuenta como tuya ante Dios",
+    aplicacion: "Pregunta de reflexión: ¿Qué cambiaría en tu vida si realmente creyeras que los logros de Cristo son tuyos ante Dios — no como favor, sino como herencia?",
+    versiculos: [
+      { ref: "Gálatas 2:20", texto: "Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí; y lo que ahora vivo en la carne, lo vivo en la fe del Hijo de Dios." },
+      { ref: "Romanos 6:4", texto: "Somos, pues, sepultados con él para muerte por el bautismo, a fin de que como Cristo resucitó de los muertos por la gloria del Padre, así también nosotros andemos en vida nueva." },
+      { ref: "Colosenses 3:1", texto: "Si, pues, habéis resucitado con Cristo, buscad las cosas de arriba, donde está Cristo sentado a la diestra de Dios." },
+      { ref: "1 Corintios 3:21-23", texto: "Porque todo es vuestro: sea Pablo, sea Apolos, sea Cefas... todo es vuestro, y vosotros de Cristo, y Cristo de Dios." }
+    ]
+  },
+  {
+    num: "02", color: "#0F6E56",
+    title: "Nueva identidad recibida, no construida",
+    desc: "Una realidad que recibes al estar unido a él",
+    aplicacion: "Pregunta de reflexión: ¿Hay áreas de tu vida donde sigues intentando construir o ganarte una identidad que ya tienes dada en Cristo?",
+    versiculos: [
+      { ref: "2 Corintios 5:17", texto: "De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas." },
+      { ref: "Colosenses 3:3", texto: "Porque habéis muerto, y vuestra vida está escondida con Cristo en Dios." },
+      { ref: "Filipenses 3:9", texto: "Y ser hallado en él, no teniendo mi propia justicia, que es por la ley, sino la que es por la fe de Cristo, la justicia que es de Dios por la fe." }
+    ]
+  },
+  {
+    num: "03", color: "#993C1D",
+    title: "Seguridad absoluta — el ancla",
+    desc: "Unión inamovible, libre de condenación",
+    aplicacion: "Pregunta de reflexión: ¿Qué condenación o duda sigue hablando más fuerte en tu vida que Romanos 8:1? Ponle nombre.",
+    versiculos: [
+      { ref: "Hebreos 6:19", texto: "La cual tenemos como segura y firme ancla del alma, y que penetra hasta dentro del velo." },
+      { ref: "Romanos 8:1", texto: "Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús." },
+      { ref: "Romanos 8:38-39", texto: "Ni lo presente, ni lo por venir, ni lo alto, ni lo profundo, ni ninguna otra cosa creada nos podrá separar del amor de Dios, que es en Cristo Jesús Señor nuestro." },
+      { ref: "1 Corintios 1:30", texto: "Mas por él estáis vosotros en Cristo Jesús, el cual nos ha sido hecho por Dios sabiduría, justificación, santificación y redención." }
+    ]
+  },
+  {
+    num: "04", color: "#185FA5",
+    title: "Acceso directo y ciudadanía celestial",
+    desc: "Derecho legal a la intimidad con Dios, ahora",
+    aplicacion: "Pregunta de reflexión: ¿Oras como alguien con acceso garantizado, o como alguien que espera ver si hoy le abren la puerta?",
+    versiculos: [
+      { ref: "Filipenses 3:20", texto: "Mas nuestra ciudadanía está en los cielos, de donde también esperamos al Salvador, al Señor Jesucristo." },
+      { ref: "Efesios 2:18", texto: "Porque por medio de él los unos y los otros tenemos entrada por un mismo Espíritu al Padre." },
+      { ref: "Hebreos 4:16", texto: "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro." }
+    ]
+  },
+  {
+    num: "05", color: "#633806",
+    title: "Participación en su sufrimiento y gloria",
+    desc: "El dolor profundiza la unión, no la rompe",
+    aplicacion: "Pregunta de reflexión: ¿Hay algo difícil que estás viviendo hoy que podría ser una forma de participar en Cristo, en lugar de una señal de que Dios está lejos?",
+    versiculos: [
+      { ref: "Romanos 8:17", texto: "Y si hijos, también herederos; herederos de Dios y coherederos con Cristo, si es que padecemos juntamente con él, para que juntamente con él seamos glorificados." },
+      { ref: "2 Corintios 3:18", texto: "Por tanto, nosotros todos, mirando a cara descubierta como en un espejo la gloria del Señor, somos transformados de gloria en gloria en la misma imagen, por el Espíritu del Señor." }
+    ]
+  },
+  {
+    num: "06", color: "#3B6D11",
+    title: "Identidad comunitaria — el cuerpo",
+    desc: "No eres un cristiano aislado, sino un miembro vivo",
+    aplicacion: "Pregunta de reflexión: ¿Cómo cambiaría la forma en que tratas a otros voluntarios si los vieras como miembros del mismo cuerpo — no como compañeros de trabajo, sino como parte de ti?",
+    versiculos: [
+      { ref: "1 Corintios 12:27", texto: "Vosotros, pues, sois el cuerpo de Cristo, y miembros cada uno en particular." },
+      { ref: "Gálatas 3:28", texto: "Ya no hay judío ni griego; no hay esclavo ni libre; no hay varón ni mujer; porque todos vosotros sois uno en Cristo Jesús." },
+      { ref: "Efesios 2:14", texto: "Porque él es nuestra paz, que de ambos pueblos hizo uno, derribando la pared intermedia de separación." }
+    ]
+  }
+];
+
+const secs = [
+  {
+    label: "Intro",
+    tiempo: "0 – 7 min",
+    bloques: [
+      { t: "blk", lbl: "Ubica la serie", html: `<p class="script">Llevamos varias charlas recorriendo la historia de Dios con la humanidad. El Reino, la caída, la ley, los sacrificios, el templo — y llegamos hasta Jesús, que cumplió con todo eso.<br><br>Pero ahora queda una pregunta en el aire: ¿y yo qué? ¿Qué cambió para mí cuando Jesús hizo lo que hizo?<br><br>Las próximas tres charlas van a responder eso. Hoy vamos con el fundamento — lo que hace posible todo lo demás.</p>` },
+      { t: "blk", lbl: "Gancho de apertura", html: `<p class="script">Quiero empezar con un experimento. Cierra los ojos un segundo. <em>[Pausa 5 seg.]</em> Piensa en la última vez que alguien te dijo algo sobre quién eres tú. Algo bueno, o algo difícil.<br><br>¿Cuánto tiempo duró ese comentario en tu cabeza?<br><br>La psicología tiene una respuesta bastante incómoda a esa pregunta. Y esta noche vamos a conectar esa respuesta con algo que Pablo escribió hace 2000 años.</p>` },
+      { t: "dato", html: `La investigación de las últimas décadas es clara: <strong>la identidad no es el resultado del comportamiento — es su causa.</strong> Lo que crees que eres determina cómo actúas, no al revés. Una persona que se cree atleta va al gimnasio cuando llueve. Una que "está intentando hacer ejercicio" siempre encuentra una razón para no ir. La diferencia no es la disciplina. Es la identidad.<br><br>Si eso es cierto en cualquier área de la vida, ¿qué significa tener una identidad que no depende de lo que hagas, de lo que sientas, de lo que los demás digan?` },
+      { t: "nota", html: "Tono: curioso, no predicador. Como quien comparte un descubrimiento. Esto baja la resistencia en adultos que ya han escuchado muchas charlas de iglesia." }
+    ]
+  },
+  {
+    label: "El problema",
+    tiempo: "7 – 15 min",
+    bloques: [
+      { t: "blk", lbl: "Diagnóstico honesto", html: `<p class="script">Antes de entrar al texto, necesito que pensemos en algo que pasa mucho adentro de la iglesia. Quizás en nosotros.<br><br>Hay una manera de seguir a Dios que se parece a esto: estás afuera de un palacio enorme. Sabes que hay algo valioso ahí. Y cada día haces lo que crees que debes hacer para que te dejen entrar.<br><br>Oras para que Dios te escuche. Sirves para que Dios te use. Lees la Biblia para que Dios no te olvide. Todo desde afuera, empujando hacia adentro.</p>` },
+      { t: "pregunta", html: "¿Alguna vez has servido en la iglesia sintiéndote más empleado que hijo? ¿Orando más por obligación que por conexión?" },
+      { t: "blk", lbl: "", html: `<p class="script">El problema no es falta de fe. El problema — y esto lo vamos a ver en el texto — es que muchos de nosotros no sabemos dónde estamos.<br><br>No sabemos que ya estamos adentro.</p>` },
+      { t: "nota", html: "Dejar silencio después de la pregunta. No forzar respuesta verbal." }
+    ]
+  },
+  {
+    label: "La preposición",
+    tiempo: "15 – 24 min",
+    bloques: [
+      { t: "blk", lbl: "La palabra más importante del NT", html: `<p class="script">Abran Efesios 1. Voy a leer los versículos 3 al 14. Cuenten cuántas veces aparece "en Cristo", "en él", "en el amado" o "en quien."<br><br><em>[Leer Efesios 1:3-14 despacio. Pausar en cada "en él".]</em><br><br>¿Cuántos contaron? Doce. En catorce versículos. En todas las cartas de Pablo, más de 160 veces.<br><br>Pablo no está adornando. Para él, la pregunta no es solamente si crees en Jesús. La pregunta es si estás en él. Y esas dos cosas no son lo mismo.</p>` },
+      { t: "verse", ref: "Efesios 1:3", texto: "Bendito sea el Dios y Padre de nuestro Señor Jesucristo, que nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo." },
+      { t: "ilustra", html: `<strong>Ilustración — el avión:</strong> Hay una diferencia enorme entre creer que un avión puede volar y estar dentro del avión. Solo cuando estás adentro, la física que lo sostiene te sostiene a ti también. "En Cristo" es eso — no es admirar a Jesús desde afuera. Es estar dentro de lo que él es.` },
+      { t: "trans", html: "— ¿Qué significa exactamente estar 'en él'? Cuatro dimensiones —" }
+    ]
+  },
+  {
+    label: "Las dimensiones",
+    tiempo: "24 – 37 min",
+    bloques: [
+      { t: "blk", lbl: "Dimensión 1 · herencia compartida", html: `<p class="script">Lo primero que significa estar en Cristo es que su historia ahora cuenta como tuya.<br><br>Pablo lo dice de varias maneras a lo largo de sus cartas, pero la imagen más radical está en Gálatas:</p>` },
+      { t: "verse", ref: "Gálatas 2:20", texto: "Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí." },
+      { t: "blk", lbl: "", html: `<p class="script">No dice "quiero llegar a ser crucificado con Cristo." Dice "estoy juntamente crucificado" — tiempo pasado, hecho consumado. Y Romanos 6 lo amplía:</p>` },
+      { t: "verse", ref: "Romanos 6:4", texto: "Somos, pues, sepultados con él para muerte por el bautismo, a fin de que como Cristo resucitó de los muertos... así también nosotros andemos en vida nueva." },
+      { t: "blk", lbl: "", html: `<p class="script">Cuando Jesús murió, tú moriste. Cuando resucitó, resucitaste. No como metáfora — como participación real. Lo que le pasó a él te pasó a ti, porque estabas en él. Y eso tiene consecuencias enormes: como dice 1 Corintios 3, todo lo que tiene Cristo es tuyo — no como favor, sino como herencia.</p>` },
+      { t: "trans", html: "— Segunda dimensión —" },
+      { t: "blk", lbl: "Dimensión 2 · nueva creación + identidad escondida", html: `<p class="script">La segunda dimensión tiene que ver con lo que eres ahora.</p>` },
+      { t: "verse", ref: "2 Corintios 5:17", texto: "De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas." },
+      { t: "verse", ref: "Colosenses 3:3", texto: "Porque habéis muerto, y vuestra vida está escondida con Cristo en Dios." },
+      { t: "blk", lbl: "", html: `<p class="script">Nueva criatura — no versión mejorada. Y "vuestra vida está escondida con Cristo en Dios" — eso significa que tu identidad más profunda no es visible ni vulnerable. No puede ser atacada, quitada ni dañada por lo que otros digan o hagan.<br><br>El error es leer "nueva criatura" como una tarea: "debes llegar a serlo." Pablo lo dice en indicativo, no en imperativo. No es una orden. Es una declaración de lo que ya ocurrió.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — los dos fumadores:</strong> Dos personas deciden dejar de fumar. La primera dice: <em>"Estoy tratando de no fumar."</em> Tiene una batalla interna cada vez que alguien ofrece un cigarrillo. La segunda dice: <em>"No fumo."</em> No hay conflicto — no es lo que ella hace, porque no es quien ella es.<br><br>La diferencia no es la fuerza de voluntad. Es la identidad. Pablo dice: en Cristo, tienes acceso a la segunda opción.` },
+      { t: "trans", html: "— Tercera dimensión —" },
+      { t: "blk", lbl: "Dimensión 3 · seguridad absoluta — el ancla", html: `<p class="script">La tercera dimensión es la que más necesitamos escuchar cuando fallamos, cuando dudamos, cuando la voz interna dice que no somos suficientes.</p>` },
+      { t: "verse", ref: "Romanos 8:1", texto: "Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús." },
+      { t: "verse", ref: "Hebreos 6:19", texto: "La cual tenemos como segura y firme ancla del alma, y que penetra hasta dentro del velo." },
+      { t: "blk", lbl: "", html: `<p class="script">El ancla no es tu comportamiento. No es tu nivel de fe. No es cuánto sirves. El ancla es la promesa de Dios en Cristo — y Hebreos dice que esa promesa penetra hasta el lugar más santo, hasta la presencia misma de Dios.<br><br>Y Romanos 8:38-39 no deja escapatoria: nada — ni lo presente, ni lo por venir, ni lo alto, ni lo profundo — puede separarte del amor de Dios que es en Cristo Jesús.</p>` },
+      { t: "dato", html: `La psicología confirma que la <strong>continuidad del yo</strong> — sentirse la misma persona a través del tiempo y las circunstancias — es uno de los predictores más fuertes de bienestar y salud mental. La identidad fragmentada genera ansiedad. La identidad anclada, libera.<br><br>En Cristo, tu identidad no sube cuando oras bien ni baja cuando fallas. Es fija. Es el ancla más estable que puede existir.` },
+      { t: "trans", html: "— Cuarta dimensión —" },
+      { t: "blk", lbl: "Dimensión 4 · acceso directo a Dios", html: `<p class="script">La cuarta dimensión es la más práctica para cómo oramos y cómo vivimos.</p>` },
+      { t: "verse", ref: "Hebreos 4:16", texto: "Acerquémonos, pues, confiadamente al trono de la gracia, para alcanzar misericordia y hallar gracia para el oportuno socorro." },
+      { t: "verse", ref: "Efesios 2:18", texto: "Porque por medio de él los unos y los otros tenemos entrada por un mismo Espíritu al Padre." },
+      { t: "blk", lbl: "", html: `<p class="script">"Confiadamente" — en el griego original es <em>parresia</em>: libertad de expresión total, sin miedo al rechazo. No es el acceso cauteloso del empleado ante su jefe. Es el acceso del hijo ante su padre.<br><br>Y Filipenses 3:20 añade algo que cambia cómo te ubicas en el mundo: "nuestra ciudadanía está en los cielos." No como escape del mundo — como identidad fundamental que informa todo lo que haces en él.</p>` },
+      { t: "nota", html: "Este es el momento de mayor densidad. Hablar más lento. Si hay pizarrón: escribir HERENCIA · NUEVA CREACIÓN · ANCLA · ACCESO. Cuatro palabras que resumen las cuatro dimensiones." }
+    ]
+  },
+  {
+    label: "Implicaciones",
+    tiempo: "37 – 42 min",
+    bloques: [
+      { t: "blk", lbl: "El giro práctico", html: `<p class="script">Entonces, ¿qué cambia concrétamente?<br><br>Una pregunta honesta: ¿cómo oras normalmente? La mayoría oramos así: "Señor, dame. Señor, ayúdame. Señor, ¿me escuchas?" Es la oración del que está afuera tocando la puerta.<br><br>Pero si tienes herencia, si eres nueva criatura, si el ancla es firme, si tienes acceso — la oración puede ser diferente. No "¿me darás acceso?" sino "Padre, gracias porque ya tengo acceso. Ayúdame a entender lo que ya me pertenece."</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el hijo y el mendigo:</strong> Dos personas afuera de un palacio. Un mendigo que lleva años tocando la puerta esperando que alguien le dé algo. Y un hijo del rey que salió a caminar y está llamando para que le abran.<br><br>Los dos están afuera. Los dos están llamando. Pero solo uno lo hace desde su identidad. La diferencia no está en la puerta — está en saber quién eres tú.` },
+      { t: "puente", html: `<strong>Para los voluntarios:</strong> Si sirves esperando que Dios te acepte, te use o te apruebe en base a lo que haces — estás sirviendo como mendigo. Si sirves desde la conciencia de que ya tienes herencia, que ya eres nueva criatura, que el ancla es firme — la misma acción se hace desde un lugar completamente diferente. Cambia la motivación, la sostenibilidad, la manera en que tratas a los demás cuando el servicio se pone difícil.` },
+      { t: "nota", html: "No extender este punto. La aplicación específica de cada identidad viene en las charlas 2 y 3. Lo que debe quedar hoy es el principio: la posición precede la conducta." }
+    ]
+  },
+  {
+    label: "Cierre",
+    tiempo: "42 – 45 min",
+    bloques: [
+      { t: "blk", lbl: "Ejercicio de cierre", html: `<p class="script">Para terminar, vamos a hacer algo juntos.<br><br>Vuelvan a Efesios 1:3-14. Léanlo internamente, en silencio, muy despacio. Cada vez que encuentren "en él", "en Cristo", "en el amado" — hagan una pausa y pregunten: ¿esto me pertenece a mí?<br><br><em>[2 minutos de silencio real. No llenar el silencio.]</em></p>` },
+      { t: "pregunta", html: "Pregunta para la semana: ¿Cuál de estas cuatro dimensiones — herencia, nueva creación, ancla, acceso — me cuesta más recibir como ya mía, en lugar de como algo que debo ganarme?" },
+      { t: "blk", lbl: "Anticipación", html: `<p class="script">La próxima vez vamos a ver las dos primeras identidades que vienen de estar en Cristo: hijos adoptados y miembros de un cuerpo. No vamos a hablar de cosas a las que deben aspirar. Vamos a hablar de cosas que ya son — y de lo que eso cambia.<br><br>Oremos.</p>` },
+      { t: "nota", html: `Oración de cierre — breve, declarativa. Modelo: "Padre, gracias porque no estamos afuera esperando. Estamos en Cristo. Tenemos herencia, somos nueva creación, tenemos ancla, tenemos acceso. Ayúdanos esta semana a vivir desde adentro. Amén." — No pedir nada. Que la oración misma sea un ejemplo de lo que aprendieron.` }
+    ]
+  },
+  {
+    label: "Material de estudio",
+    tiempo: "Para el voluntario",
+    esEstudio: true,
+    bloques: []
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+let cur = 0;
+
+function render(i) {
+  cur = i;
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j < i);
+    s.classList.toggle('cur', j === i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb';
+  btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div');
+  ps.className = 'ps';
+  prog.appendChild(ps);
+
+  const panel = document.createElement('div');
+  panel.className = 'panel';
+
+  let html = `<div class="tbadge"><i class="ti ti-clock" aria-hidden="true"></i>${s.tiempo}</div>`;
+
+  if (s.esEstudio) {
+    html += `<div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:14px">Este material no se dicta en la charla. Se entrega o comparte digitalmente para que cada voluntario lo estudie en la semana. Cada bloque incluye los versículos completos y una pregunta de reflexión personal.</div>`;
+    bloques_estudio.forEach((b, bi) => {
+      html += `<div class="estudio-blk">
+        <div class="estudio-hd" onclick="toggleEstudio(${bi})">
+          <span class="estudio-num" style="color:${b.color}">${b.num}</span>
+          <div style="flex:1">
+            <div class="estudio-title">${b.title}</div>
+            <div class="estudio-desc">${b.desc}</div>
+          </div>
+          <span class="estudio-arrow" id="earr-${bi}">▶</span>
+        </div>
+        <div class="estudio-body" id="ebody-${bi}">
+          ${b.versiculos.map(v => `<div class="estudio-verse">${v.texto}<cite>${v.ref}</cite></div>`).join('')}
+          <div class="estudio-aplicacion">${b.aplicacion}</div>
+        </div>
+      </div>`;
+    });
+  } else {
+    s.bloques.forEach(b => {
+      if (b.t === 'blk') {
+        html += `<div class="blk"><div class="blk-hd">${b.lbl || 'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+      } else if (b.t === 'nota') {
+        html += `<div class="nota">${b.html}</div>`;
+      } else if (b.t === 'verse') {
+        html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+      } else if (b.t === 'pregunta') {
+        html += `<div class="pregunta">${b.html}</div>`;
+      } else if (b.t === 'ilustra') {
+        html += `<div class="ilustra">${b.html}</div>`;
+      } else if (b.t === 'dato') {
+        html += `<div class="dato">${b.html}</div>`;
+      } else if (b.t === 'puente') {
+        html += `<div class="puente">${b.html}</div>`;
+      } else if (b.t === 'trans') {
+        html += `<p class="trans">${b.html}</p>`;
+      }
+    });
+  }
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">&larr; Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente &rarr;</button>
+  </div>`;
+
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
+});
+
+function toggleEstudio(i) {
+  const body = document.getElementById('ebody-' + i);
+  const arr = document.getElementById('earr-' + i);
+  const open = body.classList.toggle('open');
+  arr.classList.toggle('open', open);
+}
+
+render(0);
+</script>

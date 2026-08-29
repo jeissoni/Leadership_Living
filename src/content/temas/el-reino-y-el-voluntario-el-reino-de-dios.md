@@ -65,3 +65,11 @@ Cuatro atributos hacen visible ese Reino en quien sirve:
 > Pues si yo, el Señor y el Maestro, he lavado vuestros pies, vosotros también debéis lavaros los pies los unos a los otros.
 >
 > <cite>Juan 13:14</cite>
+
+## Para quien sirve
+
+La pregunta equivocada al llegar a un turno es «¿qué debo hacer para la iglesia?». La del Reino es «¿qué está haciendo Dios, y cómo me sumo?». Mateo 6:33 no es un lema de productividad: es el orden de la vida.
+
+Si tu identidad está en la ficha del rol («soy del equipo de medios»), el día en que nadie te ve se siente como fracaso. Si estás parado como hijo del Rey, el mismo día se lee distinto: estás en un Reino que ya es justo, y la fidelidad pesa más que la visibilidad.
+
+«¡Viva Cristo Rey!» no es un grito de campaña. Es el recordatorio de que el sí más poderoso no es a una tarea: es a un Reino.

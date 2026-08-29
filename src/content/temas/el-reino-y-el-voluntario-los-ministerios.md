@@ -56,3 +56,11 @@ Hay cuatro malentendidos frecuentes: elitismo (solo cuentan los dones visibles),
 > De quien todo el cuerpo, bien concertado y unido entre sí… recibe su crecimiento para ir edificándose en amor.
 >
 > <cite>Efesios 4:16</cite>
+
+## Para quien sirve
+
+1 Corintios 12 dice qué hay disponible; Efesios 4 dice para qué. Los cinco no hacen el ministerio mientras el resto observa: *equipan a los santos* para que el cuerpo lo haga.
+
+Cuatro malentendidos frecuentes: elitismo (solo cuentan los dones visibles), pasividad («no sé cuál es mi don» como excusa), don sin comunidad, e identidad en el rol. El don es lo que haces. Hijo del Rey es lo que eres. Cuando el rol desaparece, la identidad no.
+
+Pregunta para la semana: ¿estás usando tu lugar para equipar a otros, o para que el ministerio dependa de ti?

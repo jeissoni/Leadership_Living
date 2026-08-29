@@ -1,0 +1,641 @@
+.reading-shell.is-guion {
+  width: min(880px, calc(100% - 8vw));
+}
+
+.guion-sheet {
+  margin-top: 1.75rem;
+  padding: 1.35rem 1.4rem 1.7rem;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--rule) 80%, white);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.guion-sheet-label {
+  margin: 0 0 1.15rem;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.widget-stack {
+  color: var(--ink);
+  font-family: var(--font-ui);
+}
+
+.widget-stack .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.widget-stack .wrap,
+.widget-stack .fund,
+.widget-stack .guia {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.widget-stack .titulo-charla,
+.widget-stack .bloque-titulo {
+  margin: 0 0 0.2rem;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.widget-stack .subtitulo,
+.widget-stack .bloque-sub,
+.widget-stack .intro,
+.widget-stack .charla-sub {
+  margin: 0 0 1.1rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.widget-stack .intro {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper-deep);
+}
+
+.widget-stack .nav,
+.widget-stack .tab-bar,
+.widget-stack .resumen-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.1rem;
+}
+
+.widget-stack .nav,
+.widget-stack .tab-bar {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 4;
+  margin: -0.35rem -0.35rem 1.1rem;
+  padding: 0.7rem 0.35rem 0.8rem;
+  background: color-mix(in srgb, var(--surface) 94%, white);
+  border-bottom: 1px solid var(--rule);
+}
+
+.widget-stack .nb,
+.widget-stack .nav-btn,
+.widget-stack .tab,
+.widget-stack .navb,
+.widget-stack .chip {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.9rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink-soft);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.84rem;
+}
+
+.widget-stack .nb:hover,
+.widget-stack .nav-btn:hover,
+.widget-stack .tab:hover,
+.widget-stack .navb:not(:disabled):hover {
+  border-color: var(--gold-soft);
+  color: var(--navy);
+}
+
+.widget-stack .nb.on,
+.widget-stack .nav-btn.active,
+.widget-stack .tab.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--paper);
+}
+
+.widget-stack .navb:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.widget-stack .prog,
+.widget-stack .progress {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 1.2rem;
+}
+
+.widget-stack .ps {
+  height: 3px;
+  flex: 1;
+  border-radius: 2px;
+  background: var(--rule);
+}
+
+.widget-stack .ps.done {
+  background: var(--gold);
+}
+
+.widget-stack .ps.cur {
+  background: var(--navy);
+}
+
+.widget-stack .panel,
+.widget-stack .section {
+  display: none;
+}
+
+.widget-stack .panel.on,
+.widget-stack .panel.active,
+.widget-stack .section.active {
+  display: block;
+}
+
+.widget-stack .tbadge,
+.widget-stack .tiempo-chip,
+.widget-stack .time-badge,
+.widget-stack .badge,
+.widget-stack .badge-tiempo,
+.widget-stack .charla-num,
+.widget-stack .don-pill,
+.widget-stack .enemy-pill,
+.widget-stack .atributo-tag,
+.widget-stack .pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.22rem 0.72rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--tag);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.widget-stack .tbadge,
+.widget-stack .tiempo-chip,
+.widget-stack .time-badge {
+  margin-bottom: 1rem;
+}
+
+.widget-stack .card,
+.widget-stack .seccion,
+.widget-stack .blk,
+.widget-stack .block,
+.widget-stack .charla,
+.widget-stack .intercambio,
+.widget-stack .insight,
+.widget-stack .stat-card,
+.widget-stack .signo-card,
+.widget-stack .estudio-blk,
+.widget-stack .don {
+  min-height: 0;
+  margin-bottom: 1rem;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper);
+  box-shadow: none;
+  color: inherit;
+  text-decoration: none;
+  transform: none;
+  cursor: default;
+}
+
+.widget-stack .card:hover,
+.widget-stack .seccion:hover {
+  transform: none;
+  border-color: var(--rule);
+  color: inherit;
+}
+
+.widget-stack .card-header,
+.widget-stack .card-head,
+.widget-stack .sec-header,
+.widget-stack .blk-hd,
+.widget-stack .block-label,
+.widget-stack .charla-hd,
+.widget-stack .ic-header,
+.widget-stack .insight-head,
+.widget-stack .estudio-hd,
+.widget-stack .signo-hd,
+.widget-stack .don-hd,
+.widget-stack .card-hd {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper-deep);
+  color: var(--navy);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.widget-stack .card-titulo,
+.widget-stack .card-title,
+.widget-stack .sec-titulo,
+.widget-stack .charla-title,
+.widget-stack .ic-title,
+.widget-stack .don-name,
+.widget-stack .estudio-title,
+.widget-stack .signo-title,
+.widget-stack .insight-title {
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+.widget-stack .card-body,
+.widget-stack .sec-body,
+.widget-stack .blk-bd,
+.widget-stack .block-body,
+.widget-stack .charla-body,
+.widget-stack .ic-body,
+.widget-stack .insight-bridge,
+.widget-stack .estudio-body,
+.widget-stack .signo-body,
+.widget-stack .don-body {
+  display: block;
+  padding: 1.05rem 1.1rem 1.15rem;
+}
+
+.widget-stack .script,
+.widget-stack .guion,
+.widget-stack .punto-text {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.widget-stack .script em,
+.widget-stack .guion em {
+  color: var(--ink-soft);
+}
+
+.widget-stack .punto {
+  display: flex;
+  gap: 0.7rem;
+  align-items: flex-start;
+  margin-bottom: 0.7rem;
+}
+
+.widget-stack .dot,
+.widget-stack .punto-dot,
+.widget-stack [class^="d-"],
+.widget-stack [class*="dot-"] {
+  width: 6px;
+  height: 6px;
+  margin-top: 0.65rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.widget-stack .verse,
+.widget-stack .verso,
+.widget-stack .key-verse,
+.widget-stack .body-verse,
+.widget-stack .estudio-verse,
+.widget-stack .signo-verse,
+.widget-stack .quote-block,
+.widget-stack .quote,
+.widget-stack .central-verse {
+  margin: 1rem 0;
+  padding: 0.9rem 0 0.9rem 1.15rem;
+  border-left: 3px solid var(--gold);
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+.widget-stack .verse cite,
+.widget-stack .quote-who,
+.widget-stack .verse-ref,
+.widget-stack .cv-ref {
+  display: block;
+  margin-top: 0.4rem;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-style: normal;
+  letter-spacing: 0.04em;
+}
+
+.widget-stack .nota,
+.widget-stack .tip,
+.widget-stack .nota-insercion,
+.widget-stack .nota-charla,
+.widget-stack .nota-pastoral,
+.widget-stack .hilo,
+.widget-stack .estudio-aplicacion {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--gold-soft);
+  background: var(--paper-deep);
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.widget-stack .nota::before,
+.widget-stack .tip::before,
+.widget-stack .nota-insercion::before {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  content: "Nota al presentador";
+}
+
+.widget-stack .ilustra,
+.widget-stack .dato,
+.widget-stack .puente,
+.widget-stack .pregunta,
+.widget-stack .pregunta-box,
+.widget-stack .pastoral,
+.widget-stack .aviso,
+.widget-stack .respuesta,
+.widget-stack .signo-ojo {
+  margin: 1.05rem 0;
+  padding: 1rem 1.1rem 1.05rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper-deep);
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.widget-stack .ilustra::before,
+.widget-stack .dato::before,
+.widget-stack .puente::before,
+.widget-stack .pregunta::before,
+.widget-stack .pastoral-lbl,
+.widget-stack .preg-label,
+.widget-stack .giro-lbl,
+.widget-stack .bridge-label,
+.widget-stack .sec-label,
+.widget-stack .sec-lbl,
+.widget-stack .cat-lbl,
+.widget-stack .body-lbl,
+.widget-stack .sub-label,
+.widget-stack .cv-label,
+.widget-stack .respuesta-lbl,
+.widget-stack .card-lbl {
+  display: block;
+  margin: 0 0 0.4rem;
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.widget-stack .ilustra::before {
+  content: "Ilustración";
+}
+
+.widget-stack .dato::before {
+  content: "Dato";
+}
+
+.widget-stack .puente::before {
+  content: "Para quien sirve";
+}
+
+.widget-stack .pregunta::before,
+.widget-stack .pregunta-box::before {
+  content: "Pregunta";
+}
+
+.widget-stack .pregunta,
+.widget-stack .pregunta-box {
+  border-left: 3px solid var(--gold);
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.widget-stack .ilustra strong,
+.widget-stack .dato strong,
+.widget-stack .puente strong,
+.widget-stack .pastoral strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.widget-stack .trans {
+  margin: 1.1rem 0 0.4rem;
+  color: var(--ink-faint);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.widget-stack .enemigo-hd,
+.widget-stack .giro-txt,
+.widget-stack .cat-header {
+  margin: 0 0 1.1rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--paper-deep);
+  color: var(--navy);
+}
+
+.widget-stack .enemigo-hd *,
+.widget-stack .n-purple,
+.widget-stack .n-coral,
+.widget-stack .n-teal,
+.widget-stack .n-amber,
+.widget-stack .n-blue,
+.widget-stack .col-tag,
+.widget-stack .ref-purple,
+.widget-stack .lbl-purple,
+.widget-stack .lbl-teal,
+.widget-stack .lbl-coral,
+.widget-stack .lbl-amber,
+.widget-stack .lbl-blue,
+.widget-stack .ic-num {
+  color: var(--navy);
+}
+
+.widget-stack .stat-grid,
+.widget-stack .puertas-grid,
+.widget-stack .diferencia,
+.widget-stack .versus,
+.widget-stack .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.widget-stack .stat-num,
+.widget-stack .stat-n {
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+}
+
+.widget-stack .stat-txt,
+.widget-stack .stat-src,
+.widget-stack .don-hook,
+.widget-stack .expand-hint,
+.widget-stack .insight-sub,
+.widget-stack .estudio-desc,
+.widget-stack .puerta-desc,
+.widget-stack .dif-def {
+  color: var(--ink-soft);
+}
+
+.widget-stack .stat-card {
+  padding: 1.05rem 1.1rem;
+}
+
+.widget-stack .exchange-cols {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  background: var(--paper);
+}
+
+.widget-stack .col-left,
+.widget-stack .col-right {
+  padding: 0.9rem 1rem;
+}
+
+.widget-stack .col-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 0.4rem;
+  background: var(--paper-deep);
+  color: var(--gold);
+}
+
+.widget-stack .navbtns {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: 1.35rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.widget-stack table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.widget-stack th,
+.widget-stack td {
+  padding: 0.5rem 0.55rem;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.widget-stack th {
+  color: var(--navy);
+}
+
+.widget-stack button {
+  font-family: inherit;
+}
+
+.widget-stack .divider {
+  margin: 1rem 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.widget-stack .arr,
+.widget-stack .estudio-arrow,
+.widget-stack .signo-arr,
+.widget-stack .don-arr,
+.widget-stack .expand-hint {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .reading-shell.is-guion {
+    width: min(880px, calc(100% - 8vw));
+  }
+
+  .guion-sheet {
+    padding: 1.1rem 0.95rem 1.35rem;
+  }
+
+  .widget-stack .nav,
+  .widget-stack .tab-bar {
+    top: var(--header-h);
+  }
+
+  .widget-stack .diferencia,
+  .widget-stack .versus,
+  .widget-stack .exchange-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .guion-sheet {
+    box-shadow: none;
+    break-inside: auto;
+  }
+
+  .widget-stack .nav,
+  .widget-stack .tab-bar,
+  .widget-stack .prog,
+  .widget-stack .progress,
+  .widget-stack .navbtns {
+    display: none !important;
+  }
+
+  .widget-stack .panel,
+  .widget-stack .section,
+  .widget-stack .estudio-body,
+  .widget-stack .signo-body,
+  .widget-stack .don-body,
+  .widget-stack .card-body {
+    display: block !important;
+  }
+
+  .widget-stack .blk,
+  .widget-stack .card,
+  .widget-stack .seccion,
+  .widget-stack .verse {
+    break-inside: avoid;
+  }
+}

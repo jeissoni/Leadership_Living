@@ -1,0 +1,167 @@
+
+<style>
+.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
+.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
+.nb:hover { background: var(--color-background-secondary); }
+.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
+@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
+.panel { display: none; } .panel.on { display: block; }
+.prog { display: flex; gap: 3px; margin-bottom: 14px; }
+.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); }
+.ps.done { background: #534AB7; } .ps.cur { background: #AFA9EC; }
+.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
+.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
+.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+.blk-bd { padding: 14px 16px; }
+.script { font-size: 14px; line-height: 1.85; color: var(--color-text-primary); }
+.script em { color: var(--color-text-secondary); font-style: italic; }
+.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; }
+.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
+@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
+.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
+@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
+.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; background: var(--color-background-secondary); line-height: 1.6; }
+.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
+.ilustra strong { color: #0F6E56; font-weight: 500; }
+.pastoral { font-size: 14px; line-height: 1.9; color: var(--color-text-primary); background: var(--color-background-secondary); border: 1.5px solid #7F77DD; border-radius: var(--border-radius-lg); padding: 16px 18px; margin: 10px 0; }
+@media (prefers-color-scheme: dark) { .pastoral { border-color: #534AB7; } }
+.pastoral-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #534AB7; margin-bottom: 8px; }
+@media (prefers-color-scheme: dark) { .pastoral-lbl { color: #AFA9EC; } }
+.enemigo-hd { padding: 12px 16px; border-radius: var(--border-radius-lg); margin: 10px 0 6px; }
+.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 8px 0; }
+.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
+.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
+.navb:disabled { opacity: 0.3; cursor: default; }
+.navb:not(:disabled):hover { background: var(--color-background-secondary); }
+</style>
+
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 5 min",
+    bloques: [
+      { t: "blk", lbl: "Gancho de apertura", html: `<p class="script">Quiero empezar con una observación que creo que todos hemos vivido.<br><br>Hay momentos en que la vida cristiana se siente natural, fluida, real. Y hay otros en que se siente como nadar contra la corriente. No porque hayamos dejado de creer. No porque hayamos tomado una mala decisión grande. Simplemente porque algo — o varias cosas — jalan en otra dirección.<br><br>La Biblia tiene nombre para eso. No lo llama debilidad espiritual ni falta de fe. Lo llama guerra. Y en esa guerra hay enemigos identificados — con nombres, con estrategias, con puntos de ataque específicos.<br><br>Hoy vamos a hablar de dos de ellos. Los más cercanos. Los más cotidianos. El mundo y la carne.</p>` },
+      { t: "verse", ref: "Efesios 6:12", texto: "Porque no tenemos lucha contra sangre y carne, sino contra principados, contra potestades, contra los gobernadores de las tinieblas de este siglo, contra huestes espirituales de maldad en los lugares celestiales." },
+      { t: "blk", lbl: "", html: `<p class="script">Pablo no dice que tal vez tengamos lucha. Dice que la tenemos. Es un hecho declarado. Y la claridad sobre quiénes son los enemigos no es para producir miedo — es para producir inteligencia espiritual.<br><br>No se puede combatir lo que no se conoce.</p>` },
+      { t: "nota", html: "Tono: reflexivo, no alarmista. El objetivo no es asustar al grupo sino darles claridad. La persona que conoce a su enemigo ya tiene ventaja sobre quien no lo conoce." }
+    ]
+  },
+  {
+    label: "El Mundo",
+    tiempo: "5 – 18 min",
+    bloques: [
+      { t: "enemigo-hd", color: "#993C1D", bg: "#FAECE7", num: "ENEMIGO 1", title: "El Mundo", sub: "La presión que viene de afuera" },
+      { t: "blk", lbl: "Qué es — precisión necesaria", html: `<p class="script">Cuando la Biblia habla del mundo como enemigo no está hablando del planeta. Tampoco de las personas que no conocen a Dios — a esas personas Dios las ama profundamente y Cristo murió por ellas.<br><br>El mundo como enemigo es lo que el griego llama kosmos: un sistema de valores, prioridades y creencias organizado sin Dios. Invisible pero real. Que moldea silenciosamente cómo pensamos, qué deseamos, qué consideramos éxito, qué nos da vergüenza, de qué nos sentimos orgullosos.<br><br>Y hay un detalle del lenguaje que vale notar: kosmos viene de la misma raíz que cosmético. El mundo no es feo ni caótico — es ordenado, atractivo, coherente. Por eso es tan eficaz.</p>` },
+      { t: "verse", ref: "1 Juan 2:15-16", texto: "No améis al mundo, ni las cosas que están en el mundo... porque todo lo que hay en el mundo, los deseos de la carne, los deseos de los ojos, y la vanagloria de la vida, no proviene del Padre, sino del mundo." },
+      { t: "blk", lbl: "Cómo opera — tres puertas", html: `<p class="script">Juan identifica tres canales por los que el mundo opera. No son tres temas separados — son tres puertas de entrada al mismo sistema.<br><br><strong>Los deseos de la carne</strong> — satisfacción inmediata para cada necesidad. El mundo ofrece siempre la versión rápida, sin espera, sin renuncia.<br><br><strong>Los deseos de los ojos</strong> — la comparación, el querer lo que tiene el otro. Las redes sociales son la versión moderna más eficiente de esta puerta: diseñadas específicamente para mostrarnos lo que otros tienen.<br><br><strong>La vanagloria de la vida</strong> — identidad construida sobre logros, posición, apariencia. "Soy lo que hago, lo que tengo, lo que otros piensan de mí."<br><br>El mundo no dice "abandona a Dios." Dice algo más sutil: te ofrece otra identidad. Otro lugar de pertenencia. Otro sistema de valores que parece más razonable, más moderno, más aceptado.</p>` },
+      { t: "pregunta", html: "¿Cuál de las tres puertas opera más en tu vida? ¿La satisfacción inmediata? ¿La comparación? ¿La identidad por rendimiento?" },
+      { t: "blk", lbl: "Cómo se combate — renovación de la mente", html: `<p class="script">La respuesta de Pablo no es aislarse del mundo. Es algo más profundo:</p>` },
+      { t: "verse", ref: "Romanos 12:2", texto: "No os conforméis a este siglo, sino transformaos por medio de la renovación de vuestro entendimiento, para que comprobéis cuál sea la buena voluntad de Dios, agradable y perfecta." },
+      { t: "blk", lbl: "", html: `<p class="script">Dos verbos. "No os conforméis" — en griego syschematizesthe, de donde viene esquema. No dejes que el mundo te ponga en su molde.<br><br>"Transformaos" — metamorphousthe, de donde viene metamorfosis. No un cambio de conducta externa — una transformación desde adentro, producida por una mente que conoce otra realidad.<br><br>El mundo forma la mente a través de lo que consumimos, lo que escuchamos, con quién pasamos tiempo, qué celebramos. La renovación ocurre por los mismos canales, pero con contenido diferente.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el agua y el barco:</strong> Un barco está hecho para estar en el agua. El problema no es estar en el agua — el problema es que el agua entre al barco. El creyente está hecho para estar en el mundo. Pero el mundo no debe entrar y moldear la manera de pensar.<br><br>La renovación de la mente es el casco. No aísla al barco del agua — lo protege de que el agua lo domine.` },
+      { t: "trans", html: "— El segundo enemigo es más difícil. Porque no viene de afuera. —" }
+    ]
+  },
+  {
+    label: "La Carne",
+    tiempo: "18 – 32 min",
+    bloques: [
+      { t: "enemigo-hd", color: "#854F0B", bg: "#FAEEDA", num: "ENEMIGO 2", title: "La Carne", sub: "La presión que viene de adentro" },
+      { t: "blk", lbl: "Qué es — precisión necesaria", html: `<p class="script">La carne — en griego sarx — no es el cuerpo físico. Pablo no es platónico. No enseña que la materia es mala y el espíritu bueno. La carne es la naturaleza caída: el patrón de pensar, desear y actuar que quedó en nosotros desde la Caída, que sigue operando aunque somos nueva creación en Cristo.<br><br>Es el enemigo más incómodo porque no viene de afuera. Está adentro. Y sabe exactamente dónde eres vulnerable porque es parte de tu historia, de tus patrones, de tu manera aprendida de responder al dolor, al miedo, al deseo.</p>` },
+      { t: "verse", ref: "Gálatas 5:17", texto: "Porque el deseo de la carne es contra el Espíritu, y el del Espíritu es contra la carne; y éstos se oponen entre sí, para que no hagáis lo que quisiereis." },
+      { t: "blk", lbl: "La honestidad de Romanos 7", html: `<p class="script">Pablo escribe algo que muchos creyentes han leído con alivio. Porque por fin alguien dice exactamente lo que ellos viven:</p>` },
+      { t: "verse", ref: "Romanos 7:18-19", texto: "Porque el querer el bien está en mí, pero no el hacerlo. Porque no hago el bien que quiero, sino el mal que no quiero, eso hago." },
+      { t: "blk", lbl: "", html: `<p class="script">Quiero orar — y no oro. No quiero reaccionar mal — y reacciono mal. Quiero ser paciente — y no soy paciente.<br><br>¿Quién no ha vivido eso? Y aquí hay algo teológicamente crucial que Pablo quiere que entendamos: que esto ocurra no significa que eres hipócrita ni que tu fe no es real. Significa que eres humano en proceso de transformación.<br><br>El apóstol que escribió la mitad del Nuevo Testamento describe esta tensión no como algo que ya superó — sino como algo que vive. Y hay una distinción que él hace que es liberadora: en Romanos 7:17 dice "ya no soy yo quien lo hace, sino el pecado que mora en mí." No está evadiendo responsabilidad. Está siendo teológicamente preciso: <em>la carne no es lo que eres — es algo que opera en ti.</em></p>` },
+      { t: "pregunta", html: "¿Dónde reconoces la tensión de Romanos 7 en tu vida esta semana? No el pecado grande — el patrón cotidiano que no quieres pero que se repite." },
+      { t: "blk", lbl: "Cómo opera — el patrón de la carne", html: `<p class="script">Gálatas 5 lista las obras de la carne. Y lo que sorprende no es que incluya adulterio o embriaguez — sino lo que domina la lista: enemistades, pleitos, celos, iras, contiendas, disensiones, envidias.<br><br>La mayoría de los conflictos de iglesia están en esa lista. La carne no solo opera en los "pecados grandes" — opera en la manera en que respondemos cuando alguien no nos reconoce, cuando se toma una decisión con la que no estamos de acuerdo, cuando otro recibe lo que creíamos merecer nosotros.</p>` },
+      { t: "blk", lbl: "Cómo se combate — no supresión sino sustitución", html: `<p class="script">Y aquí está el error más común en cómo intentamos combatir la carne: la supresión. "Voy a resistir más fuerte. Voy a tener más disciplina. Voy a dejar de hacer esto."<br><br>El problema es que la supresión no funciona a largo plazo. Lo que resistes, persiste. Lo que intentas ignorar con fuerza de voluntad regresa con más fuerza.<br><br>Pablo no dice "repriman la carne." Dice algo diferente:</p>` },
+      { t: "verse", ref: "Gálatas 5:16", texto: "Digo, pues: Andad en el Espíritu, y no satisfagáis los deseos de la carne." },
+      { t: "blk", lbl: "", html: `<p class="script">La estrategia no es supresión — es sustitución. No vaciar la vida de lo malo. Llenarla de lo bueno hasta que lo malo no tenga espacio.<br><br>Andar en el Espíritu no es una técnica mística. Es deliberado y cotidiano: la Palabra que alimenta la mente, la oración que mantiene la conexión, las relaciones que nutren la vida espiritual, el reconocimiento rápido cuando el patrón de la carne está operando — y la vuelta inmediata.</p>` },
+      { t: "ilustra", html: `<strong>Ilustración — el cuarto oscuro:</strong> No puedes sacar la oscuridad de un cuarto peleando contra ella. No hay manera de empujar la oscuridad hacia afuera con las manos. Pero cuando enciendes la luz, la oscuridad desaparece sola — no porque la combatiste, sino porque fue desplazada por algo más real que ella.<br><br>Andar en el Espíritu es encender la luz. No es una lista de prohibiciones — es una manera de vivir conectado a quien el Espíritu dice que eres.` },
+      { t: "verse", ref: "Gálatas 5:22-23", texto: "Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza; contra tales cosas no hay ley." },
+      { t: "blk", lbl: "", html: `<p class="script">Noten la imagen: fruto, no obra. Las obras de la carne se fabrican con esfuerzo. El fruto del Espíritu se produce cuando estás conectado a la vid correcta. La rama no produce fruto por esfuerzo — lo produce porque está en Cristo.</p>` }
+    ]
+  },
+  {
+    label: "El patrón",
+    tiempo: "32 – 36 min",
+    bloques: [
+      { t: "blk", lbl: "Lo que los dos atacan", html: `<p class="script">El mundo y la carne son distintos en naturaleza — uno externo, el otro interno. Pero tienen el mismo objetivo y usan la misma estrategia.<br><br>El objetivo es separarte de vivir desde tu identidad en Cristo.<br><br>La estrategia es ofrecerte otra identidad. Otro origen para tu sentido de valor, pertenencia y propósito.<br><br>El mundo dice: eres lo que logras, lo que tienes, lo que otros piensan de ti.<br>La carne dice: eres lo que sientes, lo que deseas, lo que haces cuando nadie te ve.<br><br>Y Cristo dice: eres lo que yo declaré que eres. Eso no cambia con tus logros ni con tus fracasos. No cambia con la aprobación del mundo ni con la presión de la carne.</p>` },
+      { t: "verse", ref: "Romanos 8:1", texto: "Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús." },
+      { t: "blk", lbl: "El resumen práctico", html: `<p class="script">Contra el mundo: renueva la mente. Aliméntate deliberadamente de una realidad diferente — la que la Palabra declara — hasta que esa realidad sea más viva que la que el kosmos proyecta.<br><br>Contra la carne: anda en el Espíritu. No suprimas — sustituye. Reconoce rápido el patrón caído. Y vuelve.<br><br>Ninguno de los dos se combate una vez. Se combaten día a día. Por eso Pablo dice "andad" — tiempo presente continuo. No es una batalla que se gana y termina. Es una orientación constante.</p>` }
+    ]
+  },
+  {
+    label: "Cierre pastoral",
+    tiempo: "36 – 40 min",
+    bloques: [
+      { t: "blk", lbl: "El mensaje pastoral", html: `<div class="pastoral"><div class="pastoral-lbl">Cierre pastoral</div><p class="script">Quiero terminar con algo que creo que necesitamos escuchar.<br><br>Hemos hablado de dos enemigos reales. Y quizás al escucharlos descritos así, con nombres y estrategias, algo en ustedes se cansó un poco. Porque la guerra es agotadora. Porque hay días en que la carne ganó y el mundo moldeó y uno llega al final del día sintiéndose lejos de quien quiere ser.<br><br>Para esos días, para esos momentos, quiero que recuerden esto:<br><br>El que pelea por ustedes no perdió ninguna batalla.<br><br>El mundo intentó doblar a Jesús. Lo tentó en el desierto con exactamente las tres puertas de Juan: el deseo inmediato, la gloria visible, la identidad por rendimiento. Y Jesús respondió cada una con una sola herramienta: escrito está. La Palabra. La realidad declarada por el Padre.<br><br>La carne intentó vencer a Jesús. En Getsemaní, con miedo real, con dolor real, con la tentación real de no ir. Y él no la suprimió — la rindió. "No se haga mi voluntad, sino la tuya." Eso es andar en el Espíritu en su forma más pura.<br><br>Y lo que Jesús hizo, lo hizo por ustedes y para ustedes. Para que pudieran pararse en su victoria, no en la propia.<br><br>Ustedes no son voluntarios que intentan ser buenos cristanos. Son personas que están en Cristo — en quien venció al mundo, en quien no fue vencido por la carne — y que sirven desde esa posición, no hacia ella.<br><br>Hay días que olvidarán eso. Y habrá un Espíritu que se los recordará. Y la respuesta correcta al recordatorio no es vergüenza — es volver. Como el hijo pródigo que recuerda que tiene Padre.<br><br>Volver siempre es posible. Siempre.</p></div>` },
+      { t: "verse", ref: "Juan 16:33", texto: "Estas cosas os he hablado para que en mí tengáis paz. En el mundo tendréis aflicción; pero confiad, yo he vencido al mundo." },
+      { t: "blk", lbl: "Oración de cierre", html: `<p class="script"><em>[Orar en primera persona del plural, breve, declarativo:]</em><br><br>"Padre, gracias porque no peleamos solos. Gracias porque el que venció al mundo vive en nosotros. Ayúdanos esta semana a reconocer cuándo el kosmos intenta moldearnos y cuándo la carne intenta jalarnos — y a volver rápido, sin vergüenza, a quienes somos en Cristo. Amén."</p>` },
+      { t: "nota", html: "La oración de cierre no debe pedir victoria — debe declarar la que ya existe. El tono es el de alguien que ora desde adentro del palacio, no desde afuera de la puerta." }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j < i);
+    s.classList.toggle('cur', j === i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb'; btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'enemigo-hd') {
+      html += `<div class="enemigo-hd" style="background:${b.bg}">
+        <div style="font-size:9px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:${b.color};margin-bottom:3px">${b.num}</div>
+        <div style="font-size:20px;font-weight:600;color:${b.color};line-height:1.2;margin-bottom:3px">${b.title}</div>
+        <div style="font-size:11px;color:${b.color};opacity:0.8">${b.sub}</div>
+      </div>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html; panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>
