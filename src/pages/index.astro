@@ -17,7 +17,7 @@ const seriesBlocks = seriesCatalog.map((serie) => ({
 
 <Base
   title="Series"
-  description="Series de charlas para voluntarios: el Reino, la Ley a Jesús, identidad, enemigos y el Espíritu."
+  description="Series de charlas para voluntarios: el Reino, la Ley a Jesús, identidad, enemigos, el Espíritu y la Biblia."
 >
   <section class="wrap hero">
     <p class="kicker">Charlas para voluntarios</p>
@@ -54,6 +54,7 @@ const seriesBlocks = seriesCatalog.map((serie) => ({
               description={tema.data.description}
               order={tema.data.order}
               duration={tema.data.duration}
+              hasAudio={Boolean(tema.data.audio)}
             />
           ))}
         </div>

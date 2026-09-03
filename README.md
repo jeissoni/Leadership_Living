@@ -22,6 +22,7 @@ Abre `http://localhost:4321`.
 2. Completa el encabezado (`title`, `description`, `date`, `series`, `order`, `thesis`, `remember`, `duration`, `resources`).
 3. Escribe el sustento debajo, con `## Sustento` y `>` para citas bíblicas.
 4. Si hay material de facilitador, lista los archivos de `src/widgets/` en `widgets` y una nota en `guionLede`.
+5. Si hay un audio de resumen, pon el archivo en `public/audio/` (mp3 o m4a) y en el encabezado: `audio: nombre-del-archivo.mp3`. El reproductor aparece solo en esa ficha. También vale una URL (`https://…`).
 
 El diseño no se toca: el apunte entra en la ficha del inicio y en la vista de lectura. El guion queda en la ruta `/guion/`.
 

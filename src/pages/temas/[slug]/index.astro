@@ -1,6 +1,7 @@
 ---
 import { render } from "astro:content";
 import Base from "../../../layouts/Base.astro";
+import { audioHref, audioType } from "../../../lib/audio";
 import { seriesById } from "../../../lib/series";
 import { temaStaticPaths, type TemaEntry } from "../../../lib/tema-paths";
 
@@ -20,6 +21,8 @@ const homeHref = import.meta.env.BASE_URL;
 const base = import.meta.env.BASE_URL;
 const mindMapSrc = `${base}mapa-mental-reino-de-dios.png`;
 const guionHref = `${base}temas/${tema.id}/guion/`;
+const audioSrc = tema.data.audio ? audioHref(base, tema.data.audio) : undefined;
+const audioMime = tema.data.audio ? audioType(tema.data.audio) : undefined;
 ---
 
 <Base title={tema.data.title} description={tema.data.description} current="tema">
@@ -47,6 +50,19 @@ const guionHref = `${base}temas/${tema.id}/guion/`;
       <p class="thesis-label">En una frase</p>
       <p>{tema.data.thesis}</p>
     </blockquote>
+
+    {
+      audioSrc && (
+        <section class="audio-summary no-print">
+          <h2>Resumen en audio</h2>
+          <p>Un recuento corto de la charla, para oír de nuevo.</p>
+          <audio controls preload="metadata">
+            {audioMime ? <source src={audioSrc} type={audioMime} /> : <source src={audioSrc} />}
+            <a href={audioSrc}>Descargar el audio</a>
+          </audio>
+        </section>
+      )
+    }
 
     <section class="remember">
       <h2>Para recordar</h2>

@@ -5,15 +5,19 @@ interface Props {
   description: string;
   order: number;
   duration?: string;
+  hasAudio?: boolean;
 }
 
-const { href, title, description, order, duration } = Astro.props;
+const { href, title, description, order, duration, hasAudio } = Astro.props;
 ---
 
 <a class="card" href={href}>
   <div class="card-top">
     <span class="tag">Charla {order}</span>
-    {duration && <span>{duration}</span>}
+    <span class="card-meta">
+      {duration && <span>{duration}</span>}
+      {hasAudio && <span>Audio</span>}
+    </span>
   </div>
   <h2>{title}</h2>
   <p>{description}</p>

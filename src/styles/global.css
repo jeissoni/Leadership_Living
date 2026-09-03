@@ -310,6 +310,15 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem 0.7rem;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
 .card h2 {
   margin: 0 0 0.45rem;
   font-family: var(--font-serif);
@@ -477,6 +486,34 @@ a:hover {
 
 .remember {
   margin-top: 1.8rem;
+}
+
+.audio-summary {
+  margin-top: 1.8rem;
+  padding: 1.05rem 1.15rem 1.15rem;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.audio-summary h2 {
+  margin: 0 0 0.35rem;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+}
+
+.audio-summary p {
+  margin: 0 0 0.85rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.audio-summary audio {
+  display: block;
+  width: 100%;
+  accent-color: var(--navy);
 }
 
 .remember h2,

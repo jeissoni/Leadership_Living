@@ -12,6 +12,7 @@ remember:
   - "Segundo punto para retener."
   - "Tercer punto para retener."
 guionLede: "Nota corta para quien da la charla."
+# audio: nombre-del-archivo.mp3
 widgets:
   - bloque_fundamento_reino
 resources:
@@ -23,4 +24,4 @@ resources:
 
 Copia este archivo, quítale el `_` del nombre. `series` es el id del catálogo en `src/lib/series.ts`. `order` es el número dentro de la serie.
 
-El cuerpo de esta página es el apunte para quien vuelve a leer. Usa `>` para citas bíblicas. `widgets` lista archivos de `src/widgets/` sin `.html` y solo aparecen en `/temas/[slug]/guion/`.
+El cuerpo de esta página es el apunte para quien vuelve a leer. Usa `>` para citas bíblicas. `widgets` lista archivos de `src/widgets/` sin `.html` y solo aparecen en `/temas/[slug]/guion/`. Si hay un resumen en audio, `audio` es el nombre del archivo en `public/audio/` (o una URL).
