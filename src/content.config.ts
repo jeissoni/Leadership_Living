@@ -16,6 +16,7 @@ const temas = defineCollection({
       "identidad-en-cristo",
       "enemigos-del-creyente",
       "espiritu-santo-y-dones",
+      "la-biblia",
     ]),
     order: z.number().int().positive(),
     tags: z.array(z.string()).default([]),
@@ -23,6 +24,7 @@ const temas = defineCollection({
     thesis: z.string(),
     remember: z.array(z.string()).min(3).max(5),
     guionLede: z.string().optional(),
+    audio: z.string().optional(),
     widgets: z.array(z.string()).default([]),
     showMindMap: z.boolean().default(false),
     resources: z

@@ -24,6 +24,11 @@ export const seriesCatalog = [
     title: "El Espíritu Santo y los dones",
     lede: "Quién es el Espíritu, qué hace en el creyente, y los dones como gracia para el cuerpo.",
   },
+  {
+    id: "la-biblia",
+    title: "La Biblia",
+    lede: "Por qué es un texto serio, cómo se recibe como Palabra de Dios, y por qué unas Biblias tienen más libros.",
+  },
 ] as const;
 
 export type SeriesId = (typeof seriesCatalog)[number]["id"];

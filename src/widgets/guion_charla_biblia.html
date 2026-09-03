@@ -1,0 +1,127 @@
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 6 min",
+    bloques: [
+      { t: "blk", lbl: "La pregunta que nadie dice", html: `<p class="script">Llevamos meses abriendo este libro. Lo citamos. Lo usamos para servir. Y hay una pregunta que muchos cargan y casi nadie dice en voz alta.<br><br>¿Esto es Palabra de Dios, o es palabra de hombres religiosos?<br><br>Algunos crecieron con una Biblia en la mesa y nunca la hicieron. Otros vienen de una casa donde la Biblia tiene más libros, y la primera dubitación no es teológica: es «¿por qué la de ustedes es más delgada?».<br><br>Hoy no vamos a fingir que esas preguntas no existen. Las vamos a nombrar. Y vamos a distinguirlas, porque no son la misma.</p>` },
+      { t: "pregunta", html: "Cuando abres la Biblia, ¿la oyes como voz, o la usas como herramienta?" },
+      { t: "blk", lbl: "", html: `<p class="script">Tres cosas distintas se mezclan y entonces nadie se lleva nada.<br><br>Una: si este texto es serio — si lo que leemos es lo que se escribió, o un rumor de siglos.<br><br>Dos: si Dios habla aquí, o solo hablan hombres piadosos.<br><br>Tres: por qué unas Biblias tienen más libros que otras.<br><br>La primera se puede mostrar. La segunda se recibe. La tercera se explica sin pelea. Si las aplasto en un solo argumento, esto se vuelve un debate. Y nosotros no vinimos a ganar un debate.</p>` },
+      { t: "nota", html: "Dejar que la pregunta inicial respire. No abrir con manuscritos. El objetivo es que el grupo note su propia duda — o su falta de duda — antes de que el texto la encuentre." }
+    ]
+  },
+  {
+    label: "Confiable",
+    tiempo: "6 – 16 min",
+    bloques: [
+      { t: "blk", lbl: "Un texto serio, no un eslogan", html: `<p class="script">Empiezo por lo que sí se puede mostrar, para no pedir fe donde hace falta un hecho.<br><br>Esto no es un libro. Es una biblioteca. Sesenta y seis escritos. Cerca de cuarenta autores. Unos mil quinientos años. Hebreo, arameo, griego. Campesinos, reyes, un médico, un cobrador de impuestos, pescadores. Y un hilo que no se rompe: Dios busca, el hombre huye, Cristo cumple.<br><br>Ese hilo ya lo recorrieron. Génesis 3. El sistema que cubría. El velo rasgado. Hoy no lo volvemos a contar. Lo nombramos: el libro se sostiene como historia, no como consigna.</p>` },
+      { t: "dato", html: `<strong>El Nuevo Testamento es el texto antiguo mejor atestiguado que tenemos.</strong> Miles de manuscritos en griego. Traducciones tempranas. Citas de los Padres. No tenemos el papiro original. Tenemos un texto que se puede rastrear. El trozo más famoso de Juan (P52) se data unas décadas después de que se escribiera — no milenios después. Otros clásicos de la antigüedad sobreviven en un puñado de copias, copiadas siglos más tarde.` },
+      { t: "ilustra", html: `<strong>El teléfono descompuesto y la fotocopia.</strong> Un rumor se deforma porque cada uno oye una vez y pasa. Un texto copiado muchas veces se puede comparar: donde uno se equivocó, los otros no. Por eso las variantes no son el fin de la confianza: son la razón por la que podemos decir qué decía el texto.` },
+      { t: "blk", lbl: "Qumrán, en una frase", html: `<p class="script">El Antiguo Testamento: el pueblo judío copió con un cuidado obsesivo. Cuando aparecieron los rollos del Mar Muerto, Isaías — siglos antes de Jesús — ya decía en lo sustancial lo que leemos. Nadie reescribió al Mesías después de Pascua para que «cuadrara».<br><br>Hay variantes. Copistas se equivocaban. Casi ninguna cambia una doctrina. Lo digo sin teatro: el texto es estable. No es mágico.</p>` },
+      { t: "nota", html: "No enumerar 5.800 manuscritos como trofeo. Un hecho, una imagen (fotocopia), Isaías, y listo. Si alguien quiere números, están en Datos y en el complemento." },
+      { t: "trans", html: "— Eso es confiabilidad. Ahora: ¿es Palabra de Dios? —" }
+    ]
+  },
+  {
+    label: "Inspirada",
+    tiempo: "16 – 28 min",
+    bloques: [
+      { t: "blk", lbl: "No prometo un teorema", html: `<p class="script">Si yo les prometo demostrar que esto no es palabra de hombres, como se demuestra un teorema, les voy a fallar. O les voy a mentir un poco.<br><br>La Biblia no se presenta como dictado mágico. Tampoco como «solo humanos opinando». Dice las dos cosas a la vez.</p>` },
+      { t: "verse", ref: "2 Pedro 1:21", texto: "…nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo." },
+      { t: "blk", lbl: "Hecha por hombres, no inventada por hombres", html: `<p class="script">Hombres reales escribieron. Idioma. Época. Lágrimas. Rabia. Jeremías no suena como Lucas. El Espíritu no apagó a la persona. La llevó.<br><br>Pablo le dice a Timoteo: toda la Escritura es inspirada por Dios — soplada por Dios — y útil. No útil para ganar una discusión. Útil para formar a alguien: enseñar, redargüir, corregir, instruir.</p>` },
+      { t: "verse", ref: "2 Timoteo 3:16–17", texto: "Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra." },
+      { t: "blk", lbl: "El argumento que más pesa: Jesús", html: `<p class="script">La razón cristiana más fuerte no es la arqueología. Es cómo Jesús trata este libro.<br><br>En el desierto no improvisa una espiritualidad. Dice: escrito está. En Juan dice que la Escritura no puede ser quebrantada. Resucitado, abre a los discípulos lo que Moisés, los Profetas y los Salmos decían de él.<br><br>Si Cristo es quien decimos que es, su modo de oír esas páginas pesa más que nuestro recelo.</p>` },
+      { t: "verse", ref: "Juan 10:35", texto: "…y la Escritura no puede ser quebrantada." },
+      { t: "verse", ref: "Lucas 24:27", texto: "Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían." },
+      { t: "dato", html: `<strong>La iglesia no votó para que un libro se volviera divino.</strong> Reconoció lo que ya se leía como voz de Dios: ligado a los apóstoles, usado con amplitud, de acuerdo con el evangelio. 2 Pedro 3 ya pone cartas de Pablo junto a «las otras Escrituras». El concilio lista. No inventa.` },
+      { t: "verse", ref: "Hebreos 1:1–2", texto: "Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo." },
+      { t: "blk", lbl: "", html: `<p class="script">Dios habló. Ahora habla en el Hijo. La Escritura no compite con Cristo: da testimonio de él. El mismo hilo de cuando el velo se rasgó.<br><br>Y al final hay un paso que ningún dato cierra. El Espíritu convence. Yo les puedo quitar la excusa de «esto lo inventaron». Jesús les quita la excusa de «es solo religión antigua». El Espíritu hace que la página no se quede en información.</p>` },
+      { t: "nota", html: "No entrar a inerrancia vs infalibilidad. Si sale, una frase: lo que Dios quiso decir, lo dijo; las traducciones no son el original; no hace falta un término de seminario para oírla esta semana." }
+    ]
+  },
+  {
+    label: "66 y 73",
+    tiempo: "28 – 37 min",
+    bloques: [
+      { t: "blk", lbl: "La diferencia no está en los Evangelios", html: `<p class="script">Ahora la pregunta que en este país casi siempre está debajo de la mesa.<br><br>El Nuevo Testamento es el mismo. Veintisiete libros. Católica, protestante, ortodoxa: los mismos Evangelios, las mismas cartas, el mismo Cristo.<br><br>La diferencia está en el Antiguo.</p>` },
+      { t: "dato", html: `<strong>Dos Biblias, dos memorias.</strong> La lista hebrea — Ley, Profetas, Escritos — es la Biblia de la sinagoga, la que Jesús nombra en Lucas 24:44. La lista griega — la Septuaginta — es más ancha: viajó con la iglesia que hablaba griego, y con ella iban Tobías, Judit, Macabeos, Sabiduría, Eclesiástico, Baruc, añadidos a Daniel y a Ester. Las dos memorias son reales. No hace falta fingir que una es un invento reciente.` },
+      { t: "ilustra", html: `<strong>Jerónimo ya distinguía.</strong> El traductor de la Biblia al latín dijo, en sustancia: los libros hebreos para fundamentar doctrina; los otros, útiles. Siglos después, la Reforma volvió al canon hebreo. Trento, en 1546, definió el de setenta y tres. No es «Roma añadió libros un martes del siglo XVI». Tampoco «los protestantes recortaron la Biblia». Hubo dos listas en uso. Cada tradición cerró una.` },
+      { t: "blk", lbl: "Pastoral, no tribuna", html: `<p class="script">Si tu mamá, tu abuela o tu padrino leen setenta y tres, no están leyendo otro evangelio. El centro es el mismo.<br><br>Nosotros leemos sesenta y seis porque seguimos el canon que Jesús recibió como Escritura. Esos otros libros se pueden leer como historia y como devoción. No los usamos para sentar doctrina.<br><br>El índice no es la duda de fondo. La duda de fondo es: cuando se abre, ¿quién habla?</p>` },
+      { t: "pregunta", html: "¿Estás dispuesto a dejar el recuento de libros — y oír el centro?" },
+      { t: "nota", html: "Siete minutos, no quince. No enumerar deuterocanónicos en voz alta. Si se calienta: una frase del complemento («nadie lee otro Cristo por siete libros») y pasa al cierre. No humillar a quien viene de familia católica." },
+      { t: "trans", html: "— Entonces se lee. No para ganar. Para ser cortado. —" }
+    ]
+  },
+  {
+    label: "Cierre",
+    tiempo: "37 – 45 min",
+    bloques: [
+      { t: "blk", lbl: "No un versículo suelto", html: `<p class="script">Un solo principio de lectura, y basta para esta noche. No un versículo arrancado. Contexto. El Antiguo a la luz de Jesús, que ya vieron. El Espíritu ilumina; no te dicta un significado privado que contradiga la página.<br><br>Pablo dijo para qué sirve: formar a alguien. Santiago pone el filo que este grupo necesita.</p>` },
+      { t: "verse", ref: "Santiago 1:22", texto: "Pero sed hacedores de la palabra, y no tan solamente oidores, engañándoos a vosotros mismos." },
+      { t: "puente", html: `<strong>Para quien sirve.</strong> Hay una manera de abrir la Biblia que se parece a servir desde afuera del palacio: se lee para no quedar mal, para tener frase en el turno, para que Dios no te olvide. El problema no es falta de lectura. Es no oírla como voz. Si es Palabra de Dios, el turno no es el examen. La página te examina a ti.` },
+      { t: "pastoral", lbl: "Cierre — no resumir los datos", html: `<p class="script">Puedo mostrarles que este libro es un texto serio. Puedo mostrarles que Jesús lo trata como Escritura que no se quiebra. Puedo explicarles por qué el índice no es igual en todas las mesas.<br><br>No puedo oírla por ustedes.<br><br>Esta semana no les pido que ganen una discusión sobre manuscritos. Les pido que la abran. Y que dejen que los corte.</p>` },
+      { t: "pregunta", html: "Esta semana, ¿la abres como voz o como herramienta?" },
+      { t: "nota", html: "No acortar el silencio después de la pregunta. No añadir un octavo dato. Si hay tiempo, repetir Santiago 1:22 y sentarse." }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j<i);
+    s.classList.toggle('cur', j===i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb'; btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'puente') {
+      html += `<div class="puente">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'pastoral') {
+      html += `<div class="pastoral"><div class="pastoral-lbl">${b.lbl}</div>${b.html}</div>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html; panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>
