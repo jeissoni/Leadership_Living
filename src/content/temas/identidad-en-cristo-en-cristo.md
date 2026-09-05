@@ -8,12 +8,13 @@ tags: ["identidad"]
 duration: "45 min"
 thesis: "No estamos intentando entrar en Cristo: ya estamos dentro. La identidad no es el resultado del comportamiento; es su causa."
 remember:
-  - "«En Cristo» no es una identidad más: es el suelo donde crecen las demás."
-  - "Tu condición espiritual no depende de tu rendimiento: depende de dónde estás."
-  - "El Gran Intercambio: él tomó lo nuestro para darnos lo suyo."
-  - "Ninguna condenación hay para los que están en Cristo Jesús."
-  - "Sirves desde lo que ya eres, no para convertirte en alguien."
-guionLede: "Orden: datos para abrir → guion completo → Gran Intercambio. En la charla dada se usaron tres figuras: matrimonio, vida y ramas, cuerpo de Cristo. No acortar el silencio del cierre."
+  - "La conducta no define la identidad. La identidad define la conducta."
+  - "Creer en Jesús no es lo mismo que estar en Cristo. No podíamos saltar la línea: Él nos posicionó."
+  - "Tres figuras: vid y ramas, matrimonio, cuerpo. El fruto sale de la savia. Jesús no amputa al que tropieza."
+  - "Gracia más obras dice que a la cruz le faltó algo. El pecado duele aquí; la deuda de eternidad ya está pagada."
+  - "«Este es mi hijo amado.» El valor no fluctúa con el domingo. Ante los suyos: quítate del medio."
+guionLede: "Sigue la charla dada: identidad antes que conducta → dimensiones (no podíamos saltar) → creer vs estar y Efesios 1 → vid, matrimonio, cuerpo → descanso vs religión (consecuencias aquí, deuda allá ya saldada) → quitarse del medio → hijo amado. No acortar el silencio del cierre."
+audio: En_Jesus_-_Tu_identidad_define_tu_conducta.mp3
 widgets:
   - datos_identidad
   - guion_en_cristo_completo
@@ -21,82 +22,124 @@ widgets:
 resources:
   - label: "Efesios 1:3–14"
     url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A3-14&version=RVR1960"
-  - label: "2 Corintios 5:17"
-    url: "https://www.biblegateway.com/passage/?search=2+Corintios+5%3A17&version=RVR1960"
+  - label: "Romanos 10:9"
+    url: "https://www.biblegateway.com/passage/?search=Romanos+10%3A9&version=RVR1960"
+  - label: "Juan 15:5"
+    url: "https://www.biblegateway.com/passage/?search=Juan+15%3A5&version=RVR1960"
+  - label: "Efesios 5:31–32"
+    url: "https://www.biblegateway.com/passage/?search=Efesios+5%3A31-32&version=RVR1960"
   - label: "2 Corintios 5:21"
     url: "https://www.biblegateway.com/passage/?search=2+Corintios+5%3A21&version=RVR1960"
-  - label: "Gálatas 2:20"
-    url: "https://www.biblegateway.com/passage/?search=Galatas+2%3A20&version=RVR1960"
-  - label: "Romanos 8:1"
-    url: "https://www.biblegateway.com/passage/?search=Romanos+8%3A1&version=RVR1960"
+  - label: "Gálatas 3:13"
+    url: "https://www.biblegateway.com/passage/?search=Galatas+3%3A13&version=RVR1960"
+  - label: "1 Corintios 12:27"
+    url: "https://www.biblegateway.com/passage/?search=1+Corintios+12%3A27&version=RVR1960"
+  - label: "Mateo 3:17"
+    url: "https://www.biblegateway.com/passage/?search=Mateo+3%3A17&version=RVR1960"
   - label: "Efesios 2:6"
     url: "https://www.biblegateway.com/passage/?search=Efesios+2%3A6&version=RVR1960"
-  - label: "Colosenses 3:3"
-    url: "https://www.biblegateway.com/passage/?search=Colosenses+3%3A3&version=RVR1960"
-  - label: "1 Corintios 1:30"
-    url: "https://www.biblegateway.com/passage/?search=1+Corintios+1%3A30&version=RVR1960"
 ---
 
 ## Sustento
 
-«En Cristo» no es una identidad más en la lista. Es el suelo. Hijo, rama, miembro del cuerpo: ninguna tiene sentido si no está anclada primero en la unión. Sin este fundamento, lo que sigue suena a aspiración. Con él, cada identidad posterior es consecuencia de *dónde ya estás*.
+En el plano humano —y en mucha religión— la lógica es de esfuerzo: *lo que haces dice quién eres*. La Escritura, y lo que se ve cuando alguien de verdad se sabe otra persona, apunta al revés. **La conducta no da la identidad. La identidad define la conducta.**
 
-Hay una manera de seguir a Dios que se parece a esto: estás afuera de un palacio enorme. Sabes que hay algo valioso ahí. Y cada día haces lo que crees que debes hacer para que te dejen entrar. Oras para que Dios te escuche. Sirves para que Dios te use. Lees la Biblia para que Dios no te olvide. Todo desde afuera, empujando hacia adentro. El problema no es falta de fe. Es no saber *dónde estás*.
+Quien se sabe «saludable» no come bien para *llegar a serlo*. Come así porque lo otro no la representa. Quien se sabe «buen administrador» no espera el milagro de fin de mes: gestiona desde esa certeza. Living Room se niega a predicar la superficie: «deje de tomar», «deje de fumar», «vístase así». El legalismo desgasta. Cuando alguien entiende quién es delante de Dios y *para* Dios, el caminar se alinea solo: orgánico, no forzado.
 
-La psicología lo confirma de otra manera: la identidad determina el comportamiento, no al revés. Lo que crees que eres determina cómo actúas. Pablo no le dice a la iglesia «esfuérzate más». Le dice «recuerda quién eres».
+## El que desciende a nuestro plano
 
-En Efesios 1:3–14, «en Cristo», «en él», «en el amado» o «en quien» aparece una docena de veces. En todas las cartas de Pablo, más de 160. No está adornando. La pregunta no es solamente si crees *en* Jesús. Es si estás *en* él. Y esas dos cosas no son lo mismo.
+Habitamos tres dimensiones, presos del espacio y del tiempo. Imagina un ser que solo existe en un plano, como tinta en una hoja. Una línea dibujada delante de él es un muro. No tiene «arriba». No puede saltar. La única salida es que alguien de una dimensión más alta lo tome, lo levante y lo ponga al otro lado.
 
-> Bendito sea el Dios y Padre de nuestro Señor Jesucristo, que nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo.
+Estábamos así bajo el pecado y la muerte. La línea no se salta con voluntad. Hacía falta Alguien de otra esfera. Jesús habitó nuestro plano en un cuerpo. Resucitado, el cuerpo glorificado ya no está atado a nuestras coordenadas: María no lo reconoce hasta que él se da a conocer; en Emaús parte el pan y desaparece; entra donde las puertas están cerradas. No es truco para impresionar. Es esto: si él puede entrar a nuestro plano, también puede *meternos* en el suyo.
+
+Ese lugar cabe en una preposición pequeña: **en**.
+
+## Creer no es lo mismo que estar
+
+Los demonios creen. Saben quién es. No habitan en él. Hay un abismo entre asentir y ser unidos. La puerta es fe, no un examen.
+
+> que si confesares con tu boca que Jesús es el Señor, y creyeres en tu corazón que Dios le levantó de los muertos, serás salvo.
 >
-> <cite>Efesios 1:3</cite>
+> <cite>Romanos 10:9</cite>
 
-Tres capas van juntas: **unión** (no solo cercanía, sino estar dentro), **posición** (lo que tienes por dónde estás, no por lo que hiciste) y **participación** (lo que le pasa a él te pasa a ti). En la charla se usaron tres figuras:
+Al creer esa obra, no te cuelgan una medalla. Te *depositan*. La posición es inquebrantable. Pablo no adorna: en Efesios, «en Cristo» o «en él» se acumula más de treinta veces; en el Nuevo Testamento, más de ciento sesenta. Es la base del resto.
 
-- **Matrimonio.** Dos se hacen uno. Lo de uno pasa a ser de los dos: nombre, deudas, herencia.
-- **La vid y las ramas.** El fruto no sale del esfuerzo de la rama: sale de la savia del tronco. Separada, muere. Unida, produce lo que sola no podría.
-- **El cuerpo de Cristo.** No eres un cristiano aislado. Lo que le pasa a la Cabeza te alcanza.
-
-Hay una diferencia enorme entre creer que un avión puede volar y estar dentro del avión. Solo cuando estás adentro, la física que lo sostiene te sostiene a ti también.
-
-## Cuatro dimensiones
-
-**Herencia compartida.** Su historia ahora cuenta como tuya. Pablo no dice «quiero llegar a ser crucificado con Cristo»: dice «estoy juntamente crucificado» — tiempo pasado, hecho consumado. Cuando Jesús murió, tú moriste. Cuando resucitó, resucitaste. No como metáfora: como participación.
-
-> Con Cristo estoy juntamente crucificado, y ya no vivo yo, mas vive Cristo en mí.
+> Bendito sea el Dios y Padre de nuestro Señor Jesucristo, que nos bendijo con toda bendición espiritual en los lugares celestiales en Cristo, según nos escogió en él antes de la fundación del mundo, para que fuésemos santos y sin mancha delante de él… en quien tenemos redención por su sangre, el perdón de pecados según las riquezas de su gracia… En él asimismo tuvimos herencia… fuisteis sellados con el Espíritu Santo de la promesa.
 >
-> <cite>Gálatas 2:20</cite>
+> <cite>Efesios 1:3–4, 7, 11, 13</cite>
 
-**Nueva creación.** «Nueva criatura» no es versión mejorada, y no es una tarea. Pablo lo dice en indicativo, no en imperativo. «Vuestra vida está escondida con Cristo en Dios»: la identidad más profunda no es visible ni vulnerable. No sube cuando oras bien ni baja cuando fallas.
+Bendición, elección, redención, herencia, sello. Todo *en él*. No al lado. No «si te portas». En.
 
-> De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.
+Hay una diferencia enorme entre creer que un avión vuela y estar sentado adentro. Solo adentro te sostiene lo que lo sostiene a él.
+
+## Tres figuras
+
+**La vid y las ramas.** Injerto. Pura gracia: no éramos el árbol. Nos pegaron. La rama no fabrica savia. Se queda. Ningún árbol puja para dar fruto. El fruto brota porque hay conexión.
+
+> Yo soy la vid, vosotros los pámpanos; el que permanece en mí, y yo en él, este lleva mucho fruto; porque separados de mí nada podéis hacer.
 >
-> <cite>2 Corintios 5:17</cite>
+> <cite>Juan 15:5</cite>
 
-Dos personas deciden dejar de fumar. Una dice: «estoy tratando de no fumar». La otra: «no fumo». La diferencia no es la fuerza de voluntad. Es la identidad.
+La única función es permanecer. Autosuficiencia es decirle: «usted por allá, yo por acá» —el dinero, el cuerpo, lo que no quiero entregarle. La rama sigue injertada y se seca por dentro de sed.
 
-**El ancla.** El ancla no es tu comportamiento, ni tu nivel de fe, ni cuánto sirves. Es la promesa de Dios en Cristo. Nada —ni lo presente, ni lo por venir— puede separarte de ese amor.
+**El matrimonio.** Dos se hacen una sola carne. Misterio grande, dice Pablo, y lo apunta a Cristo y la iglesia. En la charla, dos plastilinas: se amasan, una pieza. Ya no se separan sin llevarse el uno al otro.
 
-> Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús.
+> Por esto dejará el hombre a su padre y a su madre, y se unirá a su mujer, y los dos serán una sola carne. Grande es este misterio; mas yo digo esto respecto de Cristo y de la iglesia.
 >
-> <cite>Romanos 8:1</cite>
+> <cite>Efesios 5:31–32</cite>
 
-**Acceso.** «Confiadamente» en Hebreos 4:16 es *parresia*: libertad de expresión sin miedo al rechazo. No es el acceso cauteloso del empleado. Es el del hijo. Filipenses 3:20 añade: «nuestra ciudadanía está en los cielos». No como escape: como identidad que informa lo que haces aquí.
-
-## El Gran Intercambio
-
-Él tomó lo nuestro para darnos lo suyo. Dios pone nuestros pecados en Cristo y, en su muerte obediente, imputa su justicia a nosotros.
+Ante el Padre, una entidad. Entonces la Gran Transferencia: le pasamos lo nuestro —pecado, deuda, carga, lo que no queremos que se vea— y él nos pasa lo suyo: justicia, herencia, pureza, gracia que no se agota.
 
 > Al que no conoció pecado, por nosotros lo hizo pecado, para que nosotros fuésemos hechos justicia de Dios en él.
 >
 > <cite>2 Corintios 5:21</cite>
 
-Calvino lo dijo casi como guion: haciéndose Hijo del hombre con nosotros, nos hizo hijos de Dios con él; tomando nuestra mortalidad, nos confirió su inmortalidad; recibiendo nuestra pobreza, transfirió su riqueza; tomando el peso de nuestra iniquidad, nos vistió con su justicia.
+> Cristo nos redimió de la maldición de la ley, hecho por nosotros maldición (porque está escrito: Maldito todo el que es colgado en un madero).
+>
+> <cite>Gálatas 3:13</cite>
+
+Él fue tratado como pecador. Nosotros, como justicia de Dios. Él absorbió la maldición en el madero. Nosotros no la renegociamos cada lunes.
+
+**El cuerpo.** No fans en la grada. Miembros.
+
+> Vosotros, pues, sois el cuerpo de Cristo, y miembros cada uno en particular.
+>
+> <cite>1 Corintios 12:27</cite>
+
+Jesús no amputa cuando un miembro tropieza. Su gracia no mutila. Añade. Restaura. Pega. El amor de la Cabeza no recorta al que falló.
+
+## El descanso y el desgaste
+
+Intentar *ganarse* o *mantener* el favor a puro esfuerzo es peligroso, y es teología mala. La religión de la lista larga —para poder estar en Cristo— dice, sin decirlo: a la cruz le faltó un porcentaje. **No es gracia más obras. Es gracia.**
+
+Orar, leer, congregarse no son el pasamanos para que no te bajen del barco. Son hábitos que te recuerdan que *ya estás* a bordo. Si las usas para que el Padre te quiera más, volviste a empujar una puerta abierta.
+
+Vivir de la carne cansa. Tarde o temprano se tira la toalla. Y hay que decir esto sin suavizarlo: **el pecado tiene consecuencias aquí**. Daña el cuerpo, que es templo. Rompe relaciones. A veces hay disciplina, a veces hay ley humana. Jesús no ignora eso. La deuda de eternidad, la aceptación delante del Padre, eso ya se saldó en el madero. El crédito está pagado. Estás a paz. Las dos cosas son verdad: duele ahora; allá, está resuelto.
+
+## Quitarse del medio
+
+Cuando esta libertad entra, duele ver a un ser querido atrapado: adicción, decisiones que rompen, religión que oprime. El impulso es forzar, regañar, convencer. El juicio levanta muro. Distancia.
+
+Hay un solo encargado de convencer al mundo de pecado: el Espíritu Santo. Nosotros no somos él. Ocupar su lugar desgasta a los dos. El papel es más sencillo y más difícil: reflejar amor, gracia, misericordia, bondad, servicio. Amar, abrazar, ofrecer gracia. **Quitarnos de en medio** para que no nos vean a nosotros: para que se encuentren con Cristo.
+
+## El agrado que no fluctúa
+
+El Padre no esperó tres años de milagros para hablar en el Jordán. Esa frase, por estar escondido en el Amado, se te acerca: hijo, hija.
+
+> Este es mi Hijo amado, en quien tengo complacencia.
+>
+> <cite>Mateo 3:17</cite>
+
+El valor no sube ni baja con el performance del día. Estás unido al Amado. Estás sentado con él en lugares celestiales. Desde ahí se descansa. Desde ahí el fruto brota, sin pujo.
+
+> y juntamente con él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús.
+>
+> <cite>Efesios 2:6</cite>
 
 ## Para quien sirve
 
-Si sirves esperando que Dios te acepte, te use o te apruebe por lo que haces, estás sirviendo como mendigo. Si sirves desde la conciencia de que ya tienes herencia, que ya eres nueva criatura, que el ancla es firme, la misma acción se hace desde otro lugar. Cambia la motivación, la sostenibilidad, y cómo tratas a los demás cuando el servicio se pone difícil.
+Si sirves para que Dios te acepte, estás sirviendo como mendigo. Si sirves desde «ya estoy en el Amado», la misma acción pesa distinto: no compras un lugar; gastas una herencia.
 
-La posición precede la conducta. La oración del que está afuera toca la puerta: «Señor, ¿me escuchas?». La del que está dentro dice: «Padre, gracias porque ya tengo acceso. Ayúdame a entender lo que ya me pertenece».
+Ante los que amas y no cambian: no seas el fiscal. No seas el Espíritu Santo. Sé testigo de una unión que tú no te ganaste.
 
-Pregunta para la semana: ¿cuál de estas cuatro dimensiones —herencia, nueva creación, ancla, acceso— te cuesta más recibir como ya tuya, en lugar de como algo que debes ganarte?
+Pregunta para la semana: ¿qué decisión de estos días tomarías distinto si la tomaras como alguien que ya está en el Amado —sentado, no empujando la puerta?
