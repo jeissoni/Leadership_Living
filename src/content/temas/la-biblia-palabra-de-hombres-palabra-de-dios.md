@@ -5,7 +5,7 @@ date: 2026-08-31
 series: la-biblia
 order: 1
 tags: ["escritura"]
-duration: "45 min"
+duration: "55 min"
 thesis: "La Biblia es palabra de hombres y, a la vez, Palabra de Dios. Se puede mostrar que es un texto serio. Se recibe como voz de Dios porque Jesús la trata así. Los índices distintos no cambian a Cristo."
 remember:
   - "Confiable e inspirada no son la misma pregunta. Coherencia, escribas y profecía muestran un texto serio. La inspiración se recibe."
@@ -13,7 +13,7 @@ remember:
   - "El argumento más fuerte no es la arqueología: es cómo Jesús trata la Escritura."
   - "El Nuevo Testamento es el mismo (27). La diferencia está en el Antiguo: 66 o 73, dos listas, no dos evangelios."
   - "Se abre para ser cambiado, no para acumular citas ni para ganar un debate."
-guionLede: "Confiable: tres argumentos (coherencia de autores, escribas, tres profecías). No la lista de Jesús cumple todo. No prometas demostrar inspiración. 66/73 pastoral, no tribuna. Cierre: Santiago 1:22. El complemento es referencia: no se dicta."
+guionLede: "55 min en cuatro paradas: cómo se hizo y llegó (sofrim y masoretas, canon, traductores), por qué confiar (coherencia, texto, profecía, Jesús), qué hay adentro (el mapa de los diez estantes) y cierre pastoral con oración. No prometas demostrar inspiración. 66/73 en una frase, no es el tema. Revisa en el complemento los datos populares que no se sostienen antes de citarlos."
 widgets:
   - datos_biblia
   - guion_charla_biblia
