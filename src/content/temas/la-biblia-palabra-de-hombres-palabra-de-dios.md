@@ -8,12 +8,12 @@ tags: ["escritura"]
 duration: "45 min"
 thesis: "La Biblia es palabra de hombres y, a la vez, Palabra de Dios. Se puede mostrar que es un texto serio. Se recibe como voz de Dios porque Jesús la trata así. Los índices distintos no cambian a Cristo."
 remember:
-  - "Confiable e inspirada no son la misma pregunta. Una se muestra con hechos. La otra se recibe."
+  - "Confiable e inspirada no son la misma pregunta. Coherencia, escribas y profecía muestran un texto serio. La inspiración se recibe."
   - "Hecha por hombres, no inventada por hombres. Autoría doble: estilo humano y soplo de Dios."
   - "El argumento más fuerte no es la arqueología: es cómo Jesús trata la Escritura."
   - "El Nuevo Testamento es el mismo (27). La diferencia está en el Antiguo: 66 o 73, dos listas, no dos evangelios."
   - "Se abre para ser cambiado, no para acumular citas ni para ganar un debate."
-guionLede: "No prometas demostrar inspiración. Quita obstáculos: manuscritos, Jesús, el canon. El bloque de 66/73 es histórico y pastoral, no de tribuna. Si se calienta la sala, una frase y sigue. El cierre es Santiago 1:22, no un resumen de datos. El complemento (manuscritos, lista de libros, objeciones) es referencia: no se dicta."
+guionLede: "Confiable: tres argumentos (coherencia de autores, escribas, tres profecías). No la lista de Jesús cumple todo. No prometas demostrar inspiración. 66/73 pastoral, no tribuna. Cierre: Santiago 1:22. El complemento es referencia: no se dicta."
 widgets:
   - datos_biblia
   - guion_charla_biblia
@@ -31,6 +31,14 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Lucas+24%3A44&version=RVR1960"
   - label: "Hebreos 1:1–2"
     url: "https://www.biblegateway.com/passage/?search=Hebreos+1%3A1-2&version=RVR1960"
+  - label: "Miqueas 5:2"
+    url: "https://www.biblegateway.com/passage/?search=Miqueas+5%3A2&version=RVR1960"
+  - label: "Isaías 44:28–45:1"
+    url: "https://www.biblegateway.com/passage/?search=Isaias+44%3A28-45%3A1&version=RVR1960"
+  - label: "Isaías 53"
+    url: "https://www.biblegateway.com/passage/?search=Isaias+53&version=RVR1960"
+  - label: "Hebreos 4:12"
+    url: "https://www.biblegateway.com/passage/?search=Hebreos+4%3A12&version=RVR1960"
   - label: "Santiago 1:22"
     url: "https://www.biblegateway.com/passage/?search=Santiago+1%3A22&version=RVR1960"
   - label: "Salmo 119:105"
@@ -51,13 +59,15 @@ Llevamos meses citando pasajes. El hueco no es «qué es la Biblia» en abstract
 
 ## Confiable: un texto serio
 
-La Biblia no es un libro. Es una biblioteca: 66 escritos, cerca de cuarenta autores, unos mil quinientos años, tres idiomas (hebreo, arameo, griego), tres continentes. Campesinos, reyes, profetas, un médico, un cobrador de impuestos, pescadores. Y un hilo que no se rompe: Dios busca, el hombre huye, Cristo cumple. Eso ya se vio en *De la Ley a Jesús*. Aquí solo se nombra: el libro se sostiene como historia, no como eslogan.
+La Biblia no es un libro. Es una biblioteca: 66 escritos, cerca de cuarenta autores, unos mil quinientos años, tres idiomas (hebreo, arameo, griego), tres continentes. Campesinos, reyes, profetas, un médico, un cobrador de impuestos, pescadores. Nadie armó un comité. Y el diagnóstico no cambia: Dios busca, el hombre huye, Cristo cumple. Eso ya se vio en *De la Ley a Jesús*. Distintos acentos. La misma historia. Jeremías no suena como Lucas; el centro no se rompe.
+
+El pueblo judío copió como quien copia un contrato. Los escribas contaban letras; sabían la letra del medio de la Torah; un rollo defectuoso se apartaba, no se «arreglaba» con un tachón. Los masoretas anotaron al margen para que nadie «mejorara» el texto. Un rumor se deforma (teléfono descompuesto). Un texto copiado muchas veces, con reglas, se compara: donde uno se equivocó, los otros no.
 
 El Nuevo Testamento es el conjunto de textos antiguos **mejor atestiguado** que tenemos. Hay miles de manuscritos en griego, más traducciones tempranas (latín, siríaco, copto) y citas de los Padres de la Iglesia. No tenemos el papiro original. Tenemos un texto que se puede rastrear. El fragmento más antiguo que se suele citar (P52, un trozo de Juan) se data hacia la primera mitad del siglo II: décadas, no milenios, después de la redacción. Otros libros de la antigüedad clásica sobreviven en un puñado de copias, copiadas siglos más tarde. Eso no prueba que Juan sea Palabra de Dios. Prueba que **no estamos leyendo un rumor**.
 
 Hay variantes. Copistas se equivocaban. Casi ninguna cambia una doctrina. Dilo sin teatralidad: el texto es estable; no es mágico.
 
-El Antiguo Testamento: el pueblo judío copió con un cuidado obsesivo. Los rollos del Mar Muerto (Qumrán) mostraron que Isaías, siglos antes de Jesús, ya decía en lo sustancial lo que leemos. El abismo no es entre «el original perdido» y «una invención medieval». Es entre un texto vigilado y el mito de que alguien lo reescribió en un concilio.
+Los rollos del Mar Muerto (Qumrán) mostraron que Isaías, siglos antes de Jesús, ya decía en lo sustancial lo que leemos. Nadie reescribió al Mesías después de Pascua. Y el libro se atreve a hablar *antes*: Miqueas nombra Belén; Isaías nombra a Ciro; el siervo de Isaías 53 está escrito mucho antes de la cruz. Tres ejemplos bastan. La lista de cumplimientos es la charla *Jesús cumple todo*; aquí solo se muestra que el texto no se inventó después del hecho.
 
 > Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.
 >
@@ -140,8 +150,18 @@ Un solo principio cabe aquí, y basta: **no un versículo suelto**. Contexto, g�
 
 ## Para quien sirve
 
-Hay una manera de abrir la Biblia que se parece al palacio de *En Cristo*: se lee para que Dios no te olvide, para tener frase en el turno, para no quedar mal. Todo desde afuera. El problema no es falta de lectura. Es no oírla como voz.
+Tres personas suelen estar en la misma sala.
 
-Si es Palabra de Dios, el turno no es el examen. La página te examina a ti. Si es solo palabra de hombres, puedes negociarla: lo que me sirve, lo que no. Jesús no negoció. «Escrito está».
+Quien nunca se atrevió a preguntar si esto es de Dios no es menos creyente por haberlo pensado. Esta charla no pide tragar un teorema. Muestra un texto serio, un Jesús que lo trata como Escritura, y deja el paso que ningún dato cierra: oír. El Espíritu no necesita que hayas ganado el debate para hablar.
+
+Quien la abre para tener frase en el turno, para no quedar mal, para que Dios no te olvide, está leyendo desde afuera del palacio. El problema no es falta de lectura. Es usarla. Si es Palabra de Dios, el turno no es el examen. La página te examina a ti. El versículo que no te corta, y se lo lanzas al de al lado, no lo leíste. Lo armaste.
+
+Quien creció con más libros en la mesa de la abuela no vino a que le ganen. Nadie en esa casa está leyendo otro Cristo por siete libros. El índice no salva ni condena. La pregunta es la misma para las dos mesas: cuando se abre, ¿quién habla?
+
+> Porque la palabra de Dios es viva y eficaz, y más cortante que toda espada de dos filos… y discierne los pensamientos y las intenciones del corazón.
+>
+> <cite>Hebreos 4:12</cite>
+
+Esta semana, una sola cosa. No un plan de 66 libros. Un pasaje. Lento. Antes del turno, o después. No para citarlo. Para preguntar: ¿qué está cortando en mí? Si no corta nada, todavía la estás usando de herramienta. Jesús no negoció. «Escrito está».
 
 Pregunta para la semana, una sola: **esta semana, ¿la abres como voz o como herramienta?**
