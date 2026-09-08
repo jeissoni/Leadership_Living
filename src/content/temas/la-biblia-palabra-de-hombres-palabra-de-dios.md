@@ -6,18 +6,20 @@ series: la-biblia
 order: 1
 tags: ["escritura"]
 duration: "55 min"
-thesis: "La Biblia es palabra de hombres y, a la vez, Palabra de Dios. Se puede mostrar que es un texto serio. Se recibe como voz de Dios porque Jesús la trata así. Los índices distintos no cambian a Cristo."
+thesis: "La Biblia es palabra de hombres y, a la vez, Palabra de Dios. Confiable e inspirada no son la misma pregunta: lo primero se muestra, lo segundo se recibe. Y el problema real no es qué es la Biblia en abstracto, sino cómo la usamos: como voz o como herramienta."
 remember:
-  - "Confiable e inspirada no son la misma pregunta. Coherencia, escribas y profecía muestran un texto serio. La inspiración se recibe."
-  - "Hecha por hombres, no inventada por hombres. Autoría doble: estilo humano y soplo de Dios."
-  - "El argumento más fuerte no es la arqueología: es cómo Jesús trata la Escritura."
-  - "El Nuevo Testamento es el mismo (27). La diferencia está en el Antiguo: 66 o 73, dos listas, no dos evangelios."
-  - "Se abre para ser cambiado, no para acumular citas ni para ganar un debate."
-guionLede: "55 min en cuatro paradas: cómo se hizo y llegó (sofrim y masoretas, canon, traductores), por qué confiar (coherencia, texto, profecía, Jesús), qué hay adentro (el mapa de los diez estantes) y cierre pastoral con oración. No prometas demostrar inspiración. 66/73 en una frase, no es el tema. Revisa en el complemento los datos populares que no se sostienen antes de citarlos."
+  - "Confiable e inspirada no son la misma pregunta. Si se mezclan, la charla se vuelve un debate de índices."
+  - "Nadie armó un comité: cuarenta autores, mil quinientos años, y el centro no se rompe."
+  - "Hecha por hombres, no inventada por hombres. Autoría doble: theopneustos, soplada por Dios."
+  - "La razón más fuerte no es la arqueología: es cómo Jesús trata la Escritura. Después de eso, el Espíritu convence."
+  - "La misma semilla cae en cuatro terrenos: hace falta un corazón dispuesto, y no leemos solos; el Espíritu abre el entendimiento, muestra a Cristo y fortalece para obedecer."
+guionLede: "55 min en seis tramos: apertura con las dos preguntas (¿es de Dios? ¿por qué menos libros?), cómo llegó, por qué confiar, qué hay dentro con un bosquejo del canon, cómo se lee y cierre pastoral sobre las parábolas, el corazón dispuesto y la iluminación del Espíritu Santo. No prometas demostrar inspiración: solo quitas obstáculos. Las notas de tono son indicaciones, no se leen. Los pasajes van completos, leídos de la Biblia. Desde la Parte II está el material para preparar y no es necesario dictarlo completo."
 widgets:
-  - datos_biblia
   - guion_charla_biblia
+preparationWidgets:
+  - datos_biblia
   - complemento_biblia
+includeContentInPreparation: true
 resources:
   - label: "2 Timoteo 3:16–17"
     url: "https://www.biblegateway.com/passage/?search=2+Timoteo+3%3A16-17&version=RVR1960"
@@ -41,6 +43,16 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Hebreos+4%3A12&version=RVR1960"
   - label: "Santiago 1:22"
     url: "https://www.biblegateway.com/passage/?search=Santiago+1%3A22&version=RVR1960"
+  - label: "Marcos 4:1–20"
+    url: "https://www.biblegateway.com/passage/?search=Marcos+4%3A1-20&version=RVR1960"
+  - label: "Mateo 13:10–17"
+    url: "https://www.biblegateway.com/passage/?search=Mateo+13%3A10-17&version=RVR1960"
+  - label: "Lucas 24:45"
+    url: "https://www.biblegateway.com/passage/?search=Lucas+24%3A45&version=RVR1960"
+  - label: "Juan 14:26"
+    url: "https://www.biblegateway.com/passage/?search=Juan+14%3A26&version=RVR1960"
+  - label: "Salmo 119:18"
+    url: "https://www.biblegateway.com/passage/?search=Salmo+119%3A18&version=RVR1960"
   - label: "Salmo 119:105"
     url: "https://www.biblegateway.com/passage/?search=Salmo+119%3A105&version=RVR1960"
 ---
@@ -71,7 +83,7 @@ Los rollos del Mar Muerto (Qumrán) mostraron que Isaías, siglos antes de Jesú
 
 > Toda la Escritura es inspirada por Dios, y útil para enseñar, para redargüir, para corregir, para instruir en justicia, a fin de que el hombre de Dios sea perfecto, enteramente preparado para toda buena obra.
 >
-> <cite>2 Timoteo 3:16–17</cite>
+> — *2 Timoteo 3:16–17*
 
 Pablo le habla a Timoteo sobre las Escrituras que ya tenía: el Antiguo Testamento. El soplo de Dios no es un adorno piadoso al final de un argumento histórico. Es la afirmación de que esas páginas sirven para formar a alguien, no solo para informarlo.
 
@@ -83,7 +95,7 @@ Hombres reales escribieron: idioma, época, lágrimas, rabia, estilo. Jeremías 
 
 > …nunca la profecía fue traída por voluntad humana, sino que los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo.
 >
-> <cite>2 Pedro 1:21</cite>
+> — *2 Pedro 1:21*
 
 *Theopneustos* en 2 Timoteo 3:16: soplada por Dios. Inspiración no es que Dios usó a las personas como bolígrafo. Es **autoría doble**: palabra humana y, a la vez, Palabra de Dios. Hecha por hombres. No inventada por hombres.
 
@@ -91,11 +103,11 @@ La razón cristiana más fuerte no es la arqueología. Es **Jesús**. Él cita e
 
 > …y la Escritura no puede ser quebrantada.
 >
-> <cite>Juan 10:35</cite>
+> — *Juan 10:35*
 
 > Y comenzando desde Moisés, y siguiendo por todos los profetas, les declaraba en todas las Escrituras lo que de él decían.
 >
-> <cite>Lucas 24:27</cite>
+> — *Lucas 24:27*
 
 El Nuevo Testamento es el testimonio apostólico de ese mismo Cristo. Jesús promete que el Espíritu recordará a los suyos (Juan 14:26). 2 Pedro 3:16 ya llama Escritura a cartas de Pablo: la iglesia no esperó un sello del siglo IV para oír voz de Dios en el testimonio apostólico.
 
@@ -103,7 +115,7 @@ La iglesia no *votó* para que un libro se volviera divino. **Reconoció** lo qu
 
 > Dios, habiendo hablado muchas veces y de muchas maneras en otro tiempo a los padres por los profetas, en estos postreros días nos ha hablado por el Hijo.
 >
-> <cite>Hebreos 1:1–2</cite>
+> — *Hebreos 1:1–2*
 
 Dios habló. Ahora habla en el Hijo. La Escritura no compite con Cristo: da testimonio de él. El mismo hilo de *Jesús cumple todo*.
 
@@ -144,24 +156,58 @@ Un solo principio cabe aquí, y basta: **no un versículo suelto**. Contexto, g�
 
 > Pero sed hacedores de la palabra, y no tan solamente oidores, engañándoos a vosotros mismos.
 >
-> <cite>Santiago 1:22</cite>
+> — *Santiago 1:22*
 
 *El discípulo* ya dijo: oír sin hacer deja la Palabra en información. Esta charla no lo repite como temario. Lo apunta a la Biblia misma: el voluntario que cita y no se deja cortar no está leyendo. Está coleccionando.
 
-## Para quien sirve
+## Aterrizaje pastoral: tener oídos para oír
 
-Tres personas suelen estar en la misma sala.
+Jesús enseñó muchas veces por medio de parábolas. No lo hacía para convertir la verdad en un acertijo intelectual, sino para revelar la postura de quienes escuchaban. La misma historia podía dejar indiferente al que solo sentía curiosidad y abrir el Reino al que se acercaba dispuesto a atender.
 
-Quien nunca se atrevió a preguntar si esto es de Dios no es menos creyente por haberlo pensado. Esta charla no pide tragar un teorema. Muestra un texto serio, un Jesús que lo trata como Escritura, y deja el paso que ningún dato cierra: oír. El Espíritu no necesita que hayas ganado el debate para hablar.
+En la parábola del sembrador, la semilla es la misma en los cuatro terrenos. Lo que cambia es la recepción. Un corazón está endurecido; otro recibe con emoción pero sin raíz; otro permite que las preocupaciones y los deseos ahoguen la palabra; el último oye, recibe, persevera y da fruto.
 
-Quien la abre para tener frase en el turno, para no quedar mal, para que Dios no te olvide, está leyendo desde afuera del palacio. El problema no es falta de lectura. Es usarla. Si es Palabra de Dios, el turno no es el examen. La página te examina a ti. El versículo que no te corta, y se lo lanzas al de al lado, no lo leíste. Lo armaste.
+Jesús mismo explica que **la semilla es la Palabra** (Marcos 4:14). El sembrador no cambia de semilla según el terreno. La Palabra es verdadera y poderosa en los cuatro casos. Lo que cambia es el corazón que la recibe.
 
-Quien creció con más libros en la mesa de la abuela no vino a que le ganen. Nadie en esa casa está leyendo otro Cristo por siete libros. El índice no salva ni condena. La pregunta es la misma para las dos mesas: cuando se abre, ¿quién habla?
+### 1. La semilla junto al camino: un corazón endurecido
 
-> Porque la palabra de Dios es viva y eficaz, y más cortante que toda espada de dos filos… y discierne los pensamientos y las intenciones del corazón.
+La semilla cae, pero no entra. La persona escucha exteriormente, aunque interiormente ya decidió que nada va a cambiar. Puede sentarse frente a una Biblia abierta y seguir lejos: lee para cumplir, para discutir o para confirmar lo que ya piensa.
+
+El endurecimiento no siempre parece rebeldía. A veces parece costumbre. Hemos oído tantos versículos que ya ninguno nos sorprende. Sabemos cómo termina la historia antes de permitir que nos confronte.
+
+### 2. La semilla en pedregales: emoción sin raíz
+
+Esta persona recibe la Palabra con alegría. Se emociona, toma una decisión y siente que todo va a cambiar. Pero no permite que la verdad eche raíces profundas. Cuando llegan la dificultad, la demora o el costo de obedecer, abandona lo que había recibido.
+
+No toda reacción emotiva es transformación. La raíz crece cuando permanecemos en la Palabra después de que termina la reunión y desaparece la emoción.
+
+### 3. La semilla entre espinos: una Palabra ahogada
+
+Aquí la Palabra sí entra y comienza a crecer, pero tiene competencia. Jesús menciona las preocupaciones de este mundo, el engaño de las riquezas y el deseo de otras cosas. La persona no rechaza a Dios; simplemente permite que otras voces ocupen todo el espacio.
+
+Este puede ser nuestro terreno más frecuente. Abrimos la Biblia, pero también abrimos el teléfono. Escuchamos una promesa, pero la ansiedad habla más fuerte. La semilla no era débil: fue ahogada por aquello que no quisimos arrancar.
+
+### 4. La semilla en buena tierra: oír, recibir y dar fruto
+
+La buena tierra no representa a una persona perfecta ni a quien entiende todo de inmediato. Representa a quien **oye, recibe y persevera**. Es un corazón enseñable que permite que la Palabra corrija sus ideas, confronte sus deseos y produzca obediencia.
+
+El fruto es la evidencia de que la Palabra fue atendida. No basta recordar el versículo o explicar correctamente la parábola. La pregunta es qué cambió en nuestra manera de amar, perdonar, servir y obedecer.
+
+> El que tiene oídos para oír, oiga.
 >
-> <cite>Hebreos 4:12</cite>
+> — *Marcos 4:9*
 
-Esta semana, una sola cosa. No un plan de 66 libros. Un pasaje. Lento. Antes del turno, o después. No para citarlo. Para preguntar: ¿qué está cortando en mí? Si no corta nada, todavía la estás usando de herramienta. Jesús no negoció. «Escrito está».
+Esto impide una conclusión cómoda: se puede tener una Biblia confiable, conocer sus divisiones y defender su canon sin dejar que la Palabra eche raíz. El problema no siempre es falta de evidencia o comprensión. A veces es falta de disposición para escuchar algo que corregirá nuestros planes.
 
-Pregunta para la semana, una sola: **esta semana, ¿la abres como voz o como herramienta?**
+La pregunta pastoral no es qué clase de terreno fue otra persona. Es: **¿qué terreno estoy siendo yo hoy?** Un mismo corazón puede endurecerse, volverse superficial o llenarse de espinos. Por eso necesitamos acercarnos con humildad y pedir que Dios prepare la tierra.
+
+Pero el creyente no abre la Escritura solo. El Espíritu Santo, que inspiró el texto, ilumina su lectura. Enseña y trae a la memoria las palabras de Jesús (Juan 14:26), abre el entendimiento para comprender las Escrituras (Lucas 24:45), muestra a Cristo, convence de pecado y fortalece para obedecer.
+
+Iluminación no significa recibir un significado secreto o privado. El Espíritu no contradice el texto que inspiró. Hace que la verdad comprendida llegue al corazón y produzca fruto.
+
+> Abre mis ojos, y miraré las maravillas de tu ley.
+>
+> — *Salmo 119:18*
+
+La práctica para esta semana es sencilla: un pasaje, una oración y una respuesta. Antes de leer: «Espíritu Santo, abre mi entendimiento; muéstrame a Cristo, corrige lo que deba cambiar y dame fuerzas para obedecer». Después de leer el pasaje completo: ¿qué me muestra de Dios?, ¿qué descubre en mí?, ¿qué voy a obedecer hoy?
+
+La pregunta final ya no es solamente si la Biblia es confiable. Es esta: **cuando la abras, ¿encontrará Dios un corazón dispuesto a escuchar y obedecer?**

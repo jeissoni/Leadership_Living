@@ -9,7 +9,7 @@ const widgetLabels: Record<string, string> = {
   opresion_signos: "Opresión: signos y respuesta",
   guion_charla_espiritu_santo: "Guion oral",
   dones_espiritu_explicados: "Los dones, uno a uno",
-  datos_biblia: "Datos para abrir",
+  datos_biblia: "Datos e ilustraciones",
   guion_charla_biblia: "Guion oral",
   complemento_biblia: "Manuscritos, canon y objeciones",
   bloque_fundamento_reino: "Fundamento",

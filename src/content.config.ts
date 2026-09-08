@@ -26,6 +26,8 @@ const temas = defineCollection({
     guionLede: z.string().optional(),
     audio: z.string().optional(),
     widgets: z.array(z.string()).default([]),
+    preparationWidgets: z.array(z.string()).default([]),
+    includeContentInPreparation: z.boolean().default(false),
     showMindMap: z.boolean().default(false),
     resources: z
       .array(

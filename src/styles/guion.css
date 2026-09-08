@@ -2,6 +2,26 @@
   width: min(880px, calc(100% - 8vw));
 }
 
+.guion-preparation {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+
+.guion-preparation > h2 {
+  margin: 0;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.guion-preparation-lede {
+  max-width: 65ch;
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
 .guion-sheet {
   margin-top: 1.75rem;
   padding: 1.35rem 1.4rem 1.7rem;
