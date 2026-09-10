@@ -1,0 +1,156 @@
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 8 min",
+    bloques: [
+      { t: "nota", html: "Tono cercano. No abrir con lista de disciplinas. Empezar por el hueco que dejó la charla de la Biblia." },
+      { t: "blk", lbl: "La pregunta que quedó abierta", html: `<p class="script">La última vez hablamos de este libro: cómo llegó, por qué se puede confiar, qué hay adentro. Cerramos con una pregunta: cuando lo abres, ¿quién habla? Y con una tarea pequeña: un pasaje, una oración, una respuesta.<br><br>Hoy no volvemos a demostrar que es Palabra de Dios. Eso ya lo vieron. El problema de esta noche es otro, y muchos lo cargan en silencio.</p>` },
+      { t: "pregunta", html: "¿Quieres el fruto de la buena tierra… sin cultivar el terreno?" },
+      { t: "blk", lbl: "Dos errores que se parecen a fe", html: `<p class="script">Uno: queremos paz sin oración, discernimiento sin Escritura, madurez sin renunciar a nada, comunidad sin darnos. Esperamos cosecha donde no hubo siembra.<br><br>Dos: al revés. Convertimos la vida espiritual en un checklist. Leí. Oré. Ayuné. Serví. Y el Espíritu se vuelve un juez de puntaje. Jesús ya advirtió eso en Mateo 6: se puede ayunar y orar… para que te vean.<br><br>Esta noche no vengo a darles doce prácticas. Vengo a abrir <strong>cuatro puertas</strong>. Espacios concretos donde Dios nos encuentra. No magia. No mérito. Medios de gracia.</p>` },
+      { t: "dato", html: `<strong>Puente con lo que ya tienen.</strong> <em>El discípulo</em> dijo: oír sin hacer engaña. La Biblia dijo: la semilla es la misma; cambia el terreno. Hoy: cómo se cultiva ese terreno sin volverlo un programa religioso.` },
+      { t: "trans", html: "— Primero: qué son y qué no son. —" }
+    ]
+  },
+  {
+    label: "Qué son",
+    tiempo: "8 – 18 min",
+    bloques: [
+      { t: "nota", html: "Subir un poco la claridad. Una definición, dos versículos, tres «no». Luego las cuatro puertas." },
+      { t: "blk", lbl: "Ejercicio, no espectáculo", html: `<p class="script">Pablo le escribe a Timoteo —un joven que sirve, no un monje de museo— y le dice algo que suena a gimnasio:</p>` },
+      { t: "verse", ref: "1 Timoteo 4:7–8", texto: "Ejercítate para la piedad; porque el ejercicio corporal para poco es provechoso; pero la piedad para todo aprovecha, pues tiene promesa de esta vida presente, y de la venidera." },
+      { t: "blk", lbl: "Permanecer en la vid", html: `<p class="script">Jesús lo dice con otra imagen. La rama no inventa uvas. Se queda en la vid. El fruto no es un logro personal: es consecuencia de permanecer.</p>` },
+      { t: "verse", ref: "Juan 15:4–5", texto: "Permaneced en mí, y yo en vosotros. Como el pámpano no puede llevar fruto por sí mismo, si no permanece en la vid, así tampoco vosotros, si no permanecéis en mí. Yo soy la vid, vosotros los pámpanos; el que permanece en mí, y yo en él, éste lleva mucho fruto; porque separados de mí nada podéis hacer." },
+      { t: "dato", html: `<strong>Definición para la sala.</strong> Las disciplinas espirituales son <em>espacios y hábitos concretos</em> donde ponemos el cuerpo, el tiempo y la atención, para que el Espíritu forme el corazón. No compran el favor de Dios. Abren lugar a quien ya nos amó en Cristo.` },
+      { t: "blk", lbl: "Tres cosas que no son", html: `<p class="script"><strong>No son mérito.</strong> Nadie completa la cruz con un ayuno. Si salen de aquí pensando «ahora sí Dios me va a querer», no oyeron el evangelio.<br><br><strong>No son magia.</strong> Repetir un versículo no es un hechizo. Orar en voz alta no obliga a Dios. Las disciplinas no controlan al Espíritu: se someten a Él.<br><br><strong>No son un catálogo cerrado.</strong> La Biblia modela muchas prácticas. Hoy abrimos cuatro puertas para empezar a caminar. Silencio, soledad, mayordomía, retiro: existen. Se nombran. No se dictan. Quien aprende a caminar, más adelante abre otras puertas.</p>` },
+      { t: "ilustra", html: `<strong>El gimnasio y el huerto.</strong> Nadie espera músculos por mirar el gimnasio desde la ventana. Nadie espera cosecha por desear tomates. La disciplina no es el fruto: es el lugar donde el cuerpo se pone para que crezca lo que solo Dios da.` },
+      { t: "trans", html: "— Primera puerta: la Palabra. —" }
+    ]
+  },
+  {
+    label: "Palabra",
+    tiempo: "18 – 28 min",
+    bloques: [
+      { t: "blk", lbl: "La semilla ya la conocen", html: `<p class="script">No voy a volver a contar cómo llegó la Biblia ni por qué es confiable. Eso ya está. Hoy pregunto otra cosa: si la semilla es buena… ¿qué está pasando con el terreno?<br><br>Salmo 1 no describe a alguien que colecciona citas. Describe a alguien plantado.</p>` },
+      { t: "verse", ref: "Salmo 1:2–3", texto: "Sino que en la ley de Jehová está su delicia, y en su ley medita de día y de noche. Será como árbol plantado junto a corrientes de aguas, que da su fruto en su tiempo…" },
+      { t: "blk", lbl: "Cómo se lee sin perderse", html: `<p class="script">Un solo principio, y basta para esta puerta: <strong>pasaje completo, no versículo suelto.</strong> Contexto. Quién habla, a quién, para qué. El Antiguo a la luz de Jesús. El Espíritu ilumina; no inventa un significado privado que contradiga la página.<br><br>Si nunca has leído con ritmo, no empieces por «la Biblia en un año». Empieza por un Evangelio corto —Marcos o Juan—, o por un Salmo, o por la carta que ya están viendo en el grupo. Lento. Releído. Con una pregunta: ¿qué me muestra de Dios? ¿qué descubre en mí? ¿qué voy a obedecer?</p>` },
+      { t: "puente", html: `<strong>Puente con la charla anterior.</strong> Un pasaje. Antes: «Espíritu Santo, abre mi entendimiento». Después: respuesta. Eso ya era disciplina. Hoy le ponemos nombre y le sumamos tres puertas más.` },
+      { t: "pregunta", html: "Esta semana, ¿la Palabra va a tener un espacio fijo… o solo el hueco que deje el celular?" },
+      { t: "trans", html: "— Segunda puerta: la oración. —" }
+    ]
+  },
+  {
+    label: "Oración",
+    tiempo: "28 – 36 min",
+    bloques: [
+      { t: "blk", lbl: "Responder a quien ya habló", html: `<p class="script">Si la Biblia es voz, la oración es respuesta. No es un monólogo para convencer a Dios de que nos haga caso. Es conversación con el Padre que Jesús nos enseñó a llamar Padre.<br><br>En Mateo 6, Jesús corrige dos extremos: orar para que te vean, y orar con muchas palabras como si Dios no supiera. Luego da un patrón: Padre, Reino, pan, perdón, protección.</p>` },
+      { t: "verse", ref: "Mateo 6:6", texto: "Mas tú, cuando ores, entra en tu aposento, y cerrada la puerta, ora a tu Padre que está en secreto; y tu Padre que ve en lo secreto te recompensará en público." },
+      { t: "dato", html: `<strong>Cuatro movimientos simples</strong> (si el Padrenuestro se traba): alabar / confesar / agradecer / pedir. No es fórmula mágica. Es ayuda para no reducir la oración a una lista de urgencias.` },
+      { t: "blk", lbl: "Orar con la página abierta", html: `<p class="script">La disciplina más natural, después de lo que vieron: leer un pasaje… y orar ese pasaje. Si el texto confronta, confiesa. Si consuela, agradece. Si manda, pide fuerzas. Si revela a Cristo, adóralo.<br><br>Así la oración no flota en el vacío: responde a lo que Dios ya dijo.</p>` },
+      { t: "verse", ref: "Filipenses 4:6–7", texto: "Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias. Y la paz de Dios, que sobrepasa todo entendimiento, guardará vuestros corazones y vuestros pensamientos en Cristo Jesús." },
+      { t: "nota", html: "No alargar con técnicas de «guerra espiritual» ni con horas de oración como trofeo. Si alguien pregunta por lenguas o intercesión larga: una frase —el Espíritu ayuda en nuestra debilidad (Romanos 8:26)— y vuelve al patrón simple." },
+      { t: "trans", html: "— Tercera puerta: el ayuno. —" }
+    ]
+  },
+  {
+    label: "Ayuno",
+    tiempo: "36 – 44 min",
+    bloques: [
+      { t: "nota", html: "Tono pastoral y claro. Muchos llegan con miedo, superstición o dietas. Tres minutos de definición; el resto, Jesús + Isaías 58 + un «no» practicable." },
+      { t: "blk", lbl: "Decir no para decir sí", html: `<p class="script">El ayuno no es castigar el cuerpo. Es entrenar el deseo. Dejas un apetito legítimo —comida, pantallas, ruido constante— para decir con más claridad: «Dios, tú primero».<br><br>Jesús ayunó. Y cuando el diablo lo tentó con pan, respondió con Escritura: no solo de pan vive el hombre.</p>` },
+      { t: "verse", ref: "Mateo 4:4", texto: "Él respondió y dijo: Escrito está: No solo de pan vivirá el hombre, sino de toda palabra que sale de la boca de Dios." },
+      { t: "blk", lbl: "Sin teatro", html: `<p class="script">En Mateo 6, el mismo Jesús que enseña a ayunar prohíbe el ayuno de escaparate: cara triste, anuncios, likes espirituales. El Padre ve en lo secreto.<br><br>Y hay un filtro más antiguo todavía. Isaías 58 confronta un ayuno religioso que no produce justicia ni misericordia.</p>` },
+      { t: "verse", ref: "Isaías 58:6–7", texto: "¿No es más bien el ayuno que yo escogí, desatar las ligaduras de impiedad…? ¿No es que compartas tu pan con el hambriento, y a los pobres errantes albergues en casa…?" },
+      { t: "dato", html: `<strong>Cómo empezar sin lastimarse.</strong> No es obligatorio un ayuno de cuarenta días. Una comida. O dos horas sin teléfono. O un trayecto en silencio. Quien tiene condición médica: no ayuna comida sin consejo; ayuna otra cosa. El punto no es el heroísmo: es el espacio.` },
+      { t: "pregunta", html: "¿Qué «no» pequeño podrías ofrecer esta semana… para hacer espacio a un «sí» más claro a Dios?" },
+      { t: "trans", html: "— Cuarta puerta: no solos. —" }
+    ]
+  },
+  {
+    label: "Con otros",
+    tiempo: "44 – 50 min",
+    bloques: [
+      { t: "blk", lbl: "La espiritualidad del espejo", html: `<p class="script">Si solo cultivamos Palabra, oración y ayuno a solas, podemos volvernos muy «espirituales» y muy duros. El espejo nos refleja: mi lectura, mi oración, mi ayuno.<br><br>El Nuevo Testamento no imagina un discípulo aislado. Imagina un cuerpo.</p>` },
+      { t: "verse", ref: "Hebreos 10:24–25", texto: "Y considerémonos unos a otros para estimularnos al amor y a las buenas obras; no dejando de congregarnos, como algunos tienen por costumbre, sino exhortándonos; y tanto más, cuanto veis que aquel día se acerca." },
+      { t: "verse", ref: "Santiago 5:16", texto: "Confesaos vuestras ofensas unos a otros, y orad unos por otros, para que seáis sanados. La oración eficaz del justo puede mucho." },
+      { t: "blk", lbl: "Tres gestos que cuentan como disciplina", html: `<p class="script"><strong>Confesar</strong> a alguien de confianza —no a toda la sala— lo que te está ahogando. <strong>Perdonar</strong> o pedir perdón. <strong>Servir</strong> en algo concreto esta semana, aunque nadie lo vea.<br><br>Eso también es terreno. La semilla crece en comunidad, no solo en el aposento.</p>` },
+      { t: "ilustra", html: `<strong>El voluntario del turno.</strong> Puedes citar bien y servir mal. Puedes ayunar y tratar con dureza al del equipo. La cuarta puerta evita que las otras tres se vuelvan teatro privado.` },
+      { t: "trans", html: "— Cómo empezar esta semana. —" }
+    ]
+  },
+  {
+    label: "Cierre",
+    tiempo: "50 – 55 min",
+    bloques: [
+      { t: "nota", html: "Bajar el volumen. Un ritmo mínimo. No un plan anual." },
+      { t: "blk", lbl: "Un ritmo que quepa en la vida real", html: `<p class="script">No se llevan un programa de doce semanas. Se llevan cuatro gestos, los mismos cuatro de esta noche:</p>` },
+      { t: "dato", html: `<strong>Esta semana — mínimo viable.</strong><br>1. <strong>Palabra:</strong> un pasaje, lento, completo.<br>2. <strong>Oración:</strong> responder a ese pasaje (no solo pedir).<br>3. <strong>Ayuno:</strong> un «no» pequeño —una comida, o pantallas un rato, o silencio en el camino.<br>4. <strong>Con otros:</strong> una persona —confesar, pedir perdón, servir u oír.` },
+      { t: "verse", ref: "Marcos 4:20", texto: "Y estos son los que fueron sembrados en buena tierra: los que oyen la palabra y la reciben, y dan fruto a treinta, a sesenta y a ciento por uno." },
+      { t: "pastoral", lbl: "Cierre", html: `<p class="script">Las disciplinas no reemplazan al Espíritu. Le abren espacio.<br><br>No compran el amor del Padre. Responden a un amor que ya se dio en la cruz.<br><br>La pregunta no es cuántas prácticas dominas. Es si esta semana le das a Dios lugares concretos donde encontrarte: una página abierta, una puerta cerrada para orar, un apetito puesto en pausa, un hermano al que no evitas.<br><br>Fruto, no puntuación. Permanecer, no aparentar.</p>` },
+      { t: "pregunta", html: "Esta semana, ¿le das a Dios espacios concretos… o solo buenos deseos?" },
+      { t: "nota", html: "Referencias: 1 Timoteo 4:7–8 · Juan 15:4–5 · Salmo 1 · Mateo 6:5–18 · Filipenses 4:6–7 · Mateo 4:1–4 · Isaías 58:6–7 · Santiago 5:16 · Hebreos 10:24–25 · Marcos 4:20. Variantes de ayuno y objeciones: complemento." }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j<i);
+    s.classList.toggle('cur', j===i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb'; btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += b.lbl
+        ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+        : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'puente') {
+      html += `<div class="puente">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'pastoral') {
+      html += `<div class="pastoral"><div class="pastoral-lbl">${b.lbl}</div>${b.html}</div>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html; panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>

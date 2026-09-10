@@ -29,6 +29,11 @@ export const seriesCatalog = [
     title: "La Biblia",
     lede: "Por qué es un texto serio, cómo se recibe como Palabra de Dios, y por qué unas Biblias tienen más libros.",
   },
+  {
+    id: "disciplinas-espirituales",
+    title: "Disciplinas espirituales",
+    lede: "Después de confiar en la Escritura: espacios concretos —Palabra, oración, ayuno y vida con otros— donde Dios forma el corazón.",
+  },
 ] as const;
 
 export type SeriesId = (typeof seriesCatalog)[number]["id"];
