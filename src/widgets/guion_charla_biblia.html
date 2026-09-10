@@ -175,7 +175,9 @@ secs.forEach((s, i) => {
 
   s.bloques.forEach(b => {
     if (b.t === 'blk') {
-      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+      html += b.lbl
+        ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+        : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
     } else if (b.t === 'nota') {
       html += `<div class="nota">${b.html}</div>`;
     } else if (b.t === 'verse') {

@@ -270,7 +270,9 @@ function render(idx) {
 
   s.bloques.forEach(b => {
     if (b.tipo === 'guion') {
-      html += `<div class="block"><div class="block-label">${b.label || 'Guión'}</div><div class="block-body"><p class="guion">${b.texto}</p></div></div>`;
+      html += b.label
+        ? `<div class="block"><div class="block-label">${b.label}</div><div class="block-body"><p class="guion">${b.texto}</p></div></div>`
+        : `<div class="block"><div class="block-body"><p class="guion">${b.texto}</p></div></div>`;
     } else if (b.tipo === 'nota') {
       html += `<div class="nota">${b.texto}</div>`;
     } else if (b.tipo === 'verso') {
@@ -286,9 +288,9 @@ function render(idx) {
     }
   });
 
-  const prevNext = `<div style="display:flex;justify-content:space-between;margin-top:20px;padding-top:16px;border-top:0.5px solid var(--color-border-tertiary)">
-    <button class="nav-btn" onclick="if(${idx}>0)render(${idx}-1)" style="${idx===0?'opacity:0.3;pointer-events:none':''}">&larr; Anterior</button>
-    <button class="nav-btn" onclick="if(${idx}<${secciones.length-1})render(${idx}+1)" style="${idx===secciones.length-1?'opacity:0.3;pointer-events:none':''}" >Siguiente &rarr;</button>
+  const prevNext = `<div class="navbtns">
+    <button class="nav-btn navb" onclick="if(${idx}>0)render(${idx}-1)" ${idx===0?'disabled':''}>&larr; Anterior</button>
+    <button class="nav-btn navb" onclick="if(${idx}<${secciones.length-1})render(${idx}+1)" ${idx===secciones.length-1?'disabled':''}>Siguiente &rarr;</button>
   </div>`;
 
   content.innerHTML = html + prevNext;

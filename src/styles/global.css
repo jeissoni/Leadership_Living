@@ -537,10 +537,10 @@ a:hover {
 
 .guion-lede {
   max-width: var(--measure);
-  margin: 1.8rem 0 0;
+  margin: 1.8rem 0 0.35rem;
   color: var(--ink-soft);
   font-size: 1.02rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 .view-switch {

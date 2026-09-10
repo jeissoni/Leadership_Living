@@ -253,11 +253,11 @@ secs.forEach((s, i) => {
   let html = `<div class="tbadge"><i class="ti ti-clock" aria-hidden="true"></i>${s.tiempo}</div>`;
 
   if (s.esEstudio) {
-    html += `<div style="font-size:13px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:14px">Este material no se dicta en la charla. Se entrega o comparte digitalmente para que cada voluntario lo estudie en la semana. Cada bloque incluye los versículos completos y una pregunta de reflexión personal.</div>`;
+    html += `<p class="estudio-lede">Este material no se dicta en la charla. Se entrega o comparte digitalmente para que cada voluntario lo estudie en la semana. Cada bloque incluye los versículos completos y una pregunta de reflexión personal.</p>`;
     bloques_estudio.forEach((b, bi) => {
       html += `<div class="estudio-blk">
         <div class="estudio-hd" onclick="toggleEstudio(${bi})">
-          <span class="estudio-num" style="color:${b.color}">${b.num}</span>
+          <span class="estudio-num">${b.num}</span>
           <div style="flex:1">
             <div class="estudio-title">${b.title}</div>
             <div class="estudio-desc">${b.desc}</div>
@@ -273,7 +273,9 @@ secs.forEach((s, i) => {
   } else {
     s.bloques.forEach(b => {
       if (b.t === 'blk') {
-        html += `<div class="blk"><div class="blk-hd">${b.lbl || 'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+        html += b.lbl
+          ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+          : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
       } else if (b.t === 'nota') {
         html += `<div class="nota">${b.html}</div>`;
       } else if (b.t === 'verse') {

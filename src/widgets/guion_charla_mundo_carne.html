@@ -147,7 +147,9 @@ secs.forEach((s, i) => {
 
   s.bloques.forEach(b => {
     if (b.t === 'blk') {
-      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+      html += b.lbl
+        ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+        : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
     } else if (b.t === 'nota') {
       html += `<div class="nota">${b.html}</div>`;
     } else if (b.t === 'verse') {
@@ -163,17 +165,17 @@ secs.forEach((s, i) => {
     } else if (b.t === 'trans') {
       html += `<p class="trans">${b.html}</p>`;
     } else if (b.t === 'enemigo-header') {
-      html += `<div class="enemigo-header" style="background:${b.bg}">
+      html += `<div class="enemigo-header">
         <div>
-          <div class="enemigo-num" style="color:${b.color}">${b.num}</div>
-          <div class="enemigo-title" style="color:${b.color}">${b.title}</div>
-          <div class="enemigo-sub" style="color:${b.color}">${b.sub}</div>
+          <div class="enemigo-num">${b.num}</div>
+          <div class="enemigo-title">${b.title}</div>
+          <div class="enemigo-sub">${b.sub}</div>
         </div>
       </div>`;
     } else if (b.t === 'combate') {
-      html += `<div class="combate" style="background:${b.bg};border-color:#9FE1CB">
-        <div class="combate-lbl" style="color:${b.color}">Cómo combatir al mundo → Renovación de la mente</div>
-        <div class="combate-txt" style="color:#085041">La herramienta no es más disciplina ni más esfuerzo. Es una mente renovada que conoce otra realidad — la que la Palabra declara — hasta que esa realidad sea más viva que la que el kosmos proyecta.</div>
+      html += `<div class="combate">
+        <div class="combate-lbl">Cómo combatir → Renovación de la mente</div>
+        <div class="combate-txt">La herramienta no es más disciplina ni más esfuerzo. Es una mente renovada que conoce otra realidad — la que la Palabra declara — hasta que esa realidad sea más viva que la que el kosmos proyecta.</div>
       </div>`;
     }
   });

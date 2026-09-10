@@ -187,7 +187,9 @@ secs.forEach((s, i) => {
 
   s.bloques.forEach(b => {
     if (b.t === 'blk') {
-      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+      html += b.lbl
+        ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+        : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
     } else if (b.t === 'nota') {
       html += `<div class="nota">${b.html}</div>`;
     } else if (b.t === 'verse') {
@@ -211,8 +213,7 @@ secs.forEach((s, i) => {
       });
       html += `</div></div>`;
     } else if (b.t === 'cat') {
-      html += `<div class="cat-lbl" style="color:${b.color}">${b.label}</div>
-               <div style="font-size:12px;color:var(--color-text-secondary);margin-bottom:8px;background:${b.bg};padding:6px 10px;border-radius:6px">${b.desc}</div>`;
+      html += `<div class="cat-lbl">${b.label}</div><div class="cat-desc">${b.desc}</div>`;
     } else if (b.t === 'dones') {
       dones[b.cat].forEach(d => {
         const id = donCount++;
