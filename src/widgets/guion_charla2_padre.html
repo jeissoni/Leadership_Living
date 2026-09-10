@@ -1,57 +1,3 @@
-
-<style>
-.nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 14px; }
-.nb { font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; transition: all 0.15s; }
-.nb:hover { background: var(--color-background-secondary); }
-.nb.on { background: #EEEDFE; border-color: #AFA9EC; color: #3C3489; }
-@media (prefers-color-scheme: dark) { .nb.on { background: #26215C; border-color: #534AB7; color: #CECBF6; } }
-.panel { display: none; } .panel.on { display: block; }
-.prog { display: flex; gap: 3px; margin-bottom: 14px; }
-.ps { height: 3px; border-radius: 2px; flex: 1; background: var(--color-border-tertiary); }
-.ps.done { background: #534AB7; } .ps.cur { background: #AFA9EC; }
-.tbadge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 500; color: #854F0B; background: #FAEEDA; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
-@media (prefers-color-scheme: dark) { .tbadge { background: #412402; color: #FAC775; } }
-.blk { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 10px; }
-.blk-hd { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; padding: 6px 14px; background: var(--color-background-secondary); border-bottom: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
-.blk-bd { padding: 14px 16px; }
-.script { font-size: 14px; line-height: 1.85; color: var(--color-text-primary); }
-.script em { color: var(--color-text-secondary); font-style: italic; }
-.nota { font-size: 12px; line-height: 1.6; color: var(--color-text-secondary); border-left: 2px solid var(--color-border-secondary); padding: 8px 12px; margin: 10px 0; }
-.verse { font-family: var(--font-serif); font-size: 13.5px; line-height: 1.8; color: var(--color-text-primary); padding: 11px 15px; background: #EEEDFE; border-radius: var(--border-radius-md); margin: 8px 0; }
-@media (prefers-color-scheme: dark) { .verse { background: #26215C; } }
-.verse cite { display: block; font-family: var(--font-sans); font-size: 11px; font-weight: 500; color: #534AB7; margin-top: 4px; font-style: normal; }
-@media (prefers-color-scheme: dark) { .verse cite { color: #AFA9EC; } }
-.pregunta { font-size: 14px; font-weight: 500; color: var(--color-text-primary); border-left: 3px solid #7F77DD; padding: 10px 14px; margin: 10px 0; background: var(--color-background-secondary); line-height: 1.6; }
-.ilustra { font-size: 13px; line-height: 1.65; color: #085041; background: #E1F5EE; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
-@media (prefers-color-scheme: dark) { .ilustra { background: #04342C; color: #9FE1CB; } }
-.ilustra strong { color: #0F6E56; font-weight: 500; }
-.dato { font-size: 13px; line-height: 1.65; color: #185FA5; background: #E6F1FB; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
-@media (prefers-color-scheme: dark) { .dato { background: #042C53; color: #85B7EB; } }
-.puente { font-size: 13px; line-height: 1.65; color: #854F0B; background: #FAEEDA; border-radius: var(--border-radius-md); padding: 12px 14px; margin: 10px 0; }
-@media (prefers-color-scheme: dark) { .puente { background: #412402; color: #FAC775; } }
-.nombre-card { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin: 10px 0; }
-.nombre-hd { padding: 10px 14px; display: flex; align-items: center; gap: 12px; }
-.nombre-hb { font-size: 16px; font-weight: 600; min-width: 130px; }
-.nombre-sig { font-size: 12px; color: var(--color-text-secondary); line-height: 1.4; }
-.nombre-bd { padding: 10px 14px; border-top: 0.5px solid var(--color-border-tertiary); font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; }
-.nombre-bd strong { color: var(--color-text-primary); font-weight: 500; }
-.trans { font-size: 13px; font-style: italic; color: var(--color-text-tertiary); text-align: center; padding: 10px 0 4px; }
-.giro { background: var(--color-background-secondary); border: 1.5px solid #7F77DD; border-radius: var(--border-radius-lg); padding: 14px 16px; margin: 12px 0; }
-.giro-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: #534AB7; margin-bottom: 6px; }
-@media (prefers-color-scheme: dark) { .giro-lbl { color: #AFA9EC; } }
-.giro-txt { font-size: 14px; color: var(--color-text-primary); line-height: 1.75; }
-.parabola-sec { background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 14px; margin: 10px 0; border: 0.5px solid var(--color-border-tertiary); }
-.parabola-lbl { font-size: 10px; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; color: var(--color-text-tertiary); margin-bottom: 8px; }
-.parabola-row { display: flex; gap: 10px; margin-bottom: 8px; align-items: flex-start; }
-.parabola-icon { font-size: 18px; min-width: 28px; }
-.parabola-content strong { font-size: 12px; font-weight: 500; color: var(--color-text-primary); display: block; margin-bottom: 2px; }
-.parabola-content span { font-size: 12px; color: var(--color-text-secondary); line-height: 1.55; }
-.navbtns { display: flex; justify-content: space-between; margin-top: 16px; padding-top: 12px; border-top: 0.5px solid var(--color-border-tertiary); }
-.navb { font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: transparent; color: var(--color-text-secondary); cursor: pointer; }
-.navb:disabled { opacity: 0.3; cursor: default; }
-.navb:not(:disabled):hover { background: var(--color-background-secondary); color: var(--color-text-primary); }
-</style>
-
 <div class="nav" id="nav"></div>
 <div class="prog" id="prog"></div>
 <div id="panels"></div>
@@ -60,105 +6,134 @@
 const secs = [
   {
     label: "Apertura",
-    tiempo: "0 – 5 min",
+    tiempo: "0 – 6 min",
     bloques: [
-      { t: "blk", lbl: "Puente con la charla anterior", html: `<p class="script">La última vez hablamos de estar en Cristo — de que nuestra posición lo cambia todo. Que no es lo mismo creer en Jesús desde afuera que estar dentro de lo que él es.<br><br>Hoy la pregunta avanza: si estás en Cristo, ¿a quién tienes como Padre?<br><br>Y para responder esa pregunta bien, necesitamos hacer un recorrido. Porque el Dios que Jesús llama Padre no apareció de la nada en el Nuevo Testamento. Tiene historia. Tiene nombre. Tiene carácter revelado a lo largo de siglos.<br><br>Así que vamos a hacer algo que quizás no esperaban: vamos a empezar en el Antiguo Testamento.</p>` },
-      { t: "nota", html: "Tono: de exploración, no de clase magistral. La idea es que el grupo redescubra lo que ya conoce con ojos nuevos. Si conocen bien el AT, el recorrido será de reconocimiento y profundización, no de novedad." }
+      { t: "nota", html: "Tono de conversación que continúa, no de clase nueva. Hablar como quien retoma el hilo de la semana pasada. No anunciar ‘tres puntos’; dejar que la historia se vaya abriendo." },
+      { t: "blk", lbl: "Seguimos desde donde quedamos", html: `<p class="script">La última vez hablamos de estar <em>en Cristo</em>. La vid y las ramas. El matrimonio. El cuerpo. Dónde estás lo cambia todo: no miras a Jesús desde la acera; estás adentro.<br><br>Y si eso ya quedó plantado… hay una pregunta que no se puede evitar. Porque saber <em>dónde</em> estás no alcanza si no sabes <em>quién</em> eres ahí.<br><br>Entonces hoy no cambiamos de tema. Continuamos: si ya estás en Cristo… <strong>¿quién eres desde ahí?</strong></p>` },
+      { t: "verse", ref: "1 Juan 3:1", texto: "Mirad cuál amor nos ha dado el Padre, para que seamos llamados hijos de Dios; por esto el mundo no nos conoce, porque no le conoció a él." },
+      { t: "blk", lbl: "La respuesta — y lo que duele", html: `<p class="script">Juan no duda. La respuesta es: <strong>hijos de Dios</strong>. No un apodo para sentirnos bien. Identidad.<br><br>Pero miren a su alrededor — y miren adentro — y van a ver la tensión: mucha gente está en Cristo… y aun así vive como si no tuviera Padre. O como si el Padre fuera un jefe al que hay que contentar.<br><br>Sirven. Oran. Cumplen. Y por dentro buscan aprobación, temen el castigo, o controlan todo para no caer.<br><br>Eso no se arregla con más voluntariado. Hay que nombrarlo. Y después hay que mirar cómo Dios responde.</p>` },
+      { t: "trans", html: "— Así que empecemos por lo que muchos cargan sin decirlo. —" }
     ]
   },
   {
-    label: "Nombres de Dios",
-    tiempo: "5 – 20 min",
+    label: "Problemática",
+    tiempo: "6 – 20 min",
     bloques: [
-      { t: "blk", lbl: "Los nombres como revelación", html: `<p class="script">En el mundo bíblico, un nombre no es solo una etiqueta. Es una revelación de carácter. Cuando Dios revela su nombre, está revelando quién es — y cómo quiere que nos relacionemos con él.<br><br>Vamos a ver cuatro nombres del Antiguo Testamento. Y quiero que noten algo mientras los vemos: ¿qué tipo de relación propone cada uno?</p>` },
+      { t: "nota", html: "Fluidez: huérfano y esclavo no son ‘punto 1 y 2’; son dos caras de la misma herida. Pasa de uno al otro con ‘y hay otra forma…’. Datos: peso, no cátedra. No terapia en público." },
+      { t: "blk", lbl: "Cuando estás en la casa… y te sientes solo", html: `<p class="script">El problema no es que nos falte actividad espiritual. El problema es más íntimo: estando ya en la casa, muchos seguimos viviendo como si nadie nos sostuviera — o como si el amor del Padre hubiera que ganárselo cada semana.<br><br>A veces esa herida se llama <strong>huérfano</strong>. A veces se disfraza de religión y se llama <strong>esclavo</strong>. Es el mismo vacío, con distinta ropa.</p>` },
+
+      { t: "blk", lbl: "La cara del huérfano", html: `<p class="script">Piensen en el Edén. Dios no solo creó; sostenía tres cosas que todo ser humano sigue necesitando: <strong>protección, provisión y propósito</strong>. Cuando la paternidad se rompe —en la casa o en el corazón— esas tres se sienten rotas.<br><br>Y aquí quiero ser cuidadoso: no hace falta haber crecido sin papá biológico para vivir con mentalidad de huérfano. Es un modo de habitar el mundo. Una frase interna que se repite: «si no me aseguro yo, nadie me sostiene».</p>` },
+      { t: "dato", html: `<strong>Lo que suele aparecer</strong> cuando esa frase manda: ansiedad por aprobación; identidad que depende de que te aprueben; sensación de que el control siempre está afuera. De ahí salen cosas que muchos reconocen sin querer: crisis de identidad, baja autoestima, miedo crónico al abandono, dificultad para poner límites, apegos disfuncionales, roce constante con figuras de autoridad.` },
+      { t: "dato", html: `<strong>Datos que se citan con frecuencia</strong> sobre hogares sin paternidad presente: más riesgo en salud mental; cifras altas en depresión, consumo, cárcel juvenil, pobreza. No los uses como sentencia sobre nadie en la sala. Úsalos como peso: la ausencia deja marca. Si alguien se identifica, no lo explores en público.` },
+      { t: "verse", ref: "Salmo 68:5", texto: "Padre de huérfanos y defensor de viudas es Dios en su santa morada." },
+      { t: "blk", lbl: "Dios no mira para otro lado", html: `<p class="script">Santiago 1:27 dice que la religión pura visita al huérfano. El corazón de Dios no es indiferente a esa herida.<br><br>Pero nombrar la herida no es todavía la cura. Solo nos deja listos para ver la otra cara — porque a veces el huérfano, cuando entra a la iglesia, no desaparece: <em>se vuelve empleado</em>.</p>` },
+
+      { t: "blk", lbl: "La cara del esclavo", html: `<p class="script">Esta es más “espiritual”, y por eso más peligrosa entre voluntarios.<br><br>Suena así: <strong>debo ganarme el favor de Dios</strong>. Mérito. Si algo sale mal: «Dios me está castigando.» Ansiedad crónica por el futuro. Hipervigilancia financiera y emocional. Necesidad obsesiva de control.<br><br>Y en el equipo: competencia, envidia, celos espirituales, comparación constante. Vacío. Soledad. Hipersensibilidad al rechazo; muros; al primer roce se asume abandono. Y se busca validación en cosas que pasan.<br><br>¿Se dan cuenta? Es el mismo miedo del huérfano… solo que ahora usa lenguaje de ministerio.</p>` },
+      { t: "pregunta", html: "Cuando sirves… ¿lo haces como hijo en casa, o como empleado que no quiere que le despidan?" },
+      { t: "verse", ref: "Romanos 8:15", texto: "Pues no habéis recibido el espíritu de esclavitud para estar otra vez en temor, sino que habéis recibido el espíritu de adopción, por el cual clamamos: ¡Abba, Padre!" },
+      { t: "blk", lbl: "Pablo ya lo había dicho", html: `<p class="script">Pablo no deja espacio a medias. Espíritu de esclavitud → temor. Espíritu de adopción → clamamos Abba.<br><br>Entonces el diagnóstico es simple y duro: muchos estamos en Cristo… y aun así operamos desde el temor. Más esfuerzo no cura eso. Hace falta un Padre.<br><br>Pero ¿quién es ese Padre? Porque no podemos inventarnos uno blando para calmarnos. Tenemos que mirar al Dios que ya se reveló — y ver hasta dónde llega.</p>` },
+      { t: "trans", html: "— Empecemos por sus nombres. Lejos… y verdaderos. —" }
+    ]
+  },
+  {
+    label: "Solución 1 · Nombres",
+    tiempo: "20 – 28 min",
+    bloques: [
+      { t: "nota", html: "Narrativa: los nombres son escalones de cercanía. Hablarlos como un acercamiento que todavía no llega a casa. Al final, el vacío que queda empuja solo hacia Abba." },
+      { t: "blk", lbl: "Antes de Abba, Él ya tenía nombre", html: `<p class="script">Si el problema es temor y distancia, la tentación es fabricar un dios doméstico. Pero Jesús no hace eso. Toma al Dios que Israel ya conocía… y lo acerca.<br><br>Así que, antes del giro, necesitamos sentir el peso de esos nombres. En el mundo bíblico un nombre no es etiqueta: es revelación de carácter. Cinco nombres. Mientras los oyen, pregunten en silencio: ¿qué tipo de relación propone cada uno?</p>` },
       {
         t: "nombres", items: [
           {
             nombre: "Elohim", color: "#534AB7", bg: "#EEEDFE",
-            significado: "Dios — el Creador poderoso",
+            significado: "Dios — el Creador",
             ref: "Génesis 1:1",
             verso: "En el principio creó Dios los cielos y la tierra.",
-            desc: `<strong>Elohim</strong> es el nombre con el que comienza todo. Es plural en hebreo — no porque haya varios dioses, sino para expresar la plenitud de su poder. El Dios que habla y la nada se convierte en algo.<br><br>La relación que propone: Creador–criatura. Hay una distancia inherente. Él es el origen de todo. Nosotros somos lo que él hizo. La reverencia es la respuesta natural.`
+            desc: `<strong>Elohim</strong>: plenitud de poder creador. Relación: Creador–criatura. Distancia inherente. Reverencia. Necesario… pero todavía no es hogar.`
           },
           {
             nombre: "El Shaddai", color: "#0F6E56", bg: "#E1F5EE",
-            significado: "Dios Todopoderoso — el que sustenta",
+            significado: "Todopoderoso — el que sustenta",
             ref: "Génesis 17:1",
-            verso: "Era Abram de edad de noventa y nueve años, cuando le apareció el Señor y le dijo: Yo soy el Dios Todopoderoso; anda delante de mí y sé perfecto.",
-            desc: `<strong>El Shaddai</strong> aparece en los momentos de promesa imposible. A Abraham, cuando su cuerpo ya no podía. A Job, en medio del sufrimiento. Es el Dios que tiene poder sobre lo que está más allá del poder humano.<br><br>La relación que propone: Omnipotente–dependiente. Él puede lo que yo no puedo. La postura es de rendición y confianza ante el que no tiene límites.`
-          },
-          {
-            nombre: "YHWH", color: "#993C1D", bg: "#FAECE7",
-            significado: "El que Es — el Dios del pacto",
-            ref: "Éxodo 3:14",
-            verso: "Y respondió Dios a Moisés: YO SOY EL QUE SOY. Y dijo: Así dirás a los hijos de Israel: YO SOY me envió a vosotros.",
-            desc: `<strong>YHWH</strong> — el nombre tan sagrado que los judíos no lo pronunciaban. El tetragrámaton. El nombre del pacto, el nombre personal de Dios con su pueblo.<br><br>Aquí algo cambia: este nombre no habla solo de poder sino de relación. YHWH es el Dios que se compromete, que hace pacto, que no abandona. Pero sigue siendo un nombre de tremenda santidad — los sacerdotes se purificaban antes de escribirlo.<br><br>La relación que propone: Santo–pueblo. Hay cercanía de pacto, pero mediada. Nadie entra al Lugar Santísimo excepto el sumo sacerdote, una vez al año, con sangre.`
+            verso: "…le apareció el Señor y le dijo: Yo soy el Dios Todopoderoso; anda delante de mí y sé perfecto.",
+            desc: `<strong>El Shaddai</strong>: el que sostiene promesas imposibles — Abraham, Job. Relación: Omnipotente–dependiente. Te sostiene… desde arriba.`
           },
           {
             nombre: "Adonai", color: "#185FA5", bg: "#E6F1FB",
-            significado: "Señor — el que tiene autoridad soberana",
+            significado: "Señor — autoridad soberana",
             ref: "Salmo 8:1",
             verso: "¡Oh Señor, Señor nuestro, cuán glorioso es tu nombre en toda la tierra!",
-            desc: `<strong>Adonai</strong> es el nombre que los judíos usaban en voz alta en lugar de YHWH cuando leían las Escrituras. Señor, soberano, amo. Reconoce su autoridad total sobre todo lo que existe.<br><br>La relación que propone: Soberano–súbdito. El que obedece y sirve porque reconoce quién tiene el gobierno de todo.`
+            desc: `<strong>Adonai</strong>: el nombre que se leía en voz alta. Relación: Soberano–súbdito. Hay autoridad… y hay distancia.`
+          },
+          {
+            nombre: "Jireh", color: "#854F0B", bg: "#FAEEDA",
+            significado: "Proveedor — el que ve y provee",
+            ref: "Génesis 22:14",
+            verso: "Y llamó Abraham el nombre de aquel lugar, Jehová proveerá…",
+            desc: `<strong>Jireh</strong>: en el monte, el carnero. Relación: Proveedor–necesitado. Él ve y provee… pero aún no es la intimidad de sentarte a su mesa.`
+          },
+          {
+            nombre: "YHWH", color: "#993C1D", bg: "#FAECE7",
+            significado: "Yo soy el que soy — el del pacto",
+            ref: "Éxodo 3:14",
+            verso: "Y respondió Dios a Moisés: YO SOY EL QUE SOY…",
+            desc: `<strong>YHWH</strong>: pacto y santidad. Cercanía real… y mediada. Nadie entra al Lugar Santísimo sin sangre, una vez al año.`
           }
         ]
       },
-      { t: "blk", lbl: "El patrón que emerge", html: `<p class="script">¿Notaron el patrón? Elohim: Creador–criatura. El Shaddai: Todopoderoso–dependiente. YHWH: Santo–pueblo mediado. Adonai: Soberano–súbdito.<br><br>Cada nombre revela algo real y verdadero de Dios. No son incorrectos. Son parte de quien él es.<br><br>Pero hay algo que falta en todos ellos.<br><br>En ninguno de estos nombres la relación propuesta es íntima. Hay reverencia, hay pacto, hay dependencia, hay obediencia. Pero no hay lo que Jesús trae.</p>` },
-      { t: "trans", html: "— Y entonces llega Jesús —" }
+      { t: "blk", lbl: "Todo eso es verdad — y todavía falta algo", html: `<p class="script">Creador. Todopoderoso. Señor. Proveedor. Yo Soy. Todo eso es verdad. Ninguna de esas relaciones es todavía <em>Papá</em>.<br><br>¿Ven el hilo? Dios no era lejano porque fuera frío. Era santo. Y la santidad, sin mediación, se siente como distancia.<br><br>La solución no es inventar un dios más blando. Es que <strong>ese mismo Dios</strong> —Elohim, YHWH, Adonai— se acerque… y diga una palabra que nadie se había atrevido a ponerle.</p>` },
+      { t: "trans", html: "— Esa palabra llega con Jesús. —" }
     ]
   },
   {
-    label: "El giro de Jesús",
-    tiempo: "20 – 28 min",
+    label: "Solución 2 · Abba",
+    tiempo: "28 – 38 min",
     bloques: [
-      { t: "giro", html: `<div class="giro-lbl">El giro más radical del NT</div><div class="giro-txt">Jesús no enseña un nombre nuevo de Dios. Hace algo más radical: toma al Dios de Abraham, de Moisés, del Sinaí — el Elohim, el YHWH, el Adonai — y lo llama Abba.</div>` },
-      { t: "blk", lbl: "Lo que Jesús hizo con los nombres", html: `<p class="script">En el Sermón del Monte, Jesús no dice "cuando oren, digan: Oh Elohim todopoderoso." Dice:</p>` },
+      { t: "nota", html: "Un solo movimiento narrativo: de los nombres → Abba → ‘¿cómo entré?’ → adopción. No cortes bruscos. La adopción responde al huérfano y al esclavo que nombramos al inicio." },
+      { t: "giro", html: `Jesús no inventa un dios nuevo. Toma al Elohim, al YHWH, al Adonai — y lo llama <strong>Abba</strong>.` },
+      { t: "blk", lbl: "El mismo Dios… con otra puerta", html: `<p class="script">Cuando Jesús enseña a orar, no dice: «Creador nuestro» ni «Todopoderoso nuestro». Dice:</p>` },
       { t: "verse", ref: "Mateo 6:9", texto: "Vosotros, pues, oraréis así: Padre nuestro que estás en los cielos, santificado sea tu nombre." },
-      { t: "blk", lbl: "", html: `<p class="script">Padre. No como una metáfora poética — el AT sí tiene imágenes paternas de Dios, pero siempre colectivas, siempre distantes. Jesús lo convierte en el modo primario de dirigirse a Dios. Y no dice "Padre de Abraham" o "Padre de Israel." Dice "Padre nuestro." Personal. Plural. Para todos los que están en él.<br><br>Y en su propio momento más vulnerable, en Getsemaní, cuando el peso del mundo estaba sobre él, Jesús no recurre a Elohim ni a Adonai. Recurre al nombre más íntimo:</p>` },
+      { t: "blk", lbl: "Demasiado cercano", html: `<p class="script">Padre nuestro. Personal. Plural. No «Padre de Abraham» a distancia: acceso para los que están en él.<br><br>Y en Getsemaní —cuando el cielo parece más cerrado— no vuelve a Elohim. En lo más oscuro, sigue diciendo Abba.</p>` },
       { t: "verse", ref: "Marcos 14:36", texto: "Y decía: Abba, Padre, todas las cosas son posibles para ti; aparta de mí esta copa; mas no lo que yo quiero, sino lo que tú." },
-      { t: "dato", html: `<strong>Abba — lo que significa esta palabra:</strong><br><br>Es arameo, no hebreo formal. Era la lengua de la casa, no del templo. La palabra que un niño usaba en la intimidad familiar — lo más cercano a "Papá" en español cotidiano.<br><br>Ningún judío del primer siglo se habría atrevido a usar esa palabra con Dios. Era demasiado cercana, demasiado familiar para el Dios que hacía temblar el Sinaí. Jesús no solo la usa — nos dice que nosotros también podemos usarla.<br><br>Pablo la preserva transliterada en sus cartas en griego — no la tradujo — precisamente porque era una palabra que la iglesia temprana usaba en la oración. Era parte de cómo se relacionaban con Dios.` },
-      { t: "verse", ref: "Romanos 8:15", texto: "Pues no habéis recibido el espíritu de esclavitud para estar otra vez en temor, sino que habéis recibido el espíritu de adopción, por el cual clamamos: ¡Abba, Padre!" },
-      { t: "blk", lbl: "La adopción — huiothesia", html: `<p class="script">¿Cómo llegamos nosotros a tener acceso a ese nombre? Eso es lo que Pablo explica con la palabra adopción — en griego, huiothesia.<br><br>Y aquí hay algo que el contexto cultural ilumina enormemente.</p>` },
-      { t: "ilustra", html: `<strong>La adopción romana — tres detalles que cambian todo:</strong><br><br><strong>1. Se adoptaba principalmente a adultos.</strong> Un ciudadano romano poderoso sin heredero podía adoptar a un adulto. El adoptado dejaba completamente su familia anterior. Deudas anteriores: canceladas legalmente. Historia anterior: borrada. Identidad nueva: total.<br><br><strong>2. El adoptado tenía exactamente los mismos derechos que el hijo natural.</strong> No era hijo de segunda clase. Misma herencia, mismo apellido, mismo acceso al padre. Igual en todo ante la ley.<br><br><strong>3. La iniciativa siempre era del padre.</strong> No era el adoptado quien buscaba familia — era el padre quien elegía. Esto no era rescate de lástima. Era elección deliberada.` },
-      { t: "verse", ref: "Efesios 1:4-5", texto: "Según nos escogió en él antes de la fundación del mundo... habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad." },
-      { t: "blk", lbl: "", html: `<p class="script">No nos recogió porque nos vio solos y tuvo lástima. Nos eligió. Antes de la fundación del mundo.<br><br>Y al adoptarnos, hizo exactamente lo que la adopción romana hacía: canceló la deuda anterior, borró la historia de esclavitud al pecado, y nos dio acceso pleno a todo lo que tiene. No como hijos de segunda clase. Como coherederos con el Hijo.<br><br>El Elohim que creó los cielos y la tierra — ese mismo Dios — ahora es Abba para ti.</p>` },
-      { t: "trans", html: "— Y ahora Jesús nos cuenta cómo se ve ese Padre en acción —" }
+      { t: "dato", html: `<strong>Abba</strong> es arameo de la casa, no del templo. Lo más cercano a «papito». Ningún judío se había atrevido a tanto con el Dios del Sinaí. Jesús lo usa… y nos mete en esa misma palabra. Por eso Pablo la deja en arameo (Romanos 8:15; Gálatas 4:6): para que no se diluya.` },
+      { t: "verse", ref: "Juan 1:12", texto: "Mas a todos los que le recibieron, a los que creen en su nombre, les dio potestad de ser hechos hijos de Dios." },
+      { t: "blk", lbl: "Entonces… ¿cómo entraste?", html: `<p class="script">Si Jesús nos da potestad de ser hechos hijos, la pregunta natural es: ¿cómo? ¿Por esfuerzo? ¿Por años de servicio? ¿Por un contrato mejor?<br><br>Pablo responde con una imagen que sus lectores entendían de inmediato: la <strong>adopción romana</strong>. Y esos detalles no son curiosidad histórica — responden exactamente a lo que nombramos al principio.</p>` },
+      { t: "ilustra", html: `<strong>1. Principalmente adultos.</strong> Dejabas la familia anterior. Deudas: canceladas. Historial judicial: borrado. — <em>El esclavo deja de deber.</em><br><br><strong>2. Mismos derechos que el hijo natural.</strong> No hijo de segunda. Herencia, nombre, acceso. — <em>El huérfano deja de mendigar lugar.</em><br><br><strong>3. Iniciativa siempre del padre.</strong> No era tanto “proteger a un menor” como <em>continuar linaje y dejar herencia</em>. Elección deliberada. — <em>No te colaste; te escogieron.</em>` },
+      { t: "verse", ref: "Efesios 1:4–5", texto: "Según nos escogió en él antes de la fundación del mundo… habiéndonos predestinado para ser adoptados hijos suyos por medio de Jesucristo, según el puro afecto de su voluntad." },
+      { t: "blk", lbl: "Ya no eres de esa casa", html: `<p class="script">No te recogió por lástima un martes. Te escogió. Canceló la deuda. Borró el historial de esclavitud. Te dio acceso pleno.<br><br>El Elohim que creó los cielos —ese mismo— es Abba. La solución legal y espiritual al huérfano y al esclavo es la misma: <strong>ya no eres de esa casa. Perteneces a otra.</strong><br><br>Pero todavía falta algo. Porque la adopción se entiende con la mente… y el corazón necesita ver el rostro del Padre. Jesús no solo nos dio un título. Nos contó cómo es Él cuando un hijo vuelve — o cuando un hijo nunca se fue, pero tampoco entró a la fiesta.</p>` },
+      { t: "trans", html: "— Escuchemos la parábola como quien se mira en ella. —" }
     ]
   },
   {
-    label: "El Padre que corre",
-    tiempo: "28 – 40 min",
+    label: "Solución 3 · El Padre",
+    tiempo: "38 – 48 min",
     bloques: [
-      { t: "blk", lbl: "La parábola del hijo pródigo — Leer Lucas 15:11-24", html: `<p class="script">Quiero que leamos juntos esta parábola. Y quiero pedirles algo: intenten escucharla como si fuera la primera vez. No como un texto que ya conocen, sino como Jesús contándola a personas que nunca la habían escuchado.<br><br><em>[Leer Lucas 15:11-24 en voz alta, despacio. Si es posible, una voz diferente a la del presentador.]</em><br><br>Quiero detenerme en cada uno de los tres personajes. Porque Jesús pone algo específico en cada uno.</p>` },
+      { t: "nota", html: "Contar como historia continua, no como tres viñetas sueltas. Cultura de honor → viaje → corre → regalos. Al final, el puente al hijo mayor ya está sembrado (‘ofende a justos’)." },
+      { t: "blk", lbl: "Una casa, una vergüenza, un Padre que corre", html: `<p class="script">Lucas 15. Un hijo pide la herencia en vida. En esa cultura, eso era casi decir: <em>ojalá te mueras</em>. Vergüenza familiar. Reputación rota. El padre tenía derecho a rechazarlo, a exponerlo ante la aldea.<br><br>Si la historia fuera solo justicia, terminaría ahí. Pero Jesús cuenta otra cosa. Y ahí la solución deja de ser concepto… y se vuelve carne.</p>` },
       { t: "parabola", items: [
-        { icon: "👦", title: "El hijo menor — el que se fue", body: "Pide su herencia en vida, que en la cultura del primer siglo equivalía a desear la muerte del padre. Se va, lo pierde todo, vuelve con un discurso ensayado: 'ya no soy digno de ser llamado tu hijo, hazme como a uno de tus jornaleros.' Viene con la mentalidad de empleado — lo mejor que puede ofrecer es trabajo a cambio de techo." },
-        { icon: "👴", title: "El padre — el que corre", body: "Lo ve cuando aún está lejos. Eso significa que estaba mirando. Que no lo había dado por perdido. Y corre — en la cultura del primer siglo, un hombre de honor no corría. Era indignidad pública. El padre sacrifica su reputación para llegar más rápido a su hijo. Llega antes del discurso. Interrumpe el discurso. La fiesta comienza antes de que el hijo termine de hablar." },
-        { icon: "👦", title: "El hijo mayor — el que se quedó", body: "Está afuera, enojado. No quiere entrar. Y lo que dice revela todo: 'He servido todos estos años sin desobedecer tus mandamientos, y nunca me has dado un cabrito para celebrar.' Llevaba años en la casa del padre — pero viviendo como empleado, no como hijo. La fiesta del hermano lo expone: nunca había pedido lo que siempre tuvo disponible." }
+        { icon: "1", title: "El viaje del menor", body: "País lejano. Malgasta. Cerdos. Quiere comer su comida. Degradación total: dignidad, identidad, pureza. Cuando vuelve, no vuelve como hijo: vuelve con discurso de jornalero. Quiere negociar un contrato. Mentalidad de empleado — la misma que nombramos al inicio." },
+        { icon: "2", title: "El padre corre", body: "Un hombre de honor no corre: levantar la túnica era humillante. Él se despoja de posición. Recibe la vergüenza del hijo. Abraza y besa ANTES de la confesión. La gracia llega antes del discurso — y eso desarma al esclavo que venía a negociar." },
+        { icon: "3", title: "Restauración", body: "Mejor ropa: dignidad y honor. Anillo: autoridad y plena condición. Sandalias: no esclavo — calzado de hijo. Luego fiesta pública. A veces ofende a “los justos” para salvar a los perdidos. Y ahí aparece el otro hijo…" }
       ]},
-      { t: "blk", lbl: "Lo que la parábola revela del Padre", html: `<p class="script">Jesús está respondiendo una pregunta muy específica que los fariseos tenían sobre él: ¿por qué comes con pecadores? ¿Por qué los buscas?<br><br>Y la respuesta es esta parábola. El Padre busca. El Padre mira cuando el hijo todavía está lejos. El Padre corre.<br><br>Pero fíjense en un detalle que es fácil perder: hay dos hijos perdidos en esta historia. El menor se perdió en el mundo. El mayor se perdió en la casa del padre.<br><br>El hijo mayor tiene acceso a todo y no usa nada. Lleva años al lado del padre sin pedirle un cabrito para celebrar con sus amigos. ¿Por qué? Porque no vive como hijo. Vive como empleado.</p>` },
+      { t: "blk", lbl: "No un puesto — una casa", html: `<p class="script">El hijo vuelve pidiendo trabajo. El Padre responde con hijo. Ropa, anillo, sandalias: no «ya veremos si te portas bien». Restauración plena.<br><br>Eso es lo que Dios hace con el huérfano y con el esclavo: no les da un puesto en la empresa. Les da casa.<br><br>Pero la parábola no termina en el abrazo. Hay alguien que nunca se fue… y aun así está fuera de la fiesta. Y para un grupo que sirve, esa es la escena que más nos mira.</p>` },
+      { t: "trans", html: "— Cierro con el hijo mayor… y con nosotros. —" }
+    ]
+  },
+  {
+    label: "Pastoral",
+    tiempo: "48 – 55 min",
+    bloques: [
+      { t: "nota", html: "Sin contenido nuevo. Recoger el hilo completo: huérfano → esclavo → Abba → adopción → parábola → ‘¿quién soy yo en esta historia?’. Silencio real. Oración corta." },
+      { t: "blk", lbl: "El que se quedó… y también se perdió", html: `<p class="script">El menor se perdió lejos. El mayor puede perderse <em>dentro</em> de la casa: cerca del trabajo, lejos del corazón del Padre.<br><br>Años sirviendo bien. Fuera de la fiesta. «Tantos años te sirvo… y nunca me has dado.» Contrato. Empleado. La mentalidad de esclavo… con buen curriculum ministerial.<br><br>Y el Padre no le dice «trabaja menos». Le dice: «Hijo, tú siempre estás conmigo, y todas mis cosas son tuyas.»</p>` },
       { t: "verse", ref: "Lucas 15:31", texto: "Él entonces le dijo: Hijo, tú siempre estás conmigo, y todas mis cosas son tuyas." },
-      { t: "blk", lbl: "", html: `<p class="script">"Todas mis cosas son tuyas." Las mismas palabras de 1 Corintios 3 que vimos la última vez: "todo es vuestro... y vosotros de Cristo, y Cristo de Dios."<br><br>El hijo mayor tenía todo disponible y no lo sabía. O lo sabía con la cabeza pero no lo vivía con el corazón.<br><br>Esa es la pregunta que Jesús deja abierta al final de la parábola: ¿va a entrar el hijo mayor? ¿Va a recibir la identidad que siempre tuvo disponible?<br><br>Jesús no cierra la historia. La deja abierta. Porque la respuesta la damos nosotros.</p>` },
-      { t: "pregunta", html: "¿Con cuál de los dos hijos te identificas más esta semana? ¿Con el que se fue lejos y está volviendo? ¿O con el que lleva años en la casa del padre pero viviendo como empleado?" },
-      { t: "nota", html: "Esta pregunta es el momento más importante de la charla. Dejar 30-40 segundos de silencio real. No llenar el espacio. El objetivo no es que respondan en voz alta — es que cada uno lo procese internamente." }
-    ]
-  },
-  {
-    label: "Implicaciones",
-    tiempo: "40 – 43 min",
-    bloques: [
-      { t: "blk", lbl: "El recorrido completo", html: `<p class="script">Hagamos el recorrido que hicimos hoy:<br><br>Elohim — el Creador. El Dios de la distancia necesaria, la reverencia apropiada.<br>El Shaddai — el Todopoderoso. El Dios que puede lo que yo no puedo.<br>YHWH — el Dios del pacto. Que se compromete, que no abandona.<br>Adonai — el Soberano. Al que se sirve y se obedece.<br><br>Todo eso sigue siendo verdad. Sigue siendo parte de quién es Dios.<br><br>Y luego viene Jesús. Y dice: todo eso que conocen — ese Dios — corre hacia ti cuando lo ves desde lejos. Ese Dios interrumpe tu discurso ensayado para darte un abrazo. Ese Dios está mirando desde lejos esperando que vuelvas.</p>` },
-      { t: "puente", html: `<strong>Para los voluntarios específicamente:</strong><br><br>El hijo mayor de la parábola servía bien. Hacía todo lo correcto. No desobedeció ningún mandamiento. Pero lo hacía desde el lugar equivocado — desde la obligación, no desde la filiación.<br><br>Si llevas tiempo sirviendo en esta iglesia y hay resentimiento, cansancio, necesidad de reconocimiento — no es porque seas malo. Es porque quizás estás sirviendo como el hijo mayor. Tienes todo disponible. "Todas mis cosas son tuyas." La pregunta es si estás viviendo desde eso.` },
-      { t: "verse", ref: "Gálatas 4:6-7", texto: "Y por cuanto sois hijos, Dios envió a vuestros corazones el Espíritu de su Hijo, el cual clama: ¡Abba, Padre! Así que ya no eres esclavo, sino hijo; y si hijo, también heredero de Dios por medio de Cristo." }
-    ]
-  },
-  {
-    label: "Cierre",
-    tiempo: "43 – 45 min",
-    bloques: [
-      { t: "blk", lbl: "Ejercicio de cierre", html: `<p class="script">Para cerrar, quiero que hagamos algo simple pero que requiere valentía.<br><br>Voy a pedirles que oren. No con palabras elaboradas. Solo quiero que digan — en voz baja, internamente, como sea que les salga — dos palabras.<br><br><strong>Abba, Padre.</strong><br><br><em>[60 segundos de silencio. No llenar. No apresurarlo.]</em><br><br>No para cumplir un ejercicio espiritual. Sino para practicar lo que aprendimos. El Elohim que hizo el universo, el YHWH del Sinaí, el Adonai soberano de todo — quiere que lo llames Abba. Hoy. Ahora.</p>` },
-      { t: "pregunta", html: "Pregunta para la semana: ¿Dónde estás actuando como el hijo mayor — haciendo todo bien, pero desde la obligación en lugar de desde la filiación?" },
-      { t: "blk", lbl: "Anticipación de la Charla 3", html: `<p class="script">La próxima vez — la última de la serie — vamos a ver las otras dos identidades que vienen de estar en Cristo: miembros de un cuerpo y ramas de la vid.<br><br>Ya exploramos la relación vertical: quién soy con Dios, como hijo. La siguiente es horizontal: quién soy con otros, y cómo produzco fruto desde la unión.<br><br>Oremos.</p>` },
-      { t: "nota", html: `Oración de cierre — modelo: "Abba, Padre. Gracias porque corriste hacia nosotros antes de que termináramos nuestro discurso ensayado. Gracias porque todas tus cosas son nuestras. Ayúdanos esta semana a vivir como hijos — a servirte desde ahí, a orar desde ahí, a volver desde ahí cuando fallemos. Amén."<br><br>La oración misma debe sonar como un hijo hablando con su padre — no como un súbdito dirigiéndose a un soberano. Tono cálido, directo, sin palabras grandilocuentes.` }
+      { t: "pregunta", html: "Después de todo este camino… ¿dónde te reconoces? ¿Huérfano que busca aprobación, esclavo que teme el castigo, menor que vuelve, o mayor que sirve sin entrar a la fiesta?" },
+      { t: "nota", html: "Treinta a cuarenta segundos de silencio. No llenar. Dejar que la pregunta haga el trabajo." },
+
+      { t: "blk", lbl: "Lo que ya tienes — si eres hijo", html: `<p class="script">Si el Espíritu te ha hecho clamar Abba, esto ya es tuyo: acceso íntimo. Herencia eterna. Espíritu Santo. Seguridad. Libertad, no esclavitud. Descanso en gracia. Generosidad y compasión. Esperanza eterna. Guía del Espíritu.<br><br>No es lista de premios. Es el ambiente de la casa.</p>` },
+      { t: "verse", ref: "Gálatas 4:6–7", texto: "Y por cuanto sois hijos, Dios envió a vuestros corazones el Espíritu de su Hijo, el cual clama: ¡Abba, Padre! Así que ya no eres esclavo, sino hijo; y si hijo, también heredero de Dios por medio de Cristo." },
+      { t: "puente", html: `<strong>Para quien sirve esta semana:</strong> primero soy hijo. Después soy miembro. La filiación es anterior a la función. Si sirves para ganarte la fiesta, estás en el patio del mayor. El Padre no pide más años: te dice que ya estás en casa.` },
+      { t: "blk", lbl: "Antes de irnos", html: `<p class="script">No cierro con un resumen. Cierro con dos palabras — las mismas que desarmaron al esclavo y al huérfano esta noche.<br><br>En voz baja o por dentro:<br><br><strong>Abba, Padre.</strong><br><br><em>[60 segundos de silencio.]</em></p>` },
+      { t: "pregunta", html: "Esta semana, en lo concreto: ¿oras y sirves como huérfano, como esclavo, o como hijo?" },
+      { t: "nota", html: "Oración modelo, cálida y corta: «Abba, gracias porque corriste antes de que termináramos el discurso. Gracias porque no somos huérfanos ni esclavos. Ayúdanos a servir desde la casa. Amén.»" }
     ]
   }
 ];
@@ -166,10 +141,8 @@ const secs = [
 const nav = document.getElementById('nav');
 const prog = document.getElementById('prog');
 const panelsEl = document.getElementById('panels');
-let cur = 0;
 
 function render(i) {
-  cur = i;
   nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
   prog.querySelectorAll('.ps').forEach((s,j) => {
     s.classList.toggle('done', j < i);
@@ -191,7 +164,11 @@ secs.forEach((s, i) => {
 
   s.bloques.forEach(b => {
     if (b.t === 'blk') {
-      html += `<div class="blk"><div class="blk-hd">${b.lbl||'Guión'}</div><div class="blk-bd">${b.html}</div></div>`;
+      if (b.lbl) {
+        html += `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`;
+      } else {
+        html += `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
+      }
     } else if (b.t === 'nota') {
       html += `<div class="nota">${b.html}</div>`;
     } else if (b.t === 'verse') {
@@ -207,22 +184,20 @@ secs.forEach((s, i) => {
     } else if (b.t === 'trans') {
       html += `<p class="trans">${b.html}</p>`;
     } else if (b.t === 'giro') {
-      html += `<div class="giro"><div class="giro-lbl">El giro más radical del NT</div><div class="giro-txt">${b.html.replace(/<[^>]+>/g,'')}</div></div>`;
+      html += `<div class="giro"><div class="giro-lbl">El giro</div><div class="giro-txt">${b.html}</div></div>`;
     } else if (b.t === 'nombres') {
       b.items.forEach(n => {
         html += `<div class="nombre-card">
-          <div class="nombre-hd" style="background:${n.bg}20;border-bottom:0.5px solid var(--color-border-tertiary)">
-            <div>
-              <div class="nombre-hb" style="color:${n.color}">${n.nombre}</div>
-              <div class="nombre-sig">${n.significado} · <em style="font-size:11px;color:#888">${n.ref}</em></div>
-            </div>
+          <div class="nombre-hd">
+            <div class="nombre-hb" style="color:${n.color}">${n.nombre}</div>
+            <div class="nombre-sig">${n.significado} · <em>${n.ref}</em></div>
           </div>
-          <blockquote class="verse" style="margin:0;border-radius:0;border-left:3px solid ${n.color}">${n.verso}<cite style="color:${n.color}">${n.ref}</cite></blockquote>
+          <blockquote class="verse" style="border-left-color:${n.color}">${n.verso}<cite>${n.ref}</cite></blockquote>
           <div class="nombre-bd">${n.desc}</div>
         </div>`;
       });
     } else if (b.t === 'parabola') {
-      html += `<div class="parabola-sec"><div class="parabola-lbl">Los tres personajes</div>`;
+      html += `<div class="parabola-sec"><div class="parabola-lbl">La parábola</div>`;
       b.items.forEach(p => {
         html += `<div class="parabola-row">
           <div class="parabola-icon">${p.icon}</div>
