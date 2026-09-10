@@ -26,10 +26,9 @@
   margin-top: 1.75rem;
   padding: 1.35rem 1.4rem 1.7rem;
   background: var(--surface);
-  border: 1px solid color-mix(in srgb, var(--rule) 80%, white);
-  border-top: 3px solid var(--gold);
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: none;
 }
 
 .guion-sheet-label {
@@ -132,7 +131,7 @@
 .widget-stack .nav-btn:hover,
 .widget-stack .tab:hover,
 .widget-stack .navb:not(:disabled):hover {
-  border-color: var(--gold-soft);
+  border-color: var(--lr-ice);
   color: var(--navy);
 }
 

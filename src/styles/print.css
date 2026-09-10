@@ -7,12 +7,14 @@
   html,
   body {
     background: white;
-    color: #1c1915;
+    color: #050404;
   }
 
   .skip-link,
+  .site-top,
   .site-header,
   .site-footer,
+  .brand-strip,
   .reading-bar,
   .btn,
   .no-print,
@@ -24,11 +26,11 @@
     display: block;
     margin: 0 0 1.1rem;
     padding-bottom: 0.55rem;
-    border-bottom: 1px solid #d9cfc0;
-    color: #5c564c;
-    font-family: "Source Sans 3", "Segoe UI", sans-serif;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    border-bottom: 1px solid #ececec;
+    color: #6b6b6b;
+    font-family: "Hanken Grotesk", "Segoe UI", sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
   }
 
@@ -39,7 +41,7 @@
   }
 
   .reading-title {
-    color: #1e3a4c;
+    color: #050404;
     font-size: 26pt;
   }
 
@@ -71,7 +73,7 @@
 
   .resource-list a::after {
     content: " — " attr(href);
-    color: #5c564c;
+    color: #6b6b6b;
     font-size: 9pt;
   }
 }

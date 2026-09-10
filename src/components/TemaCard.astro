@@ -13,7 +13,7 @@ const { href, title, description, order, duration, hasAudio } = Astro.props;
 
 <a class="card" href={href}>
   <div class="card-top">
-    <span class="tag">Charla {order}</span>
+    <span class="tag">Charla {String(order).padStart(2, "0")}</span>
     <span class="card-meta">
       {duration && <span>{duration}</span>}
       {hasAudio && <span>Audio</span>}
