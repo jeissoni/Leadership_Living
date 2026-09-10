@@ -14,6 +14,7 @@ remember:
   - "La razón más fuerte no es la arqueología: es cómo Jesús trata la Escritura. Después de eso, el Espíritu convence."
   - "La misma semilla cae en cuatro terrenos: hace falta un corazón dispuesto, y no leemos solos; el Espíritu abre el entendimiento, muestra a Cristo y fortalece para obedecer."
 guionLede: "55 min en seis tramos: apertura con las dos preguntas (¿es de Dios? ¿por qué menos libros?), cómo llegó, por qué confiar, qué hay dentro con un bosquejo del canon, cómo se lee y cierre pastoral sobre las parábolas, el corazón dispuesto y la iluminación del Espíritu Santo. No prometas demostrar inspiración: solo quitas obstáculos. Las notas de tono son indicaciones, no se leen. Los pasajes van completos, leídos de la Biblia. Desde la Parte II está el material para preparar y no es necesario dictarlo completo."
+audio: Palabra_de_hombres_o_Palabra_de_Dios.mp3
 widgets:
   - guion_charla_biblia
 preparationWidgets:
