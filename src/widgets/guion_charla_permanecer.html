@@ -1,0 +1,156 @@
+<div class="nav" id="nav"></div>
+<div class="prog" id="prog"></div>
+<div id="panels"></div>
+
+<script>
+const secs = [
+  {
+    label: "Apertura",
+    tiempo: "0 – 6 min",
+    bloques: [
+      { t: "nota", html: "Tono de continuidad de serie. Puente con la Biblia. No reabrir canon. Nombrar Semilla y terreno y avanzar al hueco." },
+      { t: "blk", lbl: "Seguimos en el mismo campo", html: `<p class="script">Esta serie se llama <em>Semilla y terreno</em>. La última vez vimos la semilla: un libro serio, voz de Dios, no solo herramienta. Hablamos de terreno y fruto: la misma semilla, corazones distintos, el Espíritu que ilumina.<br><br>Hoy no volvemos a demostrar que es Palabra de Dios. Vamos al problema que sigue apareciendo aunque ya sepamos todo eso.</p>` },
+      { t: "pregunta", html: "¿Quieres fruto… sin quedarte en la vid?" },
+      { t: "blk", lbl: "El hilo de esta noche", html: `<p class="script">Muchos servimos, citamos, cumplimos — y por dentro estamos separados: prisa, pantallas, checklist espiritual, o cansancio de intentar «ser más espirituales».<br><br>La solución no es más actividad. Son tres modos de quedarse: <strong>orar y meditar</strong>, <strong>permanecer</strong>, <strong>adorar</strong>. Y al final, una escena que consuela a quien sirve — y un reto pequeño para la semana.</p>` },
+      { t: "trans", html: "— Empecemos por nombrar el problema con honestidad. —" }
+    ]
+  },
+  {
+    label: "Problemática",
+    tiempo: "6 – 14 min",
+    bloques: [
+      { t: "nota", html: "Diagnóstico corto. Los tres puntos que vienen SON la solución; anúncialos al final de esta sección." },
+      { t: "blk", lbl: "Fruto sin raíz", html: `<p class="script">Queremos paz sin silencio. Discernimiento sin Escritura. Madurez sin dependencia. Un turno que salga bien… y un corazón que no para.<br><br>O el otro extremo: leí, oré, ayuné, serví — y el Espíritu se vuelve un juez de puntaje. En los dos casos pasa lo mismo: <strong>queremos fruto sin quedarnos en la vid.</strong></p>` },
+      { t: "dato", html: `<strong>Eco de Marcos 4.</strong> La semilla puede ser buena y aun así ahogarse entre espinos: preocupaciones, engaño de lo urgente, «deseo de otras cosas». Hoy el espino más común suele caber en el bolsillo: la pantalla que nunca suelta la atención. Úsalo como peso de la dispersión, no como cátedra de estadísticas.` },
+      { t: "blk", lbl: "Tres soluciones — no tres temas sueltos", html: `<p class="script">Esta noche respondemos con tres movimientos que se sostienen entre sí:<br><br>1. <strong>Orar y meditar</strong> — relación y dependencia.<br>2. <strong>Permanecer</strong> — conexión con la vid.<br>3. <strong>Adoración</strong> — poner a Dios en el centro de la atención.<br><br>Si suenan a «más tareas», todavía no oyeron. Son maneras de quedarse.</p>` },
+      { t: "trans", html: "— Primera solución: conectar el cargador. —" }
+    ]
+  },
+  {
+    label: "Orar y meditar",
+    tiempo: "14 – 24 min",
+    bloques: [
+      { t: "blk", lbl: "Dependencia, no técnica", html: `<p class="script">Meditar no es vaciar la mente. Es dejar que una palabra de Dios ocupe el centro hasta que te cambia el paso. Orar no es informar a Dios de tu agenda: es responder a quien ya habló en la Escritura.</p>` },
+      { t: "verse", ref: "Salmo 1:2–3", texto: "Sino que en la ley de Jehová está su delicia, y en su ley medita de día y de noche. Será como árbol plantado junto a corrientes de aguas, que da su fruto en su tiempo…" },
+      { t: "ilustra", html: `<strong>El cargador.</strong> Nadie espera que el teléfono se llene de batería por desearlo con fuerza. Hay que enchufarlo. Orar y meditar es eso: dependencia concreta —página abierta, puerta cerrada un rato, atención prestada— no un mood religioso.` },
+      { t: "verse", ref: "Mateo 6:6", texto: "Mas tú, cuando ores, entra en tu aposento, y cerrada la puerta, ora a tu Padre que está en secreto; y tu Padre que ve en lo secreto te recompensará en público." },
+      { t: "blk", lbl: "Cómo se ve en la práctica", html: `<p class="script">Pasaje completo, lento. Una frase que se queda. Luego orar esa frase: si confronta, confiesa; si consuela, agradece; si manda, pide fuerzas; si revela a Cristo, adóralo.<br><br>Así la oración no flota: responde a la semilla. Así el terreno empieza a recibir lo que ya sabemos que es voz de Dios.</p>` },
+      { t: "verse", ref: "Filipenses 4:6–7", texto: "Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias. Y la paz de Dios, que sobrepasa todo entendimiento, guardará vuestros corazones y vuestros pensamientos en Cristo Jesús." },
+      { t: "pregunta", html: "Esta semana… ¿vas a enchufarte a la Palabra, o solo a desear tener batería espiritual?" },
+      { t: "trans", html: "— Segunda solución: no el florero — la vid. —" }
+    ]
+  },
+  {
+    label: "Permanecer",
+    tiempo: "24 – 34 min",
+    bloques: [
+      { t: "giro", html: `La rama no inventa uvas. Se queda unida. El fruto es consecuencia de <strong>permanecer</strong>, no de forzar.` },
+      { t: "verse", ref: "Juan 15:4–5", texto: "Permaneced en mí, y yo en vosotros. Como el pámpano no puede llevar fruto por sí mismo, si no permanece en la vid, así tampoco vosotros, si no permanecéis en mí. Yo soy la vid, vosotros los pámpanos; el que permanece en mí, y yo en él, éste lleva mucho fruto; porque separados de mí nada podéis hacer." },
+      { t: "ilustra", html: `<strong>Árbol y florero.</strong> Un ramo en agua se ve vivo unos días. Después se marchita: no tenía raíz. Muchos conocemos el florero espiritual: servicio hermoso, poco jugo, cansancio a la tercera semana. Permanecer es volver a la raíz — a Cristo — no decorar mejor el florero.` },
+      { t: "blk", lbl: "Conexión antes que producción", html: `<p class="script">Permanecer no es un sentimiento bonito. Es quedarte donde ya estás en Cristo: atención, tiempo, obediencia, dependencia.<br><br>Orar, meditar y adorar —lo que vemos esta noche— son maneras de poner el cuerpo para permanecer. Sin conexión, el voluntariado se vuelve contrato. Con conexión, el mismo turno puede ser fruto.</p>` },
+      { t: "dato", html: `<strong>Puente con Identidad en Cristo.</strong> Ya están en la vid. Permanecer no los mete: los ayuda a no vivir como si estuvieran cortados. Una frase basta; no reabrir toda esa serie.` },
+      { t: "pregunta", html: "Cuando sirves… ¿lo haces desde la vid, o desde el florero?" },
+      { t: "trans", html: "— Tercera solución: ¿a quién le das la atención? —" }
+    ]
+  },
+  {
+    label: "Adoración",
+    tiempo: "34 – 42 min",
+    bloques: [
+      { t: "blk", lbl: "Adorar es mirar", html: `<p class="script">Adoración no es solo el bloque de canciones. Es poner a Dios en el centro de la atención —con la voz, con el cuerpo, con la semana.<br><br>Sin adoración, orar y meditar se vuelven técnica. Con adoración, vuelven a ser relación.</p>` },
+      { t: "verse", ref: "Salmo 95:1–2", texto: "Venid, aclamemos alegremente a Jehová; cantemos con júbilo a la roca de nuestra salvación. Lleguemos ante su presencia con alabanza; aclamémosle con cánticos." },
+      { t: "verse", ref: "Romanos 12:1", texto: "Así que, hermanos, os ruego por las misericordias de Dios, que presentéis vuestros cuerpos en sacrificio vivo, santo, agradable a Dios, que es vuestro culto racional." },
+      { t: "ilustra", html: `<strong>El músico en el metro.</strong> Un violinista de primer nivel tocó en una estación; casi nadie se detuvo. La belleza estaba ahí. Faltó atención. Así pasa en una semana llena: Dios no está ausente; nosotros vamos de prisa. Adorar es detenerse y mirar.` },
+      { t: "blk", lbl: "Cómo nace en lo concreto", html: `<p class="script">A veces es una canción a solas. A veces un Salmo leído en voz alta. A veces tres gracias concretas dichas al Padre sin pedir nada todavía.<br><br>Y a menudo nace del pasaje: si ves a Cristo, adóralo. Esa es la tercera solución al fruto sin raíz: un corazón que deja de mirarse y mira a Dios.</p>` },
+      { t: "trans", html: "— Ahora una casa, dos hermanas, y una sola cosa necesaria. —" }
+    ]
+  },
+  {
+    label: "Pastoral",
+    tiempo: "42 – 50 min",
+    bloques: [
+      { t: "nota", html: "Leer Lucas 10:38–42 completo. No avergonzar a Marta. Consolar a quien sirve agitado. Ánimo, no culpa." },
+      { t: "blk", lbl: "María y Marta", html: `<p class="script">Jesús entra a una casa. Marta sirve —de verdad sirve—. María se sienta a escuchar. Marta se agita y se queja. Jesús no desprecia el servicio. Nombra la agitación… y la <em>una sola cosa necesaria</em>.</p>` },
+      { t: "verse", ref: "Lucas 10:41–42", texto: "Respondiendo Jesús, le dijo: Marta, Marta, afanada y turbada estás con muchas cosas. Pero solo una cosa es necesaria; y María ha escogido la buena parte, la cual no le será quitada." },
+      { t: "blk", lbl: "Para quien sirve esta semana", html: `<p class="script">Escuchen el consuelo: esta noche no te mando a hacer más turnos. Te invito a sentarte.<br><br>La intimidad sostiene el servicio; no al revés. Puedes ser Marta en el equipo y aun así elegir la buena parte antes de abrir la puerta. Permanecer no cancela el ministerio: lo alimenta.<br><br>Si llegaste cansado, con culpa de «no oro suficiente», oye esto: el Padre no es un coach de rachas. Es Padre. Te espera en la vid.</p>` },
+      { t: "pregunta", html: "¿En qué te reconoces hoy: Marta agitada, María sentada… o las dos en la misma semana?" },
+      { t: "nota", html: "Veinte a treinta segundos de silencio. No llenar." },
+      { t: "trans", html: "— Un reto que quepa en la vida real. —" }
+    ]
+  },
+  {
+    label: "Reto",
+    tiempo: "50 – 55 min",
+    bloques: [
+      { t: "nota", html: "Bajar volumen. Entregar el reto claro. Puede proyectarse o dictarse lento." },
+      { t: "blk", lbl: "Tres espacios, una semana", html: `<p class="script">No se llevan un programa. Se llevan presencia. Cuatro gestos, mismos tres movimientos de esta noche:</p>` },
+      { t: "dato", html: `<strong>Reto — Tres espacios, una semana</strong><br>1. <strong>Diario (10–15 min):</strong> pasaje corto → meditar una frase → orar esa frase.<br>2. <strong>Tres veces:</strong> 5 minutos de silencio antes de pedir (permanecer).<br>3. <strong>Un momento de adoración:</strong> canción, Salmo en voz alta, o 3 agradecimientos concretos a Dios.<br>4. <strong>Cierre:</strong> una línea a un hermano o al grupo: «esta semana permanecí en…».<br><br>No es puntuación. Si fallas un día, vuelves al siguiente. El Padre no lleva racha; lleva hijos.` },
+      { t: "puente", html: `<strong>Para el voluntario:</strong> esta semana profundizamos semilla en el terreno: oír, quedarte, mirar. Primero la vid; después el turno.` },
+      { t: "pastoral", lbl: "Cierre", html: `<p class="script">Queríamos fruto sin raíz. Dios ofrece vid.<br><br>Ora y medita — enchúfate. Permanece — no vivas en el florero. Adora — mira a quien ya te miró en la cruz.<br><br>Y si Marta grita por dentro esta semana, recuerda: una sola cosa es necesaria. Siéntate. Luego sirve.</p>` },
+      { t: "pregunta", html: "Esta semana: ¿fruto sin vid… o tres espacios para quedarte?" },
+      { t: "nota", html: "Oración modelo: «Padre, gracias porque la semilla es buena y porque nos invitas a la vid. Enséñanos a meditar, a permanecer y a adorarte. Consolamos a Marta en nosotros y anímanos como a María. Por Jesús. Amén.»" }
+    ]
+  }
+];
+
+const nav = document.getElementById('nav');
+const prog = document.getElementById('prog');
+const panelsEl = document.getElementById('panels');
+
+function render(i) {
+  nav.querySelectorAll('.nb').forEach((b,j) => b.classList.toggle('on', j===i));
+  prog.querySelectorAll('.ps').forEach((s,j) => {
+    s.classList.toggle('done', j < i);
+    s.classList.toggle('cur', j === i);
+  });
+  panelsEl.querySelectorAll('.panel').forEach((p,j) => p.classList.toggle('on', j===i));
+}
+
+secs.forEach((s, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'nb';
+  btn.textContent = s.label;
+  btn.onclick = () => render(i);
+  nav.appendChild(btn);
+  const ps = document.createElement('div'); ps.className = 'ps'; prog.appendChild(ps);
+  const panel = document.createElement('div'); panel.className = 'panel';
+
+  let html = `<div class="tbadge">⏱ ${s.tiempo}</div>`;
+
+  s.bloques.forEach(b => {
+    if (b.t === 'blk') {
+      html += b.lbl
+        ? `<div class="blk"><div class="blk-hd">${b.lbl}</div><div class="blk-bd">${b.html}</div></div>`
+        : `<div class="blk"><div class="blk-bd">${b.html}</div></div>`;
+    } else if (b.t === 'nota') {
+      html += `<div class="nota">${b.html}</div>`;
+    } else if (b.t === 'verse') {
+      html += `<blockquote class="verse">${b.texto}<cite>${b.ref}</cite></blockquote>`;
+    } else if (b.t === 'pregunta') {
+      html += `<div class="pregunta">${b.html}</div>`;
+    } else if (b.t === 'ilustra') {
+      html += `<div class="ilustra">${b.html}</div>`;
+    } else if (b.t === 'dato') {
+      html += `<div class="dato">${b.html}</div>`;
+    } else if (b.t === 'puente') {
+      html += `<div class="puente">${b.html}</div>`;
+    } else if (b.t === 'trans') {
+      html += `<p class="trans">${b.html}</p>`;
+    } else if (b.t === 'giro') {
+      html += `<div class="giro"><div class="giro-lbl">El giro</div><div class="giro-txt">${b.html}</div></div>`;
+    } else if (b.t === 'pastoral') {
+      html += `<div class="pastoral"><div class="pastoral-lbl">${b.lbl}</div>${b.html}</div>`;
+    }
+  });
+
+  html += `<div class="navbtns">
+    <button class="navb" ${i===0?'disabled':''} onclick="render(${i-1})">← Anterior</button>
+    <button class="navb" ${i===secs.length-1?'disabled':''} onclick="render(${i+1})">Siguiente →</button>
+  </div>`;
+
+  panel.innerHTML = html;
+  panelsEl.appendChild(panel);
+});
+
+render(0);
+</script>

@@ -2,7 +2,7 @@
 title: "Palabra de hombres, Palabra de Dios"
 description: "Por qué este libro es un texto serio, cómo se recibe como voz de Dios, y por qué unas Biblias tienen más libros que otras."
 date: 2026-08-31
-series: la-biblia
+series: semilla-y-terreno
 order: 1
 tags: ["escritura"]
 duration: "55 min"

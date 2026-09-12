@@ -16,7 +16,7 @@ const temas = defineCollection({
       "identidad-en-cristo",
       "enemigos-del-creyente",
       "espiritu-santo-y-dones",
-      "la-biblia",
+      "semilla-y-terreno",
       "disciplinas-espirituales",
     ]),
     order: z.number().int().positive(),

@@ -25,14 +25,14 @@ export const seriesCatalog = [
     lede: "Quién es el Espíritu, qué hace en el creyente, y los dones como gracia para el cuerpo.",
   },
   {
-    id: "la-biblia",
-    title: "La Biblia",
-    lede: "Por qué es un texto serio, cómo se recibe como Palabra de Dios, y por qué unas Biblias tienen más libros.",
+    id: "semilla-y-terreno",
+    title: "Semilla y terreno",
+    lede: "La misma semilla —la Palabra— y el terreno del corazón: confiar en la Escritura y permanecer para que haya fruto.",
   },
   {
     id: "disciplinas-espirituales",
     title: "Disciplinas espirituales",
-    lede: "Después de confiar en la Escritura: espacios concretos —Palabra, oración, ayuno y vida con otros— donde Dios forma el corazón.",
+    lede: "Espacios concretos —Palabra, oración, ayuno y vida con otros— donde Dios forma el corazón.",
   },
 ] as const;
 
