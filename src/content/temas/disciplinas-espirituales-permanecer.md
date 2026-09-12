@@ -35,6 +35,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Filipenses+4%3A6-7&version=RVR1960"
   - label: "Marcos 4:18–20"
     url: "https://www.biblegateway.com/passage/?search=Marcos+4%3A18-20&version=RVR1960"
+  - label: "Gálatas 5:22–23"
+    url: "https://www.biblegateway.com/passage/?search=G%C3%A1latas+5%3A22-23&version=RVR1960"
   - label: "Mateo 6:6"
     url: "https://www.biblegateway.com/passage/?search=Mateo+6%3A6&version=RVR1960"
   - label: "Salmo 46:10"
@@ -57,31 +59,81 @@ Esta serie se llama *Semilla y terreno*, y la última vez hablamos de la semilla
 
 Hablamos de este libro que tenemos en las manos: cómo llegó hasta nosotros, por qué se puede confiar en él, qué hay adentro. Y terminamos en un lugar incómodo, porque la parábola de Marcos 4 no deja salida fácil: la semilla siempre es la misma. Lo que cambia es el terreno. Y la pregunta con la que cerramos fue esa: cuando abres la Biblia, ¿quién habla? ¿La escuchas como voz, o la usas como herramienta cuando te toca el turno?
 
-Esta noche no voy a volver a demostrar que este libro es serio. Eso ya lo vimos. Voy a otro lugar, porque hay un problema que aparece justamente *después* de que uno ya cree todo eso. Un problema que muchos de nosotros cargamos sin decirlo en voz alta.
+Esta noche no voy a volver a demostrar que este libro es serio. Eso ya lo vimos. Voy a otro lugar, y es un lugar más incómodo, porque hay un problema que aparece justamente *después* de que uno ya cree todo eso. Un problema que casi todos cargamos y que nadie dice en voz alta.
 
-Se los digo en una frase, y quiero que la carguemos toda la noche:
-
-**Queremos fruto sin quedarnos en la vid.**
+No se lo voy a explicar todavía. Se lo voy a contar.
 
 ### El problema — fruto sin raíz
 
-Queremos paz, pero sin silencio. Queremos discernimiento, pero sin abrir la Escritura. Queremos madurez, pero sin depender de nadie. Queremos que el turno salga bien, y sale bien — y por dentro seguimos agitados.
+Déjenme contarles una semana. A ver si les suena.
 
-Y existe la versión opuesta, que en un grupo de voluntarios es todavía más común: convertimos la vida con Dios en una lista. Leí. Oré. Serví. Llegué temprano. Y sin darnos cuenta el Espíritu Santo se nos vuelve un profesor que califica, y la fe se vuelve una racha que hay que mantener. Cuando la racha se rompe, aparece la culpa. Y cuando aparece la culpa, dejamos de acercarnos.
+El domingo cantaste. De verdad, no de labios para afuera: hubo una canción que te movió algo adentro y saliste diciendo «esta semana sí».
 
-Fíjense que los dos caminos terminan en el mismo lugar: mucho movimiento, poca raíz.
+El lunes el despertador sonó veinte minutos tarde y salieron corriendo. El martes hubo una reunión que se alargó y llegaste a casa con la cabeza todavía en el trabajo; tu pareja te preguntó algo y respondiste con un «ajá» que ni tú escuchaste. El miércoles discutieron por algo minúsculo, de esos que cuando lo cuentas al día siguiente da vergüenza. El jueves abriste la Biblia — bueno, abriste una aplicación, leíste tres líneas y ya estabas en otra pantalla. El viernes llegaste vacío. El sábado dormiste.
 
-Jesús ya lo había descrito. En la misma parábola de la semilla hay un terreno que a mí me parece el más honesto de todos, porque no es el de alguien que rechaza a Dios:
+Y el domingo volviste a cantar. Y volviste a decir «esta semana sí».
+
+Ahora escúchenme bien, porque aquí está el problema, y no es el que ustedes creen. El problema no es que no creas. Tú crees. El problema no es que no quieras: si no quisieras, no estarías aquí un viernes por la noche oyendo esto. El problema es otro, y es más incómodo:
+
+**Queremos el fruto sin quedarnos en la vid.**
+
+Queremos paz, pero sin silencio. Queremos discernimiento, pero sin abrir la Escritura. Queremos madurez, pero sin depender de nadie. Queremos que el día se vea bien — la casa en orden, el trabajo entregado, la relación en pie — y por dentro seguimos agitados.
+
+Y no estoy hablando de un cristiano tibio. Estoy hablando del que sabe. Del que puede explicar la doctrina, citar el versículo, ayudar a otro con su crisis… y lleva meses sin tener una conversación real con Dios.
+
+Pablo le puso nombre exacto a eso que andamos pidiendo. Escuchen la lista despacio, porque es la lista de lo que todos queríamos el domingo:
+
+> Mas el fruto del Espíritu es amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza; contra tales cosas no hay ley.
+>
+> <cite>Gálatas 5:22–23</cite>
+
+Nadie discute esa lista. Todos la queremos. Y ahora déjenme mostrarles cómo la pedimos de lunes a sábado:
+
+Queremos **amor** en la pareja — y llevamos tres días en la misma casa, en el mismo sofá, en teléfonos distintos. Queremos amar al de al lado en el trabajo, y a los diez minutos ya es un obstáculo que estorba para terminar la tarea.
+
+Queremos **gozo**, pero solo si el día sale como lo imaginamos. Si el proyecto se atrasa, si nadie nota lo que hicimos, si en casa la noche se vuelve pura logística, el gozo se fue con el resultado. Y entonces no era gozo: era buen humor.
+
+Queremos **paz**, y no le dejamos un solo hueco. El teléfono en la comida, en el sofá, en la cama, en el semáforo. Llenamos cada silencio disponible y después nos preguntamos por qué el corazón no se aquieta. No le hemos dado ni tres minutos para hacerlo.
+
+Queremos **paciencia**, y la queremos ya. Ya mismo. Con la pareja, cuando la conversación no se resuelve en cinco minutos. En el trabajo, con el compañero que no entiende a la primera. Pedimos paciencia sin estar dispuestos a esperar por nada.
+
+Queremos **benignidad** y **bondad** donde nos ven: la sonrisa en la oficina, el mensaje amable, el «con gusto». Y en casa, donde no hay público, el tono seco, la respuesta corta, el silencio que castiga. Piénsalo un segundo: ¿con quién eres más amable, con tu compañero de trabajo o con la persona con la que duermes?
+
+Queremos **fe**, que en esta lista no es solo creer: es fidelidad, ser alguien en quien se puede confiar. La queremos en la relación sin tener la conversación difícil, y en el trabajo sin depender de nadie — hacerlo todo solos, porque «así sale mejor».
+
+Queremos **mansedumbre**, pero sin soltar el control. Somos mansísimos cuando nos dan la razón. Y cuando el proyecto no sale como lo teníamos armado, o cuando en casa no se hacen las cosas a nuestra manera, aparece otra persona.
+
+Y queremos **templanza** — dominio propio — en lo que miramos cuando nadie mira, en lo que respondemos cuando nos duele, en cómo llegamos a casa después de un día largo. La queremos sin quedarnos quietos el tiempo suficiente para que el Espíritu nos gobierne. Queremos gobernarnos a nosotros mismos… separados de quien nos gobierna.
+
+¿Ven lo que está pasando? No es que no queramos el fruto. Es que queremos el fruto del Espíritu **sin el Espíritu**. Queremos la cosecha y no queremos la raíz. Y el fruto no se fabrica: no se aprieta, no se ensaya frente al espejo, no se consigue con fuerza de voluntad el lunes a las seis de la mañana.
+
+Ahora, algunos ya se estaban acomodando en la silla, pensando: «yo no soy así, yo sí tengo disciplina». Espérate. Porque hay un segundo camino, y es el mío.
+
+El primero es el de la **prisa**: queremos el fruto y no nos quedamos. La semana llena, el teléfono, la casa, el trabajo — y Dios queda para cuando haya hueco.
+
+El segundo es el de la **lista**: convertimos la vida con Dios en un checklist. Leí. Oré. Ayuné. No falté. Y sin darnos cuenta el Espíritu Santo se nos vuelve un profesor que califica, la fe se vuelve una racha que hay que mantener, y la oración se vuelve la cuota que hay que pagar para que el día salga bien. ¿Y qué pasa el día que se rompe la racha? Llega la culpa. Y cuando llega la culpa, dejamos de acercarnos — justo cuando más falta hacía.
+
+Parecen opuestos. Uno parece flojo; el otro parece espiritual. Pero miren lo que tienen en común: en los dos hay movimiento. En ninguno hay raíz. En el primero, Dios no entra en la semana. En el segundo, Dios entra… como tarea. Y una tarea no es una relación.
+
+Por eso los dos terminan igual: mucho hacer, poco quedarse. El primero vive como si Dios no estuviera. El segundo vive como si hubiera que ganárselo. Ninguno se sienta con Él.
+
+Y esto no lo estoy inventando. En la charla de la Biblia vimos la parábola del sembrador: **cuatro terrenos**, la misma semilla. Hay uno que oye y no deja entrar la palabra. Hay otro que la recibe con alegría y, cuando cuesta, se seca. Esos dos nos parecen «los de afuera». El tercero es el que me incomoda, porque se parece a nosotros:
 
 > Éstos son los que fueron sembrados entre espinos: los que oyen la palabra, pero los afanes de este siglo, y el engaño de las riquezas, y las codicias de otras cosas, entran y ahogan la palabra, y se hace infructuosa.
 >
 > <cite>Marcos 4:18–19</cite>
 
-Miren bien lo que dice. Esta persona **oye** la palabra. No la desprecia. No discute. La oye… y algo la ahoga. No un enemigo espectacular: los afanes, el dinero, «las codicias de otras cosas».
+Escuchen la primera parte: esta persona **oye** la palabra. No la desprecia. No discute con el predicador. Está sentada donde tú estás sentado ahora. Y aun así — «se hace infructuosa».
 
-Hoy ese espino suele caber en un bolsillo. Nadie decide dejar de buscar a Dios. Simplemente hay un teléfono que llena cada silencio disponible, una lista que nunca termina, y una comparación permanente con la vida de otros. La semilla estaba bien. El terreno estaba ocupado.
+¿Y quién la ahoga? No un demonio con nombre. No una persecución. Los afanes. El dinero. «Las codicias de otras cosas». Cosas que ni son pecado: el trabajo, los planes, lo que falta pagar, lo que quisiéramos tener. Y —si somos honestos— también la lista religiosa: el deseo de «cumplir» puede ocupar el terreno tanto como el teléfono.
 
-Entonces, ¿cuál es la respuesta? Porque si les digo «esfuércense más», estoy pidiéndoles justo lo que ya los tiene cansados.
+Nadie decide dejar de buscar a Dios. Nadie se levanta un martes y dice «hoy me alejo». Lo que pasa es más silencioso: el espino de hoy cabe en un bolsillo y se enciende cada vez que hay tres minutos libres. Nunca hubo una decisión. Solo dejó de haber espacio. La semilla estaba bien. El terreno estaba ocupado.
+
+Entonces te pregunto, y quiero que respondas por dentro, sin decirlo en voz alta: ¿cuándo fue la última vez que estuviste a solas con Dios, sin pedirle nada, sin correr a nada, sin un teléfono en la mano?
+
+Si tuviste que pensar mucho la respuesta, esta charla es para ti. Y si te dolió un poco la pregunta, quédate — porque lo que viene no es un regaño.
+
+Porque si yo les dijera ahora «esfuércense más», estaría pidiéndoles justamente lo que ya los tiene agotados. Y ese no es el evangelio.
 
 La respuesta de esta noche no es hacer más cosas. Son **tres maneras de quedarse**. Tres cosas que no producen fruto por sí mismas, pero que nos mantienen conectados a quien sí lo produce:
 
