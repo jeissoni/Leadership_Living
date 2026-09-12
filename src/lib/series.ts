@@ -29,11 +29,6 @@ export const seriesCatalog = [
     title: "Semilla y terreno",
     lede: "La misma semilla —la Palabra— y el terreno del corazón: confiar en la Escritura y permanecer para que haya fruto.",
   },
-  {
-    id: "disciplinas-espirituales",
-    title: "Disciplinas espirituales",
-    lede: "Espacios concretos —Palabra, oración, ayuno y vida con otros— donde Dios forma el corazón.",
-  },
 ] as const;
 
 export type SeriesId = (typeof seriesCatalog)[number]["id"];

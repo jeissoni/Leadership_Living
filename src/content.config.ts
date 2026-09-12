@@ -17,7 +17,6 @@ const temas = defineCollection({
       "enemigos-del-creyente",
       "espiritu-santo-y-dones",
       "semilla-y-terreno",
-      "disciplinas-espirituales",
     ]),
     order: z.number().int().positive(),
     tags: z.array(z.string()).default([]),
