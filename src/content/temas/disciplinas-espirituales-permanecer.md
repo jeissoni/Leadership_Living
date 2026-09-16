@@ -6,6 +6,7 @@ series: semilla-y-terreno
 order: 2
 tags: ["disciplinas", "oracion", "adoracion", "permanecer"]
 duration: "55 min"
+audio: El_terreno_-_Paz_real_en_medio_del_barrizal.mp3
 thesis: "Queremos fruto sin quedarnos en la vid. La solución no es más actividad: es orar y meditar (la conversación), permanecer (la unión: de dónde sale lo que doy) y adorar (la dirección: quién está en el centro)."
 remember:
   - "El hilo de la noche: queremos fruto sin quedarnos en la vid. Los tres puntos no son un catálogo: son la solución."
@@ -13,13 +14,13 @@ remember:
   - "Permanecer (Juan 15) es unión: ¿de dónde sale lo que doy? La rama no inventa uvas; se queda pegada al tronco."
   - "Adorar es dirección: ¿quién está en el centro? La planta gira hacia la luz — el crédito, el dinero, la comparación, el descanso."
   - "María y Marta: Jesús no desprecia el servicio; nombra una sola cosa por la que vale la pena preocuparse. El reto: tres espacios, una semana."
-guionLede: "Serie Semilla y terreno · charla 2. Puente con la Biblia → problemática (fruto sin raíz) → tres soluciones (orar/meditar, permanecer, adoración) → Lucas 10 María y Marta → reto «Tres espacios, una semana». El sustento está escrito como transcripción hablada: se puede leer de corrido para preparar. Datos e ilustraciones en la ficha; guía del presentador en el complemento."
+guionLede: "Serie Semilla y terreno · charla 2. Puente con la Biblia → problemática (fruto sin raíz) → tres soluciones (orar/meditar, permanecer, adoración) → Lucas 10 María y Marta → reto «Tres espacios, una semana». Datos e ilustraciones en la ficha; mapa de flujo, frases y axiomas para preparar."
 widgets:
   - datos_permanecer
   - guion_charla_permanecer
 preparationWidgets:
-  - complemento_permanecer
-includeContentInPreparation: true
+  - mapa_permanecer
+includeContentInPreparation: false
 resources:
   - label: "Juan 15:1–11"
     url: "https://www.biblegateway.com/passage/?search=Juan+15%3A1-11&version=NTV"
@@ -57,7 +58,7 @@ resources:
 
 Esta serie se llama *Semilla y terreno*, y la última vez hablamos de la semilla.
 
-Hablamos de este libro que tenemos en las manos: cómo llegó hasta nosotros, por qué se puede confiar en él, qué hay adentro. Y terminamos en un lugar incómodo, porque la parábola de Marcos 4 no deja salida fácil: la semilla siempre es la misma. Lo que cambia es el terreno. Y la pregunta con la que cerramos fue esa: cuando abres la Biblia, ¿quién habla? ¿La escuchas como voz, o la usas como herramienta cuando te toca el turno?
+Hablamos de este libro que tenemos en las manos: cómo llegó hasta nosotros, por qué se puede confiar en él, qué hay adentro. Y terminamos en un lugar incómodo, porque la parábola de Marcos 4 no deja salida fácil: la semilla siempre es la misma. Lo que cambia es el terreno. Y la pregunta con la que cerramos fue esa: cuando abres la Biblia, ¿quién habla? ¿La escuchas como voz, o la usas como herramienta cuando toca servir?
 
 Esta noche no voy a volver a demostrar que este libro es serio. Eso ya lo vimos. Voy a otro lugar, y es un lugar más incómodo, porque hay un problema que aparece justamente *después* de que uno ya cree todo eso. Un problema que casi todos cargamos y que nadie dice en voz alta.
 
@@ -337,7 +338,7 @@ El problema no era el delantal. Era la agitación. Y era algo más, algo que apa
 
 María, en cambio, está en el suelo, a los pies de Jesús, oyendo. No está haciendo nada «útil». Y Jesús llama a eso la única cosa por la que vale la pena preocuparse.
 
-Escuchen esto, porque es el corazón pastoral de la noche: **la intimidad sostiene el servicio, no al revés.** Si sirves desde la vid, el turno se convierte en fruto. Si sirves desde el florero, el turno se convierte en desgaste — y en reclamo.
+Escuchen esto, porque es el corazón pastoral de la noche: **la intimidad sostiene el servicio, no al revés.** Si sirves desde la vid, el servicio se convierte en fruto. Si sirves desde el florero, el servicio se convierte en desgaste — y en reclamo.
 
 Y quiero decirle algo a quien llegó cansado esta noche, con la sensación de que nunca ora lo suficiente, de que ya falló otra vez el plan de lectura, de que otros parecen más espirituales.
 
@@ -356,7 +357,6 @@ Y para que esto no se quede en una noche bonita, les dejo algo concreto para los
 1. **Todos los días, entre diez y quince minutos.** Un pasaje corto. Una frase que se te quede. Y esa frase se vuelve tu oración. Nada más.
 2. **Tres veces en la semana, cinco minutos de silencio antes de pedir.** Sin música, sin teléfono. Solo estar. Al principio va a ser incómodo; eso también dice algo de nosotros.
 3. **Un momento de adoración.** Una canción a solas, un salmo en voz alta, o tres cosas concretas que le agradeces a Dios sin pedirle nada.
-4. **Y un cierre con alguien.** Una línea, a un hermano o al grupo: «esta semana permanecí en…». No para competir. Para no caminar solo.
 
 Otras disciplinas —el ayuno, la generosidad, la confesión con un hermano— siguen ahí, y valen. Pero esta semana vamos a lo esencial del terreno: **oír, quedarnos, mirar**.
 

@@ -14,7 +14,7 @@ const widgetLabels: Record<string, string> = {
   complemento_biblia: "Manuscritos, canon y objeciones",
   datos_permanecer: "Datos e ilustraciones",
   guion_charla_permanecer: "Guion oral",
-  complemento_permanecer: "Guía del presentador",
+  mapa_permanecer: "Mapa de la charla",
   bloque_fundamento_reino: "Fundamento",
   guia_charla_reino_de_dios: "Guion oral",
   bloque_atributos_reino: "Atributos del Reino",

@@ -986,6 +986,142 @@
   font-weight: 600;
 }
 
+.widget-stack .flujo-hilo {
+  margin: 0 0 1.4rem;
+  padding: 1rem 1.15rem;
+  border-left: 3px solid var(--gold);
+  background: var(--paper-deep);
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+.widget-stack .flujo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 0 1.75rem;
+}
+
+.widget-stack .flujo-nodo {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.widget-stack .flujo-min {
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.widget-stack .flujo-nodo strong {
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.widget-stack .flujo-nodo span:last-child {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.widget-stack .flujo-arrow {
+  align-self: center;
+  margin: 0.15rem 0;
+  color: var(--gold);
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.widget-stack .flujo-trio {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.widget-stack .frase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 0.75rem;
+  margin: 0 0 1.75rem;
+}
+
+.widget-stack .frase-card {
+  padding: 0.9rem 1rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: var(--paper-deep);
+}
+
+.widget-stack .frase-donde {
+  margin: 0 0 0.4rem;
+  color: var(--gold);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.widget-stack .frase-txt {
+  margin: 0 0 0.45rem;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.widget-stack .frase-hint {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.widget-stack .axioma-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: axioma;
+}
+
+.widget-stack .axioma-list li {
+  counter-increment: axioma;
+  display: grid;
+  grid-template-columns: 1.7rem 1fr;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+.widget-stack .axioma-list li:last-child {
+  border-bottom: none;
+}
+
+.widget-stack .axioma-list li::before {
+  content: counter(axioma);
+  color: var(--gold);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding-top: 0.2rem;
+}
+
 @media (max-width: 720px) {
   .reading-shell.is-guion {
     width: min(920px, calc(100% - 6vw));
@@ -1033,6 +1169,10 @@
   .widget-stack .exchange-cols {
     grid-template-columns: 1fr;
   }
+
+  .widget-stack .flujo-trio {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media print {
@@ -1061,7 +1201,10 @@
   .widget-stack .blk,
   .widget-stack .card,
   .widget-stack .seccion,
-  .widget-stack .verse {
+  .widget-stack .verse,
+  .widget-stack .flujo-nodo,
+  .widget-stack .frase-card,
+  .widget-stack .axioma-list li {
     break-inside: avoid;
   }
 }
