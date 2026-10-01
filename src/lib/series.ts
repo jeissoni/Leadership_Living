@@ -29,6 +29,16 @@ export const seriesCatalog = [
     title: "Semilla y terreno",
     lede: "La misma semilla —la Palabra— y el terreno del corazón: confiar en la Escritura y permanecer para que haya fruto.",
   },
+  {
+    id: "espiritualidad-practica",
+    title: "Espiritualidad práctica",
+    lede: "De la idea a la relación: conocer a Jesús en el encuentro, no solo de oídas.",
+  },
+  {
+    id: "santos-que-se-santifican",
+    title: "Santos que se santifican",
+    lede: "Ya santos en Cristo; siendo hechos semejantes a él: lo que Dios declaró y lo que Dios está haciendo.",
+  },
 ] as const;
 
 export type SeriesId = (typeof seriesCatalog)[number]["id"];

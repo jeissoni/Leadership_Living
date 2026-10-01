@@ -17,6 +17,8 @@ const temas = defineCollection({
       "enemigos-del-creyente",
       "espiritu-santo-y-dones",
       "semilla-y-terreno",
+      "espiritualidad-practica",
+      "santos-que-se-santifican",
     ]),
     order: z.number().int().positive(),
     tags: z.array(z.string()).default([]),
