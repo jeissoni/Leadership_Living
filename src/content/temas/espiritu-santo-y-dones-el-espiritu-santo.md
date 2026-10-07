@@ -6,14 +6,14 @@ series: espiritu-santo-y-dones
 order: 1
 tags: ["espiritu"]
 duration: "45 min"
-thesis: "El Espíritu no es una fuerza: es Persona. Los dones no son un catálogo para demostrar espiritualidad: son gracia para edificar al otro. Sin amor, el don más espectacular es ruido."
+thesis: "Vivir y andar por el Espíritu es el camino, y quien lo hace posible es una Persona, no una fuerza. Los dones son gracia para el cuerpo: por lo menos uno, repartido como él quiere, no ganado. Sin amor, el don más espectacular es ruido."
 remember:
-  - "El error más común es tratar al Espíritu como energía o experiencia. Es Persona: mente, emociones, voluntad."
-  - "Allon Parakletos: otro del mismo tipo. No una presencia de segunda categoría."
-  - "Antes de los dones está su obra: convicción, santificación, intercesión, testimonio de que somos hijos."
-  - "Los dones son charismata: gracia, no mérito. Las listas del NT no son un catálogo cerrado."
-  - "1 Corintios 13 no es un añadido sentimental: es el argumento de Pablo sobre los dones."
-guionLede: "No convertirla en catálogo. Quién es → obra en el creyente → dones en tres categorías (revelación, poder, servicio) → cierre con 1 Corintios 13. Las descripciones de cada don son material de referencia, no para dictar."
+  - "Gálatas 5:25 es el camino: vivir y andar por el Espíritu. Quien lo hace posible no es una fuerza: es Persona."
+  - "Allon Parakletos: otro del mismo tipo. No prepara y se va. Acompaña, y está adentro. El sello (Efesios 1:13–14) es marca de propiedad."
+  - "En nosotros: templo, convicción, regeneración, testimonio de hijos, intercesión, santificación, llenura continua."
+  - "A través de nosotros: por lo menos un don (1 Pedro 4:10), para el cuerpo, de gracia, repartido como él quiere. El don es lo que el cuerpo requiere."
+  - "1 Corintios 13 no es un añadido sentimental: sin amor, el don es ruido."
+guionLede: "Problemática: fuerza que se enciende, o don que se merece. Camino Gálatas 5:25 → quién es → sello → obra en nosotros → obra a través de nosotros (revelación, poder, servicio; por lo menos uno) → 1 Corintios 13 → cierre pastoral. Las descripciones de cada don son referencia, no para dictar. RVR1960."
 widgets:
   - guion_charla_espiritu_santo
   - dones_espiritu_explicados
@@ -34,69 +34,156 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Romanos+12%3A4-8&version=RVR1960"
   - label: "Efesios 4:11–16"
     url: "https://www.biblegateway.com/passage/?search=Efesios+4%3A11-16&version=RVR1960"
+  - label: "Gálatas 5:25"
+    url: "https://www.biblegateway.com/passage/?search=Galatas+5%3A25&version=RVR1960"
+  - label: "Efesios 1:13–14"
+    url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A13-14&version=RVR1960"
+  - label: "2 Corintios 1:21–22"
+    url: "https://www.biblegateway.com/passage/?search=2+Corintios+1%3A21-22&version=RVR1960"
+  - label: "Hechos 1:8"
+    url: "https://www.biblegateway.com/passage/?search=Hechos+1%3A8&version=RVR1960"
+  - label: "1 Pedro 4:10"
+    url: "https://www.biblegateway.com/passage/?search=1+Pedro+4%3A10&version=RVR1960"
+  - label: "Efesios 5:18"
+    url: "https://www.biblegateway.com/passage/?search=Efesios+5%3A18&version=RVR1960"
+  - label: "2 Corintios 3:18"
+    url: "https://www.biblegateway.com/passage/?search=2+Corintios+3%3A18&version=RVR1960"
 ---
 
 ## Sustento
 
-Hay una diferencia enorme entre relacionarse con una persona y tratar de acceder a una fuerza. La Biblia es clara sobre cuál de las dos es correcta. El error más común es tratar al Espíritu como energía, experiencia o «algo que recibes cuando haces las cosas bien».
+*Escrito como lectura continua de la charla. Se puede leer de corrido para preparar, o para volver a ella después.*
 
-La teología llama a este estudio pneumatología, de *pneuma*: aliento, viento, espíritu. Empieza con una declaración que parece obvia y tiene implicaciones enormes: el Espíritu Santo es Persona. Habla (Hechos 13:2). Puede ser entristecido (Efesios 4:30). Tiene voluntad: reparte dones «como él quiere» (1 Corintios 12:11). Las fuerzas no hablan. Una corriente eléctrica no se entristece.
+### El camino, y quién lo hace posible
 
-> Y yo rogaré al Padre, y os dará otro Consolador, para que esté con vosotros para siempre: el Espíritu de verdad… porque mora con vosotros, y estará en vosotros.
->
-> <cite>Juan 14:16–17</cite>
-
-*Allon Parakletos*: otro del mismo tipo. Jesús no dijo «algo para reemplazarme». Dijo «alguien igual a mí». Con —presencia acompañante. En —presencia interna. El Espíritu no está cerca. Está adentro. No lo buscas en un lugar externo. Está donde tú estás. «¿No sabéis que sois templo de Dios, y que el Espíritu de Dios mora en vosotros?» (1 Corintios 3:16).
-
-## Su obra en el creyente
-
-Antes de los dones está lo que hace *en* nosotros:
-
-- **Convicción** — Juan 16:8. Hace que la Palabra no sea solo información.
-- **Regeneración** — Juan 3:5–6. Nuevo nacimiento, no mejoramiento moral.
-- **Testimonio de filiación** — Romanos 8:16. La certeza de ser hijo no viene de razonamiento: viene del Espíritu. Aquí se cierra el círculo con «Abba, Padre».
-- **Intercesión** — Romanos 8:26. Ora en nosotros cuando no sabemos pedir.
-- **Santificación** — 2 Corintios 3:18. De gloria en gloria. No es esfuerzo moral: es rendirse al proceso.
-- **Llenura continua** — Efesios 5:18, tiempo presente. No un evento de una vez: una disposición de apertura.
-
-El fruto del Espíritu (Gálatas 5) no es un don para algunos: es el carácter que el Espíritu forma en todos. Andar en el Espíritu —ya nombrado contra la carne— es relación, no técnica.
-
-> El Espíritu mismo da testimonio a nuestro espíritu, de que somos hijos de Dios.
->
-> <cite>Romanos 8:16</cite>
-
-## Los dones
-
-Pablo habla de dones en 1 Corintios 12, Romanos 12 y Efesios 4. Los tres coinciden: no son para el que los tiene. Son para el cuerpo.
-
-> Pero a cada uno le es dada la manifestación del Espíritu para provecho.
->
-> <cite>1 Corintios 12:7</cite>
-
-En griego son *charismata*, de *charis*: gracia. No se ganan. No dicen cuánto vales. Dicen para qué te necesita el cuerpo ahora. Las listas no coinciden del todo: no hay inventario cerrado. Se agrupan para enseñar:
-
-- **Revelación** — palabra de sabiduría, palabra de ciencia, profecía, discernimiento de espíritus, lenguas e interpretación. El Espíritu da a conocer lo que no se sabe por medios naturales.
-- **Poder** — fe, sanidades, milagros. El plural «dones de sanidades» sugiere manifestaciones soberanas, no una persona con capacidad permanente de garantizar resultados.
-- **Servicio** — ayuda, misericordia, liderazgo (*kubernesis*: el timón del barco, rumbo, no control), enseñanza, exhortación. Pablo pone la ayuda al mismo nivel que lo visible. El cuerpo no funciona sin los que nadie ve.
-
-Ningún don te hace más importante. El ojo no puede decir a la mano: no te necesito. El que habla en lenguas no es más espiritual que el que sirve mesas. Hay tensión entre soberanía del Espíritu («como él quiere») y búsqueda activa: «procurad los mejores dones». Las dos son verdad.
-
-## El camino más excelente
-
-Pablo lista los dones y entonces hace lo que nadie esperaba: «mas yo os muestro un camino aún más excelente». 1 Corintios 13 no es un añadido sentimental. Está en el medio de la discusión *sobre* los dones.
-
-Lenguas angélicas, profecía, fe que mueve montañas, generosidad total, martirio: sin amor, nada. El amor no es un don más. Es la condición de validez de todos los demás. Los dones sin amor producen ruido. Poder sin amor produce daño.
-
-El amor es el fruto del Espíritu. No se fabrica. Se produce cuando estás conectado a la vid. Los dones sin el fruto son herramientas sin manos. El fruto sin los dones son manos sin herramientas. La vida en el Espíritu tiene las dos.
-
-## Para quien sirve
-
-No eres un voluntario que intenta ser útil. Eres un miembro del cuerpo equipado, con dones específicos, para una función específica, en este momento. El cuerpo te necesita siendo tú: no la versión mejorada de otro.
-
-La pregunta que conviene llevarse no es primero «¿qué dones tengo?». Es: ¿cómo me relaciono con él? ¿Como persona con quien camino, o como experiencia que busco cuando necesito algo? Todo lo anterior —identidad, filiación, resistencia a los enemigos, dones— fluye de esa relación.
+Esta noche el tema es el Espíritu Santo y los dones. Y el problema se puede decir con un versículo que casi todos sabemos de memoria y casi nadie vive.
 
 > Si vivimos por el Espíritu, andemos también por el Espíritu.
 >
 > <cite>Gálatas 5:25</cite>
 
-Pregunta para la semana: ¿qué cambiaría en tu servicio si empezaras preguntándole al Espíritu qué necesita el cuerpo de ti esta semana, en lugar de hacer lo que siempre haces?
+Vivir por el Espíritu es cómo empezó la vida cristiana. Andar por el Espíritu es el camino de todos los días. Pablo no lo pone como un extra para los que tienen un don visible. Lo pone como la manera de caminar. Si eso es el camino, la pregunta de esta noche es simple: ¿quién hace posible lo anterior?
+
+Y ahí aparecen dos problemas que esta sala conoce.
+
+**El primero: lo describimos mal.** Cuando alguien pregunta cómo es el Espíritu, salen tres palabras que suenan espirituales y están tachadas: fuerza, energía, poder. «Necesito una unción.» «Necesito cargar batería.» «Necesito que baje algo.» Entonces el Espíritu se vuelve un interruptor. Si oré, si canté, si sentí, está encendido. Si la semana fue seca, está apagado. Y uno no camina con un interruptor. Uno camina con alguien.
+
+**El segundo: el don se nos volvió un examen.** O buscamos el don espectacular para demostrar que sí somos espirituales. O llegamos a la conclusión contraria: «yo no tengo don; yo solo ayudo.» Entonces el servicio es esfuerzo, y el Espíritu es para los que están en la plataforma. Las dos salidas dejan al mismo sitio: él no es con quien camino. Es un recurso que otros administran, o una meta que yo no alcancé.
+
+Esta noche no es un catálogo. Es poner el camino en su lugar. Primero quién es. Después qué hace en nosotros. Después qué hace a través de nosotros. Y al final, por qué nada de eso funciona sin amor.
+
+### No es una fuerza: es Persona
+
+La teología llama a este estudio pneumatología, de *pneuma*: aliento, viento, espíritu. Y la declaración que parece obvia cambia la relación: el Espíritu Santo es Dios. Es Persona. Por eso te puedes relacionar con él. Tiene mente, voluntad y emociones. Una corriente no tiene ninguna de las tres.
+
+Habla. En Antioquía, mientras ministraban y ayunaban, el Espíritu Santo dijo: «Apartadme a Bernabé y a Saulo» (Hechos 13:2). Las fuerzas no dan nombres.
+
+Puede entristecerse. «No contristéis al Espíritu Santo de Dios» (Efesios 4:30). Una energía no se duele cuando mientes o cuando hieres al hermano.
+
+Tiene voluntad. Reparte los dones «como él quiere» (1 Corintios 12:11). No como tú los pides para quedar bien. No como un premio por la semana buena.
+
+Jesús, la noche antes de la cruz, no promete un reemplazo inferior. Promete a alguien del mismo tipo:
+
+> Y yo rogaré al Padre, y os dará otro Consolador, para que esté con vosotros para siempre: el Espíritu de verdad… porque mora con vosotros, y estará en vosotros.
+>
+> <cite>Juan 14:16–17</cite>
+
+*Allon Parakletos*: otro Consolador, otro del mismo tipo. No un precursor que prepara el camino y se va. Acompaña. Y este está adentro. «Con vosotros» es presencia que no se retira. «En vosotros» es presencia que no se visita desde afuera. No lo buscas en un lugar al que hay que llegar. Está donde tú estás.
+
+Y esa presencia tiene una marca. No es un estado de ánimo. Es sello.
+
+> En él también vosotros, habiendo oído la palabra de verdad, el evangelio de vuestra salvación, y habiendo creído en él, fuisteis sellados con el Espíritu Santo de la promesa, que es las arras de nuestra herencia.
+>
+> <cite>Efesios 1:13–14</cite>
+
+Pablo lo dice otra vez: Dios «nos ha sellado, y nos ha dado las arras del Espíritu en nuestros corazones» (2 Corintios 1:21–22). Sello es marca de propiedad. Arras es anticipo: la herencia ya empezó, aunque el día completo no ha llegado. Si esta semana no sentiste nada especial, el sello no se cayó. La propiedad no depende del ánimo.
+
+### Lo que hace en nosotros
+
+Antes de preguntar qué don tienes, mira lo que él ya hace en todos los que son de Cristo. Esto no es para algunos. Es la obra de adentro.
+
+**Templo.** «¿No sabéis que sois templo de Dios, y que el Espíritu de Dios mora en vosotros?» (1 Corintios 3:16). El lugar santo ya no es un edificio al que vas. Eres tú. Por eso entristecerlo no es un detalle privado: es lo que pasa en su casa.
+
+**Convicción.** «Y cuando él venga, convencerá al mundo de pecado, de justicia y de juicio» (Juan 16:8). Hace que la Palabra no se quede en información. Duele donde antes no dolía. Eso no es condenación que te saca. Es luz que te llama.
+
+**Regeneración.** «El que no naciere de agua y del Espíritu, no puede entrar en el reino de Dios… Lo que es nacido del Espíritu, espíritu es» (Juan 3:5–6). Nuevo nacimiento, no mejoramiento moral. No te pulió. Te hizo nacer.
+
+**Testimonio de hijos.** «Porque todos los que son guiados por el Espíritu de Dios, éstos son hijos de Dios… habéis recibido el espíritu de adopción, por el cual clamamos: ¡Abba, Padre! El Espíritu mismo da testimonio a nuestro espíritu, de que somos hijos de Dios» (Romanos 8:14–16). La certeza de ser hijo no se fabrica con un razonamiento. La da él. Aquí se cierra el círculo con la charla de *Hijo*: el mismo Espíritu que te sella te enseña a decir Abba.
+
+**Intercesión.** «El Espíritu nos ayuda en nuestra debilidad; pues qué hemos de pedir como conviene, no lo sabemos, pero el Espíritu mismo intercede por nosotros con gemidos indecibles» (Romanos 8:26). Cuando no sabes orar, él no se va. Ora en ti.
+
+**Santificación.** «Somos transformados de gloria en gloria en la misma imagen, como por el Espíritu del Señor» (2 Corintios 3:18). Es el mismo proceso de la serie *Santos que se santifican*: no es esfuerzo moral suelto. Es rendirse a quien te va haciendo semejante a Jesús.
+
+**Llenura continua.** «No os embriaguéis con vino, en lo cual hay disolución; antes bien sed llenos del Espíritu» (Efesios 5:18). El verbo está en presente: seguid siendo llenos. No es un evento de una sola noche que se archiva. Es una disposición de apertura. La embriaguez controla a la persona desde afuera. La llenura es el Espíritu gobernando desde adentro.
+
+Y el fruto (Gálatas 5:22–23) no es un don para algunos. Es el carácter que él forma en todos: amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre, templanza. Andar en el Espíritu es relación, no técnica.
+
+### Lo que hace a través de nosotros
+
+Hechos abre el testimonio con poder, no con espectáculo:
+
+> Pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo, y me seréis testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra.
+>
+> <cite>Hechos 1:8</cite>
+
+El poder es para ser testigos. Y Pedro baja eso a cada creyente, no a un escenario:
+
+> Cada uno según el don que ha recibido, minístrelo a los otros, como buenos administradores de la multiforme gracia de Dios.
+>
+> <cite>1 Pedro 4:10</cite>
+
+Por lo menos uno. No «los que tienen don». Cada uno recibió. Y lo recibió para ministrarlo a los otros.
+
+Pablo habla de esos dones en tres lugares: 1 Corintios 12, Romanos 12 y Efesios 4. No coinciden del todo. No hay un inventario cerrado. Coinciden en la dirección:
+
+> Pero a cada uno le es dada la manifestación del Espíritu para provecho.
+>
+> <cite>1 Corintios 12:7</cite>
+
+Para provecho. Para ayudar a otros. En griego son *charismata*, de *charis*: gracia. No son por mérito. No se ganan. No se merecen. No dicen cuánto vales. Dicen para qué te necesita el cuerpo ahora. Y el que reparte no eres tú: «Pero todas estas cosas las hace uno y el mismo Espíritu, repartiendo a cada uno en particular como él quiere» (1 Corintios 12:11).
+
+El don no es tu tarjeta de presentación. El don es lo que el cuerpo requiere.
+
+Para enseñar, se pueden agrupar en tres. Las descripciones largas de cada uno quedan como referencia. Aquí basta el mapa, con el texto al lado.
+
+**Dones de revelación.** El Espíritu da a conocer lo que no se sabe por medios naturales.
+
+- Palabra de sabiduría — 1 Corintios 12:8
+- Palabra de conocimiento — 1 Corintios 12:8
+- Discernimiento de espíritus — 1 Corintios 12:10
+- Profecía — 1 Corintios 12:10 y Romanos 12:6
+
+**Dones de poder.** El Espíritu actúa de un modo que el esfuerzo no explica. El plural «dones de sanidades» sugiere manifestaciones soberanas, no una persona que garantiza el resultado cada vez que quiere.
+
+- Fe — 1 Corintios 12:9
+- Sanidades — 1 Corintios 12:9–10
+- Milagros — 1 Corintios 12:10
+- Lenguas e interpretación — 1 Corintios 12:10
+
+**Dones de servicio.** Pablo pone lo que nadie aplaude al mismo nivel que lo visible. El cuerpo no funciona sin los que nadie ve.
+
+- Enseñanza — Romanos 12:7 y Efesios 4:11
+- Servicio y ayuda — Romanos 12:7 y 1 Corintios 12:28
+- Exhortación — Romanos 12:8
+- Liderazgo y administración — Romanos 12:8 y 1 Corintios 12:28. *Kubernesis* es el timón del barco: rumbo, no control.
+- Generosidad — Romanos 12:8
+
+Ningún don te hace más importante. El ojo no puede decirle a la mano: no te necesito. El que habla en lenguas no es más espiritual que el que sirve mesas. Hay tensión, y las dos puntas son verdad: el Espíritu reparte «como él quiere», y Pablo dice «procurad los dones mejores» (1 Corintios 12:31). No se gana el don. Sí se puede desear que el cuerpo reciba lo que necesita.
+
+### El camino más excelente
+
+Pablo lista los dones y entonces hace lo que nadie esperaba: «mas yo os muestro un camino aún más excelente» (1 Corintios 12:31). 1 Corintios 13 no es un añadido sentimental. Está en el medio de la discusión sobre los dones.
+
+Lenguas angélicas, profecía, fe que mueve montañas, generosidad total, martirio: sin amor, nada. El amor no es un don más de la lista. Es la condición de validez de todos los demás. Los dones sin amor producen ruido. Poder sin amor produce daño.
+
+El amor es fruto del Espíritu. No se fabrica. Se produce cuando estás unido a la vid. Los dones sin el fruto son herramientas sin manos. El fruto sin los dones son manos sin herramientas. La vida en el Espíritu tiene las dos.
+
+### Él no se fue
+
+Si esta noche saliste pensando «yo no siento nada» o «yo no tengo un don de verdad», oye otra vez quién está en ti.
+
+No eres una batería que hay que cargar para que Dios te use. Eres templo. El sello no se negocia cada domingo. Él te marcó como propiedad cuando creíste, y las arras dicen que va a terminar lo que empezó. Cuando no sabes orar, intercede. Cuando dudas si eres hijo, da testimonio. Cuando el carácter no cambia a la velocidad que querías, sigue transformando de gloria en gloria.
+
+Y no te dejó sin nada para los demás. Por lo menos un don. No para que te mires en él. Para que el cuerpo reciba lo que necesita de ti, aunque sea lo que nadie aplaude. Si tu parte es ayudar, exhortar, dar, enseñar, servir una mesa, eso también lo repartió él. No es el premio de consolación. Es gracia.
+
+No tienes que encenderlo. Tienes que andar con él. Él no preparó el camino y se fue. Se quedó. Está adentro. Y el camino de esta semana es el de siempre: si vivimos por el Espíritu, andemos también por el Espíritu.
