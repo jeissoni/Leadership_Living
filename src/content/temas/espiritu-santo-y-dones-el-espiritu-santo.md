@@ -189,25 +189,25 @@ Para enseñar, se pueden agrupar en tres. No hace falta dictar cada uno. Basta e
 
 **Dones de revelación.** El Espíritu da a conocer lo que no se sabe por medios naturales.
 
-- Palabra de sabiduría — 1 Corintios 12:8
-- Palabra de conocimiento — 1 Corintios 12:8
-- Discernimiento de espíritus — 1 Corintios 12:10
-- Profecía — 1 Corintios 12:10 y Romanos 12:6
+- **Palabra de sabiduría** — 1 Corintios 12:8. Saber cómo actuar en un momento concreto, con la luz de Dios, no solo con inteligencia propia.
+- **Palabra de conocimiento** — 1 Corintios 12:8. Recibir una información que no se podía saber por medios naturales, para el bien de alguien.
+- **Discernimiento de espíritus** — 1 Corintios 12:10. Distinguir si algo viene del Espíritu de Dios, del espíritu humano o de otra influencia.
+- **Profecía** — 1 Corintios 12:10 y Romanos 12:6. Una palabra específica, en un momento específico, para edificar, exhortar o consolar.
 
 **Dones de poder.** El Espíritu actúa de un modo que el esfuerzo no explica. El plural «dones de sanidades» sugiere que él decide cuándo. No es una persona que garantiza el resultado cada vez que quiere.
 
-- Fe — 1 Corintios 12:9
-- Sanidades — 1 Corintios 12:9–10
-- Milagros — 1 Corintios 12:10
-- Lenguas e interpretación — 1 Corintios 12:10
+- **Fe** — 1 Corintios 12:9. No la fe que salva a todos: una confianza sobrenatural para una situación que supera lo que uno puede creer solo.
+- **Sanidades** — 1 Corintios 12:9–10. Manifestaciones del Espíritu que sanan. Él decide cuándo; no es una técnica que se controla.
+- **Milagros** — 1 Corintios 12:10. Intervención que altera el orden natural, cuando y como él quiere.
+- **Lenguas e interpretación** — 1 Corintios 12:10. Hablar en un idioma no aprendido; en la congregación, hace falta interpretación para que el cuerpo se edifique.
 
 **Dones de servicio.** Pablo pone lo que nadie aplaude al mismo nivel que lo visible. El cuerpo no funciona sin los que nadie ve.
 
-- Enseñanza — Romanos 12:7 y Efesios 4:11
-- Servicio y ayuda — Romanos 12:7 y 1 Corintios 12:28
-- Exhortación — Romanos 12:8
-- Liderazgo y administración — Romanos 12:8 y 1 Corintios 12:28. En griego es el timón del barco: rumbo, no control.
-- Generosidad — Romanos 12:8
+- **Enseñanza** — Romanos 12:7 y Efesios 4:11. Explicar y aplicar la Palabra de modo que otros entiendan y sean cambiados.
+- **Servicio y ayuda** — Romanos 12:7 y 1 Corintios 12:28. Ver necesidades prácticas y cubrirlas; el servicio invisible también es ministerio.
+- **Exhortación** — Romanos 12:8. Animar, consolar y llamar a la acción con la palabra que hace falta en ese momento.
+- **Liderazgo y administración** — Romanos 12:8 y 1 Corintios 12:28. El timón del barco: rumbo y orden, no control.
+- **Generosidad** — Romanos 12:8. Dar con libertad y alegría que exceden lo natural; no por obligación.
 
 **Ningún don te hace más importante.** El ojo no puede decirle a la mano: no te necesito. **El que habla en lenguas no es más espiritual que el que sirve mesas.**
 
