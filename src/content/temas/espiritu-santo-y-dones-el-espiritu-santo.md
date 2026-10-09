@@ -6,6 +6,7 @@ series: espiritu-santo-y-dones
 order: 1
 tags: ["espiritu"]
 duration: "45 min"
+audio: El_Espiritu_Santo_no_es_una_bateria.mp3
 thesis: "Vivir y andar por el Espíritu es el camino, y quien lo hace posible es una Persona, no una fuerza. Los dones son gracia para el cuerpo: por lo menos uno, repartido como él quiere, no ganado. Sin amor, el don más espectacular es ruido."
 remember:
   - "Gálatas 5:25 es el camino: vivir y andar por el Espíritu. Quien lo hace posible no es una fuerza: es Persona."
