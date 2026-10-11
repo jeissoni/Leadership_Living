@@ -32,7 +32,7 @@ export const seriesCatalog = [
   {
     id: "espiritualidad-practica",
     title: "Espiritualidad práctica",
-    lede: "De la idea a la relación: conocer a Jesús en el encuentro, no solo de oídas.",
+    lede: "De la idea a la relación: conocer a Jesús en el encuentro y vivir desde la identidad que él da en la mesa, no solo de oídas.",
   },
   {
     id: "santos-que-se-santifican",
