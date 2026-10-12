@@ -32,7 +32,7 @@ export const seriesCatalog = [
   {
     id: "espiritualidad-practica",
     title: "Espiritualidad práctica",
-    lede: "De la idea a la relación: conocer a Jesús en el encuentro, y vivir desde la identidad de hijo, que no depende del oficio.",
+    lede: "De la idea a la relación: conocer a Jesús en el encuentro, y vivir desde la identidad recibida en Cristo, no desde lo que hacemos o producimos.",
   },
   {
     id: "santos-que-se-santifican",
