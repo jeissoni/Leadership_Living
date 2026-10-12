@@ -618,6 +618,59 @@ a:hover {
   letter-spacing: 0.04em;
 }
 
+.prose .callout {
+  margin: 1.5rem 0;
+  padding: 0.95rem 1.1rem 1.05rem;
+  border-radius: var(--radius);
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+.prose .callout-label {
+  margin: 0 0 0.4rem;
+  color: var(--ink-faint);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.prose .callout p:last-child {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.prose .callout-problema {
+  border: 1px solid var(--lr-highlight-border);
+  background: var(--lr-highlight);
+  color: var(--lr-black);
+}
+
+.prose .callout-problema .callout-label {
+  color: var(--lr-slate);
+}
+
+.prose .callout-axioma {
+  border-left: 3px solid var(--lr-slate);
+  background: var(--lr-bg-secondary);
+  color: var(--navy);
+}
+
+.prose .pausa {
+  margin: 1.15rem 0;
+  color: var(--ink-faint);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
 .prose table {
   width: 100%;
   margin: 0 0 1.4rem;

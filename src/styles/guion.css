@@ -1087,6 +1087,20 @@
   line-height: 1.5;
 }
 
+.widget-stack .frase-card.frase-problema {
+  border: 1px solid var(--lr-highlight-border);
+  background: var(--lr-highlight);
+}
+
+.widget-stack .frase-card.frase-problema .frase-donde {
+  color: var(--lr-slate);
+}
+
+.widget-stack .frase-card.frase-axioma {
+  border-left: 3px solid var(--lr-slate);
+  background: var(--paper-deep);
+}
+
 .widget-stack .axioma-list {
   margin: 0;
   padding: 0;

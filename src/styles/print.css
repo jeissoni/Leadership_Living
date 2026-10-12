@@ -66,6 +66,10 @@
     page-break-after: avoid;
   }
 
+  .prose .callout {
+    break-inside: avoid;
+  }
+
   a {
     color: inherit;
     text-decoration: none;
