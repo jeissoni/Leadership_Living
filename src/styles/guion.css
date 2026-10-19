@@ -1101,6 +1101,191 @@
   background: var(--paper-deep);
 }
 
+.widget-stack .oratoria-wrap {
+  max-width: 40rem;
+}
+
+.widget-stack .oratoria-indice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 1.25rem;
+  position: sticky;
+  top: calc(var(--header-h) + 0.35rem);
+  z-index: 2;
+  padding: 0.45rem 0;
+  background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.widget-stack .oratoria-indice a {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.widget-stack .oratoria-indice a:hover {
+  border-color: var(--lr-slate);
+}
+
+.widget-stack .oratoria-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  margin: 0 0 1.75rem;
+}
+
+.widget-stack .oratoria-card {
+  scroll-margin-top: calc(var(--header-h) + 3.5rem);
+  padding: 1.2rem 1.15rem 1.35rem;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.widget-stack .oratoria-card-destacada {
+  border: 1px solid var(--lr-highlight-border);
+  background: var(--lr-highlight);
+}
+
+.widget-stack .oratoria-card-cierre {
+  border-left: 4px solid var(--lr-slate);
+  background: var(--paper-deep);
+}
+
+.widget-stack .oratoria-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+  margin: 0 0 0.55rem;
+}
+
+.widget-stack .oratoria-parte {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.widget-stack .oratoria-card-destacada .oratoria-parte {
+  color: var(--lr-slate);
+}
+
+.widget-stack .oratoria-paso {
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.widget-stack .oratoria-titulo {
+  margin: 0 0 1rem;
+  color: var(--navy);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.widget-stack .oratoria-campos {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+}
+
+.widget-stack .oratoria-campos dt {
+  margin: 0 0 0.3rem;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.widget-stack .oratoria-card-destacada .oratoria-campos dt {
+  color: var(--lr-slate);
+}
+
+.widget-stack .oratoria-campos dd {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1.12rem;
+  line-height: 1.5;
+}
+
+.widget-stack .oratoria-keys {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+}
+
+.widget-stack .oratoria-ancla {
+  font-family: var(--font-serif);
+  font-size: 1.28rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.widget-stack .oratoria-verso {
+  padding: 0.85rem 0.95rem;
+  border-left: 3px solid var(--lr-black);
+  background: var(--paper-deep);
+  color: var(--lr-black);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+.widget-stack .oratoria-card-destacada .oratoria-verso {
+  background: color-mix(in srgb, var(--lr-white) 55%, transparent);
+}
+
+.widget-stack .oratoria-verso-vacio {
+  border-left-color: var(--lr-border-dark);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+.widget-stack .oratoria-puente {
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .widget-stack .oratoria-titulo {
+    font-size: 1.55rem;
+  }
+
+  .widget-stack .oratoria-campos dd {
+    font-size: 1.18rem;
+  }
+
+  .widget-stack .oratoria-ancla {
+    font-size: 1.38rem;
+  }
+
+  .widget-stack .oratoria-verso {
+    font-size: 1.22rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .widget-stack .oratoria-card {
+    padding: 1.4rem 1.35rem 1.5rem;
+  }
+}
+
 .widget-stack .axioma-list {
   margin: 0;
   padding: 0;

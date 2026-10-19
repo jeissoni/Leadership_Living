@@ -13,7 +13,7 @@ remember:
   - "No trabajo para comprar un lugar en la casa; aprendo a vivir desde el lugar que recibí por gracia."
   - "Antes de decidir qué hace, recuerde a quién pertenece."
   - "El problema no es perder algo que valoramos; es creer que, al perderlo, también perdemos lo que somos."
-guionLede: "Introducción: pregunta de apertura, historia personal (rendimiento como seguridad), Gedeón 6:12 y 6:16. Tres puntos del cuerpo. Cierre: Lucas 15 y Mefiboset. NTV. 45 min."
+guionLede: "Tarjetas de oratoria: idea central, palabras clave, frase ancla, referencia y transición. Intro (pregunta + metro) + historia/Gedeón → tres puntos → Lucas 15 → cierre. NTV. 45 min."
 widgets:
   - mapa_nueva_identidad
 resources:
@@ -43,7 +43,11 @@ resources:
 
 Quiero comenzar con una pregunta: **¿quién es usted cuando ya no puede hacer aquello por lo que todos lo conocen?**
 
-Piénselo por un momento. Quizás las personas lo conocen por su profesión, por el trabajo que hace, por su capacidad para resolver problemas o por ser alguien en quien todos pueden confiar. Tal vez usted es la persona que siempre tiene una respuesta, la que sostiene a su familia, la que sirve en la iglesia, la que organiza, la que ayuda o la que nunca parece cansarse.
+Antes de responder, pensemos en algo cercano. En Medellín, el metro no es solamente un medio de transporte. Para muchos paisas se ha convertido en un símbolo de resiliencia y de orgullo: algo que cuenta una historia de lo que somos capaces de cuidar juntos. Y ese orgullo no se queda en el pecho; se nota en la cultura. Porque cuando algo forma parte de la identidad de un pueblo, la gente lo trata de otra manera. El metro se vuelve ejemplo de civismo, de cuidado y de orden no solo por las reglas, sino porque muchas personas lo sienten como propio.
+
+Eso nos muestra algo sencillo y poderoso: **la identidad produce conducta.** Lo que creemos que somos —o lo que sentimos que nos representa— termina moldeando cómo vivimos.
+
+Ahora llévelo a lo personal. Quizás las personas lo conocen por su profesión, por el trabajo que hace, por su capacidad para resolver problemas o por ser alguien en quien todos pueden confiar. Tal vez usted es la persona que siempre tiene una respuesta, la que sostiene a su familia, la que sirve en la iglesia, la que organiza, la que ayuda o la que nunca parece cansarse.
 
 Esas cosas pueden ser valiosas. El trabajo puede ser una forma de servir; nuestras capacidades pueden bendecir a otros; nuestras responsabilidades pueden ser expresiones de amor. **El problema no está en tener un oficio, asumir una responsabilidad o disfrutar de lo que hacemos. El problema comienza cuando algo que hacemos se convierte en la respuesta definitiva a la pregunta de quiénes somos.**
 

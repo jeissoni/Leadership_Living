@@ -8,7 +8,7 @@ const widgetLabels: Record<string, string> = {
   charla_diablo_autoridad: "Guion oral",
   opresion_signos: "Opresión: signos y respuesta",
   mapa_espiritu_santo: "Guía para dar la charla",
-  mapa_nueva_identidad: "Guía para dar la charla",
+  mapa_nueva_identidad: "Tarjetas de oratoria",
   datos_biblia: "Datos e ilustraciones",
   guion_charla_biblia: "Guion oral",
   complemento_biblia: "Manuscritos, canon y objeciones",
