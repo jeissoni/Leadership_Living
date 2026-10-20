@@ -1,5 +1,5 @@
 ---
-title: "Hijo, no empleado"
+title: "¡Hijo!, no __________"
 description: "Nuestra identidad no depende de lo que hacemos, de lo que producimos ni del reconocimiento que recibimos. En Cristo, Dios nos da una vida nueva y nos recibe como hijos por gracia."
 date: 2026-10-01
 series: espiritualidad-practica
@@ -61,7 +61,7 @@ No decimos solamente: «Ya no tengo ese trabajo». Por dentro podemos comenzar a
 
 Es como si hubiéramos escrito nuestro nombre sobre algo que podía cambiar. Mientras eso permanece, sentimos que sabemos quiénes somos. Pero cuando desaparece, el nombre parece desaparecer con ello.
 
-Por eso he querido llamar a esta charla «Hijo, no empleado». No porque el trabajo no importe, ni porque debamos vivir sin responsabilidades, sino porque hay algo más profundo que nuestro cargo, nuestro rendimiento o nuestra capacidad para producir. **Hay una identidad que no debería depender de que mañana sigamos haciendo lo mismo que hacemos hoy.**
+Por eso he querido llamar a esta charla «¡Hijo!, no __________». No porque el trabajo no importe, ni porque debamos vivir sin responsabilidades, sino porque hay algo más profundo que nuestro cargo, nuestro rendimiento o nuestra capacidad para producir. **Hay una identidad que no debería depender de que mañana sigamos haciendo lo mismo que hacemos hoy.**
 
 Y esta conversación no es solamente para quienes están atravesando una crisis laboral. También es para quienes sirven a Dios, para quienes procuran hacer las cosas bien, para quienes tienen responsabilidades en la familia y para quienes parecen tener todo bajo control. Porque incluso las cosas buenas pueden convertirse en el lugar del que esperamos recibir nuestro valor.
 
