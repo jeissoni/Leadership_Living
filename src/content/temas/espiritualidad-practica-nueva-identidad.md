@@ -1,5 +1,5 @@
 ---
-title: "¡Hijo!, no __________"
+title: "¡Hijo!, antes que ________"
 description: "Nuestra identidad no depende de lo que hacemos, de lo que producimos ni del reconocimiento que recibimos. En Cristo, Dios nos da una vida nueva y nos recibe como hijos por gracia."
 date: 2026-10-01
 series: espiritualidad-practica
@@ -23,8 +23,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=G%C3%A1latas+4%3A4-5&version=NTV"
   - label: "Jueces 6:11–16"
     url: "https://www.biblegateway.com/passage/?search=Jueces+6%3A11-16&version=NTV"
-  - label: "Juan 15:1–5"
-    url: "https://www.biblegateway.com/passage/?search=Juan+15%3A1-5&version=NTV"
+  - label: "Juan 15:5–8 (The Message)"
+    url: "https://www.biblegateway.com/passage/?search=John+15%3A5-8&version=MSG"
   - label: "2 Corintios 5:17"
     url: "https://www.biblegateway.com/passage/?search=2+Corintios+5%3A17&version=NTV"
   - label: "Efesios 1:3–14"
@@ -122,7 +122,7 @@ Pablo lo dice con una claridad que no debemos pasar de prisa. Cristo no vino sol
 
 Escuche lo que está en el centro de esa frase. Hay un envío: Dios envió a su Hijo. Hay un rescate: para rescatar a los que estaban sujetos. Y hay un propósito que no se reduce a sacarnos de un problema: **adoptarlos como sus propios hijos.** Esa fue la identidad que Cristo nos vino a dar. No un cargo que debamos sostener cada mañana. No un título que se gana con una temporada de buen rendimiento. Un lugar en la casa. Un nombre que el Padre pone sobre nosotros por medio de su Hijo.
 
-Por eso esta charla se llama «¡Hijo!, no __________». El trabajo importa. Las responsabilidades importan. Servir, cuidar, producir y responder bien no son cosas pequeñas. Pero hay un nombre más hondo que el cargo, el rendimiento o la capacidad de producir: **hijo.** Recibido por gracia, no comprado con resultados.
+Por eso esta charla se llama «¡Hijo!, antes que ________». El trabajo importa. Las responsabilidades importan. Servir, cuidar, producir y responder bien no son cosas pequeñas. Pero el nombre llega primero: **hijo.** Recibido por gracia, no comprado con resultados.
 
 No lo escuchemos como un reproche. Muchas veces buscamos seguridad en lo que hacemos porque queremos ser útiles y responder bien. Hay un deseo honesto detrás de esa búsqueda: no queremos ser una carga; queremos contribuir; queremos que nuestra vida sirva. El problema no es ese deseo. El problema es cuando ese deseo se convierte en la única manera que tenemos de saber quiénes somos. Hoy la gracia nos ofrece otra base: **un lugar junto al Padre, no un oficio que haya que sostener cada día para no perder el nombre.**
 
@@ -140,17 +140,15 @@ La abundancia de la que habla el evangelio no es la promesa de que nunca nos va 
 
 Ese viaje no se recorre de un salto. Hay días en los que recordamos que somos hijos y hay días en los que volvemos a pensar como empleados. Hay temporadas en las que la gracia se siente cercana y temporadas en las que la mente regresa a la lógica de la escasez. Por eso no basta con oír el título una vez. Necesitamos que esa identidad se vuelva fundamento: algo sobre lo cual se pueda caminar cuando cambien las circunstancias.
 
-Y eso es lo que vamos a hacer ahora. El cuerpo de esta charla no es una lista de tareas para volvernos dignos del nombre. **Son los fundamentos de la identidad que ya se nos dio.** Tres verdades que sostienen el viaje de la carencia a la abundancia: que el fruto de nuestra vida importa, pero no es la fuente de quiénes somos; que en Cristo recibimos una vida nueva, no una versión que nosotros mismos tenemos que fabricar; y que no trabajamos para ganarnos un lugar en la casa, sino que aprendemos a vivir desde el lugar que recibimos por gracia.
+Y ese viaje no empieza fabricando más fruto. Empieza por soltar una confusión: creer que el fruto nos gana el nombre. **El fruto importa, pero no es la fuente.**
 
-Empecemos por el primero. Si ya hay un lugar, hay algo que necesitamos soltar: la idea de que el fruto nos lo gana. **El fruto importa, pero no es la fuente de nuestra identidad.**
+## 1. El fruto no es la fuente
 
-## 1. El fruto de nuestra vida no es la fuente de nuestra identidad
+En Juan 15, Jesús utiliza la imagen de una vid y sus ramas. Él no les pide a las ramas que fabriquen uvas por su cuenta. Les pide que estén unidas a Él. La cosecha sale de esa unión; separados, no pueden producir nada.
 
-En Juan 15, Jesús utiliza la imagen de una vid y sus ramas. Él se presenta como la vid verdadera y enseña que sus discípulos necesitan permanecer en Él para dar fruto. En ese pasaje dice que separados de Él no podemos hacer nada.
-
-> «Yo soy la vid verdadera, y mi Padre es el labrador. Él corta de mí toda rama que no produce fruto y poda las ramas que sí dan fruto, para que den aún más. Ustedes ya han sido podados y purificados por el mensaje que les di. Permanezcan en mí, y yo permaneceré en ustedes. Pues una rama no puede producir fruto si la cortan de la vid, y ustedes tampoco pueden ser fructíferos a menos que permanezcan en mí. Ciertamente, yo soy la vid; ustedes son las ramas. Los que permanecen en mí y yo en ellos producirán mucho fruto porque, separados de mí, no pueden hacer nada.»
+> Yo soy la vid y ustedes son las ramas. Cuando estén unidos a mí y yo a ustedes, en una relación íntima y orgánica, la cosecha seguramente será abundante. Separados, no pueden producir nada. Cualquiera que se aparte de mí es como las ramas secas, recogidas y arrojadas al fuego. Sin embargo, si están conmigo y mis palabras están en ustedes, pueden estar seguros de que todo lo que pidan será escuchado y se les concederá. Así es como mi Padre muestra quién es: cuando producen uvas y maduran como discípulos míos.
 >
-> <cite>Juan 15:1–5</cite>
+> <cite>Juan 15:5–8 · The Message</cite>
 
 Pensemos en esa imagen. Una rama no produce vida por sí misma. No se esfuerza para convertirse en la fuente que la sostiene. La rama da fruto porque está unida a la vid. **El fruto es importante, pero no es la raíz.** La cosecha es visible, pero la vida viene de una fuente más profunda.
 
@@ -179,9 +177,9 @@ Puede esforzarse, aprender y crecer. Puede trabajar con excelencia. Puede asumir
 <p>El fruto importa como resultado de permanecer en Cristo, no como precio para ser aceptados. Mi vida se sostiene en Él.</p>
 </aside>
 
-Si el fruto no nos gana el lugar, el nombre tiene que venir de otro lado. **No lo fabricamos. Lo recibimos en Cristo.**
+Ese viaje tampoco se recorre fabricando una versión mejorada de nosotros mismos. Si el fruto no nos gana el nombre, el nombre tiene que venir de otro lado. **No lo fabricamos. Lo recibimos en Cristo.**
 
-## 2. En Cristo recibimos una vida nueva; no tenemos que fabricarla
+## 2. La vida nueva se recibe
 
 En 2 Corintios 5:17, Pablo afirma que si alguno está en Cristo, nueva creación es. Esa declaración no describe simplemente a una persona que decidió esforzarse un poco más o corregir algunos comportamientos. Habla de la obra de Dios: en Cristo comienza una realidad nueva.
 
@@ -216,9 +214,9 @@ Por eso, cuando cambie nuestro trabajo, nuestro papel en la familia o el reconoc
 <p>La nueva identidad no se fabrica ni se actualiza: se recibe en Cristo. La transformación es fruto de la gracia, no el precio de nuestra aceptación.</p>
 </aside>
 
-Recibir una vida nueva todavía deja algo más cercano: **¿qué clase de relación es esa?** No la de un empleado que demuestra que merece quedarse. **Dios nos recibe como hijos.**
+El viaje de recibir una vida nueva todavía deja un tramo más cercano: ¿desde qué lugar se camina? No desde la puerta, demostrando que merecemos entrar. **El lugar no se gana. Dios nos recibe como hijos.**
 
-## 3. Vivimos como hijos; no trabajamos para ganarnos un lugar
+## 3. El lugar no se gana
 
 Pablo, en Romanos 8, no describe la vida de hijo como una vida encogida, pendiente de no equivocarse. No es la vida de quien cuida lo que ya murió, con miedo a moverse. Es una relación. El Espíritu confirma quiénes somos de verdad y nos da una vida de resurrección: una vida que se atreve a acercarse a Dios como un hijo se acerca a su papá.
 
@@ -255,7 +253,7 @@ Esta verdad cambia también nuestra manera de mirar a los demás. Si mi identida
 <p>No trabajo para comprar un lugar en la casa; aprendo a vivir desde el lugar que recibí por gracia.</p>
 </aside>
 
-Hemos visto que el fruto no es la fuente de nuestra identidad y que Dios inicia una vida nueva en Cristo. Jesús ahora lleva esa gracia a una historia familiar: dos hijos, uno que cree que ya no puede volver como hijo y otro que convierte su servicio en una cuenta pendiente. **Y el padre sale al encuentro de ambos.**
+Ese viaje no se entiende del todo hasta que lo vemos en una casa. Jesús cuenta de dos hijos que, cada uno a su manera, todavía vivían en la carencia: uno pide trabajo para volver; el otro cobra el servicio para sentirse con derecho. **Y el padre sale al encuentro de ambos.**
 
 ## Conclusión pastoral: el Padre sale al encuentro de sus hijos
 
