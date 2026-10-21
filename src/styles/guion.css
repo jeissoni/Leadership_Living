@@ -1143,6 +1143,7 @@
 
 .widget-stack .oratoria-card {
   scroll-margin-top: calc(var(--header-h) + 3.5rem);
+  min-width: 0;
   padding: 1.2rem 1.15rem 1.35rem;
   border: 1px solid var(--rule);
   border-radius: 14px;
@@ -1195,6 +1196,97 @@
   line-height: 1.25;
 }
 
+.widget-stack .oratoria-mapa {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.05rem 1.1rem;
+  border: 1px dashed var(--rule);
+  border-radius: 14px;
+  background: var(--paper-deep);
+}
+
+.widget-stack .oratoria-mapa > p {
+  margin: 0 0 0.65rem;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.widget-stack .oratoria-mapa ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--navy);
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.widget-stack .oratoria-mapa li + li {
+  margin-top: 0.35rem;
+}
+
+.widget-stack .oratoria-estructura {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: beat;
+}
+
+.widget-stack .oratoria-estructura[start="3"] {
+  counter-reset: beat 2;
+}
+
+.widget-stack .oratoria-estructura li {
+  counter-increment: beat;
+  display: grid;
+  grid-template-columns: 1.7rem minmax(0, 1fr);
+  column-gap: 0.7rem;
+  margin: 0 0 0.9rem;
+  align-items: start;
+}
+
+.widget-stack .oratoria-estructura li:last-child {
+  margin-bottom: 0;
+}
+
+.widget-stack .oratoria-estructura li::before {
+  content: counter(beat);
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.widget-stack .oratoria-estructura li > * {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.widget-stack .oratoria-estructura strong {
+  display: block;
+  margin: 0.05rem 0 0.15rem;
+  color: var(--navy);
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+
+.widget-stack .oratoria-estructura span {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
 .widget-stack .oratoria-campos {
   display: grid;
   gap: 1rem;
@@ -1216,6 +1308,7 @@
 
 .widget-stack .oratoria-campos dd {
   margin: 0;
+  min-width: 0;
   color: var(--navy);
   font-size: 1.12rem;
   line-height: 1.5;

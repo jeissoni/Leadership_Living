@@ -8,15 +8,19 @@ tags: ["espiritualidad", "identidad", "hijo", "gracia"]
 duration: "45 min"
 thesis: "Nuestra identidad no depende de lo que hacemos, de lo que producimos ni del reconocimiento que recibimos. En Cristo, Dios nos da una vida nueva y nos recibe como hijos por gracia."
 remember:
-  - "El fruto de mi vida importa, pero no es la fuente de mi identidad. Mi vida se sostiene en Cristo."
+  - "El fruto importa como resultado de permanecer en Cristo, no como precio para ser aceptados. Mi vida se sostiene en Él."
   - "La nueva identidad no se fabrica ni se actualiza: se recibe en Cristo. La transformación es fruto de la gracia, no el precio de nuestra aceptación."
   - "No trabajo para comprar un lugar en la casa; aprendo a vivir desde el lugar que recibí por gracia."
   - "Antes de decidir qué hace, recuerde a quién pertenece."
   - "El problema no es perder algo que valoramos; es creer que, al perderlo, también perdemos lo que somos."
-guionLede: "Tarjetas de oratoria: idea central, palabras clave, frase ancla, referencia y transición. Intro (pregunta + metro) + historia/Gedeón → tres puntos → Lucas 15 → cierre. NTV. 45 min."
+guionLede: "Intro: metro → oficio como identidad → Gedeón → Gálatas 4:4–5 (Cristo nos hace hijos) → viaje de renovación. Cuerpo: tres fundamentos de esa identidad ya dada. Lucas 15 → cierre. NTV. 45 min."
 widgets:
   - mapa_nueva_identidad
 resources:
+  - label: "Mateo 9:36"
+    url: "https://www.biblegateway.com/passage/?search=Mateo+9%3A36&version=NTV"
+  - label: "Gálatas 4:4–5"
+    url: "https://www.biblegateway.com/passage/?search=G%C3%A1latas+4%3A4-5&version=NTV"
   - label: "Jueces 6:11–16"
     url: "https://www.biblegateway.com/passage/?search=Jueces+6%3A11-16&version=NTV"
   - label: "Juan 15:1–5"
@@ -25,12 +29,14 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=2+Corintios+5%3A17&version=NTV"
   - label: "Efesios 1:3–14"
     url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A3-14&version=NTV"
-  - label: "Romanos 8:14–17"
-    url: "https://www.biblegateway.com/passage/?search=Romanos+8%3A14-17&version=NTV"
+  - label: "Romanos 8:15–17 (The Message)"
+    url: "https://www.biblegateway.com/passage/?search=Romans+8%3A15-17&version=MSG"
   - label: "1 Juan 3:1"
     url: "https://www.biblegateway.com/passage/?search=1+Juan+3%3A1&version=NTV"
   - label: "Lucas 15:11–32"
     url: "https://www.biblegateway.com/passage/?search=Lucas+15%3A11-32&version=NTV"
+  - label: "Lucas 15:28–32 (The Message)"
+    url: "https://www.biblegateway.com/passage/?search=Luke+15%3A28-32&version=MSG"
   - label: "2 Samuel 9"
     url: "https://www.biblegateway.com/passage/?search=2+Samuel+9&version=NTV"
 ---
@@ -39,15 +45,17 @@ resources:
 
 *Narración pastoral para una charla de aproximadamente 45 minutos. Se puede leer de corrido para preparar, o para volver a ella después. El recuadro amarillo es la problemática. Los recuadros grises son axiomas para llevar. Las frases en negrita se dicen despacio.*
 
-## Introducción: ¿Qué pasa cuando aquello que nos define cambia?
+## Introducción: la identidad produce conducta — y Dios nos da un nombre
 
-Quiero comenzar con una pregunta: **¿quién es usted cuando ya no puede hacer aquello por lo que todos lo conocen?**
-
-Antes de responder, pensemos en algo cercano. En Medellín, el metro no es solamente un medio de transporte. Para muchos paisas se ha convertido en un símbolo de resiliencia y de orgullo: algo que cuenta una historia de lo que somos capaces de cuidar juntos. Y ese orgullo no se queda en el pecho; se nota en la cultura. Porque cuando algo forma parte de la identidad de un pueblo, la gente lo trata de otra manera. El metro se vuelve ejemplo de civismo, de cuidado y de orden no solo por las reglas, sino porque muchas personas lo sienten como propio.
+Quiero comenzar con algo cercano. En Medellín, el metro no es solamente un medio de transporte. Para muchos paisas se ha convertido en un símbolo de resiliencia y de orgullo: algo que cuenta una historia de lo que somos capaces de cuidar juntos. Y ese orgullo no se queda en el pecho; se nota en la cultura. Porque cuando algo forma parte de la identidad de un pueblo, la gente lo trata de otra manera. El metro se vuelve ejemplo de civismo, de cuidado y de orden no solo por las reglas, sino porque muchas personas lo sienten como propio.
 
 Eso nos muestra algo sencillo y poderoso: **la identidad produce conducta.** Lo que creemos que somos —o lo que sentimos que nos representa— termina moldeando cómo vivimos.
 
-Ahora llévelo a lo personal. Quizás las personas lo conocen por su profesión, por el trabajo que hace, por su capacidad para resolver problemas o por ser alguien en quien todos pueden confiar. Tal vez usted es la persona que siempre tiene una respuesta, la que sostiene a su familia, la que sirve en la iglesia, la que organiza, la que ayuda o la que nunca parece cansarse.
+Y si la identidad desencadena acciones, entonces la pregunta siguiente es inevitable: **¿en qué identidad estamos viviendo?**
+
+Porque también puede ocurrir al revés. En lugar de que una identidad sana produzca cuidado, a veces **las cosas que hacemos terminan ocupando el lugar de nuestra identidad.** Quiero plantearlo con una pregunta: **¿quién es usted cuando ya no puede hacer aquello por lo que todos lo conocen?**
+
+Quizás las personas lo conocen por su profesión, por el trabajo que hace, por su capacidad para resolver problemas o por ser alguien en quien todos pueden confiar. Tal vez usted es la persona que siempre tiene una respuesta, la que sostiene a su familia, la que sirve en la iglesia, la que organiza, la que ayuda o la que nunca parece cansarse.
 
 Esas cosas pueden ser valiosas. El trabajo puede ser una forma de servir; nuestras capacidades pueden bendecir a otros; nuestras responsabilidades pueden ser expresiones de amor. **El problema no está en tener un oficio, asumir una responsabilidad o disfrutar de lo que hacemos. El problema comienza cuando algo que hacemos se convierte en la respuesta definitiva a la pregunta de quiénes somos.**
 
@@ -61,37 +69,22 @@ No decimos solamente: «Ya no tengo ese trabajo». Por dentro podemos comenzar a
 
 Es como si hubiéramos escrito nuestro nombre sobre algo que podía cambiar. Mientras eso permanece, sentimos que sabemos quiénes somos. Pero cuando desaparece, el nombre parece desaparecer con ello.
 
-Por eso he querido llamar a esta charla «¡Hijo!, no __________». No porque el trabajo no importe, ni porque debamos vivir sin responsabilidades, sino porque hay algo más profundo que nuestro cargo, nuestro rendimiento o nuestra capacidad para producir. **Hay una identidad que no debería depender de que mañana sigamos haciendo lo mismo que hacemos hoy.**
+Esto no es solamente teórico. También lo he vivido. Desde que comencé a trabajar he tendido a creer que mi rendimiento, mi desempeño y mi capacidad para hacer bien las cosas son lo que me va a sostener y a mantenerme seguro.
 
-Y esta conversación no es solamente para quienes están atravesando una crisis laboral. También es para quienes sirven a Dios, para quienes procuran hacer las cosas bien, para quienes tienen responsabilidades en la familia y para quienes parecen tener todo bajo control. Porque incluso las cosas buenas pueden convertirse en el lugar del que esperamos recibir nuestro valor.
+Trabajar con excelencia no es malo. El problema aparece cuando, sin darme cuenta, el trabajo deja de ser aquello que hago y se convierte en el lugar donde busco mi seguridad. Y cuando me atrapo en esa lógica —cuando creo que todo depende de mí—, son días de mucha angustia.
 
-Podemos llegar a pensar que Dios está más contento con nosotros cuando hacemos más, que tenemos un lugar más seguro cuando servimos mejor o que debemos compensar nuestras debilidades con más esfuerzo espiritual. Sin darnos cuenta, empezamos a relacionarnos con Dios como si tuviéramos que demostrar constantemente que merecemos permanecer cerca de Él.
+**Una cosa es ser responsable con lo que hago; otra muy distinta es creer que mi vida depende exclusivamente de mi capacidad para hacerlo bien. Mi desempeño puede ser importante, pero no puede convertirse en mi salvador.**
 
-Entonces aparece una pregunta importante: **si mañana cambiara aquello que hoy le da reconocimiento, seguridad o sentido, ¿seguiría sabiendo quién es usted?**
+También puede ocurrir en la vida espiritual. Podemos llegar a pensar que Dios está más contento con nosotros cuando hacemos más, que tenemos un lugar más seguro cuando servimos mejor o que debemos compensar nuestras debilidades con más esfuerzo. Sin darnos cuenta, empezamos a relacionarnos con Dios como si tuviéramos que demostrar constantemente que merecemos permanecer cerca de Él.
 
-No quiero que respondamos esa pregunta desde la culpa. No se trata de condenarnos por haber buscado seguridad en el trabajo, en la familia, en los logros o en el servicio. Muchas veces lo hacemos porque deseamos ser útiles, amar bien y responder a nuestras responsabilidades. Pero hoy podemos permitir que la gracia de Dios nos muestre una base más firme.
+<aside class="callout callout-problema">
+<p class="callout-label">El problema</p>
+<p>El problema no es perder algo que valoramos; es creer que, al perderlo, también perdemos lo que somos.</p>
+</aside>
 
-Quiero compartir algo personal.
+Si eso es verdad, necesitamos un nombre que no dependa de mantener siempre el mismo rendimiento. Y la Escritura nos muestra que **Dios no espera a que nosotros fabriquemos ese nombre: Él lo da.**
 
-Desde que comencé a trabajar, hace ya varios años, he tenido una manera de pensar que me ha acompañado durante mucho tiempo: creer que mi rendimiento, mi desempeño y mi capacidad para hacer bien las cosas son lo que me va a sostener, lo que me va a mantener en un buen nivel y lo que me va a permitir estar seguro.
-
-En cierta manera, he aprendido a confiar en lo que puedo hacer, en mi capacidad para responder, en mi desempeño y en los resultados que puedo alcanzar.
-
-Y no creo que trabajar con excelencia sea algo malo. Al contrario, considero que debemos ser responsables con aquello que tenemos en nuestras manos. El problema aparece cuando, sin darme cuenta, comienzo a creer que todo depende de mí; que debo rendir bien, responder bien y mantener cierto nivel para sentir que estoy seguro.
-
-Porque entonces el trabajo deja de ser solamente aquello que hago y empieza a convertirse en el lugar donde busco mi seguridad.
-
-Y he podido reconocer algo en mi propia vida: Dios me ha cuidado y me ha sostenido. Al mirar hacia atrás, puedo reconocer que no todo ha dependido de mi capacidad, de mi desempeño o de mis fuerzas.
-
-Sin embargo, hay momentos en los que vuelvo a dudar. Y he comprobado que, cuando me quedo atrapado en esa manera de pensar, cuando comienzo a creer que todo depende de mi rendimiento y de lo que yo sea capaz de hacer, son días de mucha angustia y agonía.
-
-Es como si, por un momento, olvidara todo lo que Dios me ha permitido experimentar y volviera a cargar sobre mis hombros la responsabilidad de sostenerlo todo.
-
-Y creo que ahí hay algo que Dios me sigue enseñando: **una cosa es ser responsable con lo que hago y otra muy distinta es creer que mi vida depende exclusivamente de mi capacidad para hacerlo bien.**
-
-Puedo esforzarme, prepararme, trabajar con excelencia y procurar hacer las cosas de la mejor manera posible. Pero no soy yo quien tiene el control absoluto de todas las circunstancias. **Mi desempeño puede ser importante, pero no puede convertirse en mi salvador.**
-
-Y esto me hace pensar en Gedeón. En Jueces 6, Dios lo encuentra escondido, trillando trigo en el fondo de un lagar, con miedo de los madianitas. No está en una posición de poder. No ha ganado batallas. Si alguien le preguntara quién es, probablemente respondería con lo que ve de sí mismo: el más débil, el de menor importancia, el que se esconde.
+Miremos a Gedeón. En Jueces 6, Dios lo encuentra escondido, trillando trigo en el fondo de un lagar, con miedo de los madianitas. No está en una posición de poder. No ha ganado batallas. Si alguien le preguntara quién es, probablemente respondería con lo que ve de sí mismo: el más débil, el de menor importancia, el que se esconde.
 
 Y la primera frase que oye no es «cuando dejes de tener miedo» ni «cuando hayas demostrado que sirves». Es un nombre:
 
@@ -107,24 +100,49 @@ Dios le habla de una misión que parece demasiado grande para él. Y cuando Gede
 >
 > <cite>Jueces 6:16</cite>
 
-A veces pienso que yo también necesito volver a escuchar esa verdad. No como una promesa de que todo saldrá exactamente como espero, ni como una garantía de que nunca habrá dificultades, sino como un recordatorio de que **no tengo que vivir creyendo que todo depende exclusivamente de mí.**
+Aquí el orden se invierte respecto a lo que solemos hacer. Nosotros escribimos el nombre después del resultado: «si produzco, soy alguien»; «si me reconocen, tengo lugar»; «si sirvo bien, Dios me acerca». En Gedeón ocurre al revés: **el nombre llega primero; la conducta viene después.** Y la compañía de Dios sostiene lo que nuestras fuerzas no pueden sostener solas.
 
-La gracia me invita a trabajar sin convertir mi trabajo en mi fundamento, a esforzarme sin creer que debo sostener toda mi vida con mis fuerzas y a reconocer mis límites sin pensar que, por tenerlos, he perdido mi valor.
+Eso es precisamente lo que vimos en el metro: la identidad desencadena acciones. Dios no le dice a Gedeón «actúa primero y después te nombro»; le da un nombre y una presencia, y desde allí lo envía.
 
-Todavía estoy aprendiendo a vivir de esa manera. Hay momentos en los que confío y momentos en los que vuelvo a angustiarme. Pero quiero aprender a recordar no solamente lo que soy capaz de hacer, sino también quién ha cuidado de mí y me ha sostenido.
+Pero el evangelio nos lleva todavía más lejos. Dios no solamente nombra a un guerrero escondido; **en Jesús viene a decirnos quiénes somos delante del Padre.**
 
-Porque mi desempeño puede cambiar. Mis circunstancias pueden cambiar. Y habrá cosas que no podré controlar.
+Jesús no vino solamente a corregir lo que hacemos. **Vino a darnos una identidad: la de hijo.** Y a Él le duele ver a las personas vivir sin esa conexión. En el evangelio hay una escena que lo muestra. Jesús mira a la multitud y se detiene.
 
-Pero no quiero que mi identidad dependa de mantener siempre el mismo nivel de rendimiento. Quiero aprender a vivir desde la confianza en Dios, no desde el temor constante de que, si dejo de hacerlo todo bien, todo se va a derrumbar.
+> Cuando vio a las multitudes, les tuvo compasión, porque estaban confundidas y desamparadas, como ovejas sin pastor.
+>
+> <cite>Mateo 9:36</cite>
 
-Eso es lo contrario de lo que solemos hacer cuando escribimos el nombre después del resultado: «si produzco, soy alguien»; «si me reconocen, tengo lugar»; «si sirvo bien, Dios me acerca». En Gedeón el orden se invierte: **el nombre llega primero; la conducta viene después.** Y la compañía de Dios sostiene lo que nuestras fuerzas no pueden sostener solas.
+Jesús se detiene. Ve gente confundida y desamparada, como ovejas sin pastor. **Le duele.** Esa compasión no es una lástima que se queda mirando desde lejos. Es el dolor de quien ve personas viviendo lejos de la relación para la que fueron hechas: lejos del Padre. Y no se queda solamente en el dolor. Vino a hacer algo con esa desconexión.
 
-<aside class="callout callout-problema">
-<p class="callout-label">El problema</p>
-<p>El problema no es perder algo que valoramos; es creer que, al perderlo, también perdemos lo que somos.</p>
-</aside>
+Pablo lo dice con una claridad que no debemos pasar de prisa. Cristo no vino solamente a corregir conductas, ni solamente a aliviar una culpa, ni solamente a darnos un nuevo conjunto de responsabilidades. **Vino a darnos una identidad.** Y esa identidad tiene nombre:
 
-Para descubrir una identidad que no dependa de nuestras circunstancias, vamos a mirar tres verdades: nuestra vida no nace de nuestra productividad; nuestra nueva identidad es una obra de Dios en Cristo; y, por medio de Jesús, no somos recibidos como empleados que deben ganarse un lugar, sino como hijos que reciben por gracia un lugar en la casa del Padre.
+> Pero cuando se cumplió el tiempo establecido, Dios envió a su Hijo, nacido de una mujer y sujeto a la ley, para rescatar a los que estaban sujetos a la ley y adoptarlos como sus propios hijos.
+>
+> <cite>Gálatas 4:4–5</cite>
+
+Escuche lo que está en el centro de esa frase. Hay un envío: Dios envió a su Hijo. Hay un rescate: para rescatar a los que estaban sujetos. Y hay un propósito que no se reduce a sacarnos de un problema: **adoptarlos como sus propios hijos.** Esa fue la identidad que Cristo nos vino a dar. No un cargo que debamos sostener cada mañana. No un título que se gana con una temporada de buen rendimiento. Un lugar en la casa. Un nombre que el Padre pone sobre nosotros por medio de su Hijo.
+
+Por eso esta charla se llama «¡Hijo!, no __________». El trabajo importa. Las responsabilidades importan. Servir, cuidar, producir y responder bien no son cosas pequeñas. Pero hay un nombre más hondo que el cargo, el rendimiento o la capacidad de producir: **hijo.** Recibido por gracia, no comprado con resultados.
+
+No lo escuchemos como un reproche. Muchas veces buscamos seguridad en lo que hacemos porque queremos ser útiles y responder bien. Hay un deseo honesto detrás de esa búsqueda: no queremos ser una carga; queremos contribuir; queremos que nuestra vida sirva. El problema no es ese deseo. El problema es cuando ese deseo se convierte en la única manera que tenemos de saber quiénes somos. Hoy la gracia nos ofrece otra base: **un lugar junto al Padre, no un oficio que haya que sostener cada día para no perder el nombre.**
+
+Y aquí hay una distinción que necesitamos sostener con cuidado, porque si no lo hacemos, vamos a confundir dos cosas que la Escritura no confunde.
+
+**El título ya se nos dio.** En Cristo, la adopción no es una meta al final del camino; es el punto de partida. No estamos trabajando para llegar a ser hijos. Hemos sido adoptados para aprender a vivir como hijos. El nombre no está pendiente de nuestra próxima versión mejorada. Ya fue pronunciado.
+
+Pero que el título esté dado no significa que nuestra mente ya viva todo el tiempo desde ese título. Hay un proceso. Hay una renovación. Hay un camino en el que vamos aprendiendo a pensar, a sentir y a decidir desde lo que Dios ya dijo de nosotros, y no desde lo que el miedo, el oficio o el fracaso nos han repetido durante años. **La identidad se recibe; la mente se renueva.** El nombre llega primero; el aprendizaje de vivir desde ese nombre toma tiempo.
+
+Podríamos llamarlo un viaje. No el viaje de quien todavía no tiene casa y está buscando cómo entrar. El viaje de quien ya fue recibido y, poco a poco, deja de vivir como si siguiera afuera. Un viaje **de la carencia a la abundancia.**
+
+La carencia tiene un lenguaje muy conocido. Dice: «Todavía no soy suficiente». Dice: «Si dejo de producir, desaparezco». Dice: «Tengo que demostrar que merezco quedarme». Vive con la sensación de que el amor, el lugar y el valor son recursos escasos, y que hay que ganárselos cada día antes de que se agoten. Por eso el descanso se siente peligroso. Por eso el error se siente como una sentencia. Por eso el reconocimiento de otros se vuelve tan necesario.
+
+La abundancia de la que habla el evangelio no es la promesa de que nunca nos va a faltar nada, ni la idea de que un hijo de Dios no atraviesa pérdidas, límites o temporadas difíciles. Es otra cosa. Es descubrir que **el lugar en la casa no depende de lo que hoy podamos exhibir.** Es aprender que hay un Padre que ya nos dio un nombre, y que desde ese nombre se puede trabajar, servir, fallar, pedir ayuda y seguir, sin convertir cada acción en una prueba de pertenencia.
+
+Ese viaje no se recorre de un salto. Hay días en los que recordamos que somos hijos y hay días en los que volvemos a pensar como empleados. Hay temporadas en las que la gracia se siente cercana y temporadas en las que la mente regresa a la lógica de la escasez. Por eso no basta con oír el título una vez. Necesitamos que esa identidad se vuelva fundamento: algo sobre lo cual se pueda caminar cuando cambien las circunstancias.
+
+Y eso es lo que vamos a hacer ahora. El cuerpo de esta charla no es una lista de tareas para volvernos dignos del nombre. **Son los fundamentos de la identidad que ya se nos dio.** Tres verdades que sostienen el viaje de la carencia a la abundancia: que el fruto de nuestra vida importa, pero no es la fuente de quiénes somos; que en Cristo recibimos una vida nueva, no una versión que nosotros mismos tenemos que fabricar; y que no trabajamos para ganarnos un lugar en la casa, sino que aprendemos a vivir desde el lugar que recibimos por gracia.
+
+Empecemos por el primero. Si ya hay un lugar, hay algo que necesitamos soltar: la idea de que el fruto nos lo gana. **El fruto importa, pero no es la fuente de nuestra identidad.**
 
 ## 1. El fruto de nuestra vida no es la fuente de nuestra identidad
 
@@ -158,14 +176,12 @@ Puede esforzarse, aprender y crecer. Puede trabajar con excelencia. Puede asumir
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Para llevar</p>
-<p>El fruto de mi vida importa, pero no es la fuente de mi identidad. Mi vida se sostiene en Cristo.</p>
+<p>El fruto importa como resultado de permanecer en Cristo, no como precio para ser aceptados. Mi vida se sostiene en Él.</p>
 </aside>
 
-Ahora bien, si nuestra identidad no se construye con nuestros resultados, surge otra pregunta: ¿de dónde viene esa identidad? ¿Qué ha hecho Dios para ofrecernos una base distinta a nuestros logros, nuestros errores y nuestras circunstancias?
+Si el fruto no nos gana el lugar, el nombre tiene que venir de otro lado. **No lo fabricamos. Lo recibimos en Cristo.**
 
-La respuesta no consiste en aprender a pensar mejor acerca de nosotros mismos, como si bastara con repetir frases positivas. **La respuesta comienza con lo que Dios ha hecho por nosotros en Cristo.**
-
-## 2. En Cristo no recibimos solamente una versión mejorada de nosotros mismos; recibimos una vida nueva
+## 2. En Cristo recibimos una vida nueva; no tenemos que fabricarla
 
 En 2 Corintios 5:17, Pablo afirma que si alguno está en Cristo, nueva creación es. Esa declaración no describe simplemente a una persona que decidió esforzarse un poco más o corregir algunos comportamientos. Habla de la obra de Dios: en Cristo comienza una realidad nueva.
 
@@ -189,11 +205,9 @@ En Cristo, nuestra historia no queda borrada como si nunca hubiera ocurrido, per
 
 **La nueva identidad no consiste en negar la realidad, sino en recibir de Dios una palabra más profunda que nuestras etiquetas.**
 
-Esto también nos protege de convertir la vida cristiana en un proyecto de autoedición interminable. Podemos pasar años intentando ser la versión de nosotros mismos que creemos que por fin será aceptable: más disciplinados, más productivos, más útiles, más fuertes, más admirados. Siempre aparece algo nuevo que corregir. Y, aunque crecer es bueno, vivir tratando de volvernos dignos de amor es una carga que no podemos resolver con más esfuerzo.
+No tenemos que convertir la vida cristiana en un proyecto interminable para volvernos dignos de amor. **En Cristo recibimos perdón y una vida nueva; desde esa gracia somos transformados.** La iniciativa es de Dios: Él nos alcanza y nos llama a caminar con Él.
 
-**El evangelio anuncia que la aceptación de Dios no se compra con nuestra transformación.** En Cristo recibimos perdón y una nueva vida; desde esa gracia somos transformados. No obedecemos para conseguir que Dios empiece a amarnos. Aprendemos a obedecer porque, en Cristo, hemos sido alcanzados por su amor y llamados a caminar con Él.
-
-Eso no vuelve irrelevantes nuestras decisiones. Al contrario, nos permite mirarlas con honestidad. Si fallamos, podemos confesarlo sin tener que fingir que somos perfectos. Si necesitamos cambiar, podemos pedir ayuda. Si herimos a alguien, podemos asumir la responsabilidad, reparar en lo posible y aprender. **La gracia no nos enseña a llamar bueno a lo malo; nos permite afrontar la verdad sin creer que debemos escondernos de Dios para conservar su amor.**
+Eso no vuelve irrelevantes nuestras decisiones. Si fallamos, podemos confesarlo; si necesitamos cambiar, pedir ayuda; y si herimos a alguien, asumir la responsabilidad y reparar en lo posible. **La gracia no nos enseña a llamar bueno a lo malo; nos permite afrontar la verdad sin escondernos de Dios.**
 
 Por eso, cuando cambie nuestro trabajo, nuestro papel en la familia o el reconocimiento que recibimos, no tendremos que inventar una identidad desde cero. Podremos recordar que nuestra vida está arraigada en algo que Dios ha hecho y que nuestras circunstancias no pueden deshacer por sí solas.
 
@@ -202,17 +216,15 @@ Por eso, cuando cambie nuestro trabajo, nuestro papel en la familia o el reconoc
 <p>La nueva identidad no se fabrica ni se actualiza: se recibe en Cristo. La transformación es fruto de la gracia, no el precio de nuestra aceptación.</p>
 </aside>
 
-Pero todavía necesitamos profundizar. Saber que Dios nos perdona es maravilloso, pero ¿qué clase de relación nos ofrece? ¿Nos deja a una distancia prudente, como a personas que han recibido una segunda oportunidad y ahora deben demostrar que no volverán a fallar? ¿O nos invita a algo más cercano?
+Recibir una vida nueva todavía deja algo más cercano: **¿qué clase de relación es esa?** No la de un empleado que demuestra que merece quedarse. **Dios nos recibe como hijos.**
 
-La Escritura nos lleva a una respuesta todavía más íntima: **en Cristo, Dios no solamente nos perdona; nos recibe como hijos.**
+## 3. Vivimos como hijos; no trabajamos para ganarnos un lugar
 
-## 3. No trabajamos para comprar un lugar en la casa; aprendemos a vivir desde el lugar recibido por gracia
+Pablo, en Romanos 8, no describe la vida de hijo como una vida encogida, pendiente de no equivocarse. No es la vida de quien cuida lo que ya murió, con miedo a moverse. Es una relación. El Espíritu confirma quiénes somos de verdad y nos da una vida de resurrección: una vida que se atreve a acercarse a Dios como un hijo se acerca a su papá.
 
-Romanos 8 enseña que quienes son guiados por el Espíritu de Dios son hijos de Dios. Pablo contrasta una vida dominada por el temor con la relación que tenemos con el Padre: hemos recibido el Espíritu de adopción, por quien clamamos: «¡Abba, Padre!». Y añade que, si somos hijos, también somos herederos con Cristo.
-
-> Pues todos los que son guiados por el Espíritu de Dios son hijos de Dios. Y ustedes no han recibido un espíritu que los esclavice al miedo. En cambio, recibieron el Espíritu de Dios cuando él los adoptó como sus propios hijos. Ahora lo llamamos «Abba, Padre». Pues su Espíritu se une a nuestro espíritu para confirmar que somos hijos de Dios. Así que como somos sus hijos, también somos sus herederos. De hecho, somos herederos junto con Cristo de la gloria de Dios; pero si vamos a participar de su gloria, también debemos participar de su sufrimiento.
+> Esta vida de resurrección que recibieron de Dios no es una vida tímida, de aguardar la tumba. Es una vida aventurada, llena de expectativa, que saluda a Dios con un «¿Qué sigue, Papá?» de hijo. El Espíritu de Dios toca nuestro espíritu y confirma quiénes somos de verdad. Sabemos quién es Él y sabemos quiénes somos nosotros: Padre e hijos. Y sabemos que vamos a recibir lo que nos corresponde: ¡una herencia inimaginable!
 >
-> <cite>Romanos 8:14–17</cite>
+> <cite>Romanos 8:15–17 · The Message</cite>
 
 Pensemos en lo que significa esa imagen. Un empleado puede cumplir una tarea, recibir instrucciones y entregar resultados. Un hijo también puede colaborar, aprender, obedecer y asumir responsabilidades. Pero la razón por la que pertenece a la familia no es que haya presentado suficientes resultados. **Su lugar no es un salario que debe ganarse cada mañana.**
 
@@ -230,7 +242,7 @@ Pero 1 Juan 3:1 nos invita a contemplar la grandeza del amor del Padre: somos ll
 
 **Ser hijos no significa que todo lo que hacemos esté bien ni que no necesitemos corrección.** El amor verdadero no es indiferente a nuestro crecimiento. Pero la corrección de Dios no es lo mismo que el rechazo; su invitación a crecer no significa que debamos comprar de nuevo el lugar que hemos recibido por gracia.
 
-Desde esa seguridad podemos trabajar sin hacer del trabajo nuestra identidad. Podemos servir sin convertir el servicio en una moneda para comprar aprobación. Podemos aceptar que otra persona haga algo mejor que nosotros sin sentir que hemos dejado de tener valor. Podemos celebrar el crecimiento de otros sin interpretarlo como una amenaza. Podemos reconocer que estamos cansados y pedir ayuda, en lugar de fingir fortaleza para que nadie descubra nuestras limitaciones.
+Desde esa seguridad podemos trabajar y servir sin convertirlo en una moneda para comprar aprobación. Podemos celebrar el crecimiento de otros sin verlo como una amenaza, y reconocer el cansancio sin fingir que somos invulnerables.
 
 Y podemos atravesar una etapa en la que ya no tengamos la misma función. Tal vez usted ha sido durante años quien dirige, organiza, enseña o sostiene a otros. Quizás llegará el momento de entregar esa responsabilidad. Eso puede traer tristeza, preguntas y un proceso de adaptación. No tenemos que negar esas emociones. Pero **el final de una función no es necesariamente el final de nuestro propósito, y nunca debe confundirse automáticamente con el final de nuestro lugar en la familia de Dios.**
 
@@ -243,7 +255,7 @@ Esta verdad cambia también nuestra manera de mirar a los demás. Si mi identida
 <p>No trabajo para comprar un lugar en la casa; aprendo a vivir desde el lugar que recibí por gracia.</p>
 </aside>
 
-Ahora quiero que llevemos estas tres verdades a una historia de Jesús. Una historia sobre dos hijos que, de maneras distintas, no comprenden del todo el corazón de su padre. Uno cree que ha perdido el derecho a pertenecer. El otro cree que su servicio debería darle un derecho especial. Y el padre sale al encuentro de ambos.
+Hemos visto que el fruto no es la fuente de nuestra identidad y que Dios inicia una vida nueva en Cristo. Jesús ahora lleva esa gracia a una historia familiar: dos hijos, uno que cree que ya no puede volver como hijo y otro que convierte su servicio en una cuenta pendiente. **Y el padre sale al encuentro de ambos.**
 
 ## Conclusión pastoral: el Padre sale al encuentro de sus hijos
 
@@ -261,17 +273,15 @@ El hijo regresa con un discurso preparado. Pero Jesús cuenta que, mientras toda
 
 La historia no dice que las decisiones del hijo no tuvieran consecuencias. Tampoco presenta el daño como algo irrelevante. Pero muestra que el corazón del padre es mucho más generoso que la categoría a la que el hijo se había reducido. **El hijo vuelve pensando en cómo podría ganarse un lugar; el padre lo recibe con una alegría que él no había imaginado.**
 
-Y la historia todavía no ha terminado. Está el hijo mayor.
+Y la historia todavía no ha terminado. Está el hijo mayor. Se ha quedado en casa. Ha trabajado, ha cumplido y ha estado presente. Pero cuando oye la fiesta, su manera de relacionarse con el padre queda al descubierto:
 
-El mayor se ha quedado en casa. Ha trabajado, ha cumplido y ha estado presente. Sin embargo, cuando escucha la celebración por el regreso de su hermano, se llena de enojo y se niega a entrar. Su discurso revela otra forma de vivir la relación con el padre: recuerda sus años de servicio y siente que nunca recibió una celebración semejante.
+> El hermano mayor salió pataleando, enfadado, y se negó a participar del festejo. Su padre salió y trató de hablar con él, pero no lo quería escuchar.
+>
+> Su padre le dijo: «Hijo, no entiendes. Tú estás conmigo todo el tiempo, y todo lo que es mío es tuyo, pero este es un momento maravilloso, y teníamos que celebrarlo. Este hermano tuyo estaba muerto, ¡y ahora está vivo! Estaba perdido, ¡y lo encontramos!»
+>
+> <cite>Lucas 15:28–32 · The Message</cite>
 
 Uno de los hijos pensaba que, después de su fracaso, ya no podía ser hijo y debía pedir un lugar como trabajador. El otro, aunque permanecía en la casa, parecía entender su relación con el padre en términos de años de servicio y recompensa. **Uno se había alejado físicamente; el otro estaba cerca, pero su corazón se había convertido en una cuenta pendiente.**
-
-Y el padre sale también al encuentro del hijo mayor. Le habla con ternura, le recuerda que siempre ha estado con él y que lo que pertenece al padre también está a su disposición.
-
-> Su padre le dijo: «Mira, querido hijo, tú siempre has estado a mi lado y todo lo que tengo es tuyo».
->
-> <cite>Lucas 15:31</cite>
 
 La parábola termina sin contarnos si el hermano mayor entra a la celebración. Jesús deja abierta la pregunta y nos invita a examinarnos.
 
@@ -283,15 +293,13 @@ O quizá nos reconocemos en el mayor. Hemos permanecido, hemos servido y hemos c
 
 Esto no significa que las decisiones no importen, que no haya responsabilidades o que todo deba quedar sin resolver. Significa que **la relación con el Padre no puede reducirse a un contrato en el que intentamos pagar con nuestros logros lo que recibimos por gracia.**
 
-Hay otra imagen bíblica que puede ayudarnos a recordar la generosidad de esta gracia. En 2 Samuel 9, David busca a alguien de la casa de Saúl para mostrarle bondad por amor a Jonatán. Le presentan a Mefiboset, quien tenía una discapacidad en los pies. David lo recibe, le devuelve tierras relacionadas con su familia y le concede un lugar permanente en su mesa. Mefiboset no había conquistado ese lugar mediante una hazaña ni lo había comprado con un servicio. Lo recibió como expresión de la bondad de David.
+En 2 Samuel 9, David recibe a Mefiboset y le concede un lugar permanente en su mesa, no como recompensa por una hazaña, sino como expresión de su bondad.
 
 > A partir de ese momento, Mefiboset comió a la mesa de David, como si fuera uno de los hijos del rey.
 >
 > <cite>2 Samuel 9:11</cite>
 
-Esta historia no es exactamente lo mismo que la adopción de la que habla el Nuevo Testamento, pero sí nos ofrece una imagen de alguien que recibe una bondad que no ha conseguido por sus propios méritos. Mefiboset es llamado a sentarse a la mesa del rey. Su condición no le impide recibir esa bondad.
-
-Y el evangelio nos invita a mirar algo todavía más profundo: **por medio de Jesucristo, Dios nos ofrece perdón, reconciliación y adopción. No porque hayamos demostrado ser indispensables, sino por su gracia.**
+Esta historia no es lo mismo que la adopción de la que habla el Nuevo Testamento, pero nos da una imagen de una bondad que no se consigue por méritos. **Por medio de Jesucristo, Dios nos ofrece perdón, reconciliación y adopción por gracia.**
 
 Quiero que nos detengamos un momento. No hace falta que responda en voz alta, pero sí que sea honesto delante de Dios.
 
@@ -305,15 +313,15 @@ Tal vez una de esas áreas esté cambiando. Tal vez usted está atravesando una 
 
 Hoy no quiero decirle que no va a doler cuando cambien las circunstancias. No sería honesto prometerle que la fe evitará toda pérdida, que siempre tendrá el mismo trabajo o que nunca volverá a sentirse inseguro. Lo que sí podemos recordar es que **esas circunstancias no tienen que ser el fundamento último de nuestra identidad.**
 
-En Cristo, nuestra esperanza descansa en la obra de Dios. Somos perdonados, recibimos vida nueva y somos invitados a vivir como hijos. Nuestra relación con el Padre no se compra con productividad. Podemos crecer, obedecer y servir desde el amor recibido, en lugar de convertir cada acción en una prueba para ver si todavía merecemos pertenecer.
+En Cristo, nuestra esperanza descansa en la obra de Dios: somos perdonados y recibimos vida nueva. Podemos crecer, obedecer y servir desde el amor recibido, no para comprobar que todavía merecemos pertenecer.
 
-Romanos 8 nos recuerda que hemos recibido el Espíritu de adopción y que podemos llamar a Dios «Abba, Padre». Permita que esa verdad llegue más lejos que una frase conocida. No es solamente una idea que debemos repetir; es una invitación a vivir desde una relación que Dios nos concede en Cristo.
+Romanos 8 nos recuerda que el Espíritu confirma quiénes somos: Padre e hijos. Permita que esa verdad llegue más lejos que una frase conocida. No es solamente una idea que debemos repetir; es una invitación a vivir desde esa relación, incluso con la pregunta abierta de un hijo: «¿Qué sigue, Papá?»
 
 Quizás el siguiente paso para usted no sea hacer más. Tal vez sea aprender a descansar sin culpa. Quizás necesite pedir ayuda, reconocer un límite o dejar de esconder un error. Tal vez necesite servir sin buscar reconocimiento, o permitir que otra persona tome una responsabilidad sin sentir que por eso usted pierde su lugar. Quizás necesita regresar al Padre, no con una lista de méritos, sino con honestidad y confianza en su gracia.
 
 Y si está en una temporada en la que todo parece estable, también puede recibir esta palabra. No espere a perder algo para descubrir dónde estaba apoyando su identidad. Puede comenzar hoy a agradecer por sus responsabilidades sin convertirlas en su fundamento. Puede trabajar con excelencia sin hacer del éxito su salvador. Puede amar a las personas sin exigirles que le devuelvan una medida constante de reconocimiento.
 
-**Su nombre es más profundo que su cargo. Su valor no se mide solamente por lo que puede resolver. Su lugar delante de Dios no depende de que usted sea la persona que nunca falla.** En Cristo, Dios le ofrece una vida nueva y le invita a vivir desde la gracia.
+**Su nombre es más profundo que su cargo, y su valor no se mide por lo que puede resolver.** En Cristo, Dios le ofrece una vida nueva y le invita a vivir como hijo, desde la gracia.
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Frase de cierre</p>
