@@ -39,8 +39,6 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Lucas+15%3A11-32&version=NTV"
   - label: "Lucas 15:28–32 (The Message)"
     url: "https://www.biblegateway.com/passage/?search=Luke+15%3A28-32&version=MSG"
-  - label: "2 Samuel 9"
-    url: "https://www.biblegateway.com/passage/?search=2+Samuel+9&version=NTV"
 ---
 
 ## Sustento
@@ -295,13 +293,7 @@ O quizá nos reconocemos en el mayor. Hemos permanecido, hemos servido y hemos c
 
 Esto no significa que las decisiones no importen, que no haya responsabilidades o que todo deba quedar sin resolver. Significa que **la relación con el Padre no puede reducirse a un contrato en el que intentamos pagar con nuestros logros lo que recibimos por gracia.**
 
-En 2 Samuel 9, David recibe a Mefiboset y le concede un lugar permanente en su mesa, no como recompensa por una hazaña, sino como expresión de su bondad.
-
-> A partir de ese momento, Mefiboset comió a la mesa de David, como si fuera uno de los hijos del rey.
->
-> <cite>2 Samuel 9:11</cite>
-
-Esta historia no es lo mismo que la adopción de la que habla el Nuevo Testamento, pero nos da una imagen de una bondad que no se consigue por méritos. **Por medio de Jesucristo, Dios nos ofrece perdón, reconciliación y adopción por gracia.**
+**Por medio de Jesucristo, Dios nos ofrece perdón, reconciliación y adopción por gracia.**
 
 Quiero que nos detengamos un momento. No hace falta que responda en voz alta, pero sí que sea honesto delante de Dios.
 
