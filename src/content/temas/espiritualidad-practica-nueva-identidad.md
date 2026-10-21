@@ -29,6 +29,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=2+Corintios+5%3A17&version=NTV"
   - label: "Efesios 1:3–14"
     url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A3-14&version=NTV"
+  - label: "Efesios 1:4–5 (The Message)"
+    url: "https://www.biblegateway.com/passage/?search=Ephesians+1%3A4-5&version=MSG"
   - label: "Romanos 8:15–17 (The Message)"
     url: "https://www.biblegateway.com/passage/?search=Romans+8%3A15-17&version=MSG"
   - label: "1 Juan 3:1"
@@ -193,9 +195,9 @@ Esto no significa que, al acercarnos a Jesús, todos nuestros recuerdos desapare
 
 Efesios 1 nos ayuda a mirar esta verdad. Allí Pablo habla de las bendiciones que tenemos en Cristo: hemos sido escogidos en Él, recibimos redención por su sangre, el perdón de nuestros pecados, somos incorporados al propósito de Dios y recibimos el sello del Espíritu Santo como garantía de la herencia prometida.
 
-> Aun antes de haber hecho el mundo, Dios nos amó y nos eligió en Cristo para que seamos santos e intachables a sus ojos.
+> Mucho antes de poner los cimientos de la tierra, ya había pensado en nosotros, se había fijado en nosotros como centro de su amor, para que fuéramos completos y santos por ese mismo amor. Hace mucho, mucho tiempo, decidió adoptarnos por medio de Jesucristo. (¡Qué gozo sintió al planearlo!)
 >
-> <cite>Efesios 1:4</cite>
+> <cite>Efesios 1:4–5 · The Message</cite>
 
 Observe dónde está el énfasis: **en lo que Dios ha hecho.** La base de nuestra esperanza no es que hayamos logrado construir una identidad impecable. La base es la obra de Cristo y la gracia con la que Dios nos ha alcanzado.
 
@@ -222,7 +224,7 @@ Recibir una vida nueva todavía deja algo más cercano: **¿qué clase de relaci
 
 Pablo, en Romanos 8, no describe la vida de hijo como una vida encogida, pendiente de no equivocarse. No es la vida de quien cuida lo que ya murió, con miedo a moverse. Es una relación. El Espíritu confirma quiénes somos de verdad y nos da una vida de resurrección: una vida que se atreve a acercarse a Dios como un hijo se acerca a su papá.
 
-> Esta vida de resurrección que recibieron de Dios no es una vida tímida, de aguardar la tumba. Es una vida aventurada, llena de expectativa, que saluda a Dios con un «¿Qué sigue, Papá?» de hijo. El Espíritu de Dios toca nuestro espíritu y confirma quiénes somos de verdad. Sabemos quién es Él y sabemos quiénes somos nosotros: Padre e hijos. Y sabemos que vamos a recibir lo que nos corresponde: ¡una herencia inimaginable!
+> Esta vida de resurrección que recibieron de Dios no es una vida opacada, que aguarda la tumba, sino una expectante y de espíritu audaz, que saluda a Dios con un infantil: «Qué sigue, papá?». El Espíritu de Dios toca nuestros espíritus y confirma quiénes somos en realidad. Sabemos quién es él y quiénes somos nosotros: Padre e hijos. También sabemos que recibiremos lo que nos corresponde; una herencia extraordinaria!
 >
 > <cite>Romanos 8:15–17 · The Message</cite>
 
@@ -315,7 +317,7 @@ Hoy no quiero decirle que no va a doler cuando cambien las circunstancias. No se
 
 En Cristo, nuestra esperanza descansa en la obra de Dios: somos perdonados y recibimos vida nueva. Podemos crecer, obedecer y servir desde el amor recibido, no para comprobar que todavía merecemos pertenecer.
 
-Romanos 8 nos recuerda que el Espíritu confirma quiénes somos: Padre e hijos. Permita que esa verdad llegue más lejos que una frase conocida. No es solamente una idea que debemos repetir; es una invitación a vivir desde esa relación, incluso con la pregunta abierta de un hijo: «¿Qué sigue, Papá?»
+Romanos 8 nos recuerda que el Espíritu confirma quiénes somos: Padre e hijos. Permita que esa verdad llegue más lejos que una frase conocida. No es solamente una idea que debemos repetir; es una invitación a vivir desde esa relación, incluso con la pregunta abierta de un hijo: «Qué sigue, papá?»
 
 Quizás el siguiente paso para usted no sea hacer más. Tal vez sea aprender a descansar sin culpa. Quizás necesite pedir ayuda, reconocer un límite o dejar de esconder un error. Tal vez necesite servir sin buscar reconocimiento, o permitir que otra persona tome una responsabilidad sin sentir que por eso usted pierde su lugar. Quizás necesita regresar al Padre, no con una lista de méritos, sino con honestidad y confianza en su gracia.
 
