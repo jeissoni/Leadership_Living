@@ -1,19 +1,19 @@
 ---
 title: "Experimentar a Jesús"
-description: "Más que conocimiento, necesitamos encuentros con Jesús en lo cotidiano. Ese amor se vuelve personal, se guarda como insumo de confianza y se comparte con el pueblo —también en la presión."
+description: "Más que conocimiento, necesitamos encuentros con Jesús en lo cotidiano. Ese amor se experimenta al obedecer su voz, al amar a la iglesia y al servir; se guarda como insumo de confianza y se comparte con el pueblo —también en la presión."
 date: 2026-10-28
 series: espiritualidad-practica
 order: 3
 tags: ["espiritualidad", "oracion", "experiencia", "efesios"]
 duration: "45 min"
-thesis: "Más que conocimiento, necesitamos encuentros con Jesús en la cotidianidad. Ahí el amor deja de ser un concepto y se vuelve personal. Esos encuentros se guardan como insumos de confianza —para nosotros y, al compartirlos, para otros que tienen el mismo Padre— y también se pueden vivir en la dificultad, cuando el Espíritu fortalece el ser interior."
+thesis: "Más que conocimiento, necesitamos encuentros con Jesús en la cotidianidad. Ahí el amor deja de ser un concepto y se vuelve personal: se experimenta al obedecer su voz, al amar a la iglesia y al servir al otro. Esos encuentros se guardan como insumos de confianza —para nosotros y, al compartirlos, para otros que tienen el mismo Padre— y también se pueden vivir en la dificultad, cuando el Espíritu fortalece el ser interior."
 remember:
-  - "Un encuentro con Jesús se aclara en tres preguntas: qué tengo que hacer, cómo lo hago, cómo se ve."
+  - "El amor se experimenta al obedecer su voz, al amar a la iglesia y al servir al otro. Obedecer no compra el amor: es quedarse dentro del que ya está."
   - "Lo que Dios ya hizo no se tira. Se guarda como insumo de confianza para la próxima valle."
   - "Al contar un encuentro, el otro no necesita haberlo vivido en primera persona. Tiene el mismo Padre. Puede esperar, resistir y confiar."
   - "En la presión no esperamos a que el escenario cambie: pedimos que el Espíritu fortalezca el ser interior. Jesús buscó a los discípulos que lo abandonaron y dudaron, y comió con ellos."
   - "Dios puede usar la presión para madurarnos y ensancharnos (Santiago 1:2–4). Cristo ya vive en el creyente; la oración es que se haga en casa, también el martes."
-guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento, encuentro cotidiano. Cuerpo: 1) aclarar el encuentro — qué tengo que hacer, cómo hago, cómo se ve · 2) insumos para ti y para otros · 3) cómo experimentarlo en la dificultad (Efesios 3, Pablo preso; los discípulos que abandonaron y dudaron, Lucas 24 / Juan 21; la presión que madura, Santiago 1:2–4). Cierre pastoral. NTV. No invitar a Cristo como si estuviera afuera: Colosenses 1:27; Efesios 3:17 es hacerse en casa. Odres viejos (Lc 5:36–39) fuera: su sentido es otro."
+guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento, encuentro cotidiano. Cuerpo: 1) aclarar el encuentro — qué tengo que hacer, cómo hago, cómo se ve; dónde se experimenta: obedecer su voz (Jn 14:23; 15:9–10), amar a la iglesia (Ef 3:18; 1 Jn 4:12), servir al otro (1 Jn 3:18; Jn 13) · 2) insumos para ti y para otros · 3) cómo experimentarlo en la dificultad (Efesios 3, Pablo preso; los discípulos que abandonaron y dudaron, Lucas 24 / Juan 21; la presión que madura, Santiago 1:2–4). Cierre pastoral. NTV. No invitar a Cristo como si estuviera afuera: Colosenses 1:27; Efesios 3:17 es hacerse en casa. Obedecer no compra el amor. Odres viejos (Lc 5:36–39) fuera: su sentido es otro."
 includeContentInPreparation: true
 resources:
   - label: "Efesios 3:12"
@@ -24,6 +24,16 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Efesios+3%3A20-21&version=NTV"
   - label: "Colosenses 1:27"
     url: "https://www.biblegateway.com/passage/?search=Colosenses+1%3A27&version=NTV"
+  - label: "Juan 14:23"
+    url: "https://www.biblegateway.com/passage/?search=Juan+14%3A23&version=NTV"
+  - label: "Juan 15:9–10"
+    url: "https://www.biblegateway.com/passage/?search=Juan+15%3A9-10&version=NTV"
+  - label: "1 Juan 4:12"
+    url: "https://www.biblegateway.com/passage/?search=1+Juan+4%3A12&version=NTV"
+  - label: "1 Juan 3:18"
+    url: "https://www.biblegateway.com/passage/?search=1+Juan+3%3A18&version=NTV"
+  - label: "Juan 13:4–5, 14–15"
+    url: "https://www.biblegateway.com/passage/?search=Juan+13%3A4-5%2C14-15&version=NTV"
   - label: "Salmo 77:11–12"
     url: "https://www.biblegateway.com/passage/?search=Salmo+77%3A11-12&version=NTV"
   - label: "1 Samuel 17:37"
@@ -137,9 +147,49 @@ Casi siempre se ve chico, ordinario, tan discreto que uno puede pasarlo de largo
 
 Si solo contáramos como encuentro aquello que cabe en un testimonio de diez minutos sobre un escenario, terminaríamos viviendo pobres, rodeados de regalos que no supimos ver. Porque el Reino, en esta vida, se reconoce la mayoría de las veces en lo pequeño que el Padre va haciendo, callado, dentro de casa.
 
+Esos gestos chicos no caen en cualquier parte. Casi siempre el amor toma un lugar en la semana, y son tres lugares del mismo tipo.
+
+### Dónde se experimenta
+
+**Obedecer su voz.** Jesús lo dijo sin rodeos:
+
+> Todos los que me aman harán lo que yo diga. Mi Padre los amará, y vendremos para vivir con cada uno de ellos.
+>
+> <cite>Juan 14:23</cite>
+
+> Yo los he amado a ustedes tanto como el Padre me ha amado a mí. Permanezcan en mi amor. Cuando obedecen mis mandamientos, permanecen en mi amor, así como yo obedezco los mandamientos de mi Padre y permanezco en su amor.
+>
+> <cite>Juan 15:9–10</cite>
+
+Obedecer no compra el amor. Es quedarse dentro del amor que ya está. En el día se ve chico: **la frase que te frena** cuando ya ibas a contestar mal, la llamada que ibas a posponer, el perdón que no tenías ganas de dar. **Esa voz, obedecida, es el amor haciéndose casa.**
+
+**Amar a la iglesia.** Pablo pide que ese amor se comprenda «como corresponde a todo el pueblo de Dios». Hay un ancho que uno solo no alcanza a ver. Juan lo cierra así:
+
+> Nadie jamás ha visto a Dios; pero si nos amamos unos a otros, Dios vive en nosotros y su amor llega a la máxima expresión en nosotros.
+>
+> <cite>1 Juan 4:12</cite>
+
+Se ve al **quedarte** cuando sería más fácil ausentarte, al cargar con el hermano que está mal, al no medir el amor de Cristo solo desde tu propia semana.
+
+**Servir al otro.**
+
+> Queridos hijos, que nuestro amor no quede solo en palabras; mostremos la verdad por medio de nuestras acciones.
+>
+> <cite>1 Juan 3:18</cite>
+
+Jesús lo mostró con una toalla. Se levantó de la mesa, se quitó el manto, se ató una toalla a la cintura y les lavó los pies a los discípulos. Luego les dejó el ejemplo:
+
+> Y, dado que yo, su Señor y Maestro, les he lavado los pies, ustedes deben lavarse los pies unos a otros. Les di mi ejemplo para que lo sigan. Hagan lo mismo que yo he hecho con ustedes.
+>
+> <cite>Juan 13:14–15</cite>
+
+Servir es el amor con las manos ocupadas: el tiempo, la plata, la comida, la conversación que el otro necesitaba. Ahí dejas de decir «Dios me ama» y empiezas a **parecerte a ese amor.**
+
+Las tres se encuentran en el mismo momento. Su voz suele decir un nombre: llama a ese hermano, quédate en esa reunión, sirve a esa persona. Obedeces, y el amor se experimenta de los dos lados: en ti, porque obedeciste, y en el otro, porque fue amado.
+
 <aside class="callout callout-axioma">
 <p class="callout-label">Para llevar</p>
-<p>Entrar, pedirle que se haga en casa, reconocerlo en lo cotidiano. Eso es un encuentro: no un relámpago que hay que fabricar.</p>
+<p>Entrar, pedirle que se haga en casa, y encontrarlo al obedecer, al quedarte con su pueblo y al servir. Eso es un encuentro: no un relámpago que hay que fabricar.</p>
 </aside>
 
 Ese encuentro, si es real, no se acaba al terminar el día. **Se guarda.** Queda como insumo para cuando vuelva a hacer falta confiar.
@@ -272,7 +322,7 @@ Quiero que nos detengamos. No hace falta que responda en voz alta.
 
 Tal vez usted sabe mucho y ama poco de cerca. Tal vez tuvo un encuentro real —una frase, un perdón, un silencio— y lo dejó pasar como si no hubiera ocurrido, y ahora la presión le dice que Dios nunca ha estado. Tal vez tiene un insumo que otra persona necesita oír, y lo ha callado por miedo a parecer espiritual. Tal vez la semana aprieta y está esperando a que se calme para volver a buscarlo.
 
-La buena noticia de esta noche no es «inténtelo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él. El amor se vuelve personal en lo cotidiano, no cuando la vida se despeje. Lo que él ya hizo se puede guardar. Y lo que tú cuentes puede sostener a alguien que todavía no lo ve, porque tienen el mismo Padre.
+La buena noticia de esta noche no es «inténtelo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él. El amor se vuelve personal en lo cotidiano, no cuando la vida se despeje. Esta semana se te va a cruzar en una voz que obedecer, un hermano con quien quedarte, o alguien a quien servir. Lo que él ya hizo se puede guardar. Y lo que tú cuentes puede sostener a alguien que todavía no lo ve, porque tienen el mismo Padre.
 
 Esta semana, tres movimientos. No cinco. Tres.
 
@@ -293,7 +343,7 @@ Cristo ya vive en ti. Esta semana no le pidas que llegue. Pídele que se haga en
 
 Padre, gracias porque no nos pediste más información para empezar a amarte. Gracias porque Cristo abrió la puerta, y porque tu amor se puede experimentar aun cuando no cabe en la cabeza.
 
-Perdónanos por dejar a Jesús en el cuaderno, por olvidar lo que ya hiciste y por callar lo que podría sostener a un hermano. Enséñanos a encontrarte en lo cotidiano, a guardar esos insumos, y a contarlos con fe.
+Perdónanos por dejar a Jesús en el cuaderno, por olvidar lo que ya hiciste y por callar lo que podría sostener a un hermano. Enséñanos a obedecer tu voz en lo chico, a amar a tu iglesia y a servir con las manos ocupadas. Enséñanos a encontrarte en lo cotidiano, a guardar esos insumos, y a contarlos con fe.
 
 Acompaña a quien esta noche está bajo presión. Fortalécelo por dentro, por tu Espíritu, aunque el escenario no cambie todavía. Recuérdale lo que ya has hecho. Pon a su lado al pueblo que tiene el mismo Padre.
 
