@@ -1,20 +1,22 @@
 ---
 title: "Experimentar a Jesús"
-description: "Más que conocimiento, necesitamos encuentros con Jesús en lo cotidiano. Ese amor se experimenta al obedecer su voz, al amar a la iglesia y al servir; se guarda como insumo de confianza y se comparte con el pueblo —también en la presión."
+description: "Más que conocimiento, necesitamos encuentros con Jesús en lo cotidiano. Ese amor se experimenta al obedecer su voz, al amar a su gente y al servir; se guarda como insumo de confianza y se comparte —también cuando la semana aprieta."
 date: 2026-10-28
 series: espiritualidad-practica
 order: 3
 tags: ["espiritualidad", "oracion", "experiencia", "efesios"]
 duration: "45 min"
-thesis: "Más que conocimiento, necesitamos encuentros con Jesús en la cotidianidad. Ahí el amor deja de ser un concepto y se vuelve personal: se experimenta al obedecer su voz, al amar a la iglesia y al servir al otro. Esos encuentros se guardan como insumos de confianza —para nosotros y, al compartirlos, para otros que tienen el mismo Padre— y también se pueden vivir en la dificultad, cuando el Espíritu fortalece el ser interior."
+thesis: "Más que conocimiento, necesitamos encuentros con Jesús en la cotidianidad. Ahí el amor deja de ser un concepto y se vuelve personal: se experimenta al obedecer su voz, al amar a su gente y al servir al otro. Esos encuentros se guardan como insumos de confianza —para nosotros y, al compartirlos, para otros que tienen el mismo Padre— y también se pueden vivir en la dificultad, cuando el Espíritu fortalece el ser interior."
 remember:
-  - "El amor se experimenta al obedecer su voz, al amar a la iglesia y al servir al otro. Obedecer no compra el amor: es quedarse dentro del que ya está."
-  - "Lo que Dios ya hizo no se tira. Se guarda como insumo de confianza para la próxima valle."
-  - "Al contar un encuentro, el otro no necesita haberlo vivido en primera persona. Tiene el mismo Padre. Puede esperar, resistir y confiar."
-  - "En la presión no esperamos a que el escenario cambie: pedimos que el Espíritu fortalezca el ser interior. Jesús buscó a los discípulos que lo abandonaron y dudaron, y comió con ellos."
-  - "Dios puede usar la presión para madurarnos y ensancharnos (Santiago 1:2–4). Cristo ya vive en el creyente; la oración es que se haga en casa, también el martes."
-guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento, encuentro cotidiano. Cuerpo: 1) aclarar el encuentro — qué tengo que hacer, cómo hago, cómo se ve; dónde se experimenta: obedecer su voz (Jn 14:23; 15:9–10), amar a la iglesia (Ef 3:18; 1 Jn 4:12), servir al otro (1 Jn 3:18; Jn 13) · 2) insumos para ti y para otros · 3) cómo experimentarlo en la dificultad (Efesios 3, Pablo preso; los discípulos que abandonaron y dudaron, Lucas 24 / Juan 21; la presión que madura, Santiago 1:2–4). Cierre pastoral. NTV. No invitar a Cristo como si estuviera afuera: Colosenses 1:27; Efesios 3:17 es hacerse en casa. Obedecer no compra el amor. Odres viejos (Lc 5:36–39) fuera: su sentido es otro."
-includeContentInPreparation: true
+  - "El amor se experimenta al obedecer su voz, al amar a su gente y al servir. Obedecer no compra el amor: es quedarse dentro del que ya está."
+  - "Cuando parece que no pasó nada, no cambies de método. Quédate. La raíz se ve cuando viene el viento."
+  - "Lo que Dios ya hizo se guarda como insumo. Al contarlo, el otro no necesita haberlo vivido: tiene el mismo Padre."
+  - "En la presión pedimos que el Espíritu fortalezca el ser interior. Jesús buscó a los discípulos que lo abandonaron y dudaron, y comió con ellos."
+  - "A veces la presión ensancha: odres nuevos (Lucas 5) y Santiago 1:2–4. Cristo ya vive en ti; la oración es que se haga en casa."
+guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento, encuentro cotidiano. Cuerpo: 1) aclarar el encuentro — qué tengo que hacer, qué hago si no pasó nada, cómo se ve; dónde: obedecer (Jn 14:23; 15:9–10), amar a su gente (Ef 3:18; 1 Jn 4:12), servir (1 Jn 3:18; Jn 13) · 2) insumos para ti y para otros · 3) presión (Efesios 3; discípulos, Lc 24 / Jn 21; odres nuevos Lc 5:37–38 como imagen; Santiago 1:2–4). Cierre. NTV. Colosenses 1:27; Efesios 3:17 = hacerse en casa. Obedecer no compra el amor. Odres: imagen pastoral de ensanche, no exégesis del ayuno."
+includeContentInPreparation: false
+widgets:
+  - mapa_experimentar_jesus
 resources:
   - label: "Efesios 3:12"
     url: "https://www.biblegateway.com/passage/?search=Efesios+3%3A12&version=NTV"
@@ -46,6 +48,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Lucas+24%3A30-31&version=NTV"
   - label: "Juan 21:12–17"
     url: "https://www.biblegateway.com/passage/?search=Juan+21%3A12-17&version=NTV"
+  - label: "Lucas 5:37–38"
+    url: "https://www.biblegateway.com/passage/?search=Lucas+5%3A37-38&version=NTV"
   - label: "Santiago 1:2–4"
     url: "https://www.biblegateway.com/passage/?search=Santiago+1%3A2-4&version=NTV"
 ---
@@ -58,7 +62,7 @@ resources:
 
 *De rumores a la mesa* ya dijo que saber no es conocer. *Hijo* ya dijo quién eres. Esta noche no voy a repetir ninguna de las dos. Voy al lugar que aparece justo después: **cuando las ideas ya están, y Jesús todavía se siente lejos de la semana.**
 
-Hay una tentación muy respetable en una sala que cree. Acumular explicación. Afirmar doctrinas correctas. Saber decir quién es Jesús, qué hizo, cómo se le sirve. Y aun así, el amor hacia él se queda en un concepto: algo que se afirma el domingo y no se toca el martes.
+Hay una tentación muy respetable en una sala que cree. Acumular explicación. Tener las frases correctas. Saber decir quién es Jesús, qué hizo, cómo se le sirve. Y aun así, el amor hacia él se queda en un concepto: algo que se afirma el domingo y no se toca el martes.
 
 No es que el conocimiento esté de más. Pablo no desprecia la verdad. En Efesios 3, después de explicar el plan de Dios, se arrodilla. Si con el mapa bastara, la carta se detenía. No se detiene. Pide que experimenten el amor de Cristo, **aun cuando es demasiado grande para comprenderlo todo.**
 
@@ -68,7 +72,7 @@ Quiero plantear el problema de esta noche con claridad:
 
 **Más que conocimiento, necesitamos encuentros con Jesús en la cotidianidad.** No un retiro al año. El desayuno, el trayecto, el trabajo, la casa, la conversación que ya sabíamos que iba a apretar. Ahí el amor deja de ser teórico y se vuelve cercano. Personal.
 
-Y esos encuentros no se gastan al vivirlos. Se guardan. Quedan como **insumos** para más adelante: instrumentos de confianza de que Dios ya ha actuado. Y cuando los contamos —con fe, no como espectáculo— pueden servirle a otro que tiene el mismo Padre, aunque no lo haya vivido en primera persona. Le dan perspectiva para esperar, resistir y confiar.
+Y esos encuentros no se gastan al vivirlos. Se guardan. Quedan como **insumos** para más adelante: instrumentos de confianza de que Dios ya ha actuado. Y cuando los contamos —con honestidad, no como espectáculo— pueden servirle a otra persona que tiene el mismo Padre, aunque no lo haya vivido en primera persona. Le dan perspectiva para esperar, resistir y confiar.
 
 La pregunta, entonces, no es solo «¿cómo siento más?». Es esta:
 
@@ -81,9 +85,9 @@ La pregunta, entonces, no es solo «¿cómo siento más?». Es esta:
 
 Esa pregunta no se responde fabricando una emoción. Antes de guardar un encuentro y antes de contarlo, hay que saber de qué estamos hablando. Si no, vamos a buscar un relámpago y se nos va a pasar Jesús en el martes.
 
-Tres preguntas alcanzan para aclararlo: **qué tengo que hacer, cómo lo hago, cómo se ve.**
+Tres preguntas alcanzan para aclararlo: **qué tengo que hacer, qué hago cuando parece que no pasó nada, cómo se ve.**
 
-## 1. Qué tengo que hacer, cómo hago, cómo se ve
+## 1. Qué tengo que hacer, qué hago si no pasa nada, cómo se ve
 
 Pablo no deja el encuentro flotando en el aire, como una idea vaga de «sentir más a Dios». Después de explicar el plan entero, se arrodilla y pide algo muy concreto:
 
@@ -119,25 +123,31 @@ Cristo ya vive en quien es de él; por eso lo que tenemos que hacer no es traerl
 
 De modo que, si alguien me pregunta «¿qué tengo que hacer?», la respuesta cabe en una línea: **entrar, pedirle al Padre que fortalezca mi ser interior, y soltarle eso que todavía administro yo solo.** El encuentro no se fabrica; se recibe. Lo único que está de nuestra parte es ponernos a su alcance.
 
-### ¿Cómo lo hago?
+### ¿Qué hago cuando parece que no pasó nada?
 
-En lo cotidiano. Jesús no espera a que la agenda se despeje para acercarse, así que nosotros tampoco deberíamos reservarle solo el rincón del domingo. No se trata de despreciar el culto ni la canción; se trata de dejar de encerrarlo ahí. El texto de Pablo nos deja un orden sencillo, y lo bonito es que no es una técnica para producir a Dios. Es, más bien, una manera de ponernos a su alcance.
+Esta pregunta llega casi siempre al tercer día. Entraste. Le pediste al Padre que te fortaleciera por dentro. Le soltaste un cuarto. Y el martes se siente igual que el lunes. No hubo relámpago, el ánimo no se movió, y la conclusión se escribe sola: esto no funciona, tengo que buscar otra manera.
 
-Empieza por lo que ya es verdad, no por cómo amaneciste. Fíjate que Pablo arranca diciendo «cuando pienso en todo esto». Si lo primero que miramos es el estado de ánimo, los días malos la oración nace muerta. Pero si empezamos recordando lo que él ya abrió —la puerta, la herencia, su cercanía—, siempre hay de dónde agarrarse, incluso en la peor semana.
+Esa conclusión es la tentación, no el diagnóstico. Pablo no pide un día intenso que lo resuelva todo. Pide raíces.
 
-Y entra como estás. No te arregles en la puerta. Puedes llegar con la semana a medias, con el enojo todavía caliente, con la sequedad de quien no siente nada. Ahí mismo, con lo que haya, le pides al Padre que fortalezca tu ser interior. La oración puede ser casi literal: «Padre, de lo que a ti no se te acaba, fortaléceme por dentro, por tu Espíritu.» Y esa frase no vive solo en la silla de la mañana; también se dice en el pasillo, treinta segundos antes de esa conversación que ya sabes que te va a apretar.
+> Echarán raíces profundas en el amor de Dios, y ellas los mantendrán fuertes.
+>
+> <cite>Efesios 3:17</cite>
 
-Después, ábrele un cuarto que tenga nombre. No le digas «confío en ti» en general, porque lo general no cuesta nada. Dile: esta decisión, este miedo, este perdón que no quiero dar, este número en la cuenta, esta relación. Cristo se hace en casa por esa puerta concreta, no por una frase más espiritual.
+Una hora heroica el lunes, y nada hasta el otro lunes, no echa raíz. Diez minutos en el mismo lugar, repetidos, sí. Y esas raíces no se ven el día en que las vigilas. Se ven cuando viene el viento y la planta no se va. **La planta que desentierras cada mañana para comprobar si ya creció es la planta que terminas matando.** Cuando pasen tres días y sientas que no pasó nada, no cambies de método. Quédate.
 
-Y quédate. Las raíces no salen de un solo día intenso. Diez minutos en el mismo lugar, repetidos, pesan mucho más que una hora heroica el lunes y nada hasta el otro lunes. Cuando pasen tres días y sientas que «no pasó nada», esa es justo la tentación de cambiar de método; no lo hagas, simplemente quédate. Y, en lo posible, no camines solo: Pablo pide todo esto «como corresponde a todo el pueblo de Dios», porque hay un amor de Cristo que solo vas a ver al lado de un hermano.
+Quédate empezando por lo que ya es verdad, no por el silencio de estos días. Pablo abre la oración con una frase pequeña: «cuando pienso en todo esto». Si lo primero que miras es que no sentiste nada, la oración nace muerta. Si empiezas por lo que él ya abrió —la puerta, la herencia, un Padre a quien no se le acaban los recursos—, hay de dónde agarrarte aunque el pecho siga seco.
 
-Eso es el cómo. No un festival. Una manera humilde de ponerte a su alcance el martes, sin esperar a ser antes otra persona.
+Y quédate en el mismo cuarto. La sequedad empuja a abrir otro, más espiritual, más prometedor. Sigue en este: esta decisión, este miedo, este perdón que no quieres dar, este número, esta relación. Cristo se hace en casa por esa puerta concreta, no por una técnica distinta cada semana. La oración puede seguir siendo la misma, casi literal: «Padre, de lo que a ti no se te acaba, fortaléceme por dentro, por tu Espíritu.» Cabe en la silla de la mañana. Cabe también cuando llegas sin ganas, sin una emoción que ofrecer, con la honestidad de quien no siente nada.
+
+En lo posible, no lo camines solo. Pablo pide todo esto «como corresponde a todo el pueblo de Dios», porque hay un ancho del amor de Cristo que uno solo no alcanza a ver, y menos cuando lleva varios días convencido de que no pasó nada. Alguien de confianza al lado no fabrica el encuentro. Te recuerda que la raíz sigue trabajando donde nadie la mira.
+
+Eso es lo que haces cuando parece que no pasó nada. No un método nuevo. **Quedarte.**
 
 ### ¿Cómo se ve?
 
-Aquí se nos puede ir la noche si no lo decimos con claridad, porque mucha gente anda buscando un relámpago y, mientras mira al cielo esperando el rayo, se le pasa el encuentro que tenía al lado.
+Conviene decirlo enseguida, porque muchas veces «no pasó nada» significa que estábamos buscando un relámpago. Aquí se nos puede ir la noche si no lo aclaramos: mucha gente anda mirando al cielo, esperando el rayo, y se le pasa el encuentro que tenía al lado.
 
-Lo digo sin rodeos: un encuentro con Jesús **no tiene que verse como un culto intenso.** A veces lo acompaña la emoción, y está bien; a veces no, y también está bien, porque **experiencia no es emoción.** Hay personas que lo conocen de verdad y llevan meses sin sentir nada especial, y eso sigue siendo una relación viva. La emoción es, a lo sumo, el aviso; no es la visita. El amor de Cristo es demasiado grande para caber entero en el pecho apretado de un himno.
+Lo digo sin rodeos: un encuentro con Jesús **no tiene que verse como una reunión intensa ni como un momento de alabanza fuerte.** A veces lo acompaña la emoción, y está bien; a veces no, y también está bien, porque **experiencia no es emoción.** Hay personas que lo conocen de verdad y llevan meses sin sentir nada especial, y eso sigue siendo una relación viva. La emoción es, a lo sumo, el aviso; no es la visita. El amor de Cristo es demasiado grande para caber entero en el pecho apretado de una canción.
 
 ¿Cómo se ve, entonces, en la vida de todos los días?
 
@@ -145,7 +155,7 @@ Se ve como **una frase que te frena** cuando ya ibas a responder con el tono de 
 
 Casi siempre se ve chico, ordinario, tan discreto que uno puede pasarlo de largo sin darse cuenta. Por eso vale la pena aprender a reconocerlo; no para coleccionar anécdotas lindas, sino para que el amor de Dios deje de ser un concepto. Deja de ser ese «yo sé que Dios me ama» que decimos en tercera persona, casi de memoria, y se convierte en algo mucho más íntimo: **él estuvo aquí, en esto mío, hoy.**
 
-Si solo contáramos como encuentro aquello que cabe en un testimonio de diez minutos sobre un escenario, terminaríamos viviendo pobres, rodeados de regalos que no supimos ver. Porque el Reino, en esta vida, se reconoce la mayoría de las veces en lo pequeño que el Padre va haciendo, callado, dentro de casa.
+Si solo contáramos como encuentro aquello que cabe en una historia de diez minutos delante de todos, terminaríamos viviendo pobres, rodeados de regalos que no supimos ver. Porque el Reino, en esta vida, se reconoce la mayoría de las veces en lo pequeño que el Padre va haciendo, callado, dentro de casa.
 
 Esos gestos chicos no caen en cualquier parte. Casi siempre el amor toma un lugar en la semana, y son tres lugares del mismo tipo.
 
@@ -163,13 +173,13 @@ Esos gestos chicos no caen en cualquier parte. Casi siempre el amor toma un luga
 
 Obedecer no compra el amor. Es quedarse dentro del amor que ya está. En el día se ve chico: **la frase que te frena** cuando ya ibas a contestar mal, la llamada que ibas a posponer, el perdón que no tenías ganas de dar. **Esa voz, obedecida, es el amor haciéndose casa.**
 
-**Amar a la iglesia.** Pablo pide que ese amor se comprenda «como corresponde a todo el pueblo de Dios». Hay un ancho que uno solo no alcanza a ver. Juan lo cierra así:
+**Amar a su gente.** Pablo pide que ese amor se comprenda «como corresponde a todo el pueblo de Dios». Hay un ancho que uno solo no alcanza a ver. Juan lo cierra así:
 
 > Nadie jamás ha visto a Dios; pero si nos amamos unos a otros, Dios vive en nosotros y su amor llega a la máxima expresión en nosotros.
 >
 > <cite>1 Juan 4:12</cite>
 
-Se ve al **quedarte** cuando sería más fácil ausentarte, al cargar con el hermano que está mal, al no medir el amor de Cristo solo desde tu propia semana.
+Se ve al **quedarte** cuando sería más fácil ausentarte, al cargar con alguien que está mal, al no medir el amor de Cristo solo desde tu propia semana.
 
 **Servir al otro.**
 
@@ -185,11 +195,11 @@ Jesús lo mostró con una toalla. Se levantó de la mesa, se quitó el manto, se
 
 Servir es el amor con las manos ocupadas: el tiempo, la plata, la comida, la conversación que el otro necesitaba. Ahí dejas de decir «Dios me ama» y empiezas a **parecerte a ese amor.**
 
-Las tres se encuentran en el mismo momento. Su voz suele decir un nombre: llama a ese hermano, quédate en esa reunión, sirve a esa persona. Obedeces, y el amor se experimenta de los dos lados: en ti, porque obedeciste, y en el otro, porque fue amado.
+Las tres se encuentran en el mismo momento. Su voz suele decir un nombre: llama a esa persona, quédate en esa reunión, sirve a ese alguien. Obedeces, y el amor se experimenta de los dos lados: en ti, porque obedeciste, y en el otro, porque fue amado.
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Para llevar</p>
-<p>Entrar, pedirle que se haga en casa, y encontrarlo al obedecer, al quedarte con su pueblo y al servir. Eso es un encuentro: no un relámpago que hay que fabricar.</p>
+<p>Entrar y soltarle un cuarto. Si parece que no pasó nada, quedarte. Y encontrarlo al obedecer, al amar a su gente y al servir. Eso es un encuentro: no un relámpago que hay que fabricar.</p>
 </aside>
 
 Ese encuentro, si es real, no se acaba al terminar el día. **Se guarda.** Queda como insumo para cuando vuelva a hacer falta confiar.
@@ -216,15 +226,15 @@ David, parado frente a Goliat, tampoco improvisa una fe nueva en el momento; ech
 
 El león y el oso no habían sido teoría para él: fueron encuentros reales, y quedaron guardados en su memoria. Por eso, el día del filisteo, David no dice «espero que Dios exista»; dice con calma **el que ya me libró, me librará.** Eso es exactamente lo que una experiencia cotidiana está llamada a ser: no un trofeo para exhibir, sino un antecedente del que echar mano.
 
-Samuel, por su parte, dejó el suyo grabado en una piedra, para que al pueblo no se le olvidara:
+Samuel, por su parte, dejó el suyo grabado en una piedra, para que no se le olvidara:
 
 > Samuel tomó entonces una piedra grande y la colocó entre Mizpa y Jesana. La llamó Ebenezer —que significa «la piedra de la ayuda»—, porque dijo: «¡Hasta aquí nos ha ayudado el Señor!».
 >
 > <cite>1 Samuel 7:12</cite>
 
-«Hasta aquí.» No dice «nunca más voy a necesitar ayuda», sino «hasta aquí nos ha ayudado el Señor». La diferencia es enorme, porque significa que la próxima dificultad ya no encuentra a un pueblo amnésico, sino a un pueblo que tiene una piedra a la cual mirar.
+«Hasta aquí.» No dice «nunca más voy a necesitar ayuda», sino «hasta aquí nos ha ayudado el Señor». La diferencia es enorme, porque significa que la próxima dificultad ya no encuentra a alguien amnésico, sino a alguien que tiene una piedra a la cual mirar.
 
-Por eso te pido que no dejes pasar el encuentro del martes como si no hubiera ocurrido. Ese alivio que llegó sin que tú lo fabricaras, esa palabra que te frenó a tiempo, ese hermano que apareció justo cuando hacía falta, esa paz que no coincidía con las noticias del día: **nómbralo y guárdalo.** Si no lo haces, la próxima presión va a tener el camino libre para convencerte de que Dios nunca ha estado contigo.
+Por eso te pido que no dejes pasar el encuentro del martes como si no hubiera ocurrido. Ese alivio que llegó sin que tú lo fabricaras, esa palabra que te frenó a tiempo, esa persona que apareció justo cuando hacía falta, esa paz que no coincidía con las noticias del día: **nómbralo y guárdalo.** Si no lo haces, la próxima presión va a tener el camino libre para convencerte de que Dios nunca ha estado contigo.
 
 Y esos insumos, además, no son solo para quien los vivió.
 
@@ -234,9 +244,9 @@ Y esos insumos, además, no son solo para quien los vivió.
 
 Cuando le contamos a alguien un encuentro —con honestidad, sin maquillarlo y sin convertirlo en un espectáculo—, esa persona puede recibirlo en fe, porque tiene **el mismo Dios, el mismo Padre** que actuó en nuestra historia. No necesita haber estado en tu cocina para que lo que viviste le sirva: le presta perspectiva y le regala un antecedente que todavía no es suyo, hasta que llegue el propio. Y desde ahí puede esperar, soportar, resistir y volver a confiar.
 
-Por eso Pablo pide que este amor se comprenda «como corresponde a todo el pueblo de Dios». Hay un ancho, un largo, un alto y un profundo del amor de Cristo que simplemente no vas a alcanzar a ver tú solo. El hermano que te cuenta lo que Dios hizo en su casa te muestra un lado del Padre que tu silencio, por muy sincero y devoto que sea, nunca te iba a mostrar. Y tú, al contar lo tuyo, le haces a él exactamente ese mismo servicio.
+Por eso Pablo pide que este amor se comprenda «como corresponde a todo el pueblo de Dios». Hay un ancho, un largo, un alto y un profundo del amor de Cristo que simplemente no vas a alcanzar a ver tú solo. Quien te cuenta lo que Dios hizo en su casa te muestra un lado del Padre que tu silencio, por muy sincero que sea, nunca te iba a mostrar. Y tú, al contar lo tuyo, le haces a él exactamente ese mismo servicio.
 
-Que quede claro: esto no es presionar a nadie para que invente una anécdota espiritual. Es, más bien, negarnos a guardar para nosotros solos algo que fue dado para un pueblo entero. El que recibe así, en fe, no está viviendo de rumores baratos; está apoyándose en el mismo Padre, con el testimonio de un hermano como testigo de confianza.
+Que quede claro: esto no es presionar a nadie para que invente una anécdota espiritual. Es, más bien, negarnos a guardar para nosotros solos algo que fue dado para compartirse. El que recibe así, en fe, no está viviendo de rumores baratos; está apoyándose en el mismo Padre, con el testimonio de alguien de confianza como testigo.
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Para llevar</p>
@@ -247,7 +257,7 @@ Queda una pregunta más cercana, y es donde muchos se traban. **¿Y cuando no ha
 
 ## 3. En la presión: cómo experimentarlo
 
-Conviene recordar dónde está Pablo cuando escribe Efesios 3: está preso. Y desde la cárcel le escribe a la iglesia justamente para que no se desanimen por las pruebas que están pasando. Lo notable es lo que no dice. No dice «cuando yo salga de aquí, entonces sí van a experimentar a Dios». Se arrodilla, tal como está, y pide algo para el ser interior **mientras afuera todo sigue igual de atascado.**
+Conviene recordar dónde está Pablo cuando escribe Efesios 3: está preso. Y desde la cárcel le escribe a la gente justamente para que no se desanimen por las pruebas que están pasando. Lo notable es lo que no dice. No dice «cuando yo salga de aquí, entonces sí van a experimentar a Dios». Se arrodilla, tal como está, y pide algo para el ser interior **mientras afuera todo sigue igual de atascado.**
 
 Si para nosotros experimentar a Jesús significa «por fin se resolvió el problema», este capítulo nos va a decepcionar. Pero el texto apunta al revés: **es la promesa de que el ser interior puede ser fortalecido mientras el problema sigue exactamente en su sitio.** Hay encuentros que cambian el escenario, sí; pero este que Pablo pide aquí cambia el fondo de la persona que todavía tiene que vivir en el escenario de siempre.
 
@@ -277,23 +287,23 @@ Ya adentro, pídele el ser interior antes de pedirle que desaparezca el problema
 
 Mira de dónde sale la fuerza: de los recursos de él, no de tu reserva emocional, que en la presión suele estar vacía. Y mira dónde cae: en el adentro, en eso que decide el tono con el que llegas a casa y lo que crees de Dios cuando la noticia es mala. El que fortalece es el Espíritu; tú solo pides. En la hora difícil la oración puede ser tan corta como «Padre, de lo que a ti no se te acaba, fortaléceme aquí». Eso ya es experimentar a Jesús en medio de la complejidad: muchas veces no llega como un cambio de clima, sino como un ser interior que, inexplicablemente, se sostiene.
 
-Entonces, antes de concluir que Dios está ausente, saca el insumo. La presión tiene una mentira preferida, y la repite con mucha seguridad: «nunca te ha ayudado». Para desmentirla existe la piedra de Samuel, existe el león y el oso de David, existe el hermano que te cuenta lo suyo. Cuando el pecho se apriete, no empieces por el vacío; empieza por lo que él ya hizo.
+Entonces, antes de concluir que Dios está ausente, saca el insumo. La presión tiene una mentira preferida, y la repite con mucha seguridad: «nunca te ha ayudado». Para desmentirla existe la piedra de Samuel, existe el león y el oso de David, existe quien te cuenta lo suyo. Cuando el pecho se apriete, no empieces por el vacío; empieza por lo que él ya hizo.
 
 Y ábrele, otra vez, el cuarto que la presión quiere que administres tú solo. Cristo se hace en casa a medida que le confías cosas con nombre: esta decisión, este miedo, este número, esta relación. No es «confío en Dios» en abstracto; es soltarle precisamente lo que el estrés te empuja a controlar con las dos manos.
 
-No cargues esto a solas. El amor que no cabe en la cabeza necesita otro testigo, y en la dificultad el encuentro muchas veces llega por un hermano que se queda, que ora contigo, que te recuerda que es el mismo Padre de siempre. Eso también es cotidianidad. Eso también es experiencia.
+No cargues esto a solas. El amor que no cabe en la cabeza necesita otro testigo, y en la dificultad el encuentro muchas veces llega por alguien que se queda, que ora contigo, que te recuerda que es el mismo Padre de siempre. Eso también es cotidianidad. Eso también es experiencia.
 
-Por último, quédate, porque la raíz se toma su tiempo.
+Y quédate. En la presión la tentación de cambiar de método es más fuerte, porque el silencio se siente como abandono. No desentierres la planta para ver si ya creció. Las raíces no se ven mientras el problema sigue en su sitio; se ven cuando viene el viento y no te vas. Esa semana que te tiene a punto de rendirte puede ser la semana en que la raíz trabaja donde nadie la mira.
 
-> Echarán raíces profundas en el amor de Dios, y ellas los mantendrán fuertes.
+Y ahí hay algo todavía más hondo. A veces la dificultad no es solo algo que Dios nos ayuda a soportar; es el modo en que nos está ensanchando por dentro. Jesús usó una imagen sencilla para hablar de lo nuevo:
+
+> Y nadie echa vino nuevo en odres viejos. De lo contrario, el vino nuevo reventaría los odres, se derramaría y los odres se arruinarían. El vino nuevo se debe echar en odres nuevos, para que ambos se conserven.
 >
-> <cite>Efesios 3:17</cite>
+> <cite>Lucas 5:37–38</cite>
 
-Las raíces no se ven el martes; se ven cuando viene el viento y la planta no se va. Esa semana seca que te tiene a punto de rendirte puede ser, precisamente, la semana en que la raíz está trabajando donde nadie la mira. La planta que desentierras cada día para comprobar si ya creció es la planta que terminas matando.
+En su contexto, Jesús habla de lo nuevo del evangelio frente a formas que ya no pueden contenerlo. Esta noche tomamos la imagen con cuidado, como una foto de algo que pasa también por dentro: **lo nuevo necesita un recipiente que pueda estirarse.** Un odre viejo, seco, rígido, se rompe. Uno nuevo se adapta. A veces la presión de esta semana no es solo un peso sobre ti; es Dios estirando el recipiente, ampliando tu capacidad para recibir algo que todavía no cabe. Igual que a los discípulos, nos va llevando de a poco a una fe que ya no se apoya en lo que sentimos esa semana, sino en quién es él. Santiago se atreve a decirlo con una palabra que suena casi escandalosa:
 
-Y ahí hay algo todavía más hondo. A veces la dificultad no es solo algo que Dios nos ayuda a soportar; es el modo en que nos está ensanchando por dentro. Igual que a los discípulos, nos va llevando de a poco a una fe que ya no se apoya en lo que sentimos esa semana, sino en quién es él. Santiago se atreve a decirlo con una palabra que suena casi escandalosa:
-
-> Amados hermanos, cuando tengan que enfrentar cualquier tipo de problemas, considérenlo como una gran oportunidad para alegrarse. Pues ya saben que, siempre que se pone a prueba la fe, la constancia tiene una oportunidad para desarrollarse. Así que dejen que crezca, pues una vez que su constancia se desarrolle por completo, serán perfectos y completos, y no les faltará nada.
+> Queridos hermanos, cuando tengan que enfrentar cualquier tipo de problemas, considérenlo como una gran oportunidad para alegrarse. Pues ya saben que, siempre que se pone a prueba la fe, la constancia tiene una oportunidad para desarrollarse. Así que dejen que crezca, pues una vez que su constancia se desarrolle por completo, serán perfectos y completos, y no les faltará nada.
 >
 > <cite>Santiago 1:2–4</cite>
 
@@ -309,25 +319,25 @@ Y Pablo cierra todavía de rodillas, pero ahora adorando:
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Para llevar</p>
-<p>En la presión no esperamos a que el escenario cambie. Pedimos que el Espíritu nos fortalezca por dentro, y sacamos lo que Dios ya hizo.</p>
+<p>En la presión no esperamos a que el escenario cambie. Pedimos que el Espíritu nos fortalezca por dentro, sacamos lo que Dios ya hizo, y dejamos que él ensanche el recipiente.</p>
 </aside>
 
-Eso no se entiende del todo hasta que lo bajamos a una semana concreta. No a una idea de ser más espirituales. **A un encuentro, un insumo y un hermano.**
+Eso no se entiende del todo hasta que lo bajamos a una semana concreta. No a una idea de ser más espirituales. **A un encuentro, un insumo y alguien de confianza.**
 
 ## Conclusión pastoral: nómbralo, guárdalo, cuéntalo
 
-Quiero que nos detengamos. No hace falta que responda en voz alta.
+Quiero que nos detengamos. No hace falta que respondas en voz alta.
 
-**¿Dónde se le ha quedado Jesús en el cuaderno esta temporada?**
+**¿Dónde se te ha quedado Jesús en el cuaderno esta temporada?**
 
-Tal vez usted sabe mucho y ama poco de cerca. Tal vez tuvo un encuentro real —una frase, un perdón, un silencio— y lo dejó pasar como si no hubiera ocurrido, y ahora la presión le dice que Dios nunca ha estado. Tal vez tiene un insumo que otra persona necesita oír, y lo ha callado por miedo a parecer espiritual. Tal vez la semana aprieta y está esperando a que se calme para volver a buscarlo.
+Tal vez sabes mucho y amas poco de cerca. Tal vez tuviste un encuentro real —una frase, un perdón, un silencio— y lo dejaste pasar como si no hubiera ocurrido, y ahora la presión te dice que Dios nunca ha estado. Tal vez tienes un insumo que otra persona necesita oír, y lo has callado por miedo a parecer espiritual. Tal vez la semana aprieta y estás esperando a que se calme para volver a buscarlo.
 
-La buena noticia de esta noche no es «inténtelo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él. El amor se vuelve personal en lo cotidiano, no cuando la vida se despeje. Esta semana se te va a cruzar en una voz que obedecer, un hermano con quien quedarte, o alguien a quien servir. Lo que él ya hizo se puede guardar. Y lo que tú cuentes puede sostener a alguien que todavía no lo ve, porque tienen el mismo Padre.
+La buena noticia de esta noche no es «inténtalo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él. El amor se vuelve personal en lo cotidiano, no cuando la vida se despeje. Esta semana se te va a cruzar en una voz que obedecer, alguien con quien quedarte, o alguien a quien servir. Lo que él ya hizo se puede guardar. Y lo que tú cuentes puede sostener a alguien que todavía no lo ve, porque tienen el mismo Padre.
 
 Esta semana, tres movimientos. No cinco. Tres.
 
 1. **Nombra un encuentro.** Uno. En la cotidianidad: no tiene que ser espectacular. Escríbelo en una línea. Eso es tu piedra de esta semana.
-2. **Cuéntaselo a alguien del pueblo de Dios.** No para que te aplaudan. Para que ese amor no lo midas solo tú, y para que el otro tenga un insumo prestado.
+2. **Cuéntaselo a alguien de confianza.** No para que te aplaudan. Para que ese amor no lo midas solo tú, y para que el otro tenga un insumo prestado.
 3. **En el momento que apriete, no esperes a llegar a casa.** Di ahí mismo: «Espíritu, fortaléceme aquí.» Eso es Efesios 3:16 en el lugar donde el ser interior de verdad decide.
 
 Si un día se te pasa, al siguiente vuelves. No se paga la cuota. La raíz no lleva la cuenta de tu racha. Lleva la cuenta de si te quedaste.
@@ -343,8 +353,8 @@ Cristo ya vive en ti. Esta semana no le pidas que llegue. Pídele que se haga en
 
 Padre, gracias porque no nos pediste más información para empezar a amarte. Gracias porque Cristo abrió la puerta, y porque tu amor se puede experimentar aun cuando no cabe en la cabeza.
 
-Perdónanos por dejar a Jesús en el cuaderno, por olvidar lo que ya hiciste y por callar lo que podría sostener a un hermano. Enséñanos a obedecer tu voz en lo chico, a amar a tu iglesia y a servir con las manos ocupadas. Enséñanos a encontrarte en lo cotidiano, a guardar esos insumos, y a contarlos con fe.
+Perdónanos por dejar a Jesús en el cuaderno, por olvidar lo que ya hiciste y por callar lo que podría sostener a alguien más. Enséñanos a obedecer tu voz en lo chico, a amar a tu gente y a servir con las manos ocupadas. Enséñanos a encontrarte en lo cotidiano, a guardar esos insumos, y a contarlos con fe.
 
-Acompaña a quien esta noche está bajo presión. Fortalécelo por dentro, por tu Espíritu, aunque el escenario no cambie todavía. Recuérdale lo que ya has hecho. Pon a su lado al pueblo que tiene el mismo Padre.
+Acompaña a quien esta noche está bajo presión. Fortalécelo por dentro, por tu Espíritu, aunque el escenario no cambie todavía. Recuérdale lo que ya has hecho. Ensancha lo que hace falta ensanchar. Pon a su lado a alguien de confianza que tenga el mismo Padre.
 
 Que el amor de Cristo deje de ser un concepto y se haga casa. Amén.
