@@ -12,8 +12,8 @@ remember:
   - "Cuando parece que no pasó nada, no cambies de método. Quédate. La raíz se ve cuando viene el viento."
   - "Lo que Dios ya hizo se guarda como insumo. Al contarlo, el otro no necesita haberlo vivido: tiene el mismo Padre."
   - "En la presión pedimos que el Espíritu fortalezca el ser interior. Jesús buscó a los discípulos que lo abandonaron y dudaron, y comió con ellos."
-  - "A veces la presión ensancha: odres nuevos (Lucas 5) y Santiago 1:2–4. Cristo ya vive en ti; la oración es que se haga en casa."
-guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento, encuentro cotidiano. Cuerpo: 1) aclarar el encuentro — qué tengo que hacer, qué hago si no pasó nada, cómo se ve; dónde: obedecer (Jn 14:23; 15:9–10), amar a su gente (Ef 3:18; 1 Jn 4:12), servir (1 Jn 3:18; Jn 13) · 2) insumos para ti y para otros · 3) presión (Efesios 3; discípulos, Lc 24 / Jn 21; odres nuevos Lc 5:37–38 como imagen; Santiago 1:2–4). Cierre. NTV. Colosenses 1:27; Efesios 3:17 = hacerse en casa. Obedecer no compra el amor. Odres: imagen pastoral de ensanche, no exégesis del ayuno."
+  - "Cerramos en la Cena del Señor: pan y vino. En Emaús se les abrieron los ojos al partir el pan. Él se da a conocer en la mesa."
+guionLede: "Serie Espiritualidad práctica · charla 3. Intro: más que conocimiento. Cuerpo: 1) aclarar el encuentro · 2) insumos · 3) presión (Efesios 3; discípulos Lc 24 / Jn 21; odres Lc 5 como imagen; Santiago 1:2–4). Cierre: Cena del Señor (1 Cor 11:23–26; puente desde Emaús). NTV. No añadir punto nuevo después de la Cena. Odres: imagen pastoral, no exégesis del ayuno."
 includeContentInPreparation: false
 widgets:
   - mapa_experimentar_jesus
@@ -52,6 +52,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Lucas+5%3A37-38&version=NTV"
   - label: "Santiago 1:2–4"
     url: "https://www.biblegateway.com/passage/?search=Santiago+1%3A2-4&version=NTV"
+  - label: "1 Corintios 11:23–26"
+    url: "https://www.biblegateway.com/passage/?search=1+Corintios+11%3A23-26&version=NTV"
 ---
 
 ## Sustento
@@ -155,7 +157,7 @@ Se ve como **una frase que te frena** cuando ya ibas a responder con el tono de 
 
 Casi siempre se ve chico, ordinario, tan discreto que uno puede pasarlo de largo sin darse cuenta. Por eso vale la pena aprender a reconocerlo; no para coleccionar anécdotas lindas, sino para que el amor de Dios deje de ser un concepto. Deja de ser ese «yo sé que Dios me ama» que decimos en tercera persona, casi de memoria, y se convierte en algo mucho más íntimo: **él estuvo aquí, en esto mío, hoy.**
 
-Si solo contáramos como encuentro aquello que cabe en una historia de diez minutos delante de todos, terminaríamos viviendo pobres, rodeados de regalos que no supimos ver. Porque el Reino, en esta vida, se reconoce la mayoría de las veces en lo pequeño que el Padre va haciendo, callado, dentro de casa.
+Si solo contáramos como encuentro aquello que cabe en una historia de diez minutos delante de todos, terminaríamos viviendo pobres, rodeados de regalos que no supimos ver. Porque el Reino, en esta vida, se reconoce la mayoría de las veces en lo pequeño que el Padre va haciendo, callado, dentro de casa. Y a veces —lo veremos al final— se reconoce en una mesa: partiendo el pan.
 
 Esos gestos chicos no caen en cualquier parte. Casi siempre el amor toma un lugar en la semana, y son tres lugares del mismo tipo.
 
@@ -322,39 +324,45 @@ Y Pablo cierra todavía de rodillas, pero ahora adorando:
 <p>En la presión no esperamos a que el escenario cambie. Pedimos que el Espíritu nos fortalezca por dentro, sacamos lo que Dios ya hizo, y dejamos que él ensanche el recipiente.</p>
 </aside>
 
-Eso no se entiende del todo hasta que lo bajamos a una semana concreta. No a una idea de ser más espirituales. **A un encuentro, un insumo y alguien de confianza.**
+Eso no se entiende del todo hasta que lo bajamos a una mesa. No a una idea de ser más espirituales. **A pan y vino.**
 
-## Conclusión pastoral: nómbralo, guárdalo, cuéntalo
+## Conclusión pastoral: la Cena del Señor
 
 Quiero que nos detengamos. No hace falta que respondas en voz alta.
 
 **¿Dónde se te ha quedado Jesús en el cuaderno esta temporada?**
 
-Tal vez sabes mucho y amas poco de cerca. Tal vez tuviste un encuentro real —una frase, un perdón, un silencio— y lo dejaste pasar como si no hubiera ocurrido, y ahora la presión te dice que Dios nunca ha estado. Tal vez tienes un insumo que otra persona necesita oír, y lo has callado por miedo a parecer espiritual. Tal vez la semana aprieta y estás esperando a que se calme para volver a buscarlo.
+Tal vez sabes mucho y amas poco de cerca. Tal vez tuviste un encuentro real y lo dejaste pasar. Tal vez la semana aprieta y estás esperando a que se calme para volver a buscarlo. La buena noticia de esta noche no es «inténtalo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él.
 
-La buena noticia de esta noche no es «inténtalo más duro». Es esta: **la puerta ya está abierta.** Cristo ya vive en ti, si eres de él. El amor se vuelve personal en lo cotidiano, no cuando la vida se despeje. Esta semana se te va a cruzar en una voz que obedecer, alguien con quien quedarte, o alguien a quien servir. Lo que él ya hizo se puede guardar. Y lo que tú cuentes puede sostener a alguien que todavía no lo ve, porque tienen el mismo Padre.
+Y esta noche no cerramos con una lista. Cerramos como él se dio a conocer a los que iban derrotados hacia Emaús: **en la mesa.** Allí se les abrieron los ojos cuando tomó el pan, lo bendijo y lo partió. No fue un espectáculo. Fue un encuentro. El Resucitado se hizo reconocible partiendo el pan.
 
-Esta semana, tres movimientos. No cinco. Tres.
+La iglesia sigue recibiendo esa mesa. No como un examen para ver quién se sintió más, ni como un premio para quien tuvo una semana limpia. Como **el lugar donde él se da a conocer otra vez**: su cuerpo entregado, su sangre derramada, su presencia con nosotros.
 
-1. **Nombra un encuentro.** Uno. En la cotidianidad: no tiene que ser espectacular. Escríbelo en una línea. Eso es tu piedra de esta semana.
-2. **Cuéntaselo a alguien de confianza.** No para que te aplaudan. Para que ese amor no lo midas solo tú, y para que el otro tenga un insumo prestado.
-3. **En el momento que apriete, no esperes a llegar a casa.** Di ahí mismo: «Espíritu, fortaléceme aquí.» Eso es Efesios 3:16 en el lugar donde el ser interior de verdad decide.
+> Yo recibí del Señor lo que también les he enseñado: la misma noche en que Jesús fue traicionado, tomó pan, y dio gracias a Dios por él. Luego lo partió en pedazos y dijo: «Esto es mi cuerpo, el cual es entregado por ustedes. Hagan esto en memoria de mí». De la misma manera, tomó la copa de vino después de la cena, diciendo: «Esta copa es el nuevo pacto entre Dios y su pueblo, un acuerdo confirmado con mi sangre. Hagan esto en memoria de mí cada vez que la beban». Pues cada vez que comen este pan y beben esta copa, anuncian la muerte del Señor hasta que él vuelva.
+>
+> <cite>1 Corintios 11:23–26</cite>
 
-Si un día se te pasa, al siguiente vuelves. No se paga la cuota. La raíz no lleva la cuenta de tu racha. Lleva la cuenta de si te quedaste.
+Venimos a esta mesa como venimos a él en Efesios 3: **con libertad y confianza**, no arreglándonos en la puerta. Si esta semana “no pasó nada”, igual puedes venir. Si dudaste, igual puedes venir. Si abandonaste por dentro lo que sabías, igual puedes venir: a los discípulos que lo abandonaron, él les partió el pan y les hizo desayuno.
 
-Cristo ya vive en ti. Esta semana no le pidas que llegue. Pídele que se haga en casa.
+Antes de tomar el pan y la copa, deja que esto sea también tu piedra de esta noche: **él se da a conocer aquí.** No tienes que fabricar una emoción. Puedes recibir. Puedes recordar lo que ya hizo. Puedes pedir, en silencio: «Hazte en casa en mí.»
+
+Y cuando salgas, lleva contigo tres movimientos chicos para la semana —no como cuota, como raíz—: nombra un encuentro, cuéntaselo a alguien de confianza, y cuando apriete di: «Espíritu, fortaléceme aquí.»
+
+Ahora vamos a la mesa.
 
 <aside class="callout callout-axioma">
 <p class="callout-label">Frase de cierre</p>
-<p>Nómbralo. Guárdalo. Cuéntalo. Y cuando apriete, pide que te fortalezca por dentro.</p>
+<p>Él se da a conocer partiendo el pan. Venimos a la Cena no a producir un sentimiento, sino a recibirlo.</p>
 </aside>
 
-## Oración final
+## Oración antes de la Cena
 
 Padre, gracias porque no nos pediste más información para empezar a amarte. Gracias porque Cristo abrió la puerta, y porque tu amor se puede experimentar aun cuando no cabe en la cabeza.
 
-Perdónanos por dejar a Jesús en el cuaderno, por olvidar lo que ya hiciste y por callar lo que podría sostener a alguien más. Enséñanos a obedecer tu voz en lo chico, a amar a tu gente y a servir con las manos ocupadas. Enséñanos a encontrarte en lo cotidiano, a guardar esos insumos, y a contarlos con fe.
+Perdónanos por dejar a Jesús en el cuaderno. Enséñanos a obedecer tu voz, a amar a tu gente y a servir. Acompaña a quien esta noche está bajo presión: fortalécelo por dentro, aunque el escenario no cambie todavía.
 
-Acompaña a quien esta noche está bajo presión. Fortalécelo por dentro, por tu Espíritu, aunque el escenario no cambie todavía. Recuérdale lo que ya has hecho. Ensancha lo que hace falta ensanchar. Pon a su lado a alguien de confianza que tenga el mismo Padre.
+Al tomar este pan y esta copa, ábrenos los ojos como a los de Emaús. Que reconozcamos al que se entrega por nosotros. Que el amor de Cristo deje de ser un concepto y se haga casa.
 
-Que el amor de Cristo deje de ser un concepto y se haga casa. Amén.
+Amén.
+
+*[Se toma la Cena del Señor. No añadir un punto nuevo después.]*

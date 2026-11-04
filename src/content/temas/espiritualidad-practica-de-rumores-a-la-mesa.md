@@ -13,7 +13,10 @@ remember:
   - "Tres frentes pierden la mesa: vergüenza (me escondo), incredulidad (creo en general, no en lo mío) y relevancia (el lunes va por otro lado)."
   - "En las tres escenas el orden es el mismo: él recibe primero; el cambio de camino viene después."
   - "Si así trató a Judas —pies lavados, pan, plato—, no trata peor a los suyos. Se abre como se está."
-guionLede: "Segmento Espiritualidad práctica · charla 1. Apertura con saber vs conocer → tres frentes → mujer (Juan 8) → Tomás (Juan 20) → Marta (Lucas 10) → Judas (Juan 13 / Mateo 26) → un paso por frente. NTV. Sin demostrar historicidad: la sala ya cree."
+guionLede: "Serie Espiritualidad práctica · charla 1. Toda la sala. Intro: saber vs conocer · tres frentes. Cuerpo: Juan 8 · Juan 20 · Lucas 10 / Mateo 6:33 · Judas. Cierre: un paso por frente. NTV. Tarjetas en guion."
+includeContentInPreparation: false
+widgets:
+  - mapa_rumores_mesa
 resources:
   - label: "Job 42:5"
     url: "https://www.biblegateway.com/passage/?search=Job+42%3A5&version=NTV"
@@ -240,3 +243,11 @@ Para esta semana, no una lista. Un paso por frente, chiquito:
 - Si es **no verlo relevante**: diez minutos, sin agenda y sin lista, con Jesús. Una sola vez esta semana.
 
 Se abre como se está. Él entra y cena.
+
+### Conclusión pastoral
+
+Nombraste tu frente. Un paso chico esta semana — no una lista de mejoramiento. Si así trató a Judas, no va a tratar peor a quienes él ya llamó hijos. La mesa sigue puesta.
+
+### Oración
+
+Padre, gracias porque nos recibes antes de que suelte la carga. Perdón por escondernos, por vivir de oídas o por dejarte en el domingo. Enséñanos a quedarnos cuando hablas. Que esta semana demos un paso concreto hacia tu mesa. En el nombre de Jesús. Amén.

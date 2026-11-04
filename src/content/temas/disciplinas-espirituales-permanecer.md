@@ -14,11 +14,8 @@ remember:
   - "Permanecer (Juan 15) es unión: ¿de dónde sale lo que doy? La rama no inventa uvas; se queda pegada al tronco."
   - "Adorar es dirección: ¿quién está en el centro? La planta gira hacia la luz — el crédito, el dinero, la comparación, el descanso."
   - "María y Marta: Jesús no desprecia el servicio; nombra una sola cosa por la que vale la pena preocuparse. El reto: tres espacios, una semana."
-guionLede: "Serie Semilla y terreno · charla 2. Puente con la Biblia → problemática (fruto sin raíz) → tres soluciones (orar/meditar, permanecer, adoración) → Lucas 10 María y Marta → reto «Tres espacios, una semana». Datos e ilustraciones en la ficha; mapa de flujo, frases y axiomas para preparar."
+guionLede: "Serie Semilla y terreno · charla 2. Toda la sala. Intro: fruto sin raíz. Cuerpo: orar/meditar · permanecer · adorar · Marta. Cierre: tres espacios, una semana. NTV. Tarjetas en guion."
 widgets:
-  - datos_permanecer
-  - guion_charla_permanecer
-preparationWidgets:
   - mapa_permanecer
 includeContentInPreparation: false
 resources:
@@ -52,7 +49,7 @@ resources:
 
 ## Sustento
 
-*Escrito como transcripción de la charla. Se puede leer de corrido para preparar, o para volver a ella después. El guion oral está en la pestaña de guion; aquí está el texto completo, tal como se diría.*
+*Escrito como transcripción de la charla. Se puede leer de corrido para preparar, o para volver a ella después. Las tarjetas de oratoria están en la pestaña de guion; aquí está el texto completo, tal como se diría.*
 
 ### Seguimos en el mismo campo
 
@@ -373,3 +370,7 @@ Y si esta semana Marta empieza a gritar por dentro, con la lista, con la prisa, 
 Siéntate primero. Después sirve.
 
 **La pregunta para llevarse a casa: ¿quieres fruto… o estás dispuesto a quedarte en la vid?**
+
+### Oración
+
+Padre, perdonanos por querer cosecha sin raíz, por la prisa y por la lista que no es relación. Invítanos a quedarnos: a oírte, a permanecer en tu Hijo y a volver el corazón hacia ti en lo ordinario. Bendice los tres espacios de esta semana. En el nombre de Jesús. Amén.

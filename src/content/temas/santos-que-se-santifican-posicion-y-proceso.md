@@ -12,8 +12,11 @@ remember:
   - "Hebreos 10:14 dice las dos cosas en una frase: perfeccionó para siempre a los que está haciendo santos."
   - "Justificación es tribunal (completa, no crece). Santificación es taller (en proceso, sí crece)."
   - "La fe que justifica nunca está sola: mezclarlas vuelve el crecimiento un examen; separarlas vuelve la gracia un permiso."
-  - "Se mide en dirección, no en velocidad. Y quien la termina es Dios (Filipenses 1:6)."
-guionLede: "Serie Santos que se santifican · charla 1. Tres voces (cómoda, ansiosa, cansada) → qué significa santo → Hebreos 10:10 y 10:14 → justificación / santificación / glorificación → distintas pero inseparables → dirección no velocidad → cierre pastoral. NTV. Parte de En Cristo e Identidad."
+  - "El ladrón no tuvo taller: «hoy estarás conmigo». Quien todavía tiene días entra por la misma puerta, y el proceso sigue."
+guionLede: "Serie Santos que se santifican · charla 1. Toda la sala. Intro: tres voces. Cuerpo: qué es santo · Hebreos 10 · tribunal/taller · ladrón. Cierre: Filipenses 1:6. NTV. Tarjetas en guion."
+includeContentInPreparation: false
+widgets:
+  - mapa_santos_posicion_proceso
 resources:
   - label: "Efesios 1:4"
     url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A4&version=NTV"
@@ -49,6 +52,8 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Filipenses+1%3A6&version=NTV"
   - label: "1 Tesalonicenses 5:23–24"
     url: "https://www.biblegateway.com/passage/?search=1+Tesalonicenses+5%3A23-24&version=NTV"
+  - label: "Lucas 23:39–43"
+    url: "https://www.biblegateway.com/passage/?search=Lucas+23%3A39-43&version=NTV"
 ---
 
 ## Sustento
@@ -246,16 +251,39 @@ Tercero: la caída no te saca del proceso. Te devuelve al punto de partida del p
 
 Este versículo está escrito a creyentes. Juan da por hecho que los santos van a necesitarlo. Si la santificación significara «ya no pecas», este versículo sobraría. Está ahí porque el camino incluye confesión, limpieza y seguir.
 
-**Algo práctico para esta semana.** Cada noche, antes de dormir —dos minutos, no media hora—, dos preguntas, delante de Dios y no delante de un tribunal propio:
+### El ladrón que no tuvo taller
 
-1. ¿Dónde vi hoy que él me estaba formando?
-2. ¿Dónde me resistí?
+Hay un hombre que no tuvo tiempo de santificarse. Estaba en una cruz, al lado de Jesús. Lucas no le pone nombre. No le cuenta una conversión larga. No le deja una semana para demostrar el cambio.
 
-Sin castigarte. Sin prometer que mañana sí. Solo mirando, con él, lo que está haciendo. Así se aprende a ver el taller. La voz ansiosa convierte esto en lista de fallos. La voz cansada lo convierte en evidencia de que no sirve. Tú lo conviertes en conversación: «Señor, aquí estuviste. Aquí me resistí. Gracias por no irte.»
+Uno de los dos criminales se burla. El otro lo frena, y dice la verdad en voz alta: nosotros merecemos esto; este hombre no ha hecho nada malo. Luego se vuelve a Jesús:
+
+> Jesús, acuérdate de mí cuando vengas en tu reino.
+>
+> <cite>Lucas 23:42</cite>
+
+No ofrece un currículo. No promete que, si lo bajan de la cruz, va a ser otro. Pide memoria. Pide que el Rey no lo olvide. Y Jesús responde con un tiempo que esta charla ha estado cuidando:
+
+> Te aseguro que hoy estarás conmigo en el paraíso.
+>
+> <cite>Lucas 23:43</cite>
+
+«Hoy.» No «cuando hayas cambiado». No «si alcanzas a vivir lo suficiente para parecerte a mí». Hoy. Conmigo. En el paraíso.
+
+Ese hombre es la prueba extrema de lo que Hebreos 10:14 separa. El tribunal ya firmó. El taller no alcanzó a abrir. No hubo dirección que medir, ni velocidad, ni fruto visible de años. Y aun así entró. Santo, en el sentido de esta noche, no porque hubiera llegado a parecerse a Jesús, sino porque Jesús lo recibió. Pertenecía. Como el tazón del tabernáculo: no por lo que había sido, sino porque fue apartado para Dios en la última hora.
+
+Ahora las implicaciones, porque este texto se usa mal con facilidad.
+
+**A la voz ansiosa.** Tu lugar delante de Dios no espera a que la semana mejore. El ladrón no llegó limpio, ni constante, ni con una racha de oración. Llegó condenado, y salió con una promesa en presente. Si esta noche tu miedo es «todavía no he cambiado lo suficiente para estar con él», escucha el «hoy». El veredicto no se gana en el taller.
+
+**A la voz cansada.** No estás más lejos que él. Él no tenía nada terminado. Tú tampoco tienes que llegar terminado para ser recibido. La diferencia no es que tú debas más. La diferencia es que a ti todavía te quedan días. Y esos días no son un examen para conservar el paraíso. Son el tiempo en que el mismo Jesús que dijo «hoy» sigue formando a los suyos. Filipenses 1:6 no se le pudo cumplir en la tierra al ladrón, porque no hubo tierra después. A ti sí te queda camino. Eso no te hace menos recibido. Te hace alguien a quien el Padre todavía está haciendo santo.
+
+**A la voz cómoda.** Aquí hay que hablar claro. El ladrón no es permiso para no cambiar. Él no tuvo un mañana. Tú sí. Usar su historia para decir «entonces el proceso no importa» es pedirle al texto lo que no dice. Él confesó su culpa. No se burló. No se justificó. Y se murió esa misma tarde. Quien vive, y usa la gracia para no soltar lo que lo destruye, no se parece al ladrón. Se parece al otro criminal, el que exigió una prueba y no pidió misericordia.
+
+La próxima charla va al *cómo*: qué hizo Cristo con el poder del pecado, qué nos toca a nosotros, y qué hace el Espíritu en los días que el ladrón no tuvo. Esta noche basta con el *qué*.
+
+No te estás esforzando para que Dios te acepte. Te está formando porque ya te aceptó. El ladrón oyó el «hoy». Tú también. Y, si amanece, el taller sigue abierto.
 
 ### Él termina lo que empieza
-
-Quiero terminar hablándole a la voz cansada, porque creo que es la que más hay en esta sala, aunque no se diga.
 
 Si llevas años peleando con lo mismo, y esta noche sientes que Dios debe estar cansado de ti, escucha esto:
 
@@ -263,18 +291,8 @@ Si llevas años peleando con lo mismo, y esta noche sientes que Dios debe estar 
 >
 > <cite>Filipenses 1:6</cite>
 
-El sujeto de esa frase no eres tú. Es Dios. Él comenzó. Él continúa. Él termina. Tu santificación no es un proyecto que Dios revisa cada semana para decidir si sigue invirtiendo. Es una obra que él ya se comprometió a terminar. Tú no eres el contratista. Eres la casa. Y el constructor no abandona a mitad de obra.
+El sujeto de esa frase no eres tú. Es Dios. Él comenzó. Él continúa. Él termina. Y la garantía no descansa en tu constancia. Descansa en su fidelidad.
 
-Y Pablo, al final de su primera carta a los tesalonicenses, les deja una oración y una promesa:
+### Oración
 
-> Ahora, que el Dios de paz los haga santos en todos los aspectos, y que todo su espíritu, alma y cuerpo se mantenga sin culpa hasta que nuestro Señor Jesucristo vuelva. Dios hará que esto suceda, porque aquel que los llama es fiel.
->
-> <cite>1 Tesalonicenses 5:23–24</cite>
-
-«Dios hará que esto suceda.» No porque tú seas constante. Porque él es fiel. La constancia tuya importa —la próxima charla va a hablar de eso—. Pero la garantía no descansa en tu constancia. Descansa en su fidelidad.
-
-Acuérdate del tazón del tabernáculo. Era santo porque pertenecía. Tú perteneces. Eso no cambió esta semana, ni cambia cuando caes. Y el Dios al que perteneces no deja sus cosas a medias.
-
-No te estás esforzando para que Dios te acepte. Te está formando porque ya te aceptó.
-
-La próxima vez vamos al *cómo*: qué hizo Cristo con el poder del pecado, qué nos toca a nosotros, qué hace el Espíritu, y por qué a veces duele. Esta noche basta con el *qué*: ya santo; siendo santificado. Distintas. Inseparables. Y sostenidas por quien termina lo que empieza.
+Padre, gracias porque en Cristo ya nos declaraste santos, y porque no nos dejas igual: nos formas. Sana la voz cómoda, la ansiosa y la cansada. Que confiemos en tu veredicto y cooperemos con tu taller. En el nombre de Jesús. Amén.

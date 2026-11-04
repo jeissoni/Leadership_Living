@@ -1,8 +1,8 @@
 export const seriesCatalog = [
   {
     id: "el-reino-y-el-voluntario",
-    title: "El Reino y el voluntario",
-    lede: "Identidad para quien sirve: el Reino, los ministerios del cuerpo y la vida del discípulo.",
+    title: "El Reino y el Rey",
+    lede: "Vivir bajo el Rey: el Reino, los ministerios del cuerpo y la vida del discípulo — en casa, en el trabajo y en la comunidad de fe.",
   },
   {
     id: "de-la-ley-a-jesus",
@@ -32,7 +32,7 @@ export const seriesCatalog = [
   {
     id: "espiritualidad-practica",
     title: "Espiritualidad práctica",
-    lede: "De la idea a la relación: conocer a Jesús en el encuentro, y vivir desde la identidad recibida en Cristo, no desde lo que hacemos o producimos.",
+    lede: "De la idea a la relación: conocer a Jesús en el encuentro, vivir desde la identidad recibida en Cristo, y experimentarlo en lo cotidiano —también bajo presión.",
   },
   {
     id: "santos-que-se-santifican",

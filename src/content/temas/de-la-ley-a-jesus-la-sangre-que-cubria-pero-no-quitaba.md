@@ -6,6 +6,7 @@ series: de-la-ley-a-jesus
 order: 2
 tags: ["antiguo pacto"]
 duration: "45 min"
+showMindMap: true
 thesis: "El sistema era real y poderoso, pero provisional: cubría la vergüenza, no quitaba el pecado."
 remember:
   - "La caída no fue un tropiezo menor. La justicia de Dios no ignora la falta; el Antiguo Testamento prepara para reconocer que no podemos salvarnos solos."
@@ -13,13 +14,11 @@ remember:
   - "El tabernáculo era sombra: atrio, Lugar Santo, Lugar Santísimo. El velo decía: Dios cerca, no del todo."
   - "En el arca: la Ley, la vara de Aarón y el maná. Justicia, vida de lo seco, provisión."
   - "Cubrir no es lo mismo que quitar. Había que repetirlo cada año."
-guionLede: "Sigue el orden de la charla dada: la pregunta de la sala → pecado, sangre y expiación → tabernáculo → arca → Yom Kippur → aplicación (Obed-Edom, ley en el corazón, maná, vara). No convertir el cierre en la charla 3."
+guionLede: "Serie De la ley a Jesús · charla 2. Enfoque: toda la vida (casa, trabajo, comunidad). Intro: ¿por qué no perdonó de una vez? Cuerpo: 1) pecado y sangre · 2) tabernáculo y arca · 3) Yom Kippur y límite del sistema. Cierre: cubrir ≠ quitar; no adelantar charla 3. RVR1960. 45 min."
+includeContentInPreparation: false
 audio: de-la-ley-a-jesus-la-sangre-que-cubria-pero-no-quitaba.mp3
 widgets:
-  - charla2_sangre_arca_alianza
-  - mensaje_pastoral_charla2_sangre
-  - versiculos_charla2_sangre
-  - serie_reorganizada_2charlas
+  - mapa_sangre_cubria
 resources:
   - label: "Levítico 17:11"
     url: "https://www.biblegateway.com/passage/?search=Levitico+17%3A11&version=RVR1960"
@@ -41,19 +40,30 @@ resources:
 
 ## Sustento
 
-En la sala alguien preguntó lo que muchos piensan y pocos dicen: si Dios es tan bueno, ¿por qué no perdonó de una vez? ¿Para qué un camino tan largo?
+*Narración pastoral para una charla de aproximadamente 45 minutos. El recuadro amarillo es la problemática. Los recuadros grises son axiomas para llevar. Sigue a Génesis 3: ahora recorremos **cómo Dios enseñó**, con paciencia, que el pecado cuesta y que hace falta un sustituto. Esta charla **no** cierra la serie en Cristo — deja la pregunta abierta a propósito.*
 
-No es una pregunta frívola. Toca el carácter de Dios. La caída no fue un tropiezo menor, un error de cálculo que se arregla con un gesto. Fue la ruptura del diseño: el ser humano eligió vivir como si el Creador no mandara. Un Dios perfectamente justo no puede mirar para otro lado. Si ignorara la falta, dejaría de ser quien es. La santidad no es mal genio. Es que en él no cabe el mal, y el mal no se disuelve con un «no pasa nada».
+## Introducción: ¿por qué un camino tan largo?
 
-Hay que pagar. Y al mismo tiempo, hay misericordia: Dios no abandona al que falló. El Antiguo Testamento es el viaje donde eso se enseña con paciencia. No es demora cruel. Es pedagogía. Siglos para que la humanidad vea que no puede salvarse sola, reconozca que necesita un Salvador y lo reciba no por costumbre, sino porque entendió lo que costaba. El sistema que vamos a recorrer —sangre, tienda, arca, un día al año— es ese viaje. Real. Poderoso. Todavía no la última palabra.
+En muchas salas — y en muchos corazones — alguien pregunta lo que pocos dicen en voz alta: si Dios es tan bueno, **¿por qué no perdonó de una vez?** ¿Para qué siglos de altar, velo y un día al año?
 
-## Pecado, sangre y expiación
+No es pregunta frívola. Toca el **carácter de Dios**. La caída de Génesis 3 no fue un tropiezo menor. Fue ruptura del diseño: el ser humano eligió vivir como si el Creador no mandara. Un Dios **perfectamente justo** no puede mirar para otro lado sin dejar de ser quien es. La santidad no es mal genio: es que en él no cabe el mal, y el mal no se disuelve con un «no pasa nada».
 
-En hebreo, pecar es *errar el blanco*. No solo «hacer algo feo». Es desviarse de la diana: la vida para la que fuimos hechos. La misión se pierde. La paga de ese desvío, dice la Escritura, es la muerte. No porque Dios disfrute castigar. Porque la vida se corta cuando se corta de su fuente.
+Hay que **pagar**. Y al mismo tiempo hay **misericordia**: Dios no abandona al que falló. El Antiguo Testamento es el viaje donde eso se enseña con pedagogía — no demora cruel. Siglos para que la humanidad vea que **no puede salvarse sola**, reconozca que necesita un Salvador y lo reciba no por costumbre, sino porque entendió **lo que costaba**.
 
-Entonces aparece la misericordia dentro de la justicia. Dios permite un sustituto: un animal muere en lugar del hombre. El pecador ponía la mano sobre la cabeza de la víctima. No era teatro. Era decir: esto que debía caerme, cae aquí. *Expiación*, en palabras sencillas, es eso: alguien paga la deuda o la condena en mi lugar.
+<aside class="callout callout-problema">
+<p class="callout-label">El problema</p>
+<p>Queremos que Dios ignore el mal como si no importara — o que el perdón sea barato. Ni la justicia ni la misericordia se pueden falsificar: el pecado real exige respuesta real, y nosotros no podemos pagarla solos.</p>
+</aside>
 
-¿Por qué sangre? Porque la vida está ahí. Sin vida derramada no hay perdón ni purificación. El texto no suaviza el costo.
+Tres movimientos: **pecado, sangre y expiación**; **tabernáculo y arca**; **Yom Kippur y el límite del sistema**. Al final, aplicación pastoral — sin convertir el cierre en la charla 3.
+
+## 1. Pecado, sangre y expiación
+
+En hebreo, pecar es **errar el blanco**. No solo «hacer algo feo». Es desviarse de la diana: la vida para la que fuimos hechos. La misión se pierde. La paga de ese desvío, dice la Escritura, es la **muerte** — no porque Dios disfrute castigar, sino porque la vida se corta cuando se corta de su fuente.
+
+Entonces aparece misericordia **dentro** de la justicia. Dios permite un **sustituto**: un animal muere en lugar del hombre. El pecador ponía la mano sobre la cabeza de la víctima. No era teatro. Era decir: **esto que debía caerme, cae aquí.** *Expiación*, en palabras sencillas, es eso: alguien paga la deuda o la condena en mi lugar.
+
+¿Por qué sangre? Porque la **vida** está ahí.
 
 > Porque la vida de la carne en la sangre está, y yo os la he dado para hacer expiación sobre el altar por vuestras almas; y la misma sangre hará expiación de la persona.
 >
@@ -63,86 +73,72 @@ Entonces aparece la misericordia dentro de la justicia. Dios permite un sustitut
 >
 > <cite>Hebreos 9:22</cite>
 
-Eso cubre. Alivia. Permite seguir delante de Dios. También hay que volver a hacerlo. El alivio dura hasta la próxima falta. Quien conoce el ciclo —culpa, ritual, alivio, otra vez culpa— ya entiende el agotamiento aunque nunca haya visto un altar.
+Eso **cubre**. Alivia. Permite seguir delante de Dios. También hay que **volver a hacerlo**. El alivio dura hasta la próxima falta. Quien conoce el ciclo — culpa, ritual, alivio, otra vez culpa — entiende el agotamiento aunque nunca haya visto un altar. En casa, a veces repetimos el ciclo con disculpas rápidas, promesas o religión apretada, sin que el pecado se **quite**.
 
-## El tabernáculo: una sombra
+<aside class="callout callout-axioma">
+<p class="callout-label">Para llevar</p>
+<p>Pecado es fallar el blanco. La vida está en la sangre; expiación es sustituto — alguien paga en mi lugar.</p>
+</aside>
 
-Israel caminaba. No tenía catedral. Dios pide una tienda que se arma y se desarma: el tabernáculo. Éxodo 26 baja hasta los velos y las medidas. Nada de eso es capricho de decorador. Es un boceto. Hebreos lo llama *sombra* de lo que vendría: la forma se ve, el objeto todavía no.
+## 2. Tabernáculo y arca: sombra y distancia santa
 
-Tres espacios, cada uno más adentro.
+Israel caminaba. No tenía catedral fija. Dios pide una **tienda** que se arma y desarma: el tabernáculo. Éxodo 26 baja hasta velos y medidas — nada capricho de decorador. Es **boceto**. Hebreos lo llama *sombra* de lo que vendría: se ve la forma; el objeto todavía no.
 
-**El atrio.** Ahí llegaba el pueblo. Traía la ofrenda. La mano sobre el animal, la falta transferida, el sacerdote ofreciendo en el fuego. El pecador no improvisaba un camino hacia Dios. Traía lo que se le había dicho, y otro intermediaba.
+**El atrio.** Ahí llegaba el pueblo con la ofrenda. Mano sobre el animal, falta transferida, sacerdote en el fuego. El pecador no improvisaba camino hacia Dios. Traía lo mandado; otro intermediaba.
 
-**El Lugar Santo.** Un velo grueso. Solo sacerdotes, vestidos como se les mandó. Adentro: la mesa con los doce panes —una tribu, un pan; todo Israel representado delante de Dios—; el candelabro que no se apagaba; el altar del incienso, las oraciones subiendo. Día y noche. El sistema no cerraba a las cinco.
+**El Lugar Santo.** Velo grueso. Solo sacerdotes. Mesa con doce panes — todo Israel representado; candelabro que no se apagaba; altar del incienso — oraciones subiendo. El sistema no cerraba a las cinco.
 
-**El Lugar Santísimo.** Otro velo. El recinto más adentro. Ahí, en una nube, la presencia de Dios. No una idea. Presencia. Y nadie del pueblo entraba. El velo no era adorno. Era teología que se podía tocar: Dios cerca, no del todo.
+**El Lugar Santísimo.** Otro velo. Presencia de Dios — no idea, **presencia**. Nadie del pueblo entraba. El velo era teología que se podía tocar: **Dios cerca, no del todo.**
 
-> Y pondrás el velo debajo de los corchetes, y meterás allí, del velo adentro, el arca del testimonio; y aquel velo os hará separación entre el lugar santo y el santísimo.
+> Y pondrás el velo debajo de los corchetes… aquel velo os hará separación entre el lugar santo y el santísimo.
 >
 > <cite>Éxodo 26:33</cite>
 
-Si uno se queda solo con el mapa, parece arquitectura antigua. Si se oye lo que dice, es el retrato de una distancia: hay acceso, y hay un límite. El límite no lo puso el hombre para proteger a Dios. Lo puso Dios para que el hombre no muriera al entrar como si nada hubiera pasado.
+Detrás del segundo velo, el **arca**. Madera y oro, varas para llevarla: Dios camina con su pueblo. Encima, el *propiciatorio*; querubines mirando hacia la tapa. Dentro, tres cosas:
 
-## El arca y lo que hay dentro
+**Las tablas de la Ley** — su justicia, innegociable, bajo la tapa. **La vara de Aarón** — palo seco que floreció: vida donde solo había muerte. **El maná** — pan diario en el desierto: «no te sostuviste tú; te sostuve yo».
 
-Detrás del segundo velo, un cofre. Madera cubierta de oro, varas para llevarlo: Dios no se quedó en un edificio fijo mientras el pueblo andaba. Encima, la tapa: el *propiciatorio*. A los lados, dos querubines de oro, mirando hacia abajo, hacia esa tapa. Hebreos lo describe cuando explica el primer pacto.
-
-> Tras el segundo velo estaba la parte del tabernáculo llamada el Lugar Santísimo, el cual tenía un incensario de oro y el arca del pacto cubierta de oro por todas partes, en donde estaba una urna de oro que contenía el maná, la vara de Aarón que reverdeció, y las tablas del pacto; y sobre ella los querubines de gloria que cubrían el propiciatorio.
+> Tras el segundo velo estaba… el arca del pacto… urna de oro que contenía el maná, la vara de Aarón… y las tablas del pacto.
 >
-> <cite>Hebreos 9:3–5</cite>
+> <cite>Hebreos 9:3–4</cite>
 
-Dentro del cofre, tres cosas imposibles para el hombre, y tres revelaciones de quién es Dios.
+Justicia que no se dobla. Vida que brota de lo seco. Provisión que no falla. Todo eso en el corazón del sistema — detrás de oro y velo. El mapa no es arquitectura muerta: es retrato de **distancia santa** — acceso real, límite real. Dios puso el límite para que el hombre no muriera entrando como si nada hubiera pasado.
 
-**Las tablas de la Ley.** Su justicia. Su naturaleza moral. No un reglamento para ocupar la tarde: el bien como él es. Esa ley no se negocia. Queda *dentro*, bajo la tapa, y los querubines la miran.
+## 3. Yom Kippur: cubrir no es quitar
 
-**La vara de Aarón.** Un palo seco. Sin savia. Y floreció, y dio fruto. Autoridad que Dios confirma. Restauración. Vida donde solo había madera muerta. El que habita detrás del velo no es solo el que exige: es el que hace vivir lo que ya se dio por perdido.
+Una vez al año, **Yom Kippur**. Solo el sumo sacerdote cruzaba el velo — después de sangre por **sus** pecados. El mediador también necesitaba mediación.
 
-**El maná.** Pan caído en el desierto, cada día el de ese día. Provisión que no se fabrica. Recuerdo: no te sostuviste tú. Te sostuve yo.
+Dos animales: uno muere — el pecado se paga; otro se suelta al desierto — el pecado se aleja. Ni castigo sin alejamiento, ni gesto barato sin costo. Luego sangre **sobre el propiciatorio**. Debajo, la Ley; encima, los querubines; en medio, sangre de sustituto. La justicia no se borra: **queda cubierta**. Hay perdón — **propiciación**: honrar la justicia de Dios y abrir camino al culpable.
 
-Tres piezas. Justicia que no se dobla. Vida que brota de lo seco. Pan que no falla. Eso es lo que hay en el corazón del sistema, tapado por oro y por un velo.
-
-## El Día de la Expiación
-
-Una vez al año, Yom Kippur. El sumo sacerdote —nadie más— cruzaba el velo. Antes, sangre por *sus* pecados. El mediador también necesitaba mediación. Luego, por el pueblo.
-
-Dos animales. Uno muere: el pecado se paga. El otro se suelta vivo hacia el desierto: el pecado se aleja. Las dos cosas a la vista. Ni solo castigo sin alejamiento, ni un gesto barato sin costo.
-
-Después, el gesto que da nombre a la tapa. El sacerdote rocía la sangre *sobre el propiciatorio*. Debajo, la Ley. Encima, la mirada de los querubines. En medio, sangre de un sustituto. La justicia no se borra. Queda cubierta. El juicio se detiene. Hay perdón.
-
-Eso se llama propiciación: no convencer a un Dios caprichoso, sino honrar su justicia y, a la vez, abrir camino al culpable. Y al año siguiente, otra vez. El ritual más solemne de Israel ya decía, sin palabras, que lo de la vez anterior no había sido definitivo.
+Y al año siguiente, **otra vez**. El ritual más solemne de Israel ya decía, sin palabras, que lo anterior no había sido definitivo.
 
 > En esos sacrificios cada año se hace memoria de los pecados; porque la sangre de los toros y de los machos cabríos no puede quitar los pecados.
 >
 > <cite>Hebreos 10:3–4</cite>
 
-Cubrir no es quitar. El sistema era sombra. Una sombra dice la forma de lo que viene. No reemplaza al que viene.
+**Cubrir no es quitar.** El sistema era sombra poderosa. Una sombra anuncia al que viene; no lo reemplaza.
 
-## De la sombra a la realidad
+Desde ahí, ecos pastorales — sin adelantar la cruz como cierre de serie. El arca en casa de **Obed-Edom** bendijo todo lo que tenía: la presencia ordena lo que toca, pero era **visita**, cofre móvil, tiempo contado. Jeremías promete ley **en el corazón**, no solo en piedra dentro de madera. El **maná** sigue hablando contra la ansiedad del «¿y mañana?». La **vara** sigue hablando a lo seco en matrimonio, vocación o carácter que ya dimos por imposible.
 
-Hay una casa en el relato de David. El arca reposó tres meses en casa de Obed-Edom, y Jehová bendijo la casa y todo lo que tenía. La presencia no era un concepto. Donde el cofre llegaba, algo se ordenaba.
+<aside class="callout callout-axioma">
+<p class="callout-label">Para llevar</p>
+<p>Cubrir no es quitar. El sistema era real y enseñaba la forma del rescate — había que repetirlo cada año.</p>
+</aside>
 
-> Y el arca de Dios estuvo en casa de Obed-edom tres meses; y bendijo Jehová la casa de Obed-edom, y todo cuanto tenía.
->
-> <cite>1 Crónicas 13:14</cite>
+## Conclusión pastoral: dejar de fabricar hojas
 
-Eso era visita. Cofre móvil, tiempo contado. En la muerte de Jesús el velo del templo se rasga. El camino que el sistema solo dejaba entreabrir, Dios lo abre desde su lado. Ya no somos porteros de un arca que va y viene. El creyente es templo: el Espíritu habita. Donde llega el que es de Cristo, no llega un objeto sagrado. Llega una presencia que no se desmonta al final del turno.
+El camino fue largo porque la herida era honda y el corazón necesita **entender antes de recibir**. El sistema **cubrió** la vergüenza; **no quitó** el pecado. La pregunta que deja esta charla no es si memorizaste el mapa del tabernáculo. Es si **oyes** lo que el mapa gritaba: hace falta un sustituto mejor, un sacerdote que no ofrezca primero por sí, una sangre que no se repita cada otoño.
 
-La Ley que estaba en piedra, dentro de madera, Dios dijo que la escribiría en el corazón. No para que cada uno invente su moral. Para que lo que era externo se vuelva vida por dentro.
+**¿Dónde fabricas cobertura propia?**
 
-> Pondré mi ley en su mente, y la escribiré en su corazón; y yo seré a ellos por Dios, y ellos me serán por pueblo.
->
-> <cite>Jeremías 31:33</cite>
+Actividad, comparación, perfeccionismo, servicio religioso sin confesión — **hojas de higuera** con distintos uniformes. En casa, en el trabajo, en la iglesia. El sistema enseñaba que Dios es **santo** — no indiferente — y **misericordioso** — no cruel. Tratarlo como si pudiera ignorar lo malo es tan falso como tratarlo como si solo hubiera furia.
 
-El maná sigue hablando. El miedo al mes que viene, la ansiedad de «qué va a pasar», se enfrenta con memoria: él proveyó. No falló. El Dios del desierto no se jubiló.
+Pregunta para la semana: **¿en qué punto estás repitiendo el ciclo del atrio — culpa, cobertura rápida, alivio, otra culpa — y qué pasaría si admitieras que necesitas quien quite, no solo cubra?** La charla 3 responderá con un nombre. Esta noche basta con humildad: **no podemos salvarnos solos**, y Dios nos lo enseñó con paciencia.
 
-Y la vara. Hay zonas de la vida que parecen palo seco: un matrimonio apagado, una vocación que no responde, un carácter que ya se dio por imposible. El que habitaba sobre el arca es el mismo que florece lo muerto. No por técnica. Porque esa es su naturaleza.
+## Oración final
 
-El camino fue largo porque la herida era honda, y porque el corazón necesita entender antes de recibir. El sistema cubrió. No quitó. La pregunta que deja esta charla no es si se memorizó el mapa del tabernáculo. Es si se oye lo que el mapa gritaba: hace falta un sustituto mejor, un sacerdote que no ofrezca primero por sí, una sangre que no se repita cada otoño.
+Padre santo, gracias porque no ignoraste nuestro pecado ni nos dejaste sin señales de misericordia. Perdónanos por querer perdón barato o por fabricar coberturas que no quitan.
 
-## Para quien sirve
+Enséñanos por el tabernáculo y el arca: tú eres justo, proveedor, y das vida donde solo hay sequedad. Gracias por cubrir cuando merecíamos juicio — y por preparar nuestro corazón para quien quitará de verdad.
 
-Si sirves para tapar lo de esta semana, estás en el atrio con otra ofrenda. Actividad, comparación, perfeccionismo: hojas de higuera con uniforme de voluntario. El sistema era poderoso. No era la última palabra.
-
-La pregunta de la sala sigue abierta para el que da el turno: ¿trato a Dios como si pudiera ignorar lo que está mal, o como el Santo que cubrió y, en Cristo, quita? Y cuando el velo ya no está, ¿vivo como casa donde él permanece, o como quien todavía espera que el cofre pase tres meses y se vaya?
-
-Pregunta para la semana: ¿dónde estás fabricando cobertura propia —y qué pasaría si, en ese punto, dejaras que pague otro?
+Muéstranos dónde repetimos el ciclo sin libertad. Que esta semana confesemos antes de acusar, y confiemos en tu camino, no en nuestras hojas. Amén.

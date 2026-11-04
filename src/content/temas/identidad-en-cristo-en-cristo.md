@@ -6,6 +6,7 @@ series: identidad-en-cristo
 order: 1
 tags: ["identidad"]
 duration: "45 min"
+showMindMap: true
 thesis: "No estamos intentando entrar en Cristo: ya estamos dentro. La identidad no es el resultado del comportamiento; es su causa."
 remember:
   - "La conducta no define la identidad. La identidad define la conducta."
@@ -13,12 +14,10 @@ remember:
   - "Tres figuras: vid y ramas, matrimonio, cuerpo. El fruto sale de la savia. Jesús no amputa al que tropieza."
   - "Gracia más obras dice que a la cruz le faltó algo. El pecado duele aquí; la deuda de eternidad ya está pagada."
   - "«Este es mi hijo amado.» El valor no fluctúa con el domingo. Ante los suyos: quítate del medio."
-guionLede: "Sigue la charla dada: identidad antes que conducta → dimensiones (no podíamos saltar) → creer vs estar y Efesios 1 → vid, matrimonio, cuerpo → descanso vs religión (consecuencias aquí, deuda allá ya saldada) → quitarse del medio → hijo amado. No acortar el silencio del cierre."
-audio: En_Jesus_-_Tu_identidad_define_tu_conducta.mp3
+guionLede: "Serie Identidad en Cristo · charla 1. Toda la sala. Intro: conducta vs identidad + problema. Cuerpo: 1) no podíamos saltar · 2) creer vs estar + Efesios 1 · 3) tres figuras e intercambio · 4) gracia, descanso, quitarse del medio. Cierre: hijo amado + Efesios 2:6. Puente a Hijo (charla 2). RVR1960. 45 min."
+includeContentInPreparation: false
 widgets:
-  - datos_identidad
-  - guion_en_cristo_completo
-  - el_gran_intercambio
+  - mapa_en_cristo
 resources:
   - label: "Efesios 1:3–14"
     url: "https://www.biblegateway.com/passage/?search=Efesios+1%3A3-14&version=RVR1960"
@@ -38,23 +37,48 @@ resources:
     url: "https://www.biblegateway.com/passage/?search=Mateo+3%3A17&version=RVR1960"
   - label: "Efesios 2:6"
     url: "https://www.biblegateway.com/passage/?search=Efesios+2%3A6&version=RVR1960"
+audio: En_Jesus_-_Tu_identidad_define_tu_conducta.mp3
 ---
 
 ## Sustento
 
-En el plano humano —y en mucha religión— la lógica es de esfuerzo: *lo que haces dice quién eres*. La Escritura, y lo que se ve cuando alguien de verdad se sabe otra persona, apunta al revés. **La conducta no da la identidad. La identidad define la conducta.**
+*Narración pastoral para una charla de aproximadamente 45 minutos. Se puede leer de corrido para preparar, o para volver a ella después. El recuadro amarillo es la problemática. Los recuadros grises son axiomas para llevar. Las frases en negrita se dicen despacio. El mapa mental de la página del recurso es el esquema visual de esta noche. Esta charla habla a toda la sala: no solo a quien sirve en un turno.*
 
-Quien se sabe «saludable» no come bien para *llegar a serlo*. Come así porque lo otro no la representa. Quien se sabe «buen administrador» no espera el milagro de fin de mes: gestiona desde esa certeza. Living Room se niega a predicar la superficie: «deje de tomar», «deje de fumar», «vístase así». El legalismo desgasta. Cuando alguien entiende quién es delante de Dios y *para* Dios, el caminar se alinea solo: orgánico, no forzado.
+## Introducción: identidad antes que conducta
 
-## El que desciende a nuestro plano
+Esta noche abrimos la serie *Identidad en Cristo*. No vamos a hablar solo de quienes tienen un rol visible en la iglesia. Vamos a hablar de **dónde estás parado delante de Dios** — y de qué sale la vida cuando eso está claro.
+
+En el plano humano —y en mucha religión— la lógica es de esfuerzo: *lo que haces dice quién eres*. La Escritura apunta al revés. **La conducta no da la identidad. La identidad define la conducta.**
+
+Quien se sabe «saludable» no come bien para *llegar a serlo*. Come así porque lo otro no la representa. Quien se sabe «buen administrador» no espera el milagro de fin de mes: gestiona desde esa certeza. En la casa, en el trabajo, en la fe privada, la misma tentación aparece: **«si me porto bien, entonces soy alguien»** — y cuando fallas, la sentencia es inmediata: «soy un fracaso».
+
+Quiero plantear el problema con claridad:
+
+**Podemos esforzarnos mucho en la superficie y no haber tocado el fundamento.** Dejar de tomar, de fumar, de gritar — listas largas — mientras por dentro seguimos creyendo que el favor de Dios sube y baja con el performance del día.
+
+<aside class="callout callout-problema">
+<p class="callout-label">El problema</p>
+<p>Cuando la identidad depende del comportamiento, la vida se agota: legalismo, comparación, miedo a no ser suficiente. La pregunta que falta no es solo «qué hago», sino «dónde estoy en Cristo — y qué dice eso de quién soy».</p>
+</aside>
+
+Esta noche no vamos a predicar la superficie. Vamos a ir al suelo: **no estamos intentando entrar en Cristo; ya estamos dentro.** Cuatro movimientos alcanzan: **no podíamos saltar la línea, creer no es lo mismo que estar, tres figuras del intercambio, y el descanso que no empuja una puerta ya abierta.** Al final, una frase del Padre que no fluctúa con el domingo.
+
+## 1. No podíamos saltar la línea
 
 Habitamos tres dimensiones, presos del espacio y del tiempo. Imagina un ser que solo existe en un plano, como tinta en una hoja. Una línea dibujada delante de él es un muro. No tiene «arriba». No puede saltar. La única salida es que alguien de una dimensión más alta lo tome, lo levante y lo ponga al otro lado.
 
-Estábamos así bajo el pecado y la muerte. La línea no se salta con voluntad. Hacía falta Alguien de otra esfera. Jesús habitó nuestro plano en un cuerpo. Resucitado, el cuerpo glorificado ya no está atado a nuestras coordenadas: María no lo reconoce hasta que él se da a conocer; en Emaús parte el pan y desaparece; entra donde las puertas están cerradas. No es truco para impresionar. Es esto: si él puede entrar a nuestro plano, también puede *meternos* en el suyo.
+Estábamos así bajo el pecado y la muerte. La línea no se salta con voluntad. Hacía falta Alguien de otra esfera. Jesús habitó nuestro plano en un cuerpo. Resucitado, el cuerpo glorificado ya no está atado a nuestras coordenadas: María no lo reconoce hasta que él se da a conocer; en Emaús parte el pan y desaparece; entra donde las puertas están cerradas. No es truco para impresionar. Es esto: **si él puede entrar a nuestro plano, también puede *meternos* en el suyo.**
 
 Ese lugar cabe en una preposición pequeña: **en**.
 
-## Creer no es lo mismo que estar
+<aside class="callout callout-axioma">
+<p class="callout-label">Para llevar</p>
+<p>No podíamos saltar la línea del pecado. Él descendió, resucitó — y nos posicionó en él.</p>
+</aside>
+
+Si «en» es el suelo, la pregunta urgente es: **¿en qué se diferencia creer de estar?** Eso nos lleva al segundo movimiento.
+
+## 2. Creer no es lo mismo que estar
 
 Los demonios creen. Saben quién es. No habitan en él. Hay un abismo entre asentir y ser unidos. La puerta es fe, no un examen.
 
@@ -72,7 +96,9 @@ Bendición, elección, redención, herencia, sello. Todo *en él*. No al lado. N
 
 Hay una diferencia enorme entre creer que un avión vuela y estar sentado adentro. Solo adentro te sostiene lo que lo sostiene a él.
 
-## Tres figuras
+## 3. Tres figuras — el gran intercambio
+
+La Biblia no deja «en Cristo» como idea abstracta. Lo ilustra. Tres figuras, un mismo misterio.
 
 **La vid y las ramas.** Injerto. Pura gracia: no éramos el árbol. Nos pegaron. La rama no fabrica savia. Se queda. Ningún árbol puja para dar fruto. El fruto brota porque hay conexión.
 
@@ -80,7 +106,7 @@ Hay una diferencia enorme entre creer que un avión vuela y estar sentado adentr
 >
 > <cite>Juan 15:5</cite>
 
-La única función es permanecer. Autosuficiencia es decirle: «usted por allá, yo por acá» —el dinero, el cuerpo, lo que no quiero entregarle. La rama sigue injertada y se seca por dentro de sed.
+La única función es permanecer. Autosuficiencia es decirle: «usted por allá, yo por acá» — el dinero, el cuerpo, lo que no quiero entregarle. La rama sigue injertada y se seca por dentro de sed.
 
 **El matrimonio.** Dos se hacen una sola carne. Misterio grande, dice Pablo, y lo apunta a Cristo y la iglesia. En la charla, dos plastilinas: se amasan, una pieza. Ya no se separan sin llevarse el uno al otro.
 
@@ -108,7 +134,7 @@ Ante el Padre, una entidad. Entonces la Gran Transferencia: le pasamos lo nuestr
 
 Jesús no amputa cuando un miembro tropieza. Su gracia no mutila. Añade. Restaura. Pega. El amor de la Cabeza no recorta al que falló.
 
-## El descanso y el desgaste
+## 4. Gracia, descanso y quitarse del medio
 
 Intentar *ganarse* o *mantener* el favor a puro esfuerzo es peligroso, y es teología mala. La religión de la lista larga —para poder estar en Cristo— dice, sin decirlo: a la cruz le faltó un porcentaje. **No es gracia más obras. Es gracia.**
 
@@ -116,13 +142,19 @@ Orar, leer, congregarse no son el pasamanos para que no te bajen del barco. Son 
 
 Vivir de la carne cansa. Tarde o temprano se tira la toalla. Y hay que decir esto sin suavizarlo: **el pecado tiene consecuencias aquí**. Daña el cuerpo, que es templo. Rompe relaciones. A veces hay disciplina, a veces hay ley humana. Jesús no ignora eso. La deuda de eternidad, la aceptación delante del Padre, eso ya se saldó en el madero. El crédito está pagado. Estás a paz. Las dos cosas son verdad: duele ahora; allá, está resuelto.
 
-## Quitarse del medio
-
 Cuando esta libertad entra, duele ver a un ser querido atrapado: adicción, decisiones que rompen, religión que oprime. El impulso es forzar, regañar, convencer. El juicio levanta muro. Distancia.
 
 Hay un solo encargado de convencer al mundo de pecado: el Espíritu Santo. Nosotros no somos él. Ocupar su lugar desgasta a los dos. El papel es más sencillo y más difícil: reflejar amor, gracia, misericordia, bondad, servicio. Amar, abrazar, ofrecer gracia. **Quitarnos de en medio** para que no nos vean a nosotros: para que se encuentren con Cristo.
 
-## El agrado que no fluctúa
+Ante los que amas y no cambian: no seas el fiscal. No seas el Espíritu Santo. Sé testigo de una unión que tú no te ganaste.
+
+## Conclusión pastoral: «Este es mi Hijo amado»
+
+Quiero que nos detengamos. No hace falta que respondas en voz alta.
+
+**¿Desde dónde has estado viviendo esta temporada?**
+
+¿Desde la lista —«si cumplo, entonces valgo»? ¿Desde el miedo a que un tropiezo te saque del barco? ¿O desde la certeza —aunque sea frágil— de que **ya estás en el Amado**, no intentando entrar?
 
 El Padre no esperó tres años de milagros para hablar en el Jordán. Esa frase, por estar escondido en el Amado, se te acerca: hijo, hija.
 
@@ -136,10 +168,18 @@ El valor no sube ni baja con el performance del día. Estás unido al Amado. Est
 >
 > <cite>Efesios 2:6</cite>
 
-## Para quien sirve
+La buena noticia de esta noche no es «haz más para que Dios te acepte». Es: **la identidad no es el premio del comportamiento; es la causa.** Si sirves, trabajas, cuidas — que sea desde «ya estoy en el Amado», no como mendigo comprando un lugar.
 
-Si sirves para que Dios te acepte, estás sirviendo como mendigo. Si sirves desde «ya estoy en el Amado», la misma acción pesa distinto: no compras un lugar; gastas una herencia.
+Esta semana, una sola pregunta: **¿qué decisión tomarías distinto si la tomaras como alguien que ya está sentado en Cristo — y no empujando la puerta?**
 
-Ante los que amas y no cambian: no seas el fiscal. No seas el Espíritu Santo. Sé testigo de una unión que tú no te ganaste.
+En la próxima charla profundizamos *quién eres* desde ese «en»: hijo, no huérfano ni esclavo. Hoy basta el suelo: **en Cristo.**
 
-Pregunta para la semana: ¿qué decisión de estos días tomarías distinto si la tomaras como alguien que ya está en el Amado —sentado, no empujando la puerta?
+## Oración final
+
+Padre, gracias porque no nos dejaste atrapados en el plano del esfuerzo sin salida. Gracias porque tu Hijo descendió, resucitó y nos depositó en él.
+
+Perdónanos por las veces en que invertimos el orden: conducta primero, identidad después. Perdónanos por usar oración, lectura y comunidad para ganarnos lo que la cruz ya dio.
+
+Enséñanos a permanecer en la vid, a vivir el misterio de una sola carne con Cristo, a honrar al cuerpo sin amputar al que tropieza. Quita de en medio nuestro juicio sobre los que amamos, y haznos testigos de tu gracia.
+
+Que esta semana recordemos la voz del Jordán: hijo amado, hija amada. Desde ahí caminamos. Amén.

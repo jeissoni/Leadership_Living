@@ -14,7 +14,8 @@ remember:
   - "En nosotros: templo, convicción, regeneración, testimonio de hijos, intercesión, santificación, llenura continua."
   - "A través de nosotros: por lo menos un don (1 Pedro 4:10), para el cuerpo, de gracia, repartido como él quiere. El don es lo que el cuerpo requiere."
   - "1 Corintios 13 no es un añadido sentimental: sin amor, el don es ruido."
-guionLede: "Guía en orden: baja con la charla. Pedro → camino → Persona → en nosotros → a través de nosotros → 1 Corintios 13 → cierre. No dictar el catálogo. RVR1960."
+guionLede: "Toda la sala. Intro: Pedro dos noches · Gálatas 5:25. Cuerpo: Persona y sello · en nosotros · dones (tres categorías) · 1 Corintios 13. Cierre: templo, no batería. RVR1960. Tarjetas en guion."
+includeContentInPreparation: false
 widgets:
   - mapa_espiritu_santo
 resources:
@@ -100,7 +101,7 @@ Y ahí aparecen dos problemas que esta sala conoce.
 
 **El primero: lo describimos mal.** Cuando alguien pregunta cómo es el Espíritu, salen tres palabras que suenan espirituales: fuerza, energía, poder. «Necesito una unción.» «Necesito cargar batería.» «Necesito que baje algo.» Entonces el Espíritu se vuelve un interruptor. Si oré, si canté, si sentí, está encendido. Si la semana fue seca, está apagado. **Uno no camina con un interruptor. Uno camina con alguien.**
 
-**El segundo: el don se nos volvió un examen.** O buscamos el don espectacular para demostrar que sí somos espirituales. O llegamos a la otra esquina: «yo no tengo don; yo solo ayudo.» Entonces el servicio es puro esfuerzo. Y el Espíritu queda para los que están en la plataforma.
+**El segundo: el don se nos volvió un examen.** O buscamos el don espectacular para demostrar que sí somos espirituales. O llegamos a la otra esquina: «yo no tengo don; yo solo ayudo.» Entonces el servicio es puro esfuerzo. Y el Espíritu queda como algo de unos pocos «visibles», no como quien camina con todo el cuerpo.
 
 Las dos salidas dejan en el mismo sitio: **él no es con quien camino.** Es un recurso que otros administran. O una meta que yo no alcancé.
 
@@ -239,3 +240,7 @@ Cuando no sabes orar, intercede. Cuando dudas si eres hijo, da testimonio. Cuand
 Y no te dejó sin nada para los demás. Por lo menos un don. No para que te mires en él. Para que el cuerpo reciba lo que necesita de ti, aunque sea lo que nadie aplaude. Si tu parte es ayudar, exhortar, dar, enseñar, servir una mesa, eso también lo repartió él. **No es el premio de consolación. Es gracia.**
 
 **No tienes que encenderlo. Tienes que andar con él.** Él no preparó el camino y se fue. **Se quedó. Está adentro.** Y el camino de esta semana es el de siempre: **si vivimos por el Espíritu, andemos también por el Espíritu.**
+
+### Oración
+
+Padre, gracias por no dejarnos un interruptor sino un Consolador: Persona, presente, sellada. Perdón por usar tu Espíritu como batería o como examen. Danos andar esta semana con él, servir con amor y usar lo que repartiste para edificar a otros. En el nombre de Jesús. Amén.

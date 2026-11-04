@@ -13,7 +13,10 @@ remember:
   - "Primero el indicativo, después el imperativo. Eres, entonces vive como lo que eres."
   - "Cada «hagan morir» tiene su «vístanse». El ladrón no solo deja de robar: trabaja y comparte."
   - "No es 50 y 50: tú obras y Dios obra en ti. Y el dolor, en sus manos, entrena para su santidad."
-guionLede: "Serie Santos que se santifican · charla 2. La pelea y dos salidas falsas → Romanos 6 (katargeō, logizomai) → Colosenses 3 (hacer morir y vestirse) → Filipenses 2:12–13 → dolor (Romanos 8 / Hebreos 12) → cierre con la caña quebrada. NTV. No cargar el argumento en Romanos 7."
+guionLede: "Serie Santos que se santifican · charla 2. Toda la sala. Intro: pelea · dos salidas falsas. Cuerpo: Romanos 6 · Colosenses 3 · Filipenses 2 · dolor (Rom 8 / Heb 12). Cierre: caña quebrada · una área. NTV. Tarjetas en guion."
+includeContentInPreparation: false
+widgets:
+  - mapa_santos_muertos_pecado
 resources:
   - label: "Gálatas 5:17"
     url: "https://www.biblegateway.com/passage/?search=Galatas+5%3A17&version=NTV"
@@ -280,3 +283,7 @@ Termino con la misma promesa de la vez pasada, porque sostiene las dos charlas:
 > <cite>Filipenses 1:6</cite>
 
 Ya no eres esclavo. Deja de obedecer a un amo que perdió su poder sobre ti. Y el que te liberó no se va a ir de tu lado mientras aprendes a vivir libre.
+
+### Oración
+
+Padre, gracias porque en Cristo el pecado perdió su mando sobre nosotros. Danos tu Espíritu para hacer morir lo viejo y vestirnos de lo nuevo; en el dolor, enséñanos a confiar en tu disciplina de amor. En el nombre de Jesús. Amén.

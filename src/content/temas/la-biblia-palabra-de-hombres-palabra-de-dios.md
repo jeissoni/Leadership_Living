@@ -13,14 +13,14 @@ remember:
   - "Hecha por hombres, no inventada por hombres. Autoría doble: theopneustos, soplada por Dios."
   - "La razón más fuerte no es la arqueología: es cómo Jesús trata la Escritura. Después de eso, el Espíritu convence."
   - "La misma semilla cae en cuatro terrenos: hace falta un corazón dispuesto, y no leemos solos; el Espíritu abre el entendimiento, muestra a Cristo y fortalece para obedecer."
-guionLede: "55 min en seis tramos: apertura con las dos preguntas (¿es de Dios? ¿por qué menos libros?), cómo llegó, por qué confiar, qué hay dentro con un bosquejo del canon, cómo se lee y cierre pastoral sobre las parábolas, el corazón dispuesto y la iluminación del Espíritu Santo. No prometas demostrar inspiración: solo quitas obstáculos. Las notas de tono son indicaciones, no se leen. Los pasajes van completos, leídos de la Biblia. Desde la Parte II está el material para preparar y no es necesario dictarlo completo."
+guionLede: "Serie Semilla y terreno · charla 1. Toda la sala. Intro: confiable ≠ inspirada · voz o herramienta. Cuerpo: 1) texto confiable · 2) autoría doble y Jesús · 3) canon y cuatro terrenos. Cierre: pasaje + oración + obediencia. RVR1960. Tarjetas en guion; datos/complemento en ficha si hace falta."
 audio: Palabra_de_hombres_o_Palabra_de_Dios.mp3
+includeContentInPreparation: false
 widgets:
-  - guion_charla_biblia
+  - mapa_biblia
 preparationWidgets:
   - datos_biblia
   - complemento_biblia
-includeContentInPreparation: true
 resources:
   - label: "2 Timoteo 3:16–17"
     url: "https://www.biblegateway.com/passage/?search=2+Timoteo+3%3A16-17&version=RVR1960"
@@ -60,17 +60,21 @@ resources:
 
 ## Sustento
 
+*Escrito como lectura continua. El guion de preparación son tarjetas de oratoria; aquí está el sustento completo.*
+
+### El problema
+
 Hay una pregunta que muchos creyentes cargan y casi nadie dice en voz alta: ¿esto es Palabra de Dios, o es palabra de hombres religiosos? En un grupo mixto se junta con otra, más concreta: ¿por qué *tu* Biblia tiene menos libros?
 
 No son la misma pregunta. Si se mezclan, la charla se vuelve un debate y nadie se lleva una tesis.
 
 **Confiable** quiere decir: este texto no se inventó ayer, y lo que leemos es sustancialmente lo que se escribió. Eso se puede mostrar.
 
-**Inspirada** quiere decir: Dios habla aquí. Eso no se demuestra como un teorema. Se recibe: porque Jesús trata así la Escritura, y porque el Espíritu la hace viva. Quien da la charla quita obstáculos. No fabrica fe.
+**Inspirada** quiere decir: Dios habla aquí. Eso no se demuestra como un teorema. Se recibe: porque Jesús trata así la Escritura, y porque el Espíritu la hace viva. Quien prepara la charla quita obstáculos. No fabrica fe.
 
-Llevamos meses citando pasajes. El hueco no es «qué es la Biblia» en abstracto. Es **cómo la estamos usando**: como voz, o como herramienta para el turno.
+Llevamos meses citando pasajes. El hueco no es «qué es la Biblia» en abstracto. Es **cómo la estamos usando**: como voz que nos confronta y consuela, o como herramienta cuando conviene — citas para ganar una discusión o cumplir una rutina, sin dejarnos cortar.
 
-## Confiable: un texto serio
+### 1. Confiable: un texto serio
 
 La Biblia no es un libro. Es una biblioteca: 66 escritos, cerca de cuarenta autores, unos mil quinientos años, tres idiomas (hebreo, arameo, griego), tres continentes. Campesinos, reyes, profetas, un médico, un cobrador de impuestos, pescadores. Nadie armó un comité. Y el diagnóstico no cambia: Dios busca, el hombre huye, Cristo cumple. Eso ya se vio en *De la Ley a Jesús*. Distintos acentos. La misma historia. Jeremías no suena como Lucas; el centro no se rompe.
 
@@ -88,7 +92,7 @@ Los rollos del Mar Muerto (Qumrán) mostraron que Isaías, siglos antes de Jesú
 
 Pablo le habla a Timoteo sobre las Escrituras que ya tenía: el Antiguo Testamento. El soplo de Dios no es un adorno piadoso al final de un argumento histórico. Es la afirmación de que esas páginas sirven para formar a alguien, no solo para informarlo.
 
-## Palabra de Dios: autoría doble
+### 2. Palabra de Dios: autoría doble
 
 La Biblia no se presenta como dictado mágico ni como «solo humanos». Dice las dos cosas a la vez.
 
@@ -122,7 +126,7 @@ Dios habló. Ahora habla en el Hijo. La Escritura no compite con Cristo: da test
 
 Al final hay un paso que ningún dato cierra: el Espíritu convence. Los manuscritos quitan la excusa de «esto lo inventaron curas». Jesús quita la excusa de «es solo religión antigua». El Espíritu hace que la página no quede en información.
 
-## Por qué unas Biblias tienen más libros
+### 3. Por qué unas Biblias tienen más libros
 
 El Nuevo Testamento es el mismo: **27 libros**. Católicos, protestantes y ortodoxos coinciden.
 
@@ -149,7 +153,7 @@ En pastoral, para quien viene de familia católica: nadie está leyendo otro eva
 
 El índice no es la duda de fondo. La duda de fondo es: *cuando se abre, ¿quién habla?*
 
-## Cómo se lee
+### 4. Cómo se lee
 
 Un solo principio cabe aquí, y basta: **no un versículo suelto**. Contexto, género, la Escritura interpreta la Escritura. El Antiguo Testamento a la luz de Jesús, que ya recorrieron en tres charlas. El Espíritu ilumina; no dicta un significado privado que contradiga el texto.
 
@@ -159,9 +163,9 @@ Un solo principio cabe aquí, y basta: **no un versículo suelto**. Contexto, g�
 >
 > — *Santiago 1:22*
 
-*El discípulo* ya dijo: oír sin hacer deja la Palabra en información. Esta charla no lo repite como temario. Lo apunta a la Biblia misma: el voluntario que cita y no se deja cortar no está leyendo. Está coleccionando.
+Oír sin hacer deja la Palabra en información. Quien cita versículos para defenderse y no se deja confrontar no está leyendo. Está coleccionando.
 
-## Aterrizaje pastoral: tener oídos para oír
+### 5. Aterrizaje pastoral: tener oídos para oír
 
 Jesús enseñó muchas veces por medio de parábolas. No lo hacía para convertir la verdad en un acertijo intelectual, sino para revelar la postura de quienes escuchaban. La misma historia podía dejar indiferente al que solo sentía curiosidad y abrir el Reino al que se acercaba dispuesto a atender.
 
@@ -212,3 +216,11 @@ Iluminación no significa recibir un significado secreto o privado. El Espíritu
 La práctica para esta semana es sencilla: un pasaje, una oración y una respuesta. Antes de leer: «Espíritu Santo, abre mi entendimiento; muéstrame a Cristo, corrige lo que deba cambiar y dame fuerzas para obedecer». Después de leer el pasaje completo: ¿qué me muestra de Dios?, ¿qué descubre en mí?, ¿qué voy a obedecer hoy?
 
 La pregunta final ya no es solamente si la Biblia es confiable. Es esta: **cuando la abras, ¿encontrará Dios un corazón dispuesto a escuchar y obedecer?**
+
+### Conclusión pastoral
+
+Un pasaje esta semana, leído completo. Antes de abrir: «Espíritu Santo, abre mi entendimiento; muéstrame a Cristo, corrige lo que deba cambiar y dame fuerzas para obedecer.» Después: ¿qué me muestra de Dios?, ¿qué descubre en mí?, ¿qué voy a obedecer hoy? La Escritura confiable merece un corazón dispuesto.
+
+### Oración
+
+Padre, gracias porque hablaste en muchas maneras y ahora hablas en tu Hijo. Perdón por usar tu Palabra como escudo o como adorno. Abre nuestros ojos a las maravillas de tu ley; hazla viva por tu Espíritu y llévanos a obedecer. En el nombre de Jesús. Amén.
