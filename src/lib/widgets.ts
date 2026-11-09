@@ -15,6 +15,7 @@ const widgetLabels: Record<string, string> = {
   mapa_santos_muertos_pecado: "Tarjetas de oratoria",
   mapa_nueva_identidad: "Tarjetas de oratoria",
   mapa_experimentar_jesus: "Tarjetas de oratoria",
+  mapa_esperanza_fecha: "Tarjetas de oratoria",
   mapa_reino_de_dios: "Tarjetas de oratoria",
   mapa_discipulo: "Tarjetas de oratoria",
   mapa_ministerios: "Tarjetas de oratoria",

@@ -32,7 +32,7 @@ export const seriesCatalog = [
   {
     id: "espiritualidad-practica",
     title: "Espiritualidad práctica",
-    lede: "De la idea a la relación: conocer a Jesús en el encuentro, vivir desde la identidad recibida en Cristo, y experimentarlo en lo cotidiano —también bajo presión.",
+    lede: "De la idea a la relación: conocer a Jesús, vivir como hijos, experimentarlo en lo cotidiano, y esperar su regreso sabiendo cómo termina la historia.",
   },
   {
     id: "santos-que-se-santifican",
